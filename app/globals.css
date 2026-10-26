@@ -4,40 +4,40 @@
   color-scheme: dark;
   
   /* Deep Luxury Warm Obsidian & Espresso Noir Canvas */
-  --brand-noir-deep: #070605;
-  --brand-noir-canvas: #0b0a08;
-  --brand-noir-surface: #12100d;
-  --brand-noir-elevated: #1a1713;
-  --brand-noir-card: #161310;
-  --brand-noir-card-hover: #221e19;
+  --brand-noir-deep: #080706;
+  --brand-noir-canvas: #0d0b0a;
+  --brand-noir-surface: #141110;
+  --brand-noir-elevated: #221c1a;
+  --brand-noir-card: #181413;
+  --brand-noir-card-hover: #261f1c;
   --brand-border-subtle: rgba(255, 255, 255, 0.08);
-  --brand-border-gold: rgba(197, 168, 130, 0.25);
-  --brand-border-gold-bright: rgba(223, 202, 169, 0.55);
+  --brand-border-gold: rgba(197, 152, 127, 0.28);
+  --brand-border-gold-bright: rgba(232, 200, 181, 0.55);
 
-  /* Metallic Champagne Gold & Warm Bronze Palette (Extracted directly from Adonai Soares Logo) */
-  --brand-gold-specular: #fbf7ee;
-  --brand-gold-light: #f4ebd6;
-  --brand-gold-luminous: #dfcaa9;
-  --brand-gold-highlight: #d2b793;
-  --brand-gold-accent: #c5a882;
-  --brand-gold: #b5956f;
-  --brand-gold-dark: #a8885f;
-  --brand-gold-bronze: #866843;
-  --brand-gold-deep: #5f462a;
+  /* Metallic Rose Gold & Warm Bronze Palette (Extracted directly from Ione Barcelos Logo) */
+  --brand-gold-specular: #fff5ea;
+  --brand-gold-light: #fcebdd;
+  --brand-gold-luminous: #e8c8b5;
+  --brand-gold-highlight: #d9b29c;
+  --brand-gold-accent: #c5987f;
+  --brand-gold: #b88368;
+  --brand-gold-dark: #a8785f;
+  --brand-gold-bronze: #85523b;
+  --brand-gold-deep: #5e3522;
 
-  /* Warm Platinum, Cream & Alabaster Inks */
+  /* Warm Platinum, Cream & Pearl Alabaster Inks */
   --brand-plat-pure: #ffffff;
-  --brand-plat-highlight: #fbfaf8;
-  --brand-plat-light: #ece7df;
-  --brand-plat-steel: #d4cdc1;
-  --brand-plat-muted: #9e978d;
-  --brand-plat-dark: #6f6960;
+  --brand-plat-highlight: #faf6f2;
+  --brand-plat-light: #f2eae2;
+  --brand-plat-steel: #d4c2b5;
+  --brand-plat-muted: #a49184;
+  --brand-plat-dark: #78665a;
 
   /* Text & Inks */
-  --brand-text-primary: #fbfaf8;
-  --brand-text-secondary: #d4cdc1;
-  --brand-text-muted: #9e978d;
-  --brand-text-gold: #dfcaa9;
+  --brand-text-primary: #faf6f2;
+  --brand-text-secondary: #d4c2b5;
+  --brand-text-muted: #a49184;
+  --brand-text-gold: #e8c8b5;
 }
 
 @theme inline {
@@ -45,67 +45,67 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-canvas: #0b0a08;
-  --color-surface: #12100d;
-  --color-elevated: #1a1713;
-  --color-card: #161310;
+  --color-canvas: #0d0b0a;
+  --color-surface: #141110;
+  --color-elevated: #221c1a;
+  --color-card: #181413;
 
-  /* Metallic Champagne Gold */
-  --color-gold-50: #fbf7ee;
-  --color-gold-100: #f4ebd6;
-  --color-gold-200: #e8d8be;
-  --color-gold-300: #dfcaa9;
-  --color-gold-400: #d2b793;
-  --color-gold-500: #c5a882;
-  --color-gold-600: #a8885f;
-  --color-gold-700: #866843;
-  --color-gold-800: #5f462a;
-  --color-gold-900: #3b2b18;
+  /* Metallic Rose Gold */
+  --color-gold-50: #fff5ea;
+  --color-gold-100: #fcebdd;
+  --color-gold-200: #f5dcce;
+  --color-gold-300: #e8c8b5;
+  --color-gold-400: #d9b29c;
+  --color-gold-500: #c5987f;
+  --color-gold-600: #a8785f;
+  --color-gold-700: #85523b;
+  --color-gold-800: #5e3522;
+  --color-gold-900: #3b1d11;
 
-  /* Warm Platinum Silver & Alabaster */
+  /* Warm Platinum Silver & Pearl Alabaster */
   --color-plat-50: #ffffff;
-  --color-plat-100: #fbfaf8;
-  --color-plat-200: #f3f0ea;
-  --color-plat-300: #e6e0d6;
-  --color-plat-400: #d4cdc1;
-  --color-plat-500: #9e978d;
-  --color-plat-600: #6f6960;
-  --color-plat-700: #4f4a43;
-  --color-plat-800: #38342e;
-  --color-plat-900: #201e1a;
+  --color-plat-100: #faf6f2;
+  --color-plat-200: #f2eae2;
+  --color-plat-300: #e5d9ce;
+  --color-plat-400: #d4c2b5;
+  --color-plat-500: #a49184;
+  --color-plat-600: #78665a;
+  --color-plat-700: #54463d;
+  --color-plat-800: #382e27;
+  --color-plat-900: #1f1915;
 
   /* Luxury Warm Obsidian & Espresso Noir */
-  --color-noir-50: #221e1a;
-  --color-noir-100: #1c1814;
-  --color-noir-200: #171410;
-  --color-noir-300: #12100d;
-  --color-noir-400: #0f0d0b;
-  --color-noir-500: #0b0a08;
-  --color-noir-900: #070605;
+  --color-noir-50: #261f1c;
+  --color-noir-100: #201a18;
+  --color-noir-200: #181413;
+  --color-noir-300: #141110;
+  --color-noir-400: #100e0d;
+  --color-noir-500: #0d0b0a;
+  --color-noir-900: #080706;
 
-  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.65);
-  --shadow-gold: 0 10px 30px -8px rgba(197, 168, 130, 0.35);
-  --shadow-gold-lg: 0 18px 45px -10px rgba(197, 168, 130, 0.45);
-  --shadow-glow: 0 0 40px rgba(223, 202, 169, 0.22);
-  --shadow-gold-xl: 0 20px 50px -10px rgba(197, 168, 130, 0.55);
+  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 10px 30px -8px rgba(197, 152, 127, 0.35);
+  --shadow-gold-lg: 0 18px 45px -10px rgba(197, 152, 127, 0.45);
+  --shadow-glow: 0 0 40px rgba(232, 200, 181, 0.22);
+  --shadow-gold-xl: 0 20px 50px -10px rgba(197, 152, 127, 0.55);
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7.5rem;
-  background-color: #0b0a08;
+  background-color: #0d0b0a;
 }
 
 body {
-  background: #0b0a08;
-  color: #fbfaf8;
+  background: #0d0b0a;
+  color: #faf6f2;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #dfcaa9;
+  caret-color: #e8c8b5;
 }
 
 ::selection {
-  background: #c5a882;
-  color: #0b0a08;
+  background: #c5987f;
+  color: #0d0b0a;
 }
 
 .font-cinzel {
@@ -127,19 +127,19 @@ body {
 }
 
 .eyebrow {
-  color: #d4cdc1;
+  color: #d4c2b5;
 }
 
 .eyebrow-light {
-  color: #dfcaa9;
+  color: #e8c8b5;
 }
 
 .eyebrow-gold {
-  color: #c5a882;
+  color: #c5987f;
 }
 
 .eyebrow-dark {
-  color: #866843;
+  color: #85523b;
 }
 
 .eyebrow::before,
@@ -156,12 +156,20 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #d4cdc1;
-  font-size: 0.72rem;
+  color: #d4c2b5;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: color 200ms ease;
+}
+
+@media (min-width: 1280px) {
+  .nav-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
 }
 
 .nav-link::after {
@@ -170,7 +178,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #c5a882, #dfcaa9);
+  background: linear-gradient(90deg, #c5987f, #e8c8b5);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -190,26 +198,26 @@ body {
 }
 
 .footer-link:hover {
-  color: #dfcaa9;
+  color: #e8c8b5;
 }
 
-/* Custom Metallic Champagne Scrollbar */
+/* Custom Metallic Rose Gold Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0a08;
+  background: #0d0b0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0b0a08;
+  border: 2px solid #0d0b0a;
   border-radius: 999px;
-  background: #866843;
+  background: #85523b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a882;
+  background: #c5987f;
 }
 
 @media (prefers-reduced-motion: reduce) {

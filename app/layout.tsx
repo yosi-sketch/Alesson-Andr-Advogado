@@ -36,62 +36,63 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0a08",
+  themeColor: "#0d0b0a",
   colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.adonaisoares.adv.br"),
-  title: "Adonai Soares — Advogado · AS Advocacia e Consultoria Jurídica · Corinto - MG",
+  metadataBase: new URL("https://www.ionebarcelos.adv.br"),
+  title: "Ione Barcelos — Advogada | Direito Trabalhista · Vale do Aço · MG",
   description:
-    "⚖️ Dr. Adonai Soares de Moura (OAB/MG 187.717) — Advocacia e Consultoria Jurídica de Alta Excelência. Especialista em Direito Imobiliário, Regularização de Imóveis, Inventários e Sucessões, Direito de Família, Contratos e Defesa Técnica. Nota 4,8 ★ no Google (25 avaliações). Sede em Corinto - MG e atendimento em todo o Brasil.",
+    "⚖️ Dra. Ione Barcelos — Advocacia Trabalhista com acolhimento humano, escuta atenta e firmeza técnica no Vale do Aço (Coronel Fabriciano, Ipatinga, Timóteo) e em todo o Brasil. Foco em Saúde Mental no Trabalho, Burnout, Doenças Ocupacionais, Rescisão Indireta e Direitos do Trabalhador. Nota 5,0 ★ no Google (22 avaliações).",
   keywords: [
-    "Adonai Soares Advogado",
-    "Dr Adonai Soares",
-    "Dr Adonai Soares de Moura",
-    "AS Advocacia e Consultoria Jurídica",
-    "Advogado em Corinto MG",
-    "Advocacia Corinto Minas Gerais",
-    "Inventário e Sucessões Corinto",
-    "Direito Imobiliário Corinto",
-    "Regularização de Imóveis Corinto MG",
-    "Usucapião Corinto MG",
-    "Direito de Família Corinto",
-    "Advogado Civil Corinto",
-    "Consultoria Jurídica Corinto MG",
-    "OAB MG 187717",
+    "Ione Barcelos Advogada",
+    "Dra Ione Barcelos",
+    "Advogada Trabalhista Vale do Aço",
+    "Advogado Trabalhista Coronel Fabriciano",
+    "Advogado Trabalhista Ipatinga",
+    "Advogado Trabalhista Timóteo",
+    "Saúde Mental no Trabalho",
+    "Advogada Burnout",
+    "Depressão e Trabalho",
+    "Rescisão Indireta Vale do Aço",
+    "Doença Ocupacional MG",
+    "Acidente de Trabalho Ipatinga",
+    "Direito do Trabalho Minas Gerais",
+    "Horas Extras Vale do Aço",
+    "Adicional de Insalubridade Vale do Aço",
   ],
-  authors: [{ name: "AS Advocacia e Consultoria Jurídica" }],
-  creator: "AS Advocacia e Consultoria Jurídica",
-  publisher: "AS Advocacia e Consultoria Jurídica",
+  authors: [{ name: "Ione Barcelos — Advogada" }],
+  creator: "Ione Barcelos — Advogada",
+  publisher: "Ione Barcelos — Advogada",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=10", sizes: "any" },
-      { url: "/favicon-32x32.png?v=10", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=10", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=10", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=ione3", sizes: "any" },
+      { url: "/favicon-32x32.png?v=ione3", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=ione3", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=ione3", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=10",
-    apple: [{ url: "/apple-icon.png?v=10", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=ione3",
+    apple: [{ url: "/apple-icon.png?v=ione3", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.adonaisoares.adv.br",
-    title: "Adonai Soares — Advogado · AS Advocacia e Consultoria Jurídica · Corinto - MG",
+    url: "https://www.ionebarcelos.adv.br",
+    title: "Ione Barcelos — Advogada | Direito Trabalhista · Vale do Aço · MG",
     description:
-      "⚖️ Advocacia com rigor técnico, ética inabalável, agilidade resolutiva e atendimento humanizado. Nota 4,8 ★ no Google (25 avaliações). R. Dr. Antônio Alvarenga, 371 - Centro, Corinto - MG.",
-    siteName: "AS Advocacia e Consultoria Jurídica",
+      "⚖️ Trabalhar faz parte da vida. Adoecer por causa do trabalho não deveria fazer. Advocacia Trabalhista Humanizada e Resolutiva. Nota 5,0 ★ no Google (22 avaliações). Vale do Aço - MG.",
+    siteName: "Ione Barcelos — Advogada",
     images: [
       {
         url: "/logo.png",
-        width: 949,
-        height: 303,
-        alt: "Adonai Soares de Moura — Advocacia e Consultoria Jurídica",
+        width: 1024,
+        height: 426,
+        alt: "Ione Barcelos — Advogada",
       },
     ],
   },
@@ -105,39 +106,31 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "AS Advocacia e Consultoria Jurídica",
-    alternateName: "Adonai Soares — Advogado",
-    legalName: "Adonai Soares de Moura — Advocacia e Consultoria Jurídica",
-    telephone: "+55-38-99812-6389",
-    email: "contato@adonaisoares.adv.br",
-    url: "https://www.adonaisoares.adv.br",
-    image: "https://www.adonaisoares.adv.br/logo.png",
+    name: "Ione Barcelos — Advogada",
+    alternateName: "Dra. Ione Barcelos Advocacia Trabalhista",
+    legalName: "Ione Barcelos — Advogada",
+    telephone: "+55-31-98828-1637",
+    email: "contato@ionebarcelos.adv.br",
+    url: "https://www.ionebarcelos.adv.br",
+    image: "https://www.ionebarcelos.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Dr. Antônio Alvarenga, 371 - Centro",
-      addressLocality: "Corinto",
+      addressLocality: "Vale do Aço (Coronel Fabriciano / Ipatinga / Timóteo)",
       addressRegion: "MG",
-      postalCode: "39200-000",
       addressCountry: "BR",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -18.3792,
-      longitude: -44.4556,
-    },
-    priceRange: "$$$",
+    priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "25",
+      ratingValue: "5.0",
+      reviewCount: "22",
     },
     areaServed: [
-      "Corinto",
-      "Curvelo",
-      "Diamantina",
-      "Pirapora",
-      "Montes Claros",
-      "Sete Lagoas",
+      "Vale do Aço",
+      "Coronel Fabriciano",
+      "Ipatinga",
+      "Timóteo",
+      "Santana do Paraíso",
       "Belo Horizonte",
       "Minas Gerais",
       "Brasil",
@@ -151,16 +144,20 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
-          "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "08:00",
+        closes: "22:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "08:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/adonaisoares.adv/",
-      "https://wa.me/5538998126389",
+      "https://www.instagram.com/ionebarcelos.adv",
+      "https://wa.me/5531988281637",
     ],
   };
 
@@ -170,18 +167,18 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=10" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=10" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=10" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=10" />
-        <link rel="shortcut icon" href="/favicon.ico?v=10" />
-        <meta name="theme-color" content="#0b0a08" />
+        <link rel="icon" href="/favicon.ico?v=ione3" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ione3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ione3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=ione3" />
+        <link rel="shortcut icon" href="/favicon.ico?v=ione3" />
+        <meta name="theme-color" content="#0d0b0a" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0b0a08] font-sans text-[#fbfaf8] antialiased selection:bg-[#c5a882] selection:text-[#0b0a08]">
+      <body className="min-h-screen overflow-x-clip bg-[#0d0b0a] font-sans text-[#faf6f2] antialiased selection:bg-[#c5987f] selection:text-[#0d0b0a]">
         {children}
       </body>
     </html>
