@@ -18,41 +18,42 @@ import {
   Sparkles,
   Star,
   Users,
-  Briefcase,
+  Shield,
+  Heart,
+  FileText,
   ShieldAlert,
-  Brain,
-  Activity,
-  UserX,
-  Hourglass,
-  Flame,
+  Baby,
+  Home as HomeIcon,
+  HelpCircle,
   X,
+  ChevronDown,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5531988281637";
-const PHONE_DISPLAY = "(31) 98828-1637";
-const EMAIL_CONTACT = "contato@ionebarcelos.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/ionebarcelos.adv";
-const INSTAGRAM_HANDLE = "@ionebarcelos.adv";
-const LAWYER_NAME = "Dra. Ione Barcelos";
-const LAWYER_TITLE = "Advogada Trabalhista · Saúde Mental & Relações de Trabalho";
-const FIRM_NAME = "Ione Barcelos — Advogada";
-
-const REGION_TEXT = "Vale do Aço · Coronel Fabriciano, Ipatinga, Timóteo e região · MG";
+const WHATSAPP_NUMBER = "5535984063030";
+const PHONE_DISPLAY = "(35) 98406-3030";
+const EMAIL_CONTACT = "contato@carolinavasconcelos.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/carolinav.advogada/";
+const INSTAGRAM_HANDLE = "@carolinav.advogada";
+const LAWYER_NAME = "Dra. Carolina Vasconcelos";
+const LAWYER_TITLE = "Advogada Especialista em Direito das Famílias e Sucessões";
+const FIRM_NAME = "Carolina Vasconcelos — Advocacia";
+const ADDRESS_TEXT = "Av. Gonçalves Leite, 156 - Centro, Paraguaçu - MG, 37120-000";
+const REGION_TEXT = "Paraguaçu · Alfenas · Varginha · Sul de Minas · MG & Atuação Nacional";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Ione+Barcelos+%E2%80%94+Advogada%0AVale+do+A%C3%A7o+(regi%C3%A3o)+%C2%B7+MG";
+  "https://www.google.com/search?q=Carolina+Vasconcelos+%E2%80%94+Advocacia%0AParagua%C3%A7u+%C2%B7+MG";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/ione-barcelos-hero.jpg";
-const FOTO_SOBRE_SRC = "/ione-barcelos.jpg";
+const FOTO_HERO_SRC = "/carolina-vasconcelos-hero.jpg";
+const FOTO_SOBRE_SRC = "/carolina-vasconcelos-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Ione Barcelos! Gostaria de tirar dúvidas e agendar um atendimento trabalhista.";
+    "Olá, Dra. Carolina Vasconcelos! Gostaria de tirar dúvidas e agendar um atendimento sobre Direito de Família.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -162,243 +163,277 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "saude-mental-burnout",
-    title: "Saúde Mental no Trabalho & Burnout",
-    icon: Brain,
-    tag: "Burnout · Depressão Ocupacional · Pânico · Ansiedade Extrema",
-    summary:
-      "Trabalhar faz parte da vida; adoecer por causa do trabalho não deveria fazer. Resguarde sua saúde mental e exija a reparação e a proteção que a legislação garante.",
-    details:
-      "A pressão desmedida, metas inalcançáveis, cobranças abusivas e jornadas extenuantes geram adoecimento psíquico grave como a Síndrome de Burnout, depressão e crises de ansiedade generalizada. A Dra. Ione Barcelos atua com profundo conhecimento técnico e sensibilidade para comprovar o nexo de causalidade com o ambiente laboral, assegurando indenizações por danos morais e materiais, afastamentos remunerados, estabilidade no emprego e rescisão indireta com recebimento integral de todos os direitos.",
-    topics: [
-      "Comprovação técnica do nexo de causalidade entre as condições de trabalho e o transtorno mental",
-      "Ações indenizatórias por danos morais e ressarcimento integral de remédios e psicoterapia",
-      "Emissão e acompanhamento de CAT (Comunicação de Acidente de Trabalho) por adoecimento psíquico",
-      "Proteção legal contra demissões discriminatórias durante ou após o tratamento da saúde mental",
-      "Ajuizamento de Rescisão Indireta (saída imediata da empresa recebendo todas as verbas)",
-      "Atendimento sigiloso, acolhedor e com total respeito ao momento delicado do trabalhador",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Gostaria de conversar com você sobre adoecimento psíquico/Burnout relacionado ao trabalho.",
-  },
-  {
-    id: "assedio-moral-perseguicao",
-    title: "Assédio Moral & Perseguição Laboral",
-    icon: ShieldAlert,
-    tag: "Humilhações · Metas Abusivas · Isolamento · Constrangimento",
-    summary:
-      "Nenhum trabalhador deve ser submetido a humilhações, isolamento ou perseguição no expediente. Atuação jurídica contundente para restabelecer sua dignidade.",
-    details:
-      "O assédio moral se manifesta através de ofensas veladas ou explícitas, apelidos depreciativos, desqualificação pública perante colegas, esvaziamento arbitrário de funções e imposição de metas vexatórias. Conduzimos ações judiciais contundentes para cessar os abusos patronais, garantir indenizações proporcionais à gravidade dos fatos e possibilitar a saída digna da empresa com todos os direitos preservados.",
-    topics: [
-      "Orientação estratégica e segura para preservação de provas válidas (mensagens, áudios e e-mails)",
-      "Ações de indenização por danos morais em virtude de tratamento degradante ou humilhações",
-      "Rescisão indireta imediata para afastar o trabalhador do ambiente tóxico sem abrir mão de nada",
-      "Blindagem do empregado contra represálias ou ameaças de demissão por justa causa infundada",
-      "Representação fundamentada perante os órgãos de fiscalização do trabalho e Justiça Trabalhista",
-      "Preservação integral da honra e da reputação profissional do empregado perante o mercado",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Estou sofrendo assédio moral ou cobranças abusivas no trabalho e preciso de orientação.",
-  },
-  {
-    id: "acidentes-doencas-ocupacionais",
-    title: "Acidentes de Trabalho & Doenças Físicas (LER/DORT)",
-    icon: Activity,
-    tag: "Lesões Físicas · LER/DORT · Coluna · Estabilidade Provisória de 12 Meses",
-    summary:
-      "Defesa integral do trabalhador que sofreu lesões físicas ou sequelas decorrentes de acidentes e condições inadequadas na indústria, comércio ou serviços.",
-    details:
-      "No Vale do Aço, polo industrial com forte atividade metalúrgica, siderúrgica e de suporte operacional, os riscos físicos são uma realidade frequente. A Dra. Ione Barcelos assessora trabalhadores vítimas de acidentes típicos, amputações, lesões na coluna, tendinites, bursites e perdas auditivas, buscando pensão vitalícia, estabilidade acidentária de no mínimo 12 meses, indenizações e cobertura previdenciária justa.",
-    topics: [
-      "Ações indenizatórias por danos materiais, danos morais e danos estéticos por acidentes laborais",
-      "Pedido de pensão mensal vitalícia correspondente à redução da capacidade laboral do trabalhador",
-      "Reconhecimento e garantia da estabilidade provisória de 12 meses no emprego após alta do INSS",
-      "Cobrança de indenizações decorrentes de ausência de EPIs ou descumprimento de normas de segurança",
-      "Acompanhamento especializado em perícias médicas judiciais de engenharia e medicina do trabalho",
-      "Resguardo aos familiares e dependentes em casos de acidentes fatais com pedido de pensionamento",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Gostaria de consultoria jurídica sobre acidente de trabalho ou doença física ocupacional.",
-  },
-  {
-    id: "rescisao-indireta-contrato",
-    title: "Rescisão Indireta do Contrato de Trabalho",
-    icon: UserX,
-    tag: "Falta Grave da Empresa · FGTS Atrasado · Ambiente Tóxico · Saída Digna",
-    summary:
-      "Quando o empregador descumpre a lei, o trabalhador tem o direito de 'demitir a empresa' e receber todas as indenizações como se demitido sem justa causa.",
-    details:
-      "A rescisão indireta (Artigo 483 da CLT) é o instrumento legal que liberta o trabalhador de um contrato abusivo. Se a empresa não deposita o FGTS, atrasa salários reiteradamente, não cumpre obrigações contratuais, exige serviços superiores às suas forças ou impõe perigo manifesto de mal considerável, a Dra. Ione pleiteia a liberação imediata do vínculo com levantamento do FGTS + 40%, seguro-desemprego e todas as verbas rescisórias.",
-    topics: [
-      "Ajuizamento célere com pedido de afastamento imediato das atividades sem perda dos direitos",
-      "Cobrança integral do saldo de salário, aviso prévio indenizado, férias vencidas/proporcionais e 13º",
-      "Liberação imediata das guias para saque de todo o FGTS acumulado somado à multa de 40%",
-      "Emissão de certidão para habilitação emergencial no benefício do Seguro-Desemprego",
-      "Levantamento de extratos analíticos do FGTS e verificação minuciosa de anos sem depósitos",
-      "Segurança jurídica plena para que não ocorra a falsa acusação de abandono de emprego",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Quero saber se o meu caso dá direito à rescisão indireta do contrato de trabalho.",
-  },
-  {
-    id: "horas-extras-jornadas",
-    title: "Horas Extras Não Pagas & Jornadas Exaustivas",
-    icon: Hourglass,
-    tag: "Horas Extras · Intervalo de Almoço Suprimido · Sobreaviso · Banco Ilegal",
-    summary:
-      "Seu tempo e sua dedicação têm valor. Apuração contábil rigorosa de jornadas suplementares, intervalos violados, escalas abusivas e reflexos salariais.",
-    details:
-      "Muitas empresas manipulam controles de ponto, instituem bancos de horas informais e exigem disponibilidade via WhatsApp e ligações fora do expediente sem pagar sobreaviso. Analisamos detalhadamente cartões de ponto, relatórios de login, mensagens e testemunhos para calcular centavo a centavo todas as horas extras devidas e seus reflexos no FGTS, repouso semanal remunerado, férias e 13º salário.",
-    topics: [
-      "Cálculo exato de horas extras excedentes à 8ª diária e à 44ª semanal com adicionais devidos",
-      "Cobrança de horas decorrentes de supressão de intervalo intrajornada para descanso e almoço",
-      "Reconhecimento do tempo à disposição do empregador e horas em regime de sobreaviso e prontidão",
-      "Nulidade de acordos de compensação e bancos de horas fraudulentos ou irregulares",
-      "Adicional noturno e hora noturna reduzida para trabalhadores em turnos ininterruptos",
-      "Reflexos das horas habituais em aviso prévio, DSR, férias + 1/3, 13º salário e FGTS + 40%",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Gostaria de fazer o cálculo e cobrar horas extras que a empresa não pagou.",
-  },
-  {
-    id: "insalubridade-periculosidade-desvio",
-    title: "Adicionais de Insalubridade & Periculosidade",
-    icon: Flame,
-    tag: "Grau Máximo 40% · Periculosidade 30% · Químicos · Ruído · Desvio de Função",
-    summary:
-      "Compensação legal para quem expõe sua integridade física ou executa responsabilidades além daquelas contratadas. Defesa pericial técnica apurada.",
-    details:
-      "A exposição contínua a ruído excessivo, calor, agentes biológicos, poeiras minerais ou substâncias químicas dá direito ao adicional de insalubridade (10%, 20% ou 40%). Da mesma forma, o contato com energia elétrica, inflamáveis, explosivos ou segurança pessoal confere 30% de periculosidade. Exigimos o pagamento retroativo dos últimos 5 anos e as devidas retificações do PPP para fins de aposentadoria especial.",
-    topics: [
-      "Perícia técnica judicial para constatação in loco das condições nocivas e perigosas de trabalho",
-      "Cobrança de adicional de insalubridade em grau máximo (40%), médio (20%) ou mínimo (10%)",
-      "Adicional de periculosidade de 30% sobre o salário base para áreas de risco e eletricidade",
-      "Pedido de diferenças salariais por desvio de função ou acúmulo desproporcional de atribuições",
-      "Retificação judicial do Perfil Profissiográfico Previdenciário (PPP) e Laudo Técnico (LTCAT)",
-      "Equiparação salarial com paradigmas que realizam trabalho de igual valor na mesma empresa",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ione Barcelos! Trabalho em ambiente insalubre/perigoso e quero verificar se tenho direito aos adicionais.",
-  },
-  {
-    id: "reversao-justa-causa-verbas",
-    title: "Reversão de Justa Causa Abusiva & Verbas Rescisórias",
+    id: "divorcio-partilha-bens",
+    title: "Divórcio & Separação (Consensual ou Litigioso)",
     icon: Scale,
-    tag: "Reversão Judicial · Justa Causa Injusta · Liberação FGTS + 40% · Multas",
+    tag: "Divórcio em Cartório · Partilha de Bens · Proteção Patrimonial",
     summary:
-      "Não aceite punições desmedidas ou demissões arbitrárias. Reversão judicial da justa causa para reaver sua honra profissional e receber todas as indenizações.",
+      "O término de um casamento exige acolhimento, estratégia e segurança patrimonial. Atuação para proteger seus direitos e conduzir o processo com rapidez e serenidade.",
     details:
-      "A demissão por justa causa é a penalidade máxima da CLT e exige prova cabal, imediatidade e proporcionalidade por parte da empresa. Quando aplicada indevidamente por retaliação ou sem comprovação, revertemos a demissão em Juízo, garantindo ao trabalhador a liberação do seguro-desemprego, levantamento do FGTS com multa rescisória e pagamento de todas as verbas rescisórias devidas.",
+      "O divórcio abrange muito além do encerramento do vínculo formal; envolve a partilha justa de imóveis, investimentos e empresas, além da fixação de pensão entre cônjuges e proteção contra fraudes financeiras. A Dra. Carolina Vasconcelos atua com excelência tanto na via extrajudicial (em cartório, rápida e amigável) quanto no contencioso judicial com firmeza inabalável.",
     topics: [
-      "Análise urgente do termo de rescisão e verificação de inconsistências nos cálculos rescisórios",
-      "Reversão judicial de justa causa aplicada arbitrariamente por falta grave inexistente",
-      "Liberação de alvarás judiciais rápidos para saque do FGTS e habilitação ao seguro-desemprego",
-      "Cobrança das multas dos Artigos 467 e 477 da CLT por atraso ou controvérsia no pagamento",
-      "Danos morais pelo constrangimento ilegal decorrente de imputação falsa de falta grave",
-      "Atuação conciliatória e combativa em audiências perante a Justiça do Trabalho de Minas Gerais",
+      "Divórcio extrajudicial em cartório com rapidez, discrição e sem desgaste emocional",
+      "Divórcio judicial litigioso com defesa vigorosa do patrimônio e dos direitos da família",
+      "Levantamento patrimonial minucioso contra ocultação, fraude ou sonegação de bens",
+      "Partilha justa de imóveis, participações societárias, veículos, contas bancárias e investimentos",
+      "Arbitramento de aluguel pelo uso exclusivo do imóvel do casal pelo ex-cônjuge",
+      "Retorno imediato ao nome de solteiro(a) e regularização de todos os registros civis",
     ],
     whatsAppText:
-      "Olá, Dra. Ione Barcelos! Fui demitido por justa causa injustamente ou não recebi minhas verbas rescisórias.",
+      "Olá, Dra. Carolina! Gostaria de uma consultoria sobre divórcio e partilha de bens.",
+  },
+  {
+    id: "pensao-alimenticia",
+    title: "Pensão Alimentícia (Fixação, Revisão & Execução)",
+    icon: Heart,
+    tag: "Fixação Justa · Revisão de Valores · Cobrança de Atrasados · Prisão Civil",
+    summary:
+      "A pensão alimentícia é a garantia do sustento, da educação e da dignidade dos seus filhos. Apuração real de rendimentos e cobrança implacável de atrasos.",
+    details:
+      "Alimentos não cobrem apenas alimentação, mas educação escolar, saúde, vestuário, moradia e lazer. Conduzimos ações de fixação inicial com cálculo realista de despesas, ações revisionais para aumento ou diminuição quando as condições financeiras se transformam, e execuções rigorosas de débitos pelo rito de prisão civil ou penhora de contas e patrimônio.",
+    topics: [
+      "Fixação de alimentos provisórios emergenciais e definitivos com apuração da real capacidade",
+      "Investigação aprofundada de rendimentos e sinais exteriores de riqueza de autônomos e empresários",
+      "Ação revisional para aumento da pensão diante do crescimento e das necessidades dos filhos",
+      "Ação revisional para redução em casos de alteração comprovada da condição financeira",
+      "Execução e cobrança rápida de valores em atraso (sob pena de prisão civil ou bloqueio de bens)",
+      "Pensão gravídica para cobertura das despesas médicas, nutricionais e do parto durante a gestação",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Preciso de orientação jurídica sobre pensão alimentícia.",
+  },
+  {
+    id: "guarda-filhos-convivencia",
+    title: "Guarda dos Filhos & Convivência Familiar",
+    icon: Baby,
+    tag: "Guarda Compartilhada · Convivência · Proteção aos Filhos · Combate à Alienação",
+    summary:
+      "O bem-estar e a estabilidade emocional dos seus filhos são prioridade absoluta. Defesa intransigente do melhor interesse da criança e do adolescente.",
+    details:
+      "Na dissolução da união, a definição da guarda e da convivência deve harmonizar o convívio saudável com ambos os genitores, resguardando a rotina e a paz dos filhos. A Dra. Carolina Vasconcelos estabelece planos de convivência detalhados e atua com pulso firme contra práticas nocivas de alienação parental, ameaças ou mudanças não autorizadas de domicílio.",
+    topics: [
+      "Definição estratégica entre guarda compartilhada ou unilateral no melhor interesse dos filhos",
+      "Plano detalhado de convivência (rotina semanal, fins de semana, férias escolares e datas festivas)",
+      "Ações judiciais de urgência para combater e punir práticas de alienação parental",
+      "Autorização judicial para viagens nacionais, internacionais e mudança de cidade ou estado",
+      "Garantia e regulamentação do direito de convivência com avós e familiares próximos",
+      "Acolhimento com foco na preservação da saúde psicológica e bem-estar dos menores",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Gostaria de orientação sobre guarda dos filhos e regime de convivência.",
+  },
+  {
+    id: "inventario-partilha-sucessoes",
+    title: "Inventário & Planejamento Sucessório",
+    icon: FileText,
+    tag: "Inventário em Cartório & Judicial · Partilha de Herança · Economia Tributária",
+    summary:
+      "A preservação do patrimônio familiar e a transmissão segura de herança. Agilidade, economia tributária e prevenção de desavenças entre herdeiros.",
+    details:
+      "A perda de um familiar é um momento doloroso que não pode ser agravado por disputas patrimoniais desnecessárias ou processos travados por anos. Atuamos com celeridade máxima em inventários extrajudiciais em cartório (concluídos em poucos dias havendo consenso), inventários judiciais complexos e elaboração de planejamento sucessório preventivo com testamentos e doações.",
+    topics: [
+      "Inventário extrajudicial ágil em cartório de notas com redução drástica de prazos e custos",
+      "Inventário judicial contencioso com representação rigorosa para preservação dos quinhões",
+      "Planejamento sucessório estratégico para minimizar impostos (ITCMD) e custos cartorários",
+      "Elaboração, registro, validação e cumprimento de testamentos públicos e particulares",
+      "Remoção de inventariante omisso ou irregular e apuração rigorosa de bens sonegados",
+      "Cessão de direitos hereditários, sobrepartilha e partilha amigável de bens imóveis e rurais",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Preciso de assessoria jurídica especializada para inventário e partilha.",
+  },
+  {
+    id: "uniao-estavel",
+    title: "União Estável (Contrato, Reconhecimento & Dissolução)",
+    icon: HomeIcon,
+    tag: "Contrato de Convivência · Regime de Bens · Partilha · Direitos Sucessórios",
+    summary:
+      "A vida a dois gera plenos direitos patrimoniais e sucessórios. Formalização preventiva ou dissolução segura com garantia da partilha justa.",
+    details:
+      "Muitos casais convivem em união estável sem documentação formal, criando insegurança sobre o regime patrimonial e direitos sucessórios em caso de separação ou morte. Redigimos pactos e contratos de convivência personalizados e ajuizamos ações de reconhecimento e dissolução com partilha dos bens adquiridos conjuntamente.",
+    topics: [
+      "Elaboração de Contrato de Convivência com escolha personalizada do regime de bens",
+      "Ação judicial de reconhecimento e dissolução de união estável cumulada com partilha de bens",
+      "Reconhecimento de união estável post mortem para fins de herança e pensão por morte do INSS",
+      "Comprovação documental, testemunhal e fática da convivência pública, contínua e duradoura",
+      "Blindagem contra alegações indevidas de união estável para resguardo de bens individuais",
+      "Segurança jurídica plena e tranquilidade patrimonial para o casal e familiares",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Gostaria de consultoria sobre união estável e partilha de bens.",
+  },
+  {
+    id: "investigacao-paternidade-adocao",
+    title: "Investigação de Paternidade, Socioafetividade & Adoção",
+    icon: Users,
+    tag: "Exame de DNA · Paternidade Socioafetiva · Inclusão de Sobrenome · Adoção",
+    summary:
+      "O direito fundamental à identidade, ao amor e ao reconhecimento legal. Filiação biológica e socioafetiva com todos os efeitos jurídicos e patrimoniais.",
+    details:
+      "O reconhecimento de paternidade ou maternidade é um direito indeclinável da personalidade. Atuamos em ações de investigação de paternidade com exame de DNA, reconhecimento de filiação socioafetiva (reconhecendo o pai ou mãe de criação sem retirar o vínculo biológico) e suporte jurídico completo em processos de adoção.",
+    topics: [
+      "Ação de investigação de paternidade com exame pericial de DNA e fixação de alimentos provisórios",
+      "Reconhecimento formal de filiação socioafetiva e multiparentalidade no registro civil",
+      "Inclusão de sobrenomes paternos/maternos e garantia integral de direitos hereditários",
+      "Retificação judicial de registro civil para adequação de nomes de família",
+      "Assessoria jurídica humanizada e sensível em processos de adoção de crianças e adolescentes",
+      "Ação negatória de paternidade em hipóteses comprovadas de erro ou vício de consentimento",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Gostaria de orientações sobre investigação de paternidade ou filiação.",
+  },
+  {
+    id: "violencia-domestica-medidas-protetivas",
+    title: "Violência Doméstica & Medidas Protetivas de Urgência",
+    icon: ShieldAlert,
+    tag: "Lei Maria da Penha · Medida Protetiva Imediata · Afastamento do Lar · Acolhimento",
+    summary:
+      "A segurança física e psicológica de mulheres e filhos não pode esperar. Atuação emergencial, confidencial e rigorosa para garantir proteção legal imediata.",
+    details:
+      "Situações de violência moral, psicológica, patrimonial ou física demandam pronta intervenção da Justiça. Prestamos acolhimento humano com sigilo absoluto, pleiteando medidas protetivas urgentes (afastamento do agressor do lar, proibição de aproximação) cumuladas com alimentos provisórios emergenciais e guarda cautelar.",
+    topics: [
+      "Pedido emergencial e acompanhamento diligente de Medidas Protetivas de Urgência no Judiciário",
+      "Afastamento compulsório imediato do agressor da residência da família",
+      "Fixação cautelar urgente de alimentos provisionais e guarda emergencial dos filhos",
+      "Bloqueio judicial de contas e bens para evitar dissipação patrimonial pelo agressor",
+      "Acompanhamento especializado e suporte contínuo em delegacias e audiências judiciais",
+      "Acolhimento com profundo respeito, escuta humanizada e total confidencialidade",
+    ],
+    whatsAppText:
+      "Olá, Dra. Carolina! Preciso de orientação jurídica urgente e acolhimento com total sigilo.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Ariane Cristina Urils Oliveira Reis",
-    reviewerTag: "2 avaliações no Google · 3 meses atrás",
-    badge: "Acolhimento & Paciência Excepcional",
+    name: "Yan Henrique",
+    reviewerTag: "6 avaliações no Google · 2 meses atrás",
+    badge: "Trabalho Impecável & Atendimento Excelente",
     rating: 5,
     content:
-      "Sou grata a Deus por ter me dado a oportunidade de conhecer uma pessoa maravilhosa, uma profissional diferenciada!! Uma advogada dedicada, me explicou tudo sobre o processo do meu esposo, com paciência e muito profissionalismo; sempre se colocou à disposição p dúvidas e sempre nos deixou ciente de todo processo!! Hj, tenho orgulho de dizer q tbm é minha advogada!!! Uma profissional q super indico a todos! Q Deus continue abençoando muito!",
+      "profissionais incríveis trabalho impecável. Recomendo pela qualidade do serviço e pelo atendimento excelente.",
   },
   {
-    name: "Sthefany Lima",
-    reviewerTag: "14 avaliações no Google · 7 meses atrás",
-    badge: "Empatia & Dedicação Incomparável",
+    name: "Ana Cristina Maximo",
+    reviewerTag: "5 avaliações no Google · 9 meses atrás",
+    badge: "Disponível a Todo Tempo & Muito Atenciosa",
     rating: 5,
     content:
-      "Dra Ione Barcelos, advogada maravilhosa empática e dedicada no que faz. Abraçou minha causa e acreditou em mim em um momento de fragilidade onde muitos desacreditaram da minha causa. Sou grata por Deus ter colocado essa advogada em minha vida! Ela é uma pessoa confiável e atenciosa. Com toda certeza uma das melhores do Vale do aço 💘",
+      "Pessoa maravilhosa profissional excelente atenciosa e disponível a todo tempo super indico.tem minha total gratidão e respeito",
+    reply: "Obrigada por confiar em meu trabalho, conte sempre comigo!",
   },
   {
-    name: "Wemerson Manoel",
-    reviewerTag: "2 avaliações no Google · 7 meses atrás",
-    badge: "Como Se o Processo Fosse Dela",
+    name: "Ingrid Miranda Moura",
+    reviewerTag: "1 avaliação no Google · 1 ano atrás",
+    badge: "Advogada Humanizada & Indicação de Olhos Fechados",
     rating: 5,
     content:
-      "DR Ione é uma advogada incrível. Extremamente atenciosa e competente, responde mensagem sempre que a gente tem dúvidas, e na mesma hora que o processo movimenta ela já liga toda feliz para da a notícia como se o processo fosse dela. Recomendo totalmente a Dr Ione.",
+      "Doutora Carolina é uma advogada humanizada meu processo foi acolhido por ela e em todo tempo me deu suporte,sempre me orientando e acompanhando a todo momento o movimento dele. Indicação minha é de olhos fechados !",
   },
   {
-    name: "itallo barcelos",
-    reviewerTag: "1 avaliação no Google · 7 meses atrás",
-    badge: "Melhor Advogada do Vale do Aço",
+    name: "Bianca Borim",
+    reviewerTag: "1 avaliação no Google · 1 ano atrás",
+    badge: "Profundo Conhecimento & Muita Segurança",
     rating: 5,
     content:
-      "Nossa senhora topzera demais, melhor advogada do vale do aço, aliás, melhor advogada de Minas Gerais, profissionalismo nato, super simpática no atendimento, preço justo, só elogios, só gratidão. Se eu fizesse algo fora da lei, teria medo de andar nas ruas de Coronel Fabriciano e Ipatinga com essa advogada à solta. Se estiverem com qualquer problema na justiça, parabens, vc acaba de encontrar a solução. A justiça será feita!",
+      "Gostaria de expressar minha satisfação com o trabalho da Carolina. Sua atuação foi impecável, demonstrando grande competência, dedicação e profundo conhecimento jurídico. Ela foi sempre acessível, esclarecendo todas as dúvidas com paciência e clareza. Sua postura profissional e empática me trouxe muita segurança durante todo o processo. Recomendo fortemente seus serviços!",
+    reply: "Muito obrigada pelo carinho! Esse é meu objetivo, trazer segurança e tranquilidade em todo processo!",
   },
   {
-    name: "Robson Santos",
-    reviewerTag: "4 avaliações no Google · 7 meses atrás",
-    badge: "Transmite Confiança & Clareza",
+    name: "Sabrina Barbosa",
+    reviewerTag: "3 avaliações no Google · 1 ano atrás",
+    badge: "Excelência & Advocacia de Confiança",
     rating: 5,
     content:
-      "Advogada muito profissional, atenciosa e clara nas orientações. Transmite confiança e demonstra grande conhecimento na área. Recomendo!",
+      "Contratei os serviços da Dr. Carolina e fui surpreendida pela sua excelência. Sua abordagem personalizada, conhecimento jurídico e comunicação clara me garantiram tranquilidade durante todo o processo. Altamente recomendada para quem busca uma advocacia de confiança!",
+    reply: "Muito obrigada Sabrina! Um prazer poder representar os seus interesses juridicamente.",
   },
   {
-    name: "Marcelo",
-    reviewerTag: "1 avaliação no Google · 7 meses atrás",
-    badge: "Transparência & Muita Segurança",
+    name: "Matias Fonseca",
+    reviewerTag: "Local Guide · 14 avaliações · 27 fotos no Google · 1 ano atrás",
+    badge: "100% Transparência nos Trâmites Jurídicos",
     rating: 5,
     content:
-      "Excelente atendimento! A advogada foi extremamente atenciosa e transparente em todas as etapas do processo, explicando de forma clara cada passo e me passando muita segurança. Recomendo muito!",
+      "Excelente profissional. Respeitosa com os clientes, muito atenciosa e sempre mantém informado dos trâmites jurídicos.",
+    reply: "Muito obrigada! Meu compromisso com os meus clientes é 100% transparência em todas as etapas.",
   },
   {
-    name: "Kathiane Andrade",
-    reviewerTag: "2 avaliações no Google · 7 meses atrás",
-    badge: "Domínio Total da Causa",
+    name: "Oscarina Aparecida",
+    reviewerTag: "4 avaliações no Google · 1 ano atrás",
+    badge: "Informa o Passo a Passo do Processo",
     rating: 5,
     content:
-      "Excelente profissional... Demonstra total domínio da causa e uma segurança que nos deixa muito tranquilos durante todo o processo. Nota 10",
+      "Eu gostei muito do trabalho dela sempre ela me informar como está o processo judicial e o passo a passo é uma ótima advogada",
+    reply: "Muito obrigada Oscarina, estou sempre a disposição! Cada caso é único.",
   },
   {
-    name: "Anael Gomes",
-    reviewerTag: "11 avaliações no Google · 7 meses atrás",
-    badge: "Defesa dos Direitos do Trabalhador",
+    name: "Michele Michele",
+    reviewerTag: "1 avaliação no Google · 1 ano atrás",
+    badge: "Ética, Precisa, Competente e Humana",
     rating: 5,
     content:
-      "Atendimento nota 1000, Defendendo os direitos do trabalhador com seriedade, experiência e compromisso com a justiça. ⚖️",
+      "Excelente profissional!!! Ética, precisa, competente e humana!",
+    reply: "Muito obrigada, meu maior objetivo será sempre a tratativa humanizada para com meus clientes!",
   },
   {
-    name: "David Celso",
-    reviewerTag: "1 avaliação no Google · 7 meses atrás",
-    badge: "Paciência para Tirar Dúvidas",
+    name: "Thais Aparecida",
+    reviewerTag: "2 avaliações no Google · 1 ano atrás",
+    badge: "Muita Competência & Dedicação",
     rating: 5,
     content:
-      "Ótima advogada e atende bem ajudar tirar dúvidas sobre o processo e te falar pra vc se alcamar",
+      "Pessoa maravilhosa de muita competência e uma excelente advogada.",
   },
   {
-    name: "João Vitor Moura",
-    reviewerTag: "1 avaliação no Google · 4 meses atrás",
-    badge: "Trabalho Rápido, Eficaz & Simpática",
+    name: "Gisele Souza",
+    reviewerTag: "2 avaliações no Google · 1 ano atrás",
+    badge: "Clara e Objetiva a Solucionar Dúvidas",
     rating: 5,
     content:
-      "Muito boa, fui atendido muito bem, equipe bem eficaz, trabalho rápido e eficiente. Doutora é muito simpática e educada, gostei bastei do processo",
+      "Atenciosa, competente, clara e objetiva a solucionar dúvidas.",
   },
   {
-    name: "MARCIA BARCELOS",
-    reviewerTag: "1 avaliação no Google · 7 meses atrás",
-    badge: "Competência & Empatia",
+    name: "Maria Cecília",
+    reviewerTag: "3 avaliações no Google · 1 ano atrás",
+    badge: "Atenciosa & Muito Competente",
     rating: 5,
     content:
-      "Advogada excepcional! Além de competente, é atenciosa e empática.",
+      "Profissional muito competente e atenciosa com os seus clientes.",
+    reply: "Muito obrigada! Estou sempre a disposição",
   },
   {
-    name: "Maria Luiza Luz",
-    reviewerTag: "11 avaliações · 1 foto no Google · 4 meses atrás",
-    badge: "Atuação Impecável",
+    name: "Valeria Isabel Pena Sepini",
+    reviewerTag: "1 avaliação no Google · 5 meses atrás",
+    badge: "Ótima Advogada & Excelente Profissional",
     rating: 5,
     content:
-      "IMPECÁVEL. Um atendimento que supera qualquer expectativa pela dedicação e pelo respeito com o cliente.",
+      "Ótima advogada,excelente profissional.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Como é calculado o valor da pensão alimentícia? Existe porcentagem fixa na lei?",
+    a: "Não existe uma porcentagem fixa obrigatória de 30% como muitos acreditam. A legislação brasileira determina que o valor seja fixado com base no binômio necessidade do alimentado (gastos reais com escola, moradia, alimentação, vestuário, saúde e lazer) e possibilidade econômica do alimentante (seus rendimentos reais). Também é apurada a capacidade financeira de ambos os genitores para garantir uma divisão equilibrada.",
+  },
+  {
+    q: "Quanto tempo demora um divórcio? É possível fazer direto em cartório?",
+    a: "Quando o casal está em consenso sobre a separação e a partilha, e não há filhos menores ou incapazes (ou havendo, as questões de guarda e alimentos já estiverem judicializadas), o divórcio pode ser realizado diretamente em Cartório de Notas por escritura pública em poucos dias. Quando há litígio ou bens complexos, o divórcio corre na via judicial, com pedidos imediatos de decretação liminar da separação.",
+  },
+  {
+    q: "O que é guarda compartilhada e como fica o regime de visitas?",
+    a: "A guarda compartilhada é a regra no Direito de Família brasileiro e significa que ambos os pais tomam juntos as decisões importantes sobre a vida dos filhos (escola, saúde, viagens e religião). Isso não significa divisão matemática de metade dos dias para cada um: a criança mantém uma residência de referência e um plano estruturado de convivência que assegure rotina saudável e afeto contínuo.",
+  },
+  {
+    q: "Qual é o prazo para abrir o inventário e o que acontece se atrasar?",
+    a: "O prazo legal estipulado pelo Código de Processo Civil é de até 60 dias a contar da data do falecimento. Caso o inventário seja aberto após esse prazo, o Estado aplica multa tributária sobre o ITCMD (Imposto sobre Transmissão Causa Mortis e Doação). Por isso, quanto mais ágil for a consulta jurídica, menor o custo tributário para a família.",
+  },
+  {
+    q: "Moro em outra cidade ou fora de Minas Gerais. Posso ser atendido online?",
+    a: "Sim, com total segurança e praticidade. Hoje a grande maioria dos processos de família e inventários tramita por meio digital (Processo Judicial Eletrônico - PJe). A Dra. Carolina atende clientes em todo o Brasil e no exterior por videoconferência e WhatsApp, com assinatura digital de procurações e sigilo absoluto.",
+  },
+  {
+    q: "Como funciona a primeira conversa e o contato pelo WhatsApp?",
+    a: "O primeiro contato é feito de forma simples e direta pelo WhatsApp oficial do escritório. A Dra. Carolina e sua equipe ouvem a sua situação com atenção e sigilo, esclarecem as principais dúvidas iniciais e informam a documentação necessária para o plano de ação jurídica mais vantajoso.",
   },
 ];
 
@@ -419,7 +454,7 @@ function Heading({
       <p className={isLight ? "eyebrow-dark" : "eyebrow-light"}>{eyebrow}</p>
       <h2
         className={`mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
-          isLight ? "text-[#1e1815]" : "text-[#faf6f2]"
+          isLight ? "text-[#1e0a12]" : "text-[#fbfaf5]"
         }`}
       >
         {children}
@@ -427,7 +462,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-[15px] leading-7 ${
-            isLight ? "text-[#54463d]" : "text-[#d4c2b5]"
+            isLight ? "text-[#624738]" : "text-[#e3d3be]"
           }`}
         >
           {description}
@@ -440,6 +475,7 @@ function Heading({
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeArea, setActiveArea] = useState<PracticeArea | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     const close = (event: KeyboardEvent) => {
@@ -456,104 +492,87 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0d0b0a] text-[#faf6f2] selection:bg-[#c5987f] selection:text-[#0d0b0a]">
-        {/* Navigation Bar - Refined Metallic Rose Gold & Obsidian Luxury */}
-        <header className="sticky top-0 z-40 border-b border-[#c5987f]/25 bg-[#0d0b0a]/95 backdrop-blur-xl shadow-card">
-          <div className="mx-auto flex h-[86px] sm:h-[94px] lg:h-[100px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 xl:px-12">
-            {/* Left Group: Logo + Navigation Links */}
-            <div className="flex items-center gap-5 xl:gap-8 min-w-0">
-              <a
-                href="#inicio"
-                aria-label="Ione Barcelos — Advogada - Início"
-                onClick={closeMenu}
-                className="flex shrink-0 items-center transition-opacity hover:opacity-95"
-              >
+      <main className="overflow-hidden bg-[#0f0508] text-[#fbfaf5] selection:bg-[#dca94e] selection:text-[#0f0508]">
+        {/* Navigation Bar - Refined Metallic Imperial Gold & Velvet Bordeaux Luxury */}
+        <header className="sticky top-0 z-40 border-b border-[#dca94e]/25 bg-[#0f0508]/95 backdrop-blur-xl shadow-card">
+          <div className="mx-auto flex h-[82px] sm:h-[88px] lg:h-[94px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:px-12">
+            {/* Logo on Left */}
+            <a
+              href="#inicio"
+              aria-label="Carolina Vasconcelos — Advocacia - Início"
+              onClick={closeMenu}
+              className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95"
+            >
+              <div className="relative size-10 sm:size-12 shrink-0">
                 <Image
-                  src={LOGO_SRC}
-                  alt="Ione Barcelos — Advogada"
-                  width={220}
-                  height={92}
+                  src={LOGO_SYMBOL_SRC}
+                  alt="Monograma CV Carolina Vasconcelos"
+                  fill
                   priority
                   unoptimized
-                  className="h-[46px] sm:h-[54px] lg:h-[58px] xl:h-[64px] w-auto object-contain"
+                  className="object-contain"
                 />
-              </a>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-sm sm:text-base font-bold tracking-[0.14em] text-[#fbfaf5] leading-tight">
+                  CAROLINA VASCONCELOS
+                </span>
+                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-[#fdd984] uppercase">
+                  ADVOCACIA
+                </span>
+              </div>
+            </a>
 
-              <nav
-                aria-label="Navegação principal"
-                className="hidden items-center gap-3 xl:gap-5 lg:flex whitespace-nowrap text-[11px] xl:text-xs"
-              >
-                <a className="nav-link" href="#inicio">
-                  Início
-                </a>
-                <a className="nav-link" href="#sobre">
-                  A Advogada
-                </a>
-                <a className="nav-link" href="#atuacao">
-                  Atuação
-                </a>
-                <a className="nav-link" href="#diferenciais">
-                  Diferenciais
-                </a>
-                <a className="nav-link" href="#avaliacoes">
-                  Avaliações
-                </a>
-                <a className="nav-link" href="#contato">
-                  Contato
-                </a>
-              </nav>
-            </div>
+            {/* Desktop Navigation Menu (Center) */}
+            <nav
+              aria-label="Navegação principal"
+              className="hidden lg:flex items-center gap-3.5 xl:gap-6 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
+            >
+              <a className="nav-link" href="#inicio">
+                Início
+              </a>
+              <a className="nav-link" href="#sobre">
+                A Advogada
+              </a>
+              <a className="nav-link" href="#atuacao">
+                Especialidades
+              </a>
+              <a className="nav-link hidden xl:inline-block" href="#diferenciais">
+                Diferenciais
+              </a>
+              <a className="nav-link" href="#avaliacoes">
+                Avaliações
+              </a>
+              <a className="nav-link hidden 2xl:inline-block" href="#faq">
+                Dúvidas
+              </a>
+              <a className="nav-link" href="#contato">
+                Contato
+              </a>
+            </nav>
 
-            {/* Right Group: Social icons + WhatsApp CTA */}
-            <div className="hidden items-center gap-2 xl:gap-2.5 lg:flex shrink-0">
-              <a
-                href={GOOGLE_SEARCH_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Avaliações da Dra. Ione Barcelos no Google"
-                className="grid size-9 xl:size-10 place-items-center rounded-lg border border-[#c5987f]/30 bg-[#141110] text-[#d4c2b5] transition-all hover:border-[#e8c8b5] hover:bg-[#221c1a] hover:text-white shadow-xs"
-                title="5,0 ★ no Google (22 avaliações)"
-              >
-                <GoogleIcon size={15} />
-              </a>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram da Dra. Ione Barcelos"
-                className="grid size-9 xl:size-10 place-items-center rounded-lg border border-[#c5987f]/30 bg-[#141110] text-[#d4c2b5] transition-all hover:border-[#e8c8b5] hover:bg-[#221c1a] hover:text-white shadow-xs"
-                title={`Instagram ${INSTAGRAM_HANDLE}`}
-              >
-                <InstagramIcon size={15} />
-              </a>
-              <a
-                href={`tel:+${WHATSAPP_NUMBER}`}
-                aria-label="Ligar para a Dra. Ione Barcelos"
-                className="hidden xl:grid size-10 place-items-center rounded-lg border border-[#c5987f]/30 bg-[#141110] text-[#d4c2b5] transition-all hover:border-[#e8c8b5] hover:bg-[#221c1a] hover:text-white shadow-xs"
-                title={`Ligar: ${PHONE_DISPLAY}`}
-              >
-                <Phone size={15} />
-              </a>
-
+            {/* Right Action: Primary Glowing WhatsApp Button */}
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Ione Barcelos! Gostaria de agendar um atendimento trabalhista com seu escritório."
+                  "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento de Direito de Família."
                 )}
                 target="_blank"
                 size="sm"
                 variant="gold"
                 className="rounded-lg shadow-sm text-[11px] px-4 py-2.5 xl:px-5 xl:py-3 whitespace-nowrap"
               >
-                <WhatsAppIcon size={15} className="text-[#0d0b0a]" /> Falar no WhatsApp <ArrowUpRight size={13} className="text-[#0d0b0a]" />
+                <WhatsAppIcon size={15} className="text-[#0f0508]" /> Falar no WhatsApp <ArrowUpRight size={13} className="text-[#0f0508]" />
               </GlowingButton>
             </div>
 
+            {/* Mobile Hamburger Button */}
             <button
               type="button"
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-lg border border-[#c5987f]/40 bg-[#141110] text-[#faf6f2] lg:hidden shadow-xs ml-auto"
+              className="grid size-10 sm:size-11 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#17090d] text-[#fbfaf5] lg:hidden shadow-xs ml-auto cursor-pointer"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -569,46 +588,47 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#c5987f]/25 bg-[#141110] px-6 text-[#faf6f2] lg:hidden"
+                className="overflow-hidden border-t border-[#dca94e]/25 bg-[#17090d] px-6 text-[#fbfaf5] lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
                     ["A Advogada", "#sobre"],
-                    ["Áreas de Atuação", "#atuacao"],
+                    ["Especialidades", "#atuacao"],
                     ["Diferenciais", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
-                    ["Contato & Atendimento", "#contato"],
+                    ["Dúvidas Frequentes", "#faq"],
+                    ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#d4c2b5] hover:text-[#e8c8b5]"
+                      className="py-3 text-sm font-medium text-[#e3d3be] hover:text-[#fdd984]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fcebdd]/85 bg-gradient-to-r from-[#a56f54] via-[#e8c8b5] to-[#a56f54] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0d0b0a] shadow-[0_4px_16px_rgba(197,152,127,0.4),inset_0_1px_1px_rgba(255,255,255,0.85)] transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fbefb4]/90 bg-gradient-to-r from-[#c8953c] via-[#fdd984] to-[#a67528] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0f0508] shadow-[0_4px_16px_rgba(220,169,78,0.45),inset_0_1px_1px_rgba(255,255,255,0.9)] transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Ione Barcelos! Gostaria de conversar com você sobre uma questão trabalhista."
+                        "Olá, Dra. Carolina! Gostaria de conversar com você sobre uma questão de família."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} className="text-[#0d0b0a]" /> WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} className="text-[#0f0508]" /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#c5987f]/40 bg-[#221c1a] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#faf6f2] transition-all hover:border-[#e8c8b5]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#dca94e]/40 bg-[#240e15] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbfaf5] transition-all hover:border-[#fdd984]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (22 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (21 avaliações)
                     </a>
                   </div>
                 </div>
@@ -617,14 +637,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Rose Gold Aura & Warm Obsidian Luxury */}
+        {/* Hero Section - Imperial Gold Aura & Velvet Royal Burgundy */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#c5987f]/25 bg-gradient-to-b from-[#0d0b0a] via-[#141110] to-[#0d0b0a]"
+          className="relative isolate scroll-mt-24 border-b border-[#dca94e]/25 bg-gradient-to-b from-[#0f0508] via-[#17090d] to-[#0f0508]"
         >
-          {/* Subtle rose gold and copper ambient lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-[#c5987f]/12 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-[#e8c8b5]/8 blur-3xl" />
+          {/* Subtle gold and wine ambient lighting aura */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#dca94e]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[30rem] rounded-full bg-[#a4332b]/14 blur-3xl" />
 
           <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
             <motion.div
@@ -635,30 +655,30 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c5987f]/50 bg-[#221c1a]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8c8b5] shadow-xs backdrop-blur-md"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/50 bg-[#240e15]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984] shadow-xs backdrop-blur-md"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5987f] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#fcebdd]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dca94e] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#fbefb4]"></span>
                 </span>
-                <span>DRA. IONE BARCELOS · DIREITO TRABALHISTA · VALE DO AÇO - MG</span>
+                <span>DRA. CAROLINA VASCONCELOS · DIREITO DAS FAMÍLIAS & SUCESSÕES</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#faf6f2] sm:text-[2.6rem] sm:leading-[1.12] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbfaf5] sm:text-[2.65rem] sm:leading-[1.12] lg:text-[3.35rem] xl:text-[3.55rem]"
               >
-                Trabalhar faz parte da vida. Adoecer por causa do trabalho{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#e8c8b5] via-[#c5987f] to-[#fff5ea]">
-                  não deveria fazer.
+                Protegendo o que mais importa:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
+                  sua família, seus filhos e o seu patrimônio.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#d4c2b5] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-[#e3d3be] sm:text-base sm:leading-8"
               >
-                Sob a liderança da <strong className="font-semibold text-white">Dra. Ione Barcelos</strong>, nosso escritório é referência em atuação combativa e acolhedora em <strong className="font-semibold text-white">Direito Trabalhista, Saúde Mental no Trabalho (Burnout, Depressão e Ansiedade), Doenças Ocupacionais, Acidentes de Trabalho, Rescisão Indireta e Verbas Rescisórias</strong>. Atendimento humanizado, transparente e dedicado com nota máxima 5,0 ★ no Google e presença em todo o Vale do Aço e Brasil.
+                Sob a condução da <strong className="font-semibold text-white">Dra. Carolina Vasconcelos</strong>, nosso escritório é referência em atuação humanizada, estratégica e combativa em <strong className="font-semibold text-white">Divórcio, Pensão Alimentícia, Guarda de Filhos, Inventário e Partilha de Bens</strong>. Mais de 300 processos em 2 anos com nota máxima 5,0 ★ unânime no Google em Paraguaçu, Sul de Minas e em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -667,49 +687,49 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ione Barcelos! Gostaria de conversar para analisar uma questão trabalhista."
+                    "Olá, Dra. Carolina Vasconcelos! Gostaria de conversar para analisar uma questão de Direito de Família."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0d0b0a]" /> Iniciar Atendimento no WhatsApp
+                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar no WhatsApp com a Dra. Carolina
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#c5987f]/45 bg-[#141110]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#faf6f2] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fcebdd] hover:bg-[#221c1a] hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/45 bg-[#17090d]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbfaf5] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fbefb4] hover:bg-[#240e15] hover:text-white"
                 >
                   Conhecer Especialidades{" "}
                   <ArrowRight
                     size={14}
-                    className="transition-transform group-hover:translate-x-1 text-[#e8c8b5]"
+                    className="transition-transform group-hover:translate-x-1 text-[#fdd984]"
                   />
                 </a>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#c5a882]/25 pt-5 text-xs text-[#a49184]"
+                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#dca94e]/25 pt-5 text-xs text-[#b8a594]"
               >
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#faf6f2] transition-colors hover:text-[#e8c8b5]"
+                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5] transition-colors hover:text-[#fdd984]"
                 >
-                  <Star size={14} className="fill-[#c5987f] text-[#c5987f]" /> 5,0 ★ no Google (22 avaliações 100% 5 estrelas)
+                  <Star size={14} className="fill-[#dca94e] text-[#dca94e]" /> 5,0 ★ no Google (21 avaliações 100% 5 estrelas)
                 </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#faf6f2]">
-                  <Clock size={14} className="text-[#c5987f]" /> Aberto · Fecha 22:00
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5]">
+                  <Clock size={14} className="text-[#dca94e]" /> Atendimento Segunda a Sexta a partir das 08h
                 </span>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#faf6f2]">
-                  <MapPin size={14} className="text-[#c5987f]" /> Vale do Aço · MG & Atuação em todo o Brasil
+                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5]">
+                  <MapPin size={14} className="text-[#dca94e]" /> Sede em Paraguaçu · MG & Atuação Nacional
                 </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Ione Barcelos */}
+            {/* Hero Visual Presentation - Dra. Carolina Vasconcelos */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -720,38 +740,38 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[420px] sm:max-w-[450px] lg:max-w-[480px] xl:max-w-[500px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c5987f]/50 bg-[#141110] shadow-2xl ring-1 ring-[#e8c8b5]/35">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#dca94e]/50 bg-[#17090d] shadow-2xl ring-1 ring-[#fdd984]/35">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Ione Barcelos — Advogada Trabalhista no Vale do Aço"
+                  alt="Dra. Carolina Vasconcelos — Advogada de Família e Sucessões"
                   fill
                   priority
                   loading="eager"
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0d0b0a] via-[#0d0b0a]/85 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0f0508] via-[#0f0508]/85 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
                   <div>
                     <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dra. Ione Barcelos
+                      Dra. Carolina Vasconcelos
                     </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#e8c8b5]">
-                      Advogada Trabalhista · Saúde Mental & Relações de Trabalho
+                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#fdd984]">
+                      Direito das Famílias & Sucessões
                     </p>
                     <p className="mt-0.5 text-[11px] text-stone-300">
-                      Vale do Aço (Coronel Fabriciano · Ipatinga · Timóteo) & MG
+                      PENSÃO · GUARDA · DIVÓRCIO · INVENTÁRIO
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#c5987f]/60 bg-[#0d0b0a]/85 text-[#e8c8b5] backdrop-blur-sm shadow-md">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dca94e]/60 bg-[#0f0508]/85 text-[#fdd984] backdrop-blur-sm shadow-md">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#c5987f]/50 bg-[#0d0b0a]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#e8c8b5] shadow-md backdrop-blur-md sm:-left-4">
-                VALE DO AÇO · ADVOCACIA HUMANIZADA
+              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#dca94e]/50 bg-[#0f0508]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#fdd984] shadow-md backdrop-blur-md sm:-left-4">
+                PARAGUAÇU · MG & ATUAÇÃO DIGITAL
               </div>
 
               {/* Floating Google 5.0 Star Rating */}
@@ -759,26 +779,26 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#c5987f]/60 bg-[#141110]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#e8c8b5] hover:bg-[#221c1a] sm:-right-4"
+                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#dca94e]/60 bg-[#17090d]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#fdd984] hover:bg-[#240e15] sm:-right-4"
               >
                 <div className="flex items-center gap-2">
                   <GoogleIcon size={16} />
                   <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#c5987f]">
+                    <div className="flex gap-0.5 text-[#dca94e]">
                       {Array.from({ length: 5 }, (_, i) => (
-                        <Star key={i} size={12} className="fill-[#c5987f] text-[#c5987f]" />
+                        <Star key={i} size={12} className="fill-[#dca94e] text-[#dca94e]" />
                       ))}
                     </div>
                     <span className="font-serif text-sm font-bold text-white">
                       5,0
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#e8c8b5]">
+                    <span className="text-[9px] uppercase tracking-wider text-[#fdd984]">
                       / 5,0
                     </span>
                   </div>
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#d4c2b5]">
-                  22 Avaliações no Google (100% 5 Estrelas)
+                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#e3d3be]">
+                  21 Avaliações no Google (100% 5 Estrelas)
                 </p>
               </a>
             </motion.div>
@@ -788,39 +808,39 @@ export default function Home() {
         {/* Highlights Banner - Authority Metrics */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#c5987f]/25 bg-[#141110]"
+          className="border-b border-[#dca94e]/25 bg-[#17090d]"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima impecável com 22 avaliações comprovando acolhimento e dedicação",
+                "nota máxima unânime em 21 avaliações comprovando atendimento impecável e humanizado",
               ],
               [
-                "Saúde Mental & Trabalho",
-                "especialização em Burnout, depressão ocupacional, assédio moral e perseguição",
+                "+300 Processos",
+                "em dois anos dedicados exclusivamente ao Direito das Famílias e Sucessões",
               ],
               [
-                "Atendimento Humanizado",
-                "escuta paciente, acolhimento sincero e dedicação como se a causa fosse dela",
+                "6.000+ Seguidores",
+                "acompanhando orientações jurídicas diárias no Instagram @carolinav.advogada",
               ],
               [
-                "Vale do Aço • MG • Brasil",
-                "atuação presente em Coronel Fabriciano, Ipatinga, Timóteo e tribunais do país",
+                "Atendimento Próximo",
+                "escuta atenta, sem julgamentos e aviso rápido a cada movimentação processual",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#c5987f]/25"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dca94e]/25"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#e8c8b5] sm:text-2xl">
+                <span className="font-serif text-xl font-semibold text-[#fdd984] sm:text-2xl whitespace-nowrap">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#d4c2b5]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-[#e3d3be]">
                   {label}
                 </span>
               </div>
@@ -828,13 +848,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Ione Barcelos - Dobra Clara (Alabastro & Rosé Nobre) */}
+        {/* Sobre a Dra. Carolina Vasconcelos - Dobra Clara (Alabastro, Marfim & Toques Rubi) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#c5987f]/30 bg-[#fbf8f5] py-20 text-[#1e1815] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-y border-[#dca94e]/30 bg-[#fbf8f5] py-20 text-[#1e0a12] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Ione Barcelos Portrait Photo */}
+            {/* Visual presentation - Dra. Carolina Vasconcelos Portrait Photo */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -842,37 +862,37 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#c5987f]/45 bg-white shadow-2xl ring-1 ring-[#c5987f]/20">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#dca94e]/45 bg-white shadow-2xl ring-1 ring-[#dca94e]/20">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Ione Barcelos — Advogada Trabalhista e Defensora da Saúde Mental"
+                  alt="Dra. Carolina Vasconcelos — Especialista em Direito das Famílias e Sucessões"
                   fill
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1e1815]/80 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1e0a12]/80 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#c5987f]/40 bg-white/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#85523b]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dca94e]/40 bg-white/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#911e24]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#85523b]">
-                    Advocacia Trabalhista Humanizada
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#911e24]">
+                    Advocacia Familiarista Humanizada
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#1e1815]">
-                  Ione Barcelos — Advogada
+                <p className="mt-1 font-serif text-lg leading-snug text-[#1e0a12]">
+                  Carolina Vasconcelos — Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#85523b]">
-                  Saúde Mental & Relações de Trabalho
+                <p className="mt-0.5 text-[11px] font-medium text-[#911e24]">
+                  Pensão · Guarda · Divórcio · Inventário
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#78665a]">
-                  Vale do Aço (Coronel Fabriciano · Ipatinga · Timóteo) · MG
+                <p className="mt-1 text-[11px] leading-4 text-[#7d6b5e]">
+                  Av. Gonçalves Leite, 156 - Centro · Paraguaçu - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c5987f]/45 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#dca94e]/45 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -884,46 +904,46 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c5987f]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#85523b] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#dca94e]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#911e24] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#85523b]" />
+                <span className="size-2 shrink-0 rounded-full bg-[#911e24]" />
                 <span>SOBRE A ADVOGADA & MISSÃO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1e1815] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1e0a12] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia trabalhista construída sobre empatia profunda, rigor técnico e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#85523b] via-[#b88368] to-[#5e3522]">
-                  compromisso com quem trabalha.
+                Uma advocacia construída sobre empatia verdadeira, rigor técnico e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
+                  proteção incondicional da sua família.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#54463d]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-[#624738]"
               >
-                Quem vive e trabalha no <strong className="font-bold text-[#1e1815]">Vale do Aço</strong> — seja nas indústrias siderúrgicas e metalúrgicas, no comércio, na área hospitalar ou na prestação de serviços — sabe a dedicação exigida no dia a dia. Porém, <strong className="font-bold text-[#1e1815]">trabalhar faz parte da vida; adoecer por causa do trabalho não deveria fazer</strong>.
+                O Direito de Família e Sucessões não lida com papéis frios: <strong className="font-bold text-[#1e0a12]">ele lida com a vida de mães, pais, filhos e o patrimônio construído com anos de esforço</strong>. Cada divórcio, disputa de guarda ou inventário traz incertezas e angústias que demandam acolhimento humano e segurança jurídica inabalável.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#54463d]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-[#624738]"
               >
-                A <strong className="font-bold text-[#1e1815]">Dra. Ione Barcelos</strong> consolidou sua atuação na advocacia trabalhista por uma convicção inegociável: colocar a pessoa humana em primeiro lugar. Em momentos de extrema fragilidade — quando o empregado enfrenta <strong className="font-bold text-[#1e1815]">Burnout, depressão ocupacional, assédio moral, jornadas desumanas ou acidentes</strong> —, a Dra. Ione oferece não apenas rigor técnico e combate perante os tribunais, mas acolhimento genuíno e paciência para ouvir cada detalhe.
+                A <strong className="font-bold text-[#1e0a12]">Dra. Carolina Vasconcelos</strong> consolidou sua carreira através de uma postura diferenciada: aliar profundo domínio da legislação e jurisprudência dos tribunais a uma escuta atenta, acessível e sem julgamentos. Com mais de 300 processos em 2 anos e 100% de avaliações 5 estrelas no Google, seu compromisso é trazer clareza em cada passo e defender os seus interesses com vigor inabalável.
               </motion.p>
 
               {/* Client Quote Card from real Google Reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#c5987f]/35 bg-white p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-[#dca94e]/35 bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2a221d]">
-                  &ldquo;Dra Ione Barcelos, advogada maravilhosa empática e dedicada no que faz. Abraçou minha causa e acreditou em mim em um momento de fragilidade onde muitos desacreditaram da minha causa. Sou grata por Deus ter colocado essa advogada em minha vida! Ela é uma pessoa confiável e atenciosa. Com toda certeza uma das melhores do Vale do aço 💘&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2c151c]">
+                  &ldquo;Doutora Carolina é uma advogada humanizada meu processo foi acolhido por ela e em todo tempo me deu suporte, sempre me orientando e acompanhando a todo momento o movimento dele. Indicação minha é de olhos fechados!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#85523b]">
-                  — Sthefany Lima · Avaliação real verificada no Google Meu Negócio
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#911e24]">
+                  — Ingrid Miranda Moura · Avaliação real no Google Meu Negócio (5,0 ★)
                 </p>
               </motion.div>
 
@@ -932,45 +952,45 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-[#c5987f]/30 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#1e1815]">5,0 ★ no Google</p>
-                  <p className="mt-0.5 text-[11px] text-[#78665a]">
-                    22 avaliações 100% 5 estrelas
+                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#1e0a12]">5,0 ★ no Google</p>
+                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
+                    21 avaliações 100% 5 estrelas
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#c5987f]/30 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#1e1815]">Acolhimento Real</p>
-                  <p className="mt-0.5 text-[11px] text-[#78665a]">
-                    Escuta atenta e sem julgamentos
+                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-[#1e0a12]">+300 Processos</p>
+                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
+                    Especialização em Família e Sucessões
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#c5987f]/30 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#1e1815]">Clareza & Agilidade</p>
-                  <p className="mt-0.5 text-[11px] text-[#78665a]">
-                    Avisos rápidos a cada movimento
+                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-[#1e0a12]">Transparência Total</p>
+                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
+                    Você sabe tudo em primeira mão
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#1e1815] sm:grid-cols-2"
+                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#1e0a12] sm:grid-cols-2"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                  <span>Atuação em Coronel Fabriciano, Ipatinga, Timóteo e Vale do Aço</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                  <span>Sede física em Paraguaçu e atendimento em todo o Sul de Minas</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                  <span>Especialista em Burnout, Doenças Ocupacionais e Rescisão Indireta</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                  <span>Especialista em Divórcio, Pensão, Guarda e Inventário</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Ione Barcelos</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Carolina</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                  <span>Atuação perante a Justiça do Trabalho de MG (TRT-3) e Tribunais</span>
+                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                  <span>Atendimento online seguro para clientes de todo o Brasil</span>
                 </div>
               </motion.div>
 
@@ -980,18 +1000,18 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ione Barcelos! Gostaria de agendar um atendimento para conversar sobre a minha situação no trabalho."
+                    "Olá, Dra. Carolina! Gostaria de agendar um atendimento para conversar sobre a minha família."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0d0b0a]" /> Falar com a Dra. Ione Barcelos
+                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar com a Dra. Carolina Vasconcelos
                 </GlowingButton>
                 <a
                   href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#54463d] transition-colors hover:text-[#85523b]"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#624738] transition-colors hover:text-[#911e24]"
                 >
                   <Phone size={15} /> {PHONE_DISPLAY}
                 </a>
@@ -1003,7 +1023,7 @@ export default function Home() {
         {/* Pilares de Atuação / Especialidades */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#c5987f]/25 bg-[#141110] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#17090d] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -1014,16 +1034,16 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="ÁREAS DE ATUAÇÃO TRABALHISTA ESPECIALIZADA"
-                description="Soluções jurídicas técnicas, modernas e humanizadas para resguardar sua saúde, defender seus direitos e restabelecer sua dignidade profissional."
+                eyebrow="ÁREAS DE ATUAÇÃO EM DIREITO DE FAMÍLIA E SUCESSÕES"
+                description="Soluções jurídicas preventivas e contenciosas conduzidas com sensibilidade, agilidade e extremo rigor técnico para resguardar a sua tranquilidade."
               >
-                Especialidades completas para atender você no{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e8c8b5] via-[#c5987f] to-[#fff5ea]">
-                  Vale do Aço, Minas Gerais e em todo o Brasil.
+                Especialidades dedicadas a proteger você e seus filhos em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
+                  Paraguaçu, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#a49184]">
-                Clique em qualquer área de atuação abaixo para conferir os procedimentos detalhados e solicitar atendimento direto via WhatsApp.
+              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#b8a594]">
+                Clique em qualquer especialidade abaixo para conferir os procedimentos detalhados e solicitar orientação direta via WhatsApp.
               </p>
             </motion.div>
 
@@ -1040,25 +1060,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#c5987f]/30 bg-[#181413] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#e8c8b5] hover:shadow-gold sm:p-8"
+                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#dca94e]/30 bg-[#1c0b11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#fdd984] hover:shadow-gold sm:p-8"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#c5987f]/40 bg-[#0d0b0a] text-[#e8c8b5] shadow-xs transition-colors group-hover:bg-[#c5987f] group-hover:text-[#0d0b0a] group-hover:border-[#fcebdd]">
+                      <span className="grid size-12 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#0f0508] text-[#fdd984] shadow-xs transition-colors group-hover:bg-[#dca94e] group-hover:text-[#0f0508] group-hover:border-[#fbefb4]">
                         <Icon size={22} strokeWidth={1.5} />
                       </span>
-                      <span className="font-serif text-2xl text-[#c5987f]/40 group-hover:text-[#e8c8b5]">
+                      <span className="font-serif text-2xl text-[#dca94e]/40 group-hover:text-[#fdd984]">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#c5987f]/30 bg-[#0d0b0a] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#e8c8b5] shadow-xs">
+                      <span className="inline-block rounded-md border border-[#dca94e]/30 bg-[#0f0508] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fdd984] shadow-xs">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white group-hover:text-[#e8c8b5] transition-colors">
+                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white group-hover:text-[#fdd984] transition-colors">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#d4c2b5]">
+                      <p className="mt-3 text-[13px] leading-6 text-[#e3d3be]">
                         {area.summary}
                       </p>
                     </div>
@@ -1066,7 +1086,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8c8b5] hover:text-white"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984] hover:text-white cursor-pointer"
                     >
                       Ver detalhes e procedimentos{" "}
                       <ArrowRight
@@ -1081,33 +1101,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Ione Barcelos - Dobra Clara */}
+        {/* Por Que Escolher a Dra. Carolina Vasconcelos - Dobra Clara */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#c5987f]/30 bg-[#f5efeb] py-20 text-[#1e1815] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dca94e]/30 bg-[#f5ebd4]/35 py-20 text-[#1e0a12] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <Heading
                 theme="light"
-                eyebrow="EMPATIA, COMBATE TÉCNICO & ATENDIMENTO HUMANO"
-                description="Quando a sua saúde, seu sustento e sua dignidade estão em jogo, você merece uma advogada acessível, empática e que realmente resolve."
+                eyebrow="ACOLHIMENTO HUMANO, COMBATE TÉCNICO & AGILIDADE"
+                description="Quando o futuro dos seus filhos e a sua tranquilidade estão em jogo, você merece uma advogada humanizada, acessível e que realmente resolve."
               >
                 Por que confiar seus direitos à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#85523b] via-[#b88368] to-[#5e3522]">
-                  Dra. Ione Barcelos?
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
+                  Dra. Carolina Vasconcelos?
                 </span>
               </Heading>
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Ione Barcelos! Gostaria de conversar para entender os passos do meu processo trabalhista."
+                  "Olá, Dra. Carolina! Gostaria de conversar para entender os passos do meu processo de família."
                 )}
                 target="_blank"
                 size="md"
                 variant="gold"
                 className="rounded-lg shadow-sm"
               >
-                <WhatsAppIcon size={16} className="text-[#0d0b0a]" /> Falar no WhatsApp
+                <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar no WhatsApp
               </GlowingButton>
             </div>
 
@@ -1118,49 +1138,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#c5987f]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b88368] hover:shadow-[0_12px_36px_rgba(197,152,127,0.18)] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.2)] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5987f]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#85523b]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Direto
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dca94e]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#911e24]">
+                      <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
                     </span>
-                    <span className="text-xs font-semibold text-[#85523b]">
+                    <span className="text-xs font-semibold text-[#911e24]">
                       Sempre ao Seu Lado
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e1815] sm:text-[1.75rem]">
-                    Comunicação Sem Juridiquês, Paciência e Respostas Claras
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e0a12] sm:text-[1.75rem]">
+                    Comunicação Transparente, Sem Juridiquês e Respostas Rápidas
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#54463d]">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Ione Barcelos é aliar alto preparo técnico a uma escuta atenta e paciente. Ela explica cada etapa sem palavras difíceis, tranquiliza quem está angustiado e mantém você ciente de todo o processo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#624738]">
+                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Carolina é aliar alto rigor técnico a um atendimento empático. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2a221d]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c151c]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Contato direto pelo WhatsApp para sanar dúvidas sempre que precisar</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Contato direto pelo WhatsApp para sanar dúvidas sempre que você precisar</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Retorno imediato: na hora que o processo movimenta ela já avisa com alegria</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Retorno imediato: você é mantido ciente de todos os trâmites do processo</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Transparência total e acolhimento em momentos de fragilidade física ou mental</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Acolhimento sincero e seguro em momentos delicados de separação ou luto</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#c5987f]/25 pt-4">
+                <div className="mt-7 border-t border-[#dca94e]/25 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ione Barcelos! Gostaria de tirar dúvidas com você sobre o meu caso trabalhista."
+                      "Olá, Dra. Carolina! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5987f]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e1815] transition-all hover:border-[#85523b] hover:bg-[#c5987f] hover:text-[#0d0b0a]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e0a12] transition-all hover:border-[#911e24] hover:bg-[#dca94e] hover:text-[#0f0508]"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Ione Barcelos
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Carolina
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1173,46 +1193,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#c5987f]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b88368] hover:shadow-[0_12px_36px_rgba(197,152,127,0.18)] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.2)] sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c5987f]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#85523b]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dca94e]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#911e24]">
                       <Award size={14} /> Solidez & Domínio Processual
                     </span>
-                    <span className="text-xs font-semibold text-[#85523b]">
-                      Justiça Para Quem Trabalha
+                    <span className="text-xs font-semibold text-[#911e24]">
+                      +300 Processos Conduzidos
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e1815] sm:text-[1.75rem]">
-                    Especialização em Saúde Mental, Acidentes e Rescisão Indireta
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e0a12] sm:text-[1.75rem]">
+                    Especialização em Famílias, Pensão, Guarda & Sucessões
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#54463d]">
-                    Causas envolvendo Burnout, acidentes de trabalho e assédio moral demandam fundamentação médica e pericial minuciosa. A Dra. Ione constrói teses robustas e combativas, garantindo reparações justas e a libertação de ambientes de trabalho nocivos com todas as indenizações.
+                  <p className="mt-3 text-[14px] leading-relaxed text-[#624738]">
+                    Demandas familiares exigem estratégias processuais refinadas: investigação de ocultação de bens, pedidos cautelares de urgência e defesa dos direitos dos filhos. A Dra. Carolina constrói teses contundentes para garantir acordos justos ou vitórias expressivas em Juízo.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2a221d]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c151c]">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Estratégia pericial sólida para demonstrar o nexo de causalidade ocupacional</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Estratégia pericial para comprovação de rendimentos reais e patrimônio oculto</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Cálculo minucioso de horas extras, adicionais de insalubridade e FGTS sonegados</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Atuação rápida para obtenção de alimentos provisionais e medidas de urgência</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#85523b]" />
-                      <span>Atuação firme em audiências e perante o Tribunal Regional do Trabalho (TRT-3)</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
+                      <span>Experiência comprovada com mais de 300 processos em apenas dois anos</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#c5987f]/25 pt-4">
+                <div className="mt-7 border-t border-[#dca94e]/25 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ione Barcelos! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Carolina! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#c5987f]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e1815] transition-all hover:border-[#85523b] hover:bg-[#c5987f] hover:text-[#0d0b0a]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e0a12] transition-all hover:border-[#911e24] hover:bg-[#dca94e] hover:text-[#0f0508]"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1226,26 +1246,26 @@ export default function Home() {
         </section>
 
         {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#c5987f]/25 bg-[#141110] py-20 text-[#faf6f2] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#c5987f]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#e8c8b5]/10 blur-3xl" />
+        <section className="relative overflow-hidden border-t border-[#dca94e]/25 bg-[#17090d] py-20 text-[#fbfaf5] sm:py-24 lg:py-28">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dca94e]/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#a4332b]/10 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="COMO CONDUZIMOS O SEU CASO"
-                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, sua saúde e a segurança de sua família."
+                eyebrow="COMO CUIDAMOS DO SEU CASO"
+                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seu patrimônio e a proteção dos seus filhos."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e8c8b5] via-[#c5987f] to-[#fff5ea]">
-                  fazer valer seus direitos e restabelecer sua dignidade.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
+                  resolver sua questão familiar com dignidade e segurança.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#c5987f]/35 bg-[#181413] p-6 font-serif text-base italic leading-7 text-[#faf6f2] shadow-card">
-                &ldquo;Trabalhar faz parte da vida; adoecer por causa do trabalho não deveria fazer. Nossa missão é acolher o trabalhador com empatia, escutar sua dor e aplicar a técnica jurídica com vigor para alcançar a solução mais justa.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e8c8b5]">
-                  — Dra. Ione Barcelos · Advogada Trabalhista
+              <blockquote className="mt-8 rounded-xl border border-[#dca94e]/35 bg-[#1c0b11] p-6 font-serif text-base italic leading-7 text-[#fbfaf5] shadow-card">
+                &ldquo;Cada caso de família é único. Nosso compromisso é trazer 100% de transparência em todas as etapas, garantindo que você se sinta seguro e respaldado do início até a conclusão final.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#fdd984]">
+                  — Dra. Carolina Vasconcelos · Advogada Familiarista
                 </footer>
               </blockquote>
             </div>
@@ -1255,23 +1275,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#c5987f]/25"
+              className="divide-y divide-[#dca94e]/25"
             >
               {[
                 [
                   "01",
-                  "Escuta Atenta & Diagnóstico Trabalhista",
-                  "Conversa reservada e sem julgamentos via WhatsApp, ligação ou atendimento direto. Análise detalhada do ambiente laboral, laudos médicos, ponto e contracheques.",
+                  "Escuta Humanizada & Diagnóstico Jurídico",
+                  "Conversa reservada pelo WhatsApp ou em nosso escritório para entender os fatos com respeito e sigilo. Análise da documentação, bens, despesas e necessidades da família.",
                 ],
                 [
                   "02",
-                  "Definição Estratégica & Execução Rápida",
-                  "Apresentação clara dos seus direitos, rotas cabíveis (rescisão indireta, indenização por dano moral, perícia de insalubridade) e ajuizamento célere da ação.",
+                  "Estratégia Sob Medida & Ação Rápida",
+                  "Apresentação das alternativas mais seguras e econômicas (acordo extrajudicial em cartório ou ação judicial firme) com protocolo célere de pedidos urgentes de alimentos e medidas protetivas.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Próximo & Notícias em Primeira Mão",
-                  "Atuação combativa em audiências e perícias judiciais, mantendo você informado a cada andamento com alegria e total transparência até a vitória final.",
+                  "Acompanhamento Próximo & Atualização Contínua",
+                  "Você nunca fica sem saber o que está acontecendo. Informamos cada andamento do processo em tempo real, com linguagem simples e transparência total até a vitória jurídica.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1279,12 +1299,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#e8c8b5]">
+                  <span className="font-serif text-2xl font-semibold text-[#fdd984]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#d4c2b5]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#e3d3be]">
                       {description}
                     </p>
                   </div>
@@ -1297,51 +1317,51 @@ export default function Home() {
         {/* Avaliações / Depoimentos Reais no Google Meu Negócio - Dobra Clara (Alabastro & Marfim) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#c5987f]/30 bg-[#fbf8f5] py-20 text-[#1e1815] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dca94e]/30 bg-[#fbf8f5] py-20 text-[#1e0a12] sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos autênticos e públicos de clientes sobre a competência, a transparência e o acolhimento da Dra. Ione Barcelos no Vale do Aço - MG."
+                description="Veja depoimentos autênticos e públicos de clientes sobre a competência, a transparência e o acolhimento da Dra. Carolina Vasconcelos em Paraguaçu e região."
               >
                 Avaliada com 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#85523b] via-[#b88368] to-[#5e3522]">
-                  22 avaliações no Google pela dedicação e atendimento humanizado.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
+                  21 avaliações no Google pela dedicação e atendimento humanizado.
                 </span>
               </Heading>
 
               {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#c5987f]/35 bg-white p-5 shadow-[0_8px_30px_rgba(26,20,18,0.08)] sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#c5987f]/30 bg-[#fbf8f5] shadow-xs">
+              <div className="flex flex-col gap-3 rounded-xl border border-[#dca94e]/35 bg-white p-5 shadow-[0_8px_30px_rgba(26,20,18,0.08)] sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dca94e]/30 bg-[#fbf8f5] shadow-xs">
                   <GoogleIcon size={30} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#1e1815]">
+                    <span className="font-serif text-3xl font-bold leading-none text-[#1e0a12]">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#c5987f]">
+                    <div className="flex gap-0.5 text-[#dca94e]">
                       {Array.from({ length: 5 }, (_, i) => (
                         <Star
                           key={i}
                           size={14}
-                          className="fill-[#c5987f] text-[#c5987f]"
+                          className="fill-[#dca94e] text-[#dca94e]"
                         />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#54463d]">
-                    Ione Barcelos — Advogada
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#624738]">
+                    Carolina Vasconcelos — Advocacia
                   </p>
                   <a
                     href={GOOGLE_SEARCH_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#85523b] transition-colors hover:text-[#1e1815]"
+                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#911e24] transition-colors hover:text-[#1e0a12]"
                   >
-                    22 avaliações no Google (100% 5 Estrelas) <ArrowUpRight size={13} />
+                    21 avaliações no Google (100% 5 Estrelas) <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -1352,41 +1372,48 @@ export default function Home() {
               {clientReviews.map((review) => (
                 <article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#c5987f]/30 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#b88368] hover:shadow-[0_12px_36px_rgba(197,152,127,0.18)] shadow-[0_4px_20px_rgba(26,20,18,0.05)] sm:p-8"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.22)] shadow-[0_4px_20px_rgba(26,20,18,0.05)] sm:p-8"
                 >
                   <div>
                     {/* Header: Stars + Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#c5987f]">
+                      <div className="flex gap-1 text-[#dca94e]">
                         {Array.from({ length: review.rating }, (_, i) => (
                           <Star
                             key={i}
                             size={14}
-                            className="fill-[#c5987f] text-[#c5987f]"
+                            className="fill-[#dca94e] text-[#dca94e]"
                           />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#c5987f]/35 bg-[#fbf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#85523b] shadow-xs">
+                      <span className="rounded-md border border-[#dca94e]/35 bg-[#fbf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#911e24] shadow-xs">
                         {review.badge}
                       </span>
                     </div>
 
                     {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2a221d]">
+                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2c151c]">
                       &ldquo;{review.content}&rdquo;
                     </p>
+
+                    {review.reply && (
+                      <div className="mt-4 rounded-lg border-l-2 border-[#911e24] bg-[#fbf8f5] p-3 text-[12px] text-[#624738]">
+                        <p className="font-semibold text-[#911e24]">Resposta da Dra. Carolina:</p>
+                        <p className="mt-0.5 italic">{review.reply}</p>
+                      </div>
+                    )}
                   </div>
 
                   {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#c5987f]/25 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#c5987f]/40 bg-[#fcebdd] font-serif text-sm font-semibold text-[#85523b] shadow-xs">
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#dca94e]/25 pt-4">
+                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] font-serif text-sm font-semibold text-[#911e24] shadow-xs">
                       {review.name.charAt(0)}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#1e1815]">
+                      <p className="truncate font-serif text-base font-semibold text-[#1e0a12]">
                         {review.name}
                       </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#78665a]">
+                      <p className="text-[10px] uppercase tracking-wider text-[#7d6b5e]">
                         {review.reviewerTag}
                       </p>
                     </div>
@@ -1396,22 +1423,22 @@ export default function Home() {
             </div>
 
             {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#c5987f]/25 pt-8 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#dca94e]/25 pt-8 sm:flex-row">
               <div className="flex flex-wrap items-center gap-2">
                 {[
-                  "Advogada Trabalhista no Vale do Aço",
-                  "Especialista em Burnout & Saúde Mental",
-                  "Doenças Ocupacionais & Acidentes",
-                  "Rescisão Indireta do Contrato",
-                  "Nota 5,0 ★ no Google (22 avaliações)",
-                  "Atendimento Humanizado & Ágil",
-                  "Atuação em Todo o Brasil",
+                  "Advogada Familiarista em Paraguaçu - MG",
+                  "Direito de Família & Sucessões",
+                  "Especialista em Divórcio & Partilha",
+                  "Pensão Alimentícia & Execução de Atrasados",
+                  "Guarda dos Filhos & Convivência",
+                  "Nota 5,0 ★ no Google (21 avaliações)",
+                  "Atendimento Humanizado & Sigiloso",
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#c5987f]/30 bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#1e1815] shadow-xs"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#dca94e]/30 bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#1e0a12] shadow-xs"
                   >
-                    <CheckCircle2 size={13} className="text-[#85523b]" />
+                    <CheckCircle2 size={13} className="text-[#911e24]" />
                     {tag}
                   </span>
                 ))}
@@ -1421,9 +1448,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#85523b] transition-colors hover:text-[#1e1815]"
+                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#911e24] transition-colors hover:text-[#1e0a12]"
               >
-                Ver Todas as 22 Avaliações no Google{" "}
+                Ver Todas as Avaliações no Google{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1433,87 +1460,157 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contato & Atendimento */}
+        {/* FAQ - Perguntas Frequentes */}
+        <section
+          id="faq"
+          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#17090d] py-20 text-[#fbfaf5] sm:py-28 lg:py-32"
+        >
+          <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
+            <div className="text-center">
+              <p className="eyebrow-light justify-center">TIRE SUAS DÚVIDAS</p>
+              <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#fbfaf5] sm:text-4xl lg:text-[3.15rem]">
+                Perguntas Frequentes sobre{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
+                  Direito de Família e Sucessões
+                </span>
+              </h2>
+              <p className="mt-4 text-[15px] leading-7 text-[#e3d3be]">
+                Respostas diretas e esclarecedoras para as principais dúvidas de quem busca orientação jurídica.
+              </p>
+            </div>
+
+            <div className="mt-12 space-y-4">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaq === index;
+                return (
+                  <div
+                    key={index}
+                    className="overflow-hidden rounded-xl border border-[#dca94e]/30 bg-[#1c0b11] transition-all"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? null : index)}
+                      className="flex w-full items-center justify-between p-6 text-left font-serif text-lg font-semibold text-white transition-colors hover:text-[#fdd984]"
+                    >
+                      <span>{faq.q}</span>
+                      <ChevronDown
+                        size={20}
+                        className={`shrink-0 text-[#dca94e] transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {isOpen && (
+                      <div className="border-t border-[#dca94e]/20 px-6 pb-6 pt-4 text-sm leading-7 text-[#e3d3be]">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-10 text-center">
+              <p className="text-sm text-[#b8a594]">
+                Tem uma dúvida específica sobre a sua situação?
+              </p>
+              <div className="mt-4">
+                <GlowingButton
+                  href={getWhatsAppUrl(
+                    "Olá, Dra. Carolina! Gostaria de tirar uma dúvida sobre a minha situação de família."
+                  )}
+                  target="_blank"
+                  size="md"
+                  variant="gold"
+                >
+                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Enviar Mensagem no WhatsApp
+                </GlowingButton>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contato & Sede */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#c5987f]/25 bg-[#141110] py-20 text-[#faf6f2] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#0f0508] py-20 text-[#fbfaf5] sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & AGENDAMENTO DE ATENDIMENTO"
-                description="Fale diretamente com a Dra. Ione Barcelos pelo WhatsApp para orientação imediata com sigilo absoluto e acolhimento humano."
+                eyebrow="CONTATO & AGENDAMENTO"
+                description="Fale diretamente com a Dra. Carolina Vasconcelos pelo WhatsApp para orientação imediata com sigilo absoluto e acolhimento humano."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#e8c8b5] via-[#c5987f] to-[#fff5ea]">
-                  defender sua saúde e fazer valer seus direitos trabalhistas.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
+                  acolher sua história e defender a sua família.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ione Barcelos! Gostaria de agendar um atendimento trabalhista."
+                    "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} className="text-[#0d0b0a]" /> Falar no WhatsApp com a Dra. Ione
+                  <WhatsAppIcon size={17} className="text-[#0f0508]" /> Falar no WhatsApp com a Dra. Carolina
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#d4c2b5]">
+                <p className="text-[11px] leading-5 text-[#e3d3be]">
                   WhatsApp e telefone direto:{" "}
                   <strong className="text-white">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#d4c2b5]">
+              <div className="mt-10 space-y-4 text-xs text-[#e3d3be]">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#c5987f]"
+                    className="mt-0.5 shrink-0 text-[#dca94e]"
                   />
                   <div>
                     <p className="font-semibold text-white">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#e8c8b5] font-bold">
-                      Aberto · Atendimento até 22:00
+                    <p className="mt-0.5 text-[#fdd984] font-bold">
+                      Segunda a Sexta · Abre às 08:00
                     </p>
-                    <p className="text-[11px] text-[#a49184]">
-                      Segunda a Sexta das 08h às 22h · Sábados das 08h às 18h · Plantão trabalhista ágil
+                    <p className="text-[11px] text-[#b8a594]">
+                      Atendimento com horário agendado para dedicação exclusiva ao seu caso
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#c5987f]" />
+                  <Phone size={16} className="shrink-0 text-[#dca94e]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#e8c8b5]"
+                    className="font-medium text-white transition-colors hover:text-[#fdd984]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#c5987f]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#dca94e]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#e8c8b5] text-white"
+                    className="transition-colors hover:text-[#fdd984] text-white"
                   >
-                    {INSTAGRAM_HANDLE} (Instagram Oficial)
+                    {INSTAGRAM_HANDLE} (Instagram Oficial com 6.000+ seguidores)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#c5987f]" />
+                  <Mail size={16} className="shrink-0 text-[#dca94e]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#e8c8b5] text-white"
+                    className="transition-colors hover:text-[#fdd984] text-white"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1522,13 +1619,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#c5987f]"
+                    className="mt-0.5 shrink-0 text-[#dca94e]"
                   />
                   <div>
-                    <span className="text-white">{REGION_TEXT}</span>
+                    <span className="text-white font-medium">{ADDRESS_TEXT}</span>
                     <br />
-                    <span className="text-[11px] text-[#a49184]">
-                      Atendimento presencial no Vale do Aço e assessoria trabalhista online em todo o Brasil
+                    <span className="text-[11px] text-[#b8a594]">
+                      Sede no Centro de Paraguaçu - MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1536,86 +1633,90 @@ export default function Home() {
             </div>
 
             {/* Brand Presentation Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#c5987f]/35 bg-[#181413] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#85523b] via-[#c5987f] to-[#e8c8b5]" />
+            <div className="relative overflow-hidden rounded-xl border border-[#dca94e]/35 bg-[#1c0b11] p-7 shadow-card sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#911e24] via-[#dca94e] to-[#fdd984]" />
 
-              <div className="flex flex-col gap-2">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#e8c8b5]">
-                  Ione Barcelos — Advogada
-                </p>
-                <div className="relative h-[68px] w-[280px] sm:h-[78px] sm:w-[340px]">
+              <div className="flex items-center gap-4">
+                <div className="relative size-16 shrink-0">
                   <Image
-                    src={LOGO_SRC}
-                    alt="Ione Barcelos — Advogada"
+                    src={LOGO_SYMBOL_SRC}
+                    alt="Monograma CV Carolina Vasconcelos"
                     fill
                     unoptimized
-                    sizes="340px"
-                    className="object-contain object-left"
+                    className="object-contain"
                   />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fdd984]">
+                    CAROLINA VASCONCELOS
+                  </p>
+                  <p className="font-serif text-xl sm:text-2xl font-bold text-white">
+                    ADVOCACIA
+                  </p>
                 </div>
               </div>
 
               {/* Photo Presentation */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#c5987f]/30 bg-[#0d0b0a] shadow-xs">
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#dca94e]/30 bg-[#0f0508] shadow-xs">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Ione Barcelos — Atendimento Humanizado no Vale do Aço"
+                  alt="Dra. Carolina Vasconcelos em seu escritório"
                   fill
                   unoptimized
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Atendimento Acolhedor, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-300">Vale do Aço · MG & Brasil</p>
+                  <p className="text-[10px] text-stone-300">Paraguaçu · Sul de Minas & Brasil</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#d4c2b5]">
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#e3d3be]">
                 <strong className="font-semibold text-white">
                   {FIRM_NAME}
                 </strong>
                 <br />
                 {LAWYER_NAME} · {LAWYER_TITLE}
                 <br />
-                Atendimento no Vale do Aço (Coronel Fabriciano, Ipatinga, Timóteo) e perante a Justiça do Trabalho
+                {ADDRESS_TEXT}
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#c5987f]/25 bg-[#0d0b0a] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#e8c8b5]">
+              <div className="mt-6 rounded-lg border border-[#dca94e]/25 bg-[#0f0508] p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#fdd984]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#d4c2b5]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-[#e3d3be]">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#e8c8b5]">
-                    08:00 às 22:00
+                  <span className="text-right font-semibold text-[#fdd984]">
+                    Abre às 08:00
                   </span>
-                  <span>Sábados</span>
-                  <span className="text-right font-medium text-[#c5987f]">
-                    08:00 às 18:00
+                  <span>Sábados e Domingos</span>
+                  <span className="text-right font-medium text-[#b8a594]">
+                    Plantão via WhatsApp
                   </span>
-                  <span>Região Base</span>
-                  <span className="text-right text-white">Vale do Aço · MG</span>
+                  <span>Sede Física</span>
+                  <span className="text-right text-white">Paraguaçu · MG</span>
                   <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#e8c8b5]">5,0 ★ (22 avaliações)</span>
-                  <span>Justiça Trabalhista</span>
-                  <span className="text-right text-white">TRT da 3ª Região & TST</span>
+                  <span className="text-right font-semibold text-[#fdd984]">5,0 ★ (21 avaliações)</span>
+                  <span>Especialidade</span>
+                  <span className="text-right text-white">Família & Sucessões</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#c5987f]/25" />
+              <div className="my-7 h-px bg-[#dca94e]/25" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#a49184]">
-                  Atendimento sob estrito sigilo profissional e conformidade ética com a OAB
+                <p className="text-xs text-[#b8a594]">
+                  Atendimento sob estrito sigilo profissional e conformidade com o Código de Ética da OAB
                 </p>
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ione Barcelos! Gostaria de agendar um atendimento trabalhista."
+                    "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#c5987f]/50 bg-[#221c1a] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#e8c8b5] hover:bg-[#c5987f] hover:text-[#0d0b0a]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/50 bg-[#240e15] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#fdd984] hover:bg-[#dca94e] hover:text-[#0f0508]"
                 >
                   <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
                 </a>
@@ -1625,63 +1726,72 @@ export default function Home() {
         </section>
 
         {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#c5987f]/25 bg-gradient-to-r from-[#0d0b0a] via-[#181413] to-[#0d0b0a] px-5 py-14 text-[#faf6f2] shadow-card sm:px-8 sm:py-16 lg:px-12">
+        <section className="border-t border-[#dca94e]/25 bg-gradient-to-r from-[#0f0508] via-[#1c0b11] to-[#0f0508] px-5 py-14 text-[#fbfaf5] shadow-card sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8c8b5]">
-                <Sparkles size={13} /> IONE BARCELOS — ADVOGADA TRABALHISTA
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
+                <Sparkles size={13} /> CAROLINA VASCONCELOS — ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Sentindo-se esgotado, injustiçado ou adoecendo por causa do trabalho?
+                Precisa de segurança jurídica para proteger sua família, seus filhos ou seus bens?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Ione Barcelos! Preciso de orientação trabalhista sobre a minha situação na empresa."
+                "Olá, Dra. Carolina! Preciso de orientação jurídica sobre a minha família."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fcebdd]/85 bg-gradient-to-r from-[#a56f54] via-[#e8c8b5] to-[#a56f54] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0d0b0a] shadow-[0_8px_24px_-4px_rgba(197,152,127,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.85)] transition-all hover:-translate-y-0.5 hover:from-[#c5987f] hover:via-[#fff5ea] hover:to-[#c5987f] hover:shadow-[0_12px_32px_rgba(197,152,127,0.7)]"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fbefb4]/90 bg-gradient-to-r from-[#c8953c] via-[#fdd984] to-[#a67528] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0f0508] shadow-[0_8px_24px_-4px_rgba(220,169,78,0.5),inset_0_1px_1.5px_rgba(255,255,255,0.9)] transition-all hover:-translate-y-0.5 hover:from-[#dca94e] hover:via-[#fbfaf3] hover:to-[#c8953c] hover:shadow-[0_12px_32px_rgba(220,169,78,0.7)]"
             >
-              <WhatsAppIcon size={17} className="text-[#0d0b0a]" /> Iniciar Atendimento Agora{" "}
-              <ArrowUpRight size={15} className="text-[#0d0b0a]" />
+              <WhatsAppIcon size={17} className="text-[#0f0508]" /> Iniciar Atendimento Agora{" "}
+              <ArrowUpRight size={15} className="text-[#0f0508]" />
             </a>
           </div>
         </section>
 
         {/* Footer - Elegant Luxury Noir */}
-        <footer className="border-t border-[#c5987f]/25 bg-[#0d0b0a] px-5 py-14 text-[#faf6f2] sm:px-8 lg:px-12">
+        <footer className="border-t border-[#dca94e]/25 bg-[#0f0508] px-5 py-14 text-[#fbfaf5] sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <a
                 href="#inicio"
-                aria-label="Ione Barcelos — Advogada"
+                aria-label="Carolina Vasconcelos — Advocacia"
                 className="inline-block transition-transform hover:scale-[1.01]"
               >
-                <div className="relative h-[78px] w-[300px] sm:h-[95px] sm:w-[360px]">
-                  <Image
-                    src={LOGO_SRC}
-                    alt="Ione Barcelos — Advogada"
-                    fill
-                    unoptimized
-                    sizes="360px"
-                    className="object-contain object-left"
-                  />
+                <div className="flex items-center gap-3">
+                  <div className="relative size-14 shrink-0">
+                    <Image
+                      src={LOGO_SYMBOL_SRC}
+                      alt="Monograma CV Carolina Vasconcelos"
+                      fill
+                      unoptimized
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-serif text-lg font-bold tracking-wider text-[#fbfaf5] leading-tight">
+                      CAROLINA VASCONCELOS
+                    </span>
+                    <span className="text-[11px] font-semibold tracking-[0.22em] text-[#fdd984] uppercase">
+                      ADVOCACIA
+                    </span>
+                  </div>
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#a49184]">
-                ⚖️ Trabalhar faz parte da vida. Adoecer por causa do trabalho não deveria fazer. Advocacia Trabalhista com acolhimento humano, seriedade e compromisso inabalável com a justiça no Vale do Aço e em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-[#b8a594]">
+                ⚖️ PENSÃO | GUARDA | DIVÓRCIO | INVENTÁRIO. Advocacia especializada em Direito das Famílias e Sucessões com acolhimento humano, seriedade e compromisso inegociável com a sua tranquilidade em Paraguaçu e em todo o Brasil.
               </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#e8c8b5]">
+              <p className="mt-3 text-[11px] font-semibold text-[#fdd984]">
                 {LAWYER_NAME} — {LAWYER_TITLE}
               </p>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8c8b5]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#d4c2b5]">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#e3d3be]">
                 <a className="footer-link" href="#inicio">
                   Início
                 </a>
@@ -1689,7 +1799,7 @@ export default function Home() {
                   A Advogada
                 </a>
                 <a className="footer-link" href="#atuacao">
-                  Áreas de Atuação
+                  Especialidades
                 </a>
                 <a className="footer-link" href="#diferenciais">
                   Diferenciais
@@ -1697,20 +1807,23 @@ export default function Home() {
                 <a className="footer-link" href="#avaliacoes">
                   Avaliações de Clientes (5,0 ★)
                 </a>
+                <a className="footer-link" href="#faq">
+                  Dúvidas Frequentes
+                </a>
                 <a className="footer-link" href="#contato">
-                  Contato & Atendimento
+                  Contato & Sede
                 </a>
               </div>
             </div>
 
             <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e8c8b5]">
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
                 Contato & Atendimento
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#d4c2b5]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#e3d3be]">
                 <a
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ione Barcelos! Gostaria de falar com seu escritório."
+                    "Olá, Dra. Carolina! Gostaria de falar com seu escritório."
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -1740,21 +1853,21 @@ export default function Home() {
                 </a>
                 <div className="footer-link inline-flex items-start gap-2">
                   <MapPin size={15} className="mt-0.5 shrink-0" />
-                  <span>{REGION_TEXT}</span>
+                  <span>{ADDRESS_TEXT}</span>
                 </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#e8c8b5] font-semibold">
-                  <Clock size={14} className="shrink-0 text-[#c5987f]" /> Aberto · Atendimento até 22:00
+                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#fdd984] font-semibold">
+                  <Clock size={14} className="shrink-0 text-[#dca94e]" /> Segunda a Sexta a partir das 08:00
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#c5987f]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dca94e]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} IONE BARCELOS ADVOGADA. Todos os direitos reservados.
+              © {new Date().getFullYear()} CAROLINA VASCONCELOS ADVOCACIA. Todos os direitos reservados.
             </p>
             <p>
-              Conteúdo informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
+              Conteúdo de caráter exclusivamente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1766,21 +1879,21 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Ione Barcelos! Gostaria de um atendimento trabalhista pelo WhatsApp."
+              "Olá, Dra. Carolina! Gostaria de um atendimento sobre Direito de Família pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Ione Barcelos"
-            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#c5987f]/80 bg-gradient-to-b from-[#261f1c] via-[#181413] to-[#0d0b0a] text-[#e8c8b5] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(197,152,127,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fcebdd] hover:shadow-[0_10px_35px_rgba(197,152,127,0.6)] focus:outline-none focus:ring-4 focus:ring-[#c5987f]/40"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Carolina Vasconcelos"
+            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#dca94e]/80 bg-gradient-to-b from-[#240e15] via-[#1c0b11] to-[#0f0508] text-[#fdd984] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(220,169,78,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fbefb4] hover:shadow-[0_10px_35px_rgba(220,169,78,0.6)] focus:outline-none focus:ring-4 focus:ring-[#dca94e]/40"
           >
             {/* Live pulsating status beacon */}
             <span className="absolute -top-0.5 -right-0.5 flex size-3.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5987f] opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0d0b0a] bg-[#fcebdd]"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dca94e] opacity-75"></span>
+              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0f0508] bg-[#fbefb4]"></span>
             </span>
-            <WhatsAppIcon size={26} className="text-[#fcebdd] transition-transform duration-300 group-hover:scale-110" />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#c5987f]/60 bg-[#0d0b0a]/95 px-3.5 py-1.5 text-xs font-semibold text-[#faf6f2] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
-              <span className="text-[#e8c8b5]">WhatsApp Direto</span> · Dra. Ione Barcelos
+            <WhatsAppIcon size={26} className="text-[#fbefb4] transition-transform duration-300 group-hover:scale-110" />
+            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#dca94e]/60 bg-[#0f0508]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbfaf5] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
+              <span className="text-[#fdd984]">WhatsApp Direto</span> · Dra. Carolina Vasconcelos
             </span>
           </a>
         </aside>
@@ -1804,30 +1917,30 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#c5987f]/40 bg-[#141110] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#faf6f2]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#dca94e]/40 bg-[#17090d] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbfaf5]"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#c5987f]/30 bg-[#221c1a] text-[#faf6f2] transition-colors hover:border-[#e8c8b5] hover:text-[#fcebdd]"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#dca94e]/30 bg-[#240e15] text-[#fbfaf5] transition-colors hover:border-[#fdd984] hover:text-[#fbefb4] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-[#c5987f]/40 bg-[#0d0b0a] p-1 shadow-xs">
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-[#dca94e]/40 bg-[#0f0508] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma IB Ione Barcelos Advogada"
+                      alt="Monograma CV Carolina Vasconcelos"
                       fill
-                      sizes="40px"
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">IONE BARCELOS ADVOGADA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#e8c8b5] uppercase">
+                    <p className="eyebrow-light">CAROLINA VASCONCELOS ADVOCACIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#fdd984] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1840,21 +1953,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#d4c2b5]">
+                <p className="mt-5 text-sm leading-7 text-[#e3d3be]">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#c5987f]/25 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8c8b5]">
+                <div className="mt-6 border-t border-[#dca94e]/25 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#d4c2b5]"
+                        className="flex items-center gap-3 text-sm text-[#e3d3be]"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#c5987f]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#dca94e]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1869,12 +1982,12 @@ export default function Home() {
                     variant="gold"
                     className="rounded-lg shadow-md"
                   >
-                    <WhatsAppIcon size={16} className="text-[#0d0b0a]" /> Consultar sobre esta demanda
+                    <WhatsAppIcon size={16} className="text-[#0f0508]" /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#a49184] transition-colors hover:text-white"
+                    className="px-5 py-3 text-xs font-semibold text-[#b8a594] transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>
