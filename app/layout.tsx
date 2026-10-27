@@ -36,61 +36,64 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0f0508",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.carolinavasconcelos.adv.br"),
-  title: "Carolina Vasconcelos — Advocacia | Direito de Família & Sucessões · Paraguaçu · MG",
+  metadataBase: new URL("https://www.marianabrumbahia.adv.br"),
+  title: "Mariana Brum Bahia — Advocacia | Especialista em Mutum · MG",
   description:
-    "⚖️ Dra. Carolina Vasconcelos — Advocacia Humanizada e de Alta Precisão em Direito das Famílias e Sucessões. Especialista em Divórcio, Pensão Alimentícia, Guarda de Filhos, Inventário e Partilha de Bens. Atendimento em Paraguaçu, Alfenas, Varginha, Sul de Minas e em todo o Brasil. Nota Máxima 5,0 ★ no Google (21 avaliações).",
+    "⚖️ Dra. Mariana Brum Bahia (OAB/MG 241.996) — Advocacia Humanizada, Segura e Estratégica em Mutum e Região. Especialista em Direito de Família, Sucessões, Previdenciário (INSS), Cível e Trabalhista. Atendimento Presencial e Online em todo o Brasil. Nota Máxima 5,0 ★ no Google (16 avaliações).",
   keywords: [
-    "Carolina Vasconcelos Advocacia",
-    "Dra Carolina Vasconcelos",
-    "Advogada Familiarista Paraguaçu",
-    "Advogado de Família Paraguaçu MG",
-    "Divórcio e Separação Paraguaçu",
-    "Pensão Alimentícia Paraguaçu MG",
-    "Guarda dos Filhos e Convivência",
-    "Inventário e Sucessões Paraguaçu",
-    "Partilha de Bens Sul de Minas",
-    "Advogada de Família Alfenas",
-    "Advogado de Família Varginha",
-    "Direito das Famílias Minas Gerais",
-    "Contrato de Convivência e União Estável",
+    "Mariana Brum Bahia Advocacia",
+    "Dra Mariana Brum Bahia",
+    "Advogada em Mutum MG",
+    "Advogado Mutum Minas Gerais",
+    "Direito de Família Mutum",
+    "Divórcio e Separação Mutum",
+    "Pensão Alimentícia Mutum MG",
+    "Guarda dos Filhos Mutum",
+    "Inventário e Partilha Mutum",
+    "Advogada Previdenciária Mutum",
+    "Aposentadoria INSS Mutum MG",
+    "Correspondente Jurídico Mutum",
+    "OAB MG 241996",
+    "Lajinha MG Advogado",
+    "Ipanema MG Advogado",
+    "Manhuaçu MG Advocacia",
   ],
-  authors: [{ name: "Carolina Vasconcelos — Advocacia" }],
-  creator: "Carolina Vasconcelos — Advocacia",
-  publisher: "Carolina Vasconcelos — Advocacia",
+  authors: [{ name: "Mariana Brum Bahia — Advocacia" }],
+  creator: "Mariana Brum Bahia — Advocacia",
+  publisher: "Mariana Brum Bahia — Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=cv2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=cv2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=cv2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=cv2", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico?v=mb1", sizes: "any" },
+      { url: "/favicon-32x32.png?v=mb1", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=mb1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=mb1", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico?v=cv2",
-    apple: [{ url: "/apple-icon.png?v=cv2", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=mb1",
+    apple: [{ url: "/apple-icon.png?v=mb1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.carolinavasconcelos.adv.br",
-    title: "Carolina Vasconcelos — Advocacia | Direito de Família & Sucessões",
+    url: "https://www.marianabrumbahia.adv.br",
+    title: "Mariana Brum Bahia — Advocacia | Mutum · MG",
     description:
-      "⚖️ Advocacia Humanizada, Segura e Resolutiva. Especialista em Pensão, Guarda, Divórcio e Inventário. Mais de 300 processos e nota máxima 5,0 ★ no Google (21 avaliações). Paraguaçu - MG.",
-    siteName: "Carolina Vasconcelos — Advocacia",
+      "⚖️ Advocacia Humanizada, Segura e Resolutiva. Especialista em Direito das Famílias, Sucessões, Previdenciário e Cível. Nota máxima 5,0 ★ no Google (16 avaliações). Praça Benedito Valadares - Mutum, MG.",
+    siteName: "Mariana Brum Bahia — Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 682,
-        alt: "Carolina Vasconcelos — Advocacia",
+        height: 512,
+        alt: "Mariana Brum Bahia — Advocacia",
       },
     ],
   },
@@ -104,35 +107,35 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Carolina Vasconcelos — Advocacia",
-    alternateName: "Dra. Carolina Vasconcelos Advocacia Familiarista",
-    legalName: "Carolina Vasconcelos — Advocacia",
-    telephone: "+55-35-98406-3030",
-    email: "contato@carolinavasconcelos.adv.br",
-    url: "https://www.carolinavasconcelos.adv.br",
-    image: "https://www.carolinavasconcelos.adv.br/logo.png",
+    name: "Mariana Brum Bahia — Advocacia",
+    alternateName: "Dra. Mariana Brum Bahia Advocacia",
+    legalName: "Mariana Brum Bahia — Advocacia",
+    telephone: "+55-33-99999-7644",
+    email: "contato@marianabrumbahia.adv.br",
+    url: "https://www.marianabrumbahia.adv.br",
+    image: "https://www.marianabrumbahia.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Gonçalves Leite, 156 - Centro",
-      addressLocality: "Paraguaçu",
+      streetAddress: "Praça Benedito Valadares",
+      addressLocality: "Mutum",
       addressRegion: "MG",
-      postalCode: "37120-000",
+      postalCode: "36955-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "21",
+      reviewCount: "16",
     },
     areaServed: [
-      "Paraguaçu",
-      "Alfenas",
-      "Varginha",
-      "Machado",
-      "Poços de Caldas",
-      "Pouso Alegre",
-      "Sul de Minas",
+      "Mutum",
+      "Lajinha",
+      "Aimorés",
+      "Ipanema",
+      "Manhuaçu",
+      "Taparuba",
+      "Leste de Minas",
       "Minas Gerais",
       "Brasil",
     ],
@@ -151,8 +154,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/carolinav.advogada/",
-      "https://wa.me/5535984063030",
+      "https://www.instagram.com/marianabrumbahia.adv?igsh=ZW55cXhmbTRvMTVj",
+      "https://wa.me/5533999997644",
     ],
   };
 
@@ -162,18 +165,18 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=cv2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=cv2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=cv2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=cv2" />
-        <link rel="shortcut icon" href="/favicon.ico?v=cv2" />
-        <meta name="theme-color" content="#0f0508" />
+        <link rel="icon" href="/favicon.ico?v=mb1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=mb1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=mb1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=mb1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=mb1" />
+        <meta name="theme-color" content="#ffffff" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-[#0f0508] font-sans text-[#fbfaf5] antialiased selection:bg-[#dca94e] selection:text-[#0f0508]">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#9e1836] selection:text-white">
         {children}
       </body>
     </html>

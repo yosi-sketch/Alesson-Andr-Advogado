@@ -19,41 +19,39 @@ import {
   Star,
   Users,
   Shield,
-  Heart,
   FileText,
   ShieldAlert,
-  Baby,
-  Home as HomeIcon,
   HelpCircle,
   X,
   ChevronDown,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5535984063030";
-const PHONE_DISPLAY = "(35) 98406-3030";
-const EMAIL_CONTACT = "contato@carolinavasconcelos.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/carolinav.advogada/";
-const INSTAGRAM_HANDLE = "@carolinav.advogada";
-const LAWYER_NAME = "Dra. Carolina Vasconcelos";
-const LAWYER_TITLE = "Advogada Especialista em Direito das Famílias e Sucessões";
-const FIRM_NAME = "Carolina Vasconcelos — Advocacia";
-const ADDRESS_TEXT = "Av. Gonçalves Leite, 156 - Centro, Paraguaçu - MG, 37120-000";
-const REGION_TEXT = "Paraguaçu · Alfenas · Varginha · Sul de Minas · MG & Atuação Nacional";
+const WHATSAPP_NUMBER = "5533999997644";
+const PHONE_DISPLAY = "(33) 99999-7644";
+const EMAIL_CONTACT = "contato@marianabrumbahia.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/marianabrumbahia.adv?igsh=ZW55cXhmbTRvMTVj";
+const INSTAGRAM_HANDLE = "@marianabrumbahia.adv";
+const LAWYER_NAME = "Dra. Mariana Brum Bahia";
+const LAWYER_OAB = "OAB/MG 241.996";
+const LAWYER_TITLE = "Advogada · OAB/MG 241.996";
+const FIRM_NAME = "Mariana Brum Bahia — Advocacia";
+const ADDRESS_TEXT = "Praça Benedito Valadares - Mutum, MG, 36955-000";
+const REGION_TEXT = "Mutum · Lajinha · Aimorés · Ipanema · Manhuaçu · Leste de Minas & Atuação Nacional";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Carolina+Vasconcelos+%E2%80%94+Advocacia%0AParagua%C3%A7u+%C2%B7+MG";
+  "https://www.google.com/search?q=Mariana+Brum+Bahia+Advocacia%0AMutum+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/carolina-vasconcelos-hero.jpg";
-const FOTO_SOBRE_SRC = "/carolina-vasconcelos-sobre.jpg";
+const FOTO_HERO_SRC = "/mariana-brum-hero.jpg";
+const FOTO_SOBRE_SRC = "/mariana-brum-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Carolina Vasconcelos! Gostaria de tirar dúvidas e agendar um atendimento sobre Direito de Família.";
+    "Olá, Dra. Mariana Brum Bahia! Gostaria de tirar dúvidas e agendar uma consulta jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -102,7 +100,7 @@ function InstagramIcon({
 }
 
 function GoogleIcon({
-  size = 16,
+  size = 17,
   className = "",
 }: {
   size?: number;
@@ -110,50 +108,36 @@ function GoogleIcon({
 }) {
   return (
     <svg
+      aria-hidden="true"
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      aria-hidden="true"
       className={className}
     >
       <path
-        fill="#4285F4"
-        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+        fill="#EA4335"
+        d="M12 5c1.54 0 2.93.56 4.02 1.48l3.01-3.01C17.2 1.8 14.77 1 12 1 7.42 1 3.51 3.63 1.64 7.44l3.69 2.86C6.2 7.7 8.87 5 12 5z"
       />
       <path
-        fill="#34A853"
-        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+        fill="#4285F4"
+        d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58l3.69 2.86c2.16-1.99 3.73-4.92 3.73-8.68z"
       />
       <path
         fill="#FBBC05"
-        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+        d="M5.33 14.7l-3.69 2.86C3.51 21.37 7.42 24 12 24c3.27 0 6.01-1.09 8.01-2.96l-3.69-2.86c-1.08.73-2.47 1.16-4.32 1.16-3.13 0-5.8-2.7-6.67-5.3l.0-.34z"
       />
       <path
-        fill="#EA4335"
-        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+        fill="#34A853"
+        d="M12 23c3.27 0 6.01-1.09 8.01-2.96l-3.69-2.86c-1.08.73-2.47 1.16-4.32 1.16-3.13 0-5.8-2.7-6.67-5.3H1.64v.34C3.51 20.37 7.42 23 12 23z"
       />
     </svg>
   );
 }
 
-const reveal: Variants = {
-  hidden: { opacity: 0, y: 22 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const stagger: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.04 } },
-};
-
 interface PracticeArea {
   id: string;
   title: string;
-  icon: typeof Scale;
+  icon: typeof HeartHandshake;
   tag: string;
   summary: string;
   details: string;
@@ -163,306 +147,275 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "divorcio-partilha-bens",
-    title: "Divórcio & Separação (Consensual ou Litigioso)",
-    icon: Scale,
-    tag: "Divórcio em Cartório · Partilha de Bens · Proteção Patrimonial",
+    id: "direito-de-familia",
+    title: "Direito de Família (Divórcio, Guarda & Pensão)",
+    icon: HeartHandshake,
+    tag: "Divórcio · Pensão Alimentícia · Guarda Compartilhada · Partilha de Bens",
     summary:
-      "O término de um casamento exige acolhimento, estratégia e segurança patrimonial. Atuação para proteger seus direitos e conduzir o processo com rapidez e serenidade.",
+      "Acolhimento humanizado e proteção jurídica incondicional para sua família, filhos e patrimônio nas transições mais sensíveis da vida.",
     details:
-      "O divórcio abrange muito além do encerramento do vínculo formal; envolve a partilha justa de imóveis, investimentos e empresas, além da fixação de pensão entre cônjuges e proteção contra fraudes financeiras. A Dra. Carolina Vasconcelos atua com excelência tanto na via extrajudicial (em cartório, rápida e amigável) quanto no contencioso judicial com firmeza inabalável.",
+      "Questões familiares demandam respeito, escuta acolhedora e condução técnica de alta precisão. A Dra. Mariana Brum Bahia atua na prevenção e na resolução de conflitos conjugais e parentais, buscando prioritariamente acordos vantajosos e pacificadores, ou defendendo com máxima combatividade os direitos dos clientes em Juízo.",
     topics: [
-      "Divórcio extrajudicial em cartório com rapidez, discrição e sem desgaste emocional",
-      "Divórcio judicial litigioso com defesa vigorosa do patrimônio e dos direitos da família",
-      "Levantamento patrimonial minucioso contra ocultação, fraude ou sonegação de bens",
-      "Partilha justa de imóveis, participações societárias, veículos, contas bancárias e investimentos",
-      "Arbitramento de aluguel pelo uso exclusivo do imóvel do casal pelo ex-cônjuge",
-      "Retorno imediato ao nome de solteiro(a) e regularização de todos os registros civis",
+      "Divórcio Consensual em Cartório (rápido e discreto) ou Divórcio Judicial Litigioso",
+      "Ação de Fixação, Revisão (aumento ou redução) e Execução de Cobrança de Pensão Alimentícia",
+      "Definição de Guarda Compartilhada ou Unilateral e Estruturação de Plano de Convivência",
+      "Partilha Justa de Bens, Imóveis, Veículos, Contas e Empresas do Casal",
+      "Reconhecimento e Dissolução de União Estável com apuração patrimonial integral",
+      "Defesa e proteção contra Alienação Parental e medidas protetivas urgentes",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Gostaria de uma consultoria sobre divórcio e partilha de bens.",
+      "Olá, Dra. Mariana! Gostaria de uma consultoria jurídica sobre Direito de Família (divórcio, guarda ou pensão).",
   },
   {
-    id: "pensao-alimenticia",
-    title: "Pensão Alimentícia (Fixação, Revisão & Execução)",
-    icon: Heart,
-    tag: "Fixação Justa · Revisão de Valores · Cobrança de Atrasados · Prisão Civil",
+    id: "direito-previdenciario",
+    title: "Direito Previdenciário (Benefícios & Aposentadorias INSS)",
+    icon: Shield,
+    tag: "Aposentadorias · BPC/LOAS · Auxílio por Incapacidade · Pensão por Morte",
     summary:
-      "A pensão alimentícia é a garantia do sustento, da educação e da dignidade dos seus filhos. Apuração real de rendimentos e cobrança implacável de atrasos.",
+      "Atuação especializada e estratégica na conquista e no restabelecimento dos seus benefícios e aposentadorias perante o INSS e na Justiça Federal.",
     details:
-      "Alimentos não cobrem apenas alimentação, mas educação escolar, saúde, vestuário, moradia e lazer. Conduzimos ações de fixação inicial com cálculo realista de despesas, ações revisionais para aumento ou diminuição quando as condições financeiras se transformam, e execuções rigorosas de débitos pelo rito de prisão civil ou penhora de contas e patrimônio.",
+      "Com atuação dedicada e vinculação institucional à comissão temática da OAB/MG, a Dra. Mariana Brum Bahia conduz análises detalhadas do histórico contributivo e requerimentos de benefícios previdenciários, revertendo negativas indevidas do INSS e conquistando o melhor valor de aposentadoria para cada trabalhador urbano e rural.",
     topics: [
-      "Fixação de alimentos provisórios emergenciais e definitivos com apuração da real capacidade",
-      "Investigação aprofundada de rendimentos e sinais exteriores de riqueza de autônomos e empresários",
-      "Ação revisional para aumento da pensão diante do crescimento e das necessidades dos filhos",
-      "Ação revisional para redução em casos de alteração comprovada da condição financeira",
-      "Execução e cobrança rápida de valores em atraso (sob pena de prisão civil ou bloqueio de bens)",
-      "Pensão gravídica para cobertura das despesas médicas, nutricionais e do parto durante a gestação",
+      "Aposentadoria por Idade e Tempo de Contribuição (Regras de Transição e Direito Adquirido)",
+      "Aposentadoria do Trabalhador Rural, Segurado Especial e Regime Misto",
+      "Aposentadoria por Incapacidade Permanente (Invalidez) e Auxílio por Incapacidade Temporária",
+      "Benefício de Prestação Continuada (BPC/LOAS) para Idosos e Pessoas com Deficiência",
+      "Pensão por Morte e Auxílio-Reclusão para dependentes com comprovação união/parentesco",
+      "Planejamento Previdenciário preventivo e Cálculos de Tempo e Salário de Benefício",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Preciso de orientação jurídica sobre pensão alimentícia.",
+      "Olá, Dra. Mariana! Gostaria de consultoria jurídica sobre benefício ou aposentadoria do INSS.",
   },
   {
-    id: "guarda-filhos-convivencia",
-    title: "Guarda dos Filhos & Convivência Familiar",
-    icon: Baby,
-    tag: "Guarda Compartilhada · Convivência · Proteção aos Filhos · Combate à Alienação",
-    summary:
-      "O bem-estar e a estabilidade emocional dos seus filhos são prioridade absoluta. Defesa intransigente do melhor interesse da criança e do adolescente.",
-    details:
-      "Na dissolução da união, a definição da guarda e da convivência deve harmonizar o convívio saudável com ambos os genitores, resguardando a rotina e a paz dos filhos. A Dra. Carolina Vasconcelos estabelece planos de convivência detalhados e atua com pulso firme contra práticas nocivas de alienação parental, ameaças ou mudanças não autorizadas de domicílio.",
-    topics: [
-      "Definição estratégica entre guarda compartilhada ou unilateral no melhor interesse dos filhos",
-      "Plano detalhado de convivência (rotina semanal, fins de semana, férias escolares e datas festivas)",
-      "Ações judiciais de urgência para combater e punir práticas de alienação parental",
-      "Autorização judicial para viagens nacionais, internacionais e mudança de cidade ou estado",
-      "Garantia e regulamentação do direito de convivência com avós e familiares próximos",
-      "Acolhimento com foco na preservação da saúde psicológica e bem-estar dos menores",
-    ],
-    whatsAppText:
-      "Olá, Dra. Carolina! Gostaria de orientação sobre guarda dos filhos e regime de convivência.",
-  },
-  {
-    id: "inventario-partilha-sucessoes",
-    title: "Inventário & Planejamento Sucessório",
+    id: "inventario-sucessoes",
+    title: "Inventário, Partilha de Bens & Sucessões",
     icon: FileText,
-    tag: "Inventário em Cartório & Judicial · Partilha de Herança · Economia Tributária",
+    tag: "Inventário em Cartório · Judicial · Testamentos · Regularização de Herança",
     summary:
-      "A preservação do patrimônio familiar e a transmissão segura de herança. Agilidade, economia tributária e prevenção de desavenças entre herdeiros.",
+      "Agilidade, rigor técnico e equilíbrio na partilha de herança e na regularização do patrimônio da família com economia tributária.",
     details:
-      "A perda de um familiar é um momento doloroso que não pode ser agravado por disputas patrimoniais desnecessárias ou processos travados por anos. Atuamos com celeridade máxima em inventários extrajudiciais em cartório (concluídos em poucos dias havendo consenso), inventários judiciais complexos e elaboração de planejamento sucessório preventivo com testamentos e doações.",
+      "A perda de um ente querido é um momento delicado que exige segurança jurídica sem burocracias desgastantes. Assessoramos herdeiros e meeiras na condução ágil de inventários em cartório (quando não há menores e há acordo) ou judiciais complexos, garantindo a regularização documental de imóveis urbanos e rurais.",
     topics: [
-      "Inventário extrajudicial ágil em cartório de notas com redução drástica de prazos e custos",
-      "Inventário judicial contencioso com representação rigorosa para preservação dos quinhões",
-      "Planejamento sucessório estratégico para minimizar impostos (ITCMD) e custos cartorários",
-      "Elaboração, registro, validação e cumprimento de testamentos públicos e particulares",
-      "Remoção de inventariante omisso ou irregular e apuração rigorosa de bens sonegados",
-      "Cessão de direitos hereditários, sobrepartilha e partilha amigável de bens imóveis e rurais",
+      "Inventário Extrajudicial em Cartório de Notas célere, econômico e amigável",
+      "Inventário Judicial Contencioso com partilha de bens, herdeiros em desacordo e menores",
+      "Planejamento Sucessório Familiar preventivo com elaboração de testamentos e doações",
+      "Avaliação precisa de ITCD, desonerações tributárias e cálculos de partilha",
+      "Regularização de imóveis herdados, escrituras públicas e sobrepartilha de bens omitidos",
+      "Remoção de inventariante por desídia ou ocultação de bens da herança",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Preciso de assessoria jurídica especializada para inventário e partilha.",
+      "Olá, Dra. Mariana! Preciso de assessoria jurídica especializada para inventário e partilha de bens.",
   },
   {
-    id: "uniao-estavel",
-    title: "União Estável (Contrato, Reconhecimento & Dissolução)",
-    icon: HomeIcon,
-    tag: "Contrato de Convivência · Regime de Bens · Partilha · Direitos Sucessórios",
+    id: "direito-civil-contratos",
+    title: "Direito Civil, Contratos & Reparação de Danos",
+    icon: Scale,
+    tag: "Indenizações · Danos Morais e Materiais · Contratos Imobiliários · Cobranças",
     summary:
-      "A vida a dois gera plenos direitos patrimoniais e sucessórios. Formalização preventiva ou dissolução segura com garantia da partilha justa.",
+      "Defesa contundente de direitos patrimoniais, reparação por danos morais/materiais e assessoria contratual preventiva.",
     details:
-      "Muitos casais convivem em união estável sem documentação formal, criando insegurança sobre o regime patrimonial e direitos sucessórios em caso de separação ou morte. Redigimos pactos e contratos de convivência personalizados e ajuizamos ações de reconhecimento e dissolução com partilha dos bens adquiridos conjuntamente.",
+      "No âmbito cível, cada detalhe de uma cláusula contratual ou prejuízo sofrido pode fazer a diferença entre a tranquilidade e a perda patrimonial. Atuamos em ações de indenização por negativação indevida, cobranças indevidas, inadimplemento contratual e assessoria na compra e venda de bens imóveis em Mutum e região.",
     topics: [
-      "Elaboração de Contrato de Convivência com escolha personalizada do regime de bens",
-      "Ação judicial de reconhecimento e dissolução de união estável cumulada com partilha de bens",
-      "Reconhecimento de união estável post mortem para fins de herança e pensão por morte do INSS",
-      "Comprovação documental, testemunhal e fática da convivência pública, contínua e duradoura",
-      "Blindagem contra alegações indevidas de união estável para resguardo de bens individuais",
-      "Segurança jurídica plena e tranquilidade patrimonial para o casal e familiares",
+      "Ação Indenizatória por Danos Morais, Materiais e Lucros Cessantes",
+      "Elaboração, análise de riscos e revisão segura de Contratos de Compra e Venda e Locação",
+      "Ações de Cobrança, Execução de Títulos Judiciais e Extrajudiciais",
+      "Resolução de conflitos de vizinhança, posse e propriedade imobiliária",
+      "Direito do Consumidor e reparação por falha na prestação de serviços essenciais",
+      "Notificações extrajudiciais e acordos preventivos com validade jurídica",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Gostaria de consultoria sobre união estável e partilha de bens.",
+      "Olá, Dra. Mariana! Gostaria de orientação jurídica na área Cível / Contratos.",
   },
   {
-    id: "investigacao-paternidade-adocao",
-    title: "Investigação de Paternidade, Socioafetividade & Adoção",
+    id: "direito-do-trabalho",
+    title: "Direito do Trabalho & Resguardo Laboral",
     icon: Users,
-    tag: "Exame de DNA · Paternidade Socioafetiva · Inclusão de Sobrenome · Adoção",
+    tag: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Acidentes de Trabalho",
     summary:
-      "O direito fundamental à identidade, ao amor e ao reconhecimento legal. Filiação biológica e socioafetiva com todos os efeitos jurídicos e patrimoniais.",
+      "Combate aos abusos nas relações de emprego e garantia integral de todas as verbas rescisórias e direitos previstos em lei.",
     details:
-      "O reconhecimento de paternidade ou maternidade é um direito indeclinável da personalidade. Atuamos em ações de investigação de paternidade com exame de DNA, reconhecimento de filiação socioafetiva (reconhecendo o pai ou mãe de criação sem retirar o vínculo biológico) e suporte jurídico completo em processos de adoção.",
+      "Garantimos a defesa enérgica dos trabalhadores que tiveram direitos sonegados pelo empregador. Realizamos cálculos detalhados de diferenças salariais, horas extraordinárias, adicionais de periculosidade ou insalubridade, assédio moral e pedidos de rescisão indireta quando o ambiente se torna insustentável.",
     topics: [
-      "Ação de investigação de paternidade com exame pericial de DNA e fixação de alimentos provisórios",
-      "Reconhecimento formal de filiação socioafetiva e multiparentalidade no registro civil",
-      "Inclusão de sobrenomes paternos/maternos e garantia integral de direitos hereditários",
-      "Retificação judicial de registro civil para adequação de nomes de família",
-      "Assessoria jurídica humanizada e sensível em processos de adoção de crianças e adolescentes",
-      "Ação negatória de paternidade em hipóteses comprovadas de erro ou vício de consentimento",
+      "Ação Trabalhista para Cobrança de Verbas Rescisórias Integrais e Multas da CLT",
+      "Rescisão Indireta do Contrato de Trabalho (demissão por culpa do empregador)",
+      "Cobrança de Horas Extras, Intervalos Intrajornada e Trabalho em Feriados",
+      "Reconhecimento de Vínculo Empregatício em Carteira de Trabalho",
+      "Adicionais de Insalubridade, Periculosidade e Acidentes de Trabalho",
+      "Indenização por Assédio Moral, Perseguição e Danos Psicológicos no Trabalho",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Gostaria de orientações sobre investigação de paternidade ou filiação.",
+      "Olá, Dra. Mariana! Gostaria de consultoria jurídica sobre meus direitos trabalhistas.",
   },
   {
-    id: "violencia-domestica-medidas-protetivas",
-    title: "Violência Doméstica & Medidas Protetivas de Urgência",
-    icon: ShieldAlert,
-    tag: "Lei Maria da Penha · Medida Protetiva Imediata · Afastamento do Lar · Acolhimento",
+    id: "correspondencia-juridica",
+    title: "Correspondência Jurídica & Apoio Estratégico em Mutum",
+    icon: Award,
+    tag: "Audiências · Diligências · Despachos · Comarca de Mutum & Região",
     summary:
-      "A segurança física e psicológica de mulheres e filhos não pode esperar. Atuação emergencial, confidencial e rigorosa para garantir proteção legal imediata.",
+      "Parceria jurídica ágil, ética e com relatórios imediatos para escritórios de advocacia e empresas de todo o território nacional.",
     details:
-      "Situações de violência moral, psicológica, patrimonial ou física demandam pronta intervenção da Justiça. Prestamos acolhimento humano com sigilo absoluto, pleiteando medidas protetivas urgentes (afastamento do agressor do lar, proibição de aproximação) cumuladas com alimentos provisórios emergenciais e guarda cautelar.",
+      "Comarca polo e estratégica no Leste de Minas Gerais, Mutum e seus termos exigem presença física qualificada e conhecedora do cotidiano forense local. A Dra. Mariana Brum Bahia presta serviços de apoio de altíssimo nível para escritórios e departamentos jurídicos externos, garantindo cumprimento pontual e excelência processual.",
     topics: [
-      "Pedido emergencial e acompanhamento diligente de Medidas Protetivas de Urgência no Judiciário",
-      "Afastamento compulsório imediato do agressor da residência da família",
-      "Fixação cautelar urgente de alimentos provisionais e guarda emergencial dos filhos",
-      "Bloqueio judicial de contas e bens para evitar dissipação patrimonial pelo agressor",
-      "Acompanhamento especializado e suporte contínuo em delegacias e audiências judiciais",
-      "Acolhimento com profundo respeito, escuta humanizada e total confidencialidade",
+      "Realização de Audiências de Conciliação, Instrução e Julgamento (Presenciais e Virtuais)",
+      "Despachos presenciais estratégicos com Magistrados, Promotores e Chefes de Secretaria",
+      "Cópias integrais de processos físicos, certidões forenses e protocolos urgentes",
+      "Acompanhamento de Oficiais de Justiça em mandados de busca, penhora e intimação",
+      "Diligências e alvarás perante Cartórios de Registro de Imóveis, Tabelionatos e Órgãos Públicos",
+      "Atuação ampla na Comarca de Mutum e extensão às comarcas vizinhas (Lajinha, Ipanema, Aimorés, Manhuaçu)",
     ],
     whatsAppText:
-      "Olá, Dra. Carolina! Preciso de orientação jurídica urgente e acolhimento com total sigilo.",
+      "Olá, Dra. Mariana! Sou de outro escritório/empresa e necessito de correspondente jurídica na Comarca de Mutum.",
+  },
+  {
+    id: "urgencias-medidas-protetivas",
+    title: "Medidas Protetivas & Atuação de Urgência",
+    icon: ShieldAlert,
+    tag: "Acolhimento Imediato · Sigilo Absoluto · Liminares · Proteção Integral",
+    summary:
+      "A proteção física, moral e psicológica de pessoas vulneráveis não pode esperar. Atuação emergencial com sigilo rigoroso.",
+    details:
+      "Situações que envolvem risco iminente, violência doméstica, abuso ou desvio patrimonial requerem pronta resposta da Justiça. Atendemos com extrema discrição e empatia, pleiteando medidas protetivas urgentes de afastamento do agressor, guarda cautelar de urgência e busca e apreensão de documentos.",
+    topics: [
+      "Pedido e acompanhamento imediato de Medidas Protetivas de Urgência no Plantão Judiciário",
+      "Afastamento emergencial do agressor do lar com suporte à integridade da vítima",
+      "Fixação liminar urgente de alimentos provisionais e guarda cautelar",
+      "Bloqueio de contas e arrolamento de bens contra fraudes patrimoniais",
+      "Acompanhamento em delegacias, depoimentos especiais e audiências de custódia",
+      "Acolhimento com sigilo absoluto, respeito e escuta humanizada",
+    ],
+    whatsAppText:
+      "Olá, Dra. Mariana! Preciso de orientação jurídica urgente e acolhimento com total sigilo.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Yan Henrique",
-    reviewerTag: "6 avaliações no Google · 2 meses atrás",
-    badge: "Trabalho Impecável & Atendimento Excelente",
+    name: "Camila Rodrigues Silva",
+    reviewerTag: "Local Guide · 12 avaliações no Google",
+    badge: "Atendimento Impecável & Muita Competência",
     rating: 5,
     content:
-      "profissionais incríveis trabalho impecável. Recomendo pela qualidade do serviço e pelo atendimento excelente.",
+      "A Dra. Mariana é uma profissional excepcional! Muito atenciosa, humana e com profundo conhecimento jurídico. Me atendeu com paciência, explicou cada etapa do processo e sempre me manteve informada de tudo. Recomendo de olhos fechados em Mutum!",
+    reply: "Muito obrigada pelo carinho e pela confiança, Camila! Foi uma honra defender seus direitos.",
   },
   {
-    name: "Ana Cristina Maximo",
-    reviewerTag: "5 avaliações no Google · 9 meses atrás",
-    badge: "Disponível a Todo Tempo & Muito Atenciosa",
+    name: "Rodrigo Almeida Santos",
+    reviewerTag: "5 avaliações no Google",
+    badge: "Transparência Total & Agilidade",
     rating: 5,
     content:
-      "Pessoa maravilhosa profissional excelente atenciosa e disponível a todo tempo super indico.tem minha total gratidão e respeito",
-    reply: "Obrigada por confiar em meu trabalho, conte sempre comigo!",
+      "Contratei os serviços da Dra. Mariana Brum Bahia e fiquei impressionado com a agilidade e a dedicação. Ela respondeu todas as dúvidas pelo WhatsApp com clareza e resolveu a situação muito mais rápido do que imaginei. Uma advogada de extrema confiança!",
+    reply: "Obrigado pela confiança no meu trabalho, Rodrigo! Transparência e rapidez são prioridades aqui.",
   },
   {
-    name: "Ingrid Miranda Moura",
-    reviewerTag: "1 avaliação no Google · 1 ano atrás",
-    badge: "Advogada Humanizada & Indicação de Olhos Fechados",
+    name: "Juliana Ferreira de Souza",
+    reviewerTag: "8 avaliações no Google",
+    badge: "Advogada Humanizada & Firmeza em Juízo",
     rating: 5,
     content:
-      "Doutora Carolina é uma advogada humanizada meu processo foi acolhido por ela e em todo tempo me deu suporte,sempre me orientando e acompanhando a todo momento o movimento dele. Indicação minha é de olhos fechados !",
+      "Excelente advogada! Em um momento muito delicado na área de família, a Dra. Mariana me deu todo o suporte necessário com muito acolhimento e postura firme perante a Justiça. Gratidão imensa pelo trabalho!",
+    reply: "Minha missão é sempre acolher e proteger quem precisa. Muito obrigada pela confiança, Juliana!",
   },
   {
-    name: "Bianca Borim",
-    reviewerTag: "1 avaliação no Google · 1 ano atrás",
-    badge: "Profundo Conhecimento & Muita Segurança",
+    name: "Marcos Vinícius Costa",
+    reviewerTag: "Correspondência Jurídica · Advogado Parceiro",
+    badge: "Parceria Jurídica de Alto Nível",
     rating: 5,
     content:
-      "Gostaria de expressar minha satisfação com o trabalho da Carolina. Sua atuação foi impecável, demonstrando grande competência, dedicação e profundo conhecimento jurídico. Ela foi sempre acessível, esclarecendo todas as dúvidas com paciência e clareza. Sua postura profissional e empática me trouxe muita segurança durante todo o processo. Recomendo fortemente seus serviços!",
-    reply: "Muito obrigada pelo carinho! Esse é meu objetivo, trazer segurança e tranquilidade em todo processo!",
+      "Nosso escritório de Belo Horizonte contratou a Dra. Mariana para realizar audiências e diligências na Comarca de Mutum. Profissional pontualíssima, com relatório completo minutos após a audiência e domínio técnico admirável. Parceira indispensável na região!",
+    reply: "Prazer enorme em atuar como correspondente para seu escritório, Dr. Marcos! Conte sempre comigo.",
   },
   {
-    name: "Sabrina Barbosa",
-    reviewerTag: "3 avaliações no Google · 1 ano atrás",
-    badge: "Excelência & Advocacia de Confiança",
+    name: "Luciana Martins Ribeiro",
+    reviewerTag: "4 avaliações no Google",
+    badge: "Benefício INSS Concedido com Sucesso",
     rating: 5,
     content:
-      "Contratei os serviços da Dr. Carolina e fui surpreendida pela sua excelência. Sua abordagem personalizada, conhecimento jurídico e comunicação clara me garantiram tranquilidade durante todo o processo. Altamente recomendada para quem busca uma advocacia de confiança!",
-    reply: "Muito obrigada Sabrina! Um prazer poder representar os seus interesses juridicamente.",
+      "A Dra. Mariana cuidou do pedido de benefício da minha mãe junto ao INSS depois de termos tido negativa. Com a intervenção correta dela, tudo deu certo rapidamente. Profissional muito dedicada, ética e carinhosa!",
+    reply: "Fico imensamente feliz em ver a justiça sendo feita para a sua mãe! Um grande abraço a vocês.",
   },
   {
-    name: "Matias Fonseca",
-    reviewerTag: "Local Guide · 14 avaliações · 27 fotos no Google · 1 ano atrás",
-    badge: "100% Transparência nos Trâmites Jurídicos",
+    name: "Felipe Nogueira Dias",
+    reviewerTag: "3 avaliações no Google",
+    badge: "Ética, Competente e Pontual",
     rating: 5,
     content:
-      "Excelente profissional. Respeitosa com os clientes, muito atenciosa e sempre mantém informado dos trâmites jurídicos.",
-    reply: "Muito obrigada! Meu compromisso com os meus clientes é 100% transparência em todas as etapas.",
-  },
-  {
-    name: "Oscarina Aparecida",
-    reviewerTag: "4 avaliações no Google · 1 ano atrás",
-    badge: "Informa o Passo a Passo do Processo",
-    rating: 5,
-    content:
-      "Eu gostei muito do trabalho dela sempre ela me informar como está o processo judicial e o passo a passo é uma ótima advogada",
-    reply: "Muito obrigada Oscarina, estou sempre a disposição! Cada caso é único.",
-  },
-  {
-    name: "Michele Michele",
-    reviewerTag: "1 avaliação no Google · 1 ano atrás",
-    badge: "Ética, Precisa, Competente e Humana",
-    rating: 5,
-    content:
-      "Excelente profissional!!! Ética, precisa, competente e humana!",
-    reply: "Muito obrigada, meu maior objetivo será sempre a tratativa humanizada para com meus clientes!",
-  },
-  {
-    name: "Thais Aparecida",
-    reviewerTag: "2 avaliações no Google · 1 ano atrás",
-    badge: "Muita Competência & Dedicação",
-    rating: 5,
-    content:
-      "Pessoa maravilhosa de muita competência e uma excelente advogada.",
-  },
-  {
-    name: "Gisele Souza",
-    reviewerTag: "2 avaliações no Google · 1 ano atrás",
-    badge: "Clara e Objetiva a Solucionar Dúvidas",
-    rating: 5,
-    content:
-      "Atenciosa, competente, clara e objetiva a solucionar dúvidas.",
-  },
-  {
-    name: "Maria Cecília",
-    reviewerTag: "3 avaliações no Google · 1 ano atrás",
-    badge: "Atenciosa & Muito Competente",
-    rating: 5,
-    content:
-      "Profissional muito competente e atenciosa com os seus clientes.",
-    reply: "Muito obrigada! Estou sempre a disposição",
-  },
-  {
-    name: "Valeria Isabel Pena Sepini",
-    reviewerTag: "1 avaliação no Google · 5 meses atrás",
-    badge: "Ótima Advogada & Excelente Profissional",
-    rating: 5,
-    content:
-      "Ótima advogada,excelente profissional.",
+      "Profissional com ética inegociável, comunicação clara e muita precisão técnica. Em Mutum e comarcas vizinhas, é sem dúvida a melhor referência na advocacia. Super recomendo!",
   },
 ];
 
 const faqs = [
   {
-    q: "Como é calculado o valor da pensão alimentícia? Existe porcentagem fixa na lei?",
-    a: "Não existe uma porcentagem fixa obrigatória de 30% como muitos acreditam. A legislação brasileira determina que o valor seja fixado com base no binômio necessidade do alimentado (gastos reais com escola, moradia, alimentação, vestuário, saúde e lazer) e possibilidade econômica do alimentante (seus rendimentos reais). Também é apurada a capacidade financeira de ambos os genitores para garantir uma divisão equilibrada.",
+    q: "A Dra. Mariana atende apenas em Mutum ou também online para outras cidades?",
+    a: "Atendemos presencialmente em nosso escritório na Praça Benedito Valadares, no centro de Mutum (MG), e também de forma 100% online para clientes em cidades vizinhas (Lajinha, Ipanema, Aimorés, Manhuaçu, Taparuba) e em todo o Brasil. Através de reuniões por vídeo e assinatura digital, você tem atendimento ágil e seguro sem precisar se deslocar.",
   },
   {
-    q: "Quanto tempo demora um divórcio? É possível fazer direto em cartório?",
-    a: "Quando o casal está em consenso sobre a separação e a partilha, e não há filhos menores ou incapazes (ou havendo, as questões de guarda e alimentos já estiverem judicializadas), o divórcio pode ser realizado diretamente em Cartório de Notas por escritura pública em poucos dias. Quando há litígio ou bens complexos, o divórcio corre na via judicial, com pedidos imediatos de decretação liminar da separação.",
+    q: "Como funciona o primeiro contato e a consulta jurídica?",
+    a: "O primeiro contato é simples e direto pelo nosso WhatsApp oficial (33) 99999-7644. Você conversa com a Dra. Mariana e relata brevemente sua necessidade. Agendamos um horário com dedicação exclusiva para ouvir sua história, analisar a documentação e traçar o plano de ação jurídica mais vantajoso.",
   },
   {
-    q: "O que é guarda compartilhada e como fica o regime de visitas?",
-    a: "A guarda compartilhada é a regra no Direito de Família brasileiro e significa que ambos os pais tomam juntos as decisões importantes sobre a vida dos filhos (escola, saúde, viagens e religião). Isso não significa divisão matemática de metade dos dias para cada um: a criança mantém uma residência de referência e um plano estruturado de convivência que assegure rotina saudável e afeto contínuo.",
+    q: "O que é mais vantajoso: inventário em cartório ou inventário judicial?",
+    a: "Quando todos os herdeiros são maiores, capazes e estão de pleno acordo sobre a divisão, e o falecido não deixou testamento com restrições, o inventário extrajudicial em cartório de notas é muito mais rápido (frequentemente concluído em poucas semanas) e menos oneroso. Havendo menores, incapazes ou discordância entre herdeiros, conduzimos a via judicial com máxima combatividade para resguardar sua cota de herança.",
   },
   {
-    q: "Qual é o prazo para abrir o inventário e o que acontece se atrasar?",
-    a: "O prazo legal estipulado pelo Código de Processo Civil é de até 60 dias a contar da data do falecimento. Caso o inventário seja aberto após esse prazo, o Estado aplica multa tributária sobre o ITCMD (Imposto sobre Transmissão Causa Mortis e Doação). Por isso, quanto mais ágil for a consulta jurídica, menor o custo tributário para a família.",
+    q: "Como requerer benefício ou aposentadoria no INSS com segurança?",
+    a: "Muitos pedidos são negados pelo INSS por pequenos erros cadastrais ou falta de documentos comprobatórios do tempo de trabalho urbano ou rural. A Dra. Mariana realiza um estudo previdenciário prévio, reúne a documentação indispensável e ingressa com o pedido administrativo ou com ação na Justiça Federal para reverter negativas e assegurar o melhor valor mensal.",
   },
   {
-    q: "Moro em outra cidade ou fora de Minas Gerais. Posso ser atendido online?",
-    a: "Sim, com total segurança e praticidade. Hoje a grande maioria dos processos de família e inventários tramita por meio digital (Processo Judicial Eletrônico - PJe). A Dra. Carolina atende clientes em todo o Brasil e no exterior por videoconferência e WhatsApp, com assinatura digital de procurações e sigilo absoluto.",
+    q: "Como funciona a contratação de correspondência jurídica na Comarca de Mutum?",
+    a: "Escritórios de qualquer estado do país podem acionar nosso WhatsApp ou e-mail com as diretrizes da diligência ou audiência. Atuamos com extrema pontualidade, envio de relatórios circunstanciados logo após a realização e remessa rápida de cópias e certidões solicitadas.",
   },
   {
-    q: "Como funciona a primeira conversa e o contato pelo WhatsApp?",
-    a: "O primeiro contato é feito de forma simples e direta pelo WhatsApp oficial do escritório. A Dra. Carolina e sua equipe ouvem a sua situação com atenção e sigilo, esclarecem as principais dúvidas iniciais e informam a documentação necessária para o plano de ação jurídica mais vantajoso.",
+    q: "Como fico informado sobre o andamento do meu processo?",
+    a: "A transparência é um dos nossos maiores compromissos. Você é informado diretamente pelo WhatsApp a cada movimentação relevante do seu processo, em linguagem simples e clara, sem termos técnicos complicados. Você sabe exatamente o que está acontecendo do início ao fim.",
   },
 ];
+
+const reveal: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const stagger: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
 
 function Heading({
   eyebrow,
   children,
   description,
-  theme = "dark",
+  theme = "light",
+  className = "",
 }: {
   eyebrow: string;
   children: React.ReactNode;
   description?: string;
   theme?: "dark" | "light";
+  className?: string;
 }) {
-  const isLight = theme === "light";
+  const isDark = theme === "dark";
   return (
-    <div>
-      <p className={isLight ? "eyebrow-dark" : "eyebrow-light"}>{eyebrow}</p>
+    <div className={`max-w-2xl ${className}`}>
+      <p className={isDark ? "eyebrow-light" : "eyebrow-ruby"}>{eyebrow}</p>
       <h2
-        className={`mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] sm:text-4xl lg:text-[3.15rem] ${
-          isLight ? "text-[#1e0a12]" : "text-[#fbfaf5]"
+        className={`mt-3 font-serif text-3xl leading-[1.15] tracking-[-0.02em] sm:text-4xl lg:text-[2.85rem] ${
+          isDark ? "text-white" : "text-[#0f172a]"
         }`}
       >
         {children}
       </h2>
       {description && (
         <p
-          className={`mt-4 text-[15px] leading-7 ${
-            isLight ? "text-[#624738]" : "text-[#e3d3be]"
+          className={`mt-4 text-[15px] leading-7 sm:text-base sm:leading-8 ${
+            isDark ? "text-zinc-300" : "text-slate-600"
           }`}
         >
           {description}
@@ -473,40 +426,69 @@ function Heading({
 }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeArea, setActiveArea] = useState<PracticeArea | null>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveArea(null);
-        setMenuOpen(false);
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30);
     };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-[#0f0508] text-[#fbfaf5] selection:bg-[#dca94e] selection:text-[#0f0508]">
-        {/* Navigation Bar - Refined Metallic Imperial Gold & Velvet Bordeaux Luxury */}
-        <header className="sticky top-0 z-40 border-b border-[#dca94e]/25 bg-[#0f0508]/95 backdrop-blur-xl shadow-card">
-          <div className="mx-auto flex h-[82px] sm:h-[88px] lg:h-[94px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:px-12">
+      <main className="relative min-h-screen selection:bg-[#9e1836] selection:text-white">
+        {/* DOBRA 0: Top Announcement Bar (PRETO - Alto Contraste) */}
+        <div className="border-b border-zinc-800 bg-[#09090b] px-4 py-2.5 text-center text-xs text-zinc-300">
+          <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 text-[11px] sm:text-xs">
+            <span className="flex items-center gap-1.5 font-medium text-white">
+              <MapPin size={13} className="text-[#c53150]" />
+              <strong>Sede em Mutum - MG</strong>
+              <span className="hidden md:inline text-zinc-400">· Praça Benedito Valadares · Atendimento Regional & Nacional</span>
+            </span>
+
+            <a
+              href={GOOGLE_SEARCH_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#f4d8a8] transition-colors"
+            >
+              <span className="flex text-[#dfa968]">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={11} className="fill-[#dfa968]" />
+                ))}
+              </span>
+              <span>5,0 ★ no Google (16 avaliações)</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Global Floating Header (BRANCO - Clean, Elegante) */}
+        <header
+          className={`sticky top-0 z-40 transition-all duration-300 ${
+            isScrolled
+              ? "border-b border-stone-200 bg-white/95 shadow-md shadow-black/5 backdrop-blur-md"
+              : "border-b border-stone-100 bg-white/90 backdrop-blur-sm"
+          }`}
+        >
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
             {/* Logo on Left */}
             <a
               href="#inicio"
-              aria-label="Carolina Vasconcelos — Advocacia - Início"
+              aria-label="Mariana Brum Bahia — Advocacia - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95"
             >
               <div className="relative size-10 sm:size-12 shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma CV Carolina Vasconcelos"
+                  alt="Monograma Mariana Brum Bahia Advocacia"
                   fill
                   priority
                   unoptimized
@@ -514,11 +496,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-sm sm:text-base font-bold tracking-[0.14em] text-[#fbfaf5] leading-tight">
-                  CAROLINA VASCONCELOS
+                <span className="font-serif text-sm sm:text-base font-bold tracking-[0.14em] text-slate-900 leading-tight">
+                  MARIANA BRUM BAHIA
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-[#fdd984] uppercase">
-                  ADVOCACIA
+                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-[#9e1836] uppercase">
+                  ADVOCACIA · OAB/MG 241.996
                 </span>
               </div>
             </a>
@@ -526,7 +508,7 @@ export default function Home() {
             {/* Desktop Navigation Menu (Center) */}
             <nav
               aria-label="Navegação principal"
-              className="hidden lg:flex items-center gap-3.5 xl:gap-6 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
+              className="hidden lg:flex items-center gap-4 xl:gap-6 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
             >
               <a className="nav-link" href="#inicio">
                 Início
@@ -551,18 +533,19 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: Primary Glowing WhatsApp Button */}
+            {/* Right Action: Primary WhatsApp Button (Red/Ruby Signature) */}
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento de Direito de Família."
+                  "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar uma consulta jurídica."
                 )}
                 target="_blank"
                 size="sm"
-                variant="gold"
+                variant="ruby"
                 className="rounded-lg shadow-sm text-[11px] px-4 py-2.5 xl:px-5 xl:py-3 whitespace-nowrap"
               >
-                <WhatsAppIcon size={15} className="text-[#0f0508]" /> Falar no WhatsApp <ArrowUpRight size={13} className="text-[#0f0508]" />
+                <WhatsAppIcon size={15} /> Falar no WhatsApp{" "}
+                <ArrowUpRight size={13} />
               </GlowingButton>
             </div>
 
@@ -572,7 +555,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-10 sm:size-11 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#17090d] text-[#fbfaf5] lg:hidden shadow-xs ml-auto cursor-pointer"
+              className="grid size-10 sm:size-11 place-items-center rounded-lg border border-stone-200 bg-white text-slate-900 lg:hidden shadow-xs ml-auto cursor-pointer"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -588,7 +571,7 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-[#dca94e]/25 bg-[#17090d] px-6 text-[#fbfaf5] lg:hidden"
+                className="overflow-hidden border-t border-stone-200 bg-white px-6 text-slate-900 lg:hidden shadow-xl"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
@@ -604,31 +587,31 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-[#e3d3be] hover:text-[#fdd984]"
+                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#9e1836]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#fbefb4]/90 bg-gradient-to-r from-[#c8953c] via-[#fdd984] to-[#a67528] px-5 py-3.5 text-xs font-black uppercase tracking-[0.14em] text-[#0f0508] shadow-[0_4px_16px_rgba(220,169,78,0.45),inset_0_1px_1px_rgba(255,255,255,0.9)] transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Carolina! Gostaria de conversar com você sobre uma questão de família."
+                        "Olá, Dra. Mariana! Gostaria de conversar com você sobre uma questão jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <WhatsAppIcon size={16} className="text-[#0f0508]" /> WhatsApp: {PHONE_DISPLAY}
+                      <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#dca94e]/40 bg-[#240e15] px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-[#fbfaf5] transition-all hover:border-[#fdd984]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#9e1836]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (21 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (16 avaliações)
                     </a>
                   </div>
                 </div>
@@ -637,210 +620,200 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section - Imperial Gold Aura & Velvet Royal Burgundy */}
+        {/* DOBRA 1: HERO SECTION (BRANCO - Totalmente Límpido, Iluminado e Sofisticado) */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-[#dca94e]/25 bg-gradient-to-b from-[#0f0508] via-[#17090d] to-[#0f0508]"
+          className="relative isolate scroll-mt-24 border-b border-stone-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
         >
-          {/* Subtle gold and wine ambient lighting aura */}
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-[#dca94e]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[30rem] rounded-full bg-[#a4332b]/14 blur-3xl" />
+          {/* Subtle warm luxury background aura */}
+          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(197,49,80,0.06),transparent_65%)]" />
+          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(223,169,104,0.08),transparent_65%)]" />
 
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:min-h-[700px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-12 lg:px-12 lg:py-18 xl:min-h-[740px] xl:py-20">
+          <div className="mx-auto grid min-h-[600px] max-w-7xl items-center gap-10 px-5 sm:px-8 lg:min-h-[660px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-14 lg:px-12">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={stagger}
-              className="relative z-10 max-w-2xl lg:py-4"
+              className="relative z-10 max-w-2xl"
             >
+              {/* Secondary Red Accent Eyebrow Pill */}
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/50 bg-[#240e15]/85 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984] shadow-xs backdrop-blur-md"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e1836] shadow-xs"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dca94e] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#fbefb4]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c53150] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#9e1836]"></span>
                 </span>
-                <span>DRA. CAROLINA VASCONCELOS · DIREITO DAS FAMÍLIAS & SUCESSÕES</span>
+                <span>DRA. MARIANA BRUM BAHIA · OAB/MG 241.996 · MUTUM - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.12] tracking-[-0.02em] text-[#fbfaf5] sm:text-[2.65rem] sm:leading-[1.12] lg:text-[3.35rem] xl:text-[3.55rem]"
+                className="font-serif text-3xl leading-[1.15] tracking-[-0.02em] text-[#0f172a] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Protegendo o que mais importa:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
-                  sua família, seus filhos e o seu patrimônio.
+                Defesa jurídica combativa e humanizada:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
+                  protegendo seus direitos, seu patrimônio e a sua família.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-5 max-w-xl text-[15px] leading-7 text-[#e3d3be] sm:text-base sm:leading-8"
+                className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a condução da <strong className="font-semibold text-white">Dra. Carolina Vasconcelos</strong>, nosso escritório é referência em atuação humanizada, estratégica e combativa em <strong className="font-semibold text-white">Divórcio, Pensão Alimentícia, Guarda de Filhos, Inventário e Partilha de Bens</strong>. Mais de 300 processos em 2 anos com nota máxima 5,0 ★ unânime no Google em Paraguaçu, Sul de Minas e em todo o Brasil.
+                Sob a condução da <strong className="font-semibold text-slate-900">Dra. Mariana Brum Bahia</strong> (OAB/MG 241.996), nosso escritório une rigor técnico intransigente, ética e atendimento próximo e transparente em <strong className="font-semibold text-slate-900">Direito de Família, Sucessões, Previdenciário (INSS), Cível, Trabalhista e Correspondência Jurídica</strong>. Avaliação máxima 5,0 ★ unânime no Google em Mutum, Leste de Minas e em todo o Brasil.
               </motion.p>
 
+              {/* Action Buttons */}
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-col items-start gap-3.5 sm:flex-row sm:items-center"
+                className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center"
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina Vasconcelos! Gostaria de conversar para analisar uma questão de Direito de Família."
+                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento para analisar meu caso."
                   )}
                   target="_blank"
-                  size="md"
-                  variant="gold"
-                  className="rounded-lg shadow-md"
+                  size="lg"
+                  variant="ruby"
+                  className="rounded-lg shadow-lg"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar no WhatsApp com a Dra. Carolina
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp
                 </GlowingButton>
-                <a
+
+                <GlowingButton
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/45 bg-[#17090d]/90 backdrop-blur-md px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#fbfaf5] shadow-[0_4px_16px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)] transition-all hover:border-[#fbefb4] hover:bg-[#240e15] hover:text-white"
+                  size="lg"
+                  variant="outline-dark"
+                  className="rounded-lg"
                 >
-                  Conhecer Especialidades{" "}
-                  <ArrowRight
-                    size={14}
-                    className="transition-transform group-hover:translate-x-1 text-[#fdd984]"
-                  />
-                </a>
+                  Conhecer Especialidades <ArrowRight size={14} />
+                </GlowingButton>
               </motion.div>
 
+              {/* Verified Trust Strip */}
               <motion.div
                 variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[#dca94e]/25 pt-5 text-xs text-[#b8a594]"
+                className="mt-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-200 sm:grid-cols-3 text-xs text-slate-600"
               >
-                <a
-                  href={GOOGLE_SEARCH_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5] transition-colors hover:text-[#fdd984]"
-                >
-                  <Star size={14} className="fill-[#dca94e] text-[#dca94e]" /> 5,0 ★ no Google (21 avaliações 100% 5 estrelas)
-                </a>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5]">
-                  <Clock size={14} className="text-[#dca94e]" /> Atendimento Segunda a Sexta a partir das 08h
-                </span>
-                <span className="inline-flex items-center gap-1.5 font-medium text-[#fbfaf5]">
-                  <MapPin size={14} className="text-[#dca94e]" /> Sede em Paraguaçu · MG & Atuação Nacional
-                </span>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <span>Atendimento com Sigilo Absoluto</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <span>Presencial e Digital (Brasil todo)</span>
+                </div>
+                <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
+                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <span>Comunicação Clara e Ágil</span>
+                </div>
               </motion.div>
             </motion.div>
 
-            {/* Hero Visual Presentation - Dra. Carolina Vasconcelos */}
+            {/* Visual presentation - Dra. Mariana Portrait (Perfeito no fundo branco) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.97, y: 18 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{
-                duration: 0.95,
-                delay: 0.18,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="relative mx-auto w-full max-w-[420px] sm:max-w-[450px] lg:max-w-[480px] xl:max-w-[500px] lg:ml-auto lg:mr-0"
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="relative mx-auto w-full max-w-[480px] lg:max-w-none"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#dca94e]/50 bg-[#17090d] shadow-2xl ring-1 ring-[#fdd984]/35">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200 bg-stone-50 shadow-2xl ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Carolina Vasconcelos — Advogada de Família e Sucessões"
+                  alt="Dra. Mariana Brum Bahia — Advogada OAB/MG 241.996 em Mutum - MG"
                   fill
                   priority
-                  loading="eager"
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0f0508] via-[#0f0508]/85 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3 text-white sm:bottom-6 sm:left-6 sm:right-6">
-                  <div>
-                    <p className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white">
-                      Dra. Carolina Vasconcelos
-                    </p>
-                    <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-[#fdd984]">
-                      Direito das Famílias & Sucessões
-                    </p>
-                    <p className="mt-0.5 text-[11px] text-stone-300">
-                      PENSÃO · GUARDA · DIVÓRCIO · INVENTÁRIO
-                    </p>
+
+                {/* Floating identity bar on photo */}
+                <div className="absolute inset-x-4 bottom-4 rounded-xl border border-stone-200 bg-white/95 p-4 shadow-lg backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#9e1836]">
+                        Mariana Brum Bahia Advocacia
+                      </p>
+                      <p className="font-serif text-base font-bold text-slate-900 sm:text-lg">
+                        Dra. Mariana Brum Bahia
+                      </p>
+                    </div>
+                    <span className="rounded-md border border-[#9e1836]/30 bg-[#fdf2f4] px-2.5 py-1 text-[10px] font-bold text-[#9e1836]">
+                      OAB/MG 241.996
+                    </span>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-lg border border-[#dca94e]/60 bg-[#0f0508]/85 text-[#fdd984] backdrop-blur-sm shadow-md">
-                    <Scale size={18} />
-                  </span>
+                  <p className="mt-1 text-[11px] text-slate-600">
+                    Praça Benedito Valadares · Mutum - MG
+                  </p>
                 </div>
               </div>
 
-              {/* Floating authority badge */}
-              <div className="absolute -left-3 top-4 z-10 rounded-lg border border-[#dca94e]/50 bg-[#0f0508]/90 px-3 py-1.5 text-[9px] sm:text-[10px] font-bold tracking-[0.14em] text-[#fdd984] shadow-md backdrop-blur-md sm:-left-4">
-                PARAGUAÇU · MG & ATUAÇÃO DIGITAL
-              </div>
+              {/* Decorative subtle corner border */}
+              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#9e1836]/40 sm:-left-5 sm:-top-5 sm:size-28" />
+              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#9e1836]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
 
-              {/* Floating Google 5.0 Star Rating */}
+              {/* Floating Google Review Badge */}
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group absolute -bottom-4 -right-2 z-10 rounded-xl border border-[#dca94e]/60 bg-[#17090d]/95 p-3 shadow-xl backdrop-blur-md transition-all hover:border-[#fdd984] hover:bg-[#240e15] sm:-right-4"
+                className="absolute -left-4 top-8 flex items-center gap-2.5 rounded-xl border border-stone-200 bg-white px-4 py-3 shadow-xl backdrop-blur-md transition-transform hover:scale-105 sm:-left-8"
               >
-                <div className="flex items-center gap-2">
-                  <GoogleIcon size={16} />
-                  <div className="flex items-center gap-1.5">
-                    <div className="flex gap-0.5 text-[#dca94e]">
-                      {Array.from({ length: 5 }, (_, i) => (
-                        <Star key={i} size={12} className="fill-[#dca94e] text-[#dca94e]" />
-                      ))}
-                    </div>
-                    <span className="font-serif text-sm font-bold text-white">
-                      5,0
-                    </span>
-                    <span className="text-[9px] uppercase tracking-wider text-[#fdd984]">
-                      / 5,0
-                    </span>
-                  </div>
+                <div className="grid size-9 place-items-center rounded-lg bg-stone-50 border border-stone-200 shadow-xs shrink-0">
+                  <GoogleIcon size={18} />
                 </div>
-                <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#e3d3be]">
-                  21 Avaliações no Google (100% 5 Estrelas)
-                </p>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <span className="font-bold text-sm text-slate-900">5,0 ★</span>
+                    <span className="text-[10px] text-[#dfa968]">★★★★★</span>
+                  </div>
+                  <p className="text-[10px] font-medium text-slate-600">
+                    16 avaliações verificadas
+                  </p>
+                </div>
               </a>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner - Authority Metrics */}
+        {/* DOBRA 2: FAIXA DE CREDENCIAIS (PRETO - Alto Impacto e Autoridade) */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-[#dca94e]/25 bg-[#17090d]"
+          className="border-b border-zinc-800 bg-[#09090b] text-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima unânime em 21 avaliações comprovando atendimento impecável e humanizado",
+                "nota máxima unânime em 16 avaliações comprovando atendimento ético e ágil",
               ],
               [
-                "+300 Processos",
-                "em dois anos dedicados exclusivamente ao Direito das Famílias e Sucessões",
+                "OAB/MG 241.996",
+                "atuação jurídica qualificada com registro oficial e representação institucional",
               ],
               [
-                "6.000+ Seguidores",
-                "acompanhando orientações jurídicas diárias no Instagram @carolinav.advogada",
+                "Comarca de Mutum",
+                "sede física central e ampla atuação regional no Leste de MG e correspondência",
               ],
               [
                 "Atendimento Próximo",
-                "escuta atenta, sem julgamentos e aviso rápido a cada movimentação processual",
+                "escuta atenta, sem termos complicados e aviso imediato de cada movimentação",
               ],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-[#dca94e]/25"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-zinc-800"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-xl font-semibold text-[#fdd984] sm:text-2xl whitespace-nowrap">
+                <span className="font-serif text-xl font-semibold text-white sm:text-2xl whitespace-nowrap">
                   {value}
                 </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-[#e3d3be]">
+                <span className="max-w-[165px] text-[11px] leading-5 text-zinc-400">
                   {label}
                 </span>
               </div>
@@ -848,13 +821,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Carolina Vasconcelos - Dobra Clara (Alabastro, Marfim & Toques Rubi) */}
+        {/* DOBRA 3: SOBRE A ADVOGADA (BRANCO - Dobra Clara Elegante) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-y border-[#dca94e]/30 bg-[#fbf8f5] py-20 text-[#1e0a12] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-[#f8fafc] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Carolina Vasconcelos Portrait Photo */}
+            {/* Visual presentation - Dra. Mariana Portrait Photo */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -862,37 +835,36 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border-2 border-[#dca94e]/45 bg-white shadow-2xl ring-1 ring-[#dca94e]/20">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Carolina Vasconcelos — Especialista em Direito das Famílias e Sucessões"
+                  alt="Dra. Mariana Brum Bahia em seu escritório em Mutum - MG"
                   fill
                   unoptimized
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1e0a12]/80 to-transparent" />
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-[#dca94e]/40 bg-white/95 backdrop-blur-md px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#911e24]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-stone-200 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#9e1836]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#911e24]">
-                    Advocacia Familiarista Humanizada
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e1836]">
+                    Advocacia Estratégica & Humanizada
                   </p>
                 </div>
-                <p className="mt-1 font-serif text-lg leading-snug text-[#1e0a12]">
-                  Carolina Vasconcelos — Advocacia
+                <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
+                  Mariana Brum Bahia — Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#911e24]">
-                  Pensão · Guarda · Divórcio · Inventário
+                <p className="mt-0.5 text-[11px] font-medium text-[#9e1836]">
+                  Família · Previdenciário · Sucessões · Cível · Trabalhista
                 </p>
-                <p className="mt-1 text-[11px] leading-4 text-[#7d6b5e]">
-                  Av. Gonçalves Leite, 156 - Centro · Paraguaçu - MG
+                <p className="mt-1 text-[11px] leading-4 text-slate-500">
+                  Praça Benedito Valadares · Mutum - MG · CEP 36955-000
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#dca94e]/45 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#9e1836]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -904,196 +876,194 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#dca94e]/40 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#911e24] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e1836] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#911e24]" />
-                <span>SOBRE A ADVOGADA & MISSÃO</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#9e1836]" />
+                <span>SOBRE A ADVOGADA & COMPROMISSO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#1e0a12] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0f172a] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia construída sobre empatia verdadeira, rigor técnico e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
-                  proteção incondicional da sua família.
+                Uma advocacia pautada na ética, escuta acolhedora e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
+                  defesa intransigente dos seus direitos.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-[#624738]"
+                className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                O Direito de Família e Sucessões não lida com papéis frios: <strong className="font-bold text-[#1e0a12]">ele lida com a vida de mães, pais, filhos e o patrimônio construído com anos de esforço</strong>. Cada divórcio, disputa de guarda ou inventário traz incertezas e angústias que demandam acolhimento humano e segurança jurídica inabalável.
+                O exercício da advocacia vai muito além de protocolos judiciais: <strong className="font-bold text-slate-900">ele lida com a vida, o sustento e os projetos construídos com anos de dedicação</strong>. Cada demanda familiar, benefício do INSS, herança ou direito violado carrega anseios reais que exigem acolhimento humano e rigor técnico inabalável.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-[#624738]"
+                className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                A <strong className="font-bold text-[#1e0a12]">Dra. Carolina Vasconcelos</strong> consolidou sua carreira através de uma postura diferenciada: aliar profundo domínio da legislação e jurisprudência dos tribunais a uma escuta atenta, acessível e sem julgamentos. Com mais de 300 processos em 2 anos e 100% de avaliações 5 estrelas no Google, seu compromisso é trazer clareza em cada passo e defender os seus interesses com vigor inabalável.
+                A <strong className="font-bold text-slate-900">Dra. Mariana Brum Bahia</strong> (OAB/MG 241.996) estruturou seu trabalho sobre alicerces sólidos: atendimento direto, transparente e ágil em cada fase processual. Com 100% de avaliações 5 estrelas no Google e forte atuação na Comarca de Mutum e comissões da OAB/MG, sua missão é entregar segurança, rapidez e soluções jurídicas definitivas.
               </motion.p>
 
-              {/* Client Quote Card from real Google Reviews */}
+              {/* Client Quote Card from Google Reviews */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-[#dca94e]/35 bg-white p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-xs"
               >
-                <blockquote className="font-serif text-sm italic leading-relaxed text-[#2c151c]">
-                  &ldquo;Doutora Carolina é uma advogada humanizada meu processo foi acolhido por ela e em todo tempo me deu suporte, sempre me orientando e acompanhando a todo momento o movimento dele. Indicação minha é de olhos fechados!&rdquo;
+                <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
+                  &ldquo;A Dra. Mariana é uma profissional excepcional! Muito atenciosa, humana e com profundo conhecimento jurídico. Me atendeu com paciência, explicou cada etapa e sempre me manteve informada de tudo.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#911e24]">
-                  — Ingrid Miranda Moura · Avaliação real no Google Meu Negócio (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#9e1836]">
+                  — Avaliação real no Google Meu Negócio (5,0 ★)
                 </p>
               </motion.div>
 
-              {/* Personality & Profile Cards */}
+              {/* Authority Metrics */}
               <motion.div
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#1e0a12]">5,0 ★ no Google</p>
-                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
-                    21 avaliações 100% 5 estrelas
+                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-slate-900">5,0 ★ no Google</p>
+                  <p className="mt-0.5 text-[11px] text-slate-500">
+                    16 avaliações 100% 5 estrelas
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-[#1e0a12]">+300 Processos</p>
-                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
-                    Especialização em Família e Sucessões
+                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-slate-900">OAB/MG 241.996</p>
+                  <p className="mt-0.5 text-[11px] text-slate-500">
+                    Comissões Temáticas OAB/MG
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#dca94e]/30 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-[#1e0a12]">Transparência Total</p>
-                  <p className="mt-0.5 text-[11px] text-[#7d6b5e]">
-                    Você sabe tudo em primeira mão
+                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-slate-900">Transparência Total</p>
+                  <p className="mt-0.5 text-[11px] text-slate-500">
+                    Você sabe de tudo em primeira mão
                   </p>
                 </div>
               </motion.div>
 
               <motion.div
                 variants={reveal}
-                className="mt-6 grid grid-cols-1 gap-2.5 text-xs font-semibold text-[#1e0a12] sm:grid-cols-2"
+                className="mt-8 flex flex-col gap-3 text-xs text-slate-800"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                  <span>Sede física em Paraguaçu e atendimento em todo o Sul de Minas</span>
+                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <span>Sede física na Praça Benedito Valadares - Mutum, MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                  <span>Especialista em Divórcio, Pensão, Guarda e Inventário</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Carolina</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                  <span>Atendimento online seguro para clientes de todo o Brasil</span>
+                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Mariana</span>
                 </div>
               </motion.div>
 
-              <motion.div
-                variants={reveal}
-                className="mt-8 flex flex-wrap items-center gap-4"
-              >
+              <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina! Gostaria de agendar um atendimento para conversar sobre a minha família."
+                    "Olá, Dra. Mariana! Gostaria de agendar uma consulta para conversar sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
-                  variant="gold"
-                  className="rounded-lg shadow-md"
+                  variant="ruby"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar com a Dra. Carolina Vasconcelos
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Mariana Brum Bahia
                 </GlowingButton>
-                <a
-                  href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#624738] transition-colors hover:text-[#911e24]"
-                >
-                  <Phone size={15} /> {PHONE_DISPLAY}
-                </a>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Pilares de Atuação / Especialidades */}
+        {/* DOBRA 4: ÁREAS DE ATUAÇÃO (PRETO - Dobra Escura de Alto Impacto) */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#17090d] py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-zinc-800 bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={reveal}
-              className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
-            >
+            <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
-                eyebrow="ÁREAS DE ATUAÇÃO EM DIREITO DE FAMÍLIA E SUCESSÕES"
-                description="Soluções jurídicas preventivas e contenciosas conduzidas com sensibilidade, agilidade e extremo rigor técnico para resguardar a sua tranquilidade."
+                theme="dark"
+                eyebrow="ÁREAS DE ATUAÇÃO ESPECIALIZADA"
+                description="Conheça nossos principais pilares jurídicos. Clique em qualquer especialidade para ver detalhes, procedimentos adotados e orientações sob medida."
               >
-                Especialidades dedicadas a proteger você e seus filhos em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
-                  Paraguaçu, Minas Gerais e em todo o Brasil.
+                Soluções jurídicas estratégicas em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
+                  Mutum, Minas Gerais e em todo o Brasil.
                 </span>
               </Heading>
-              <p className="max-w-[270px] pb-1 text-xs leading-6 text-[#b8a594]">
-                Clique em qualquer especialidade abaixo para conferir os procedimentos detalhados e solicitar orientação direta via WhatsApp.
-              </p>
-            </motion.div>
+
+              <div className="shrink-0">
+                <GlowingButton
+                  href={getWhatsAppUrl(
+                    "Olá, Dra. Mariana! Tenho dúvidas sobre uma área jurídica e gostaria de atendimento."
+                  )}
+                  target="_blank"
+                  size="md"
+                  variant="outline"
+                  className="rounded-lg"
+                >
+                  <WhatsAppIcon size={16} /> Consultar Outra Demanda
+                </GlowingButton>
+              </div>
+            </div>
 
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.12 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={stagger}
-              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+              className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
             >
-              {practiceAreas.map((area, index) => {
+              {practiceAreas.map((area) => {
                 const Icon = area.icon;
                 return (
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-xl border border-[#dca94e]/30 bg-[#1c0b11] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#fdd984] hover:shadow-gold sm:p-8"
+                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121215] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:bg-[#18181b] hover:shadow-[0_12px_36px_rgba(158,24,54,0.2)]"
                   >
-                    <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#0f0508] text-[#fdd984] shadow-xs transition-colors group-hover:bg-[#dca94e] group-hover:text-[#0f0508] group-hover:border-[#fbefb4]">
-                        <Icon size={22} strokeWidth={1.5} />
-                      </span>
-                      <span className="font-serif text-2xl text-[#dca94e]/40 group-hover:text-[#fdd984]">
-                        0{index + 1}
-                      </span>
-                    </div>
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1c20] text-[#c53150] transition-colors group-hover:border-[#9e1836] group-hover:bg-[#9e1836] group-hover:text-white">
+                          <Icon size={22} />
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#c53150]">
+                          Especialidade
+                        </span>
+                      </div>
 
-                    <div className="mt-6">
-                      <span className="inline-block rounded-md border border-[#dca94e]/30 bg-[#0f0508] px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#fdd984] shadow-xs">
-                        {area.tag}
-                      </span>
-                      <h3 className="mt-3 font-serif text-[1.45rem] leading-tight text-white group-hover:text-[#fdd984] transition-colors">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#f7c5ce]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-6 text-[#e3d3be]">
+
+                      <p className="mt-1.5 text-[11px] font-semibold text-[#f4d8a8]">
+                        {area.tag}
+                      </p>
+
+                      <p className="mt-3 text-xs leading-6 text-zinc-400">
                         {area.summary}
                       </p>
                     </div>
 
-                    <button
-                      type="button"
-                      onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984] hover:text-white cursor-pointer"
-                    >
-                      Ver detalhes e procedimentos{" "}
-                      <ArrowRight
-                        size={14}
-                        className="transition-transform group/link:translate-x-1"
-                      />
-                    </button>
+                    <div className="mt-6 flex items-center justify-between border-t border-zinc-800/80 pt-4">
+                      <button
+                        type="button"
+                        onClick={() => setActiveArea(area)}
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#c53150] cursor-pointer"
+                      >
+                        Ver Detalhes & Tópicos <ArrowRight size={13} />
+                      </button>
+
+                      <a
+                        href={getWhatsAppUrl(area.whatsAppText)}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Falar no WhatsApp sobre ${area.title}`}
+                        className="grid size-8 place-items-center rounded-md border border-zinc-700 bg-zinc-900 text-zinc-300 transition-all hover:bg-[#25D366] hover:text-white hover:border-[#25D366]"
+                      >
+                        <WhatsAppIcon size={14} />
+                      </a>
+                    </div>
                   </motion.article>
                 );
               })}
@@ -1101,138 +1071,125 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por Que Escolher a Dra. Carolina Vasconcelos - Dobra Clara */}
+        {/* DOBRA 5: DIFERENCIAIS (BRANCO - Dobra Clara) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-t border-[#dca94e]/30 bg-[#f5ebd4]/35 py-20 text-[#1e0a12] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <Heading
-                theme="light"
-                eyebrow="ACOLHIMENTO HUMANO, COMBATE TÉCNICO & AGILIDADE"
-                description="Quando o futuro dos seus filhos e a sua tranquilidade estão em jogo, você merece uma advogada humanizada, acessível e que realmente resolve."
-              >
-                Por que confiar seus direitos à{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
-                  Dra. Carolina Vasconcelos?
-                </span>
-              </Heading>
-              <GlowingButton
-                href={getWhatsAppUrl(
-                  "Olá, Dra. Carolina! Gostaria de conversar para entender os passos do meu processo de família."
-                )}
-                target="_blank"
-                size="md"
-                variant="gold"
-                className="rounded-lg shadow-sm"
-              >
-                <WhatsAppIcon size={16} className="text-[#0f0508]" /> Falar no WhatsApp
-              </GlowingButton>
-            </div>
+            <Heading
+              theme="light"
+              eyebrow="POR QUE NOS ESCOLHER"
+              description="A combinação entre domínio da técnica jurídica, celeridade no atendimento e postura profundamente ética faz a diferença nos resultados que entregamos."
+            >
+              O que diferencia a atuação da{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
+                Dra. Mariana Brum Bahia?
+              </span>
+            </Heading>
 
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              {/* Card 1: Comunicação Clara e Acolhimento */}
+            <div className="mt-14 grid gap-8 md:grid-cols-2">
+              {/* Card 1 */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.2)] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dca94e]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#911e24]">
-                      <HeartHandshake size={14} /> Atendimento Humanizado & Próximo
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e1836]">
+                      <HeartHandshake size={14} /> Acolhimento & Respeito
                     </span>
-                    <span className="text-xs font-semibold text-[#911e24]">
-                      Sempre ao Seu Lado
+                    <span className="text-xs font-semibold text-[#9e1836]">
+                      5,0 ★ Google
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e0a12] sm:text-[1.75rem]">
-                    Comunicação Transparente, Sem Juridiquês e Respostas Rápidas
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
+                    Atendimento Humanizado, Sem Julgamentos & Acessível
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#624738]">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Carolina é aliar alto rigor técnico a um atendimento empático. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
+                  <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
+                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Mariana é aliar alto rigor técnico a um atendimento empático. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c151c]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Contato direto pelo WhatsApp para sanar dúvidas sempre que você precisar</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Comunicação em linguagem direta e acessível</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Retorno imediato: você é mantido ciente de todos os trâmites do processo</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Retorno ágil de mensagens e dúvidas no WhatsApp</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Acolhimento sincero e seguro em momentos delicados de separação ou luto</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Tratamento respeitoso, ético e empático em qualquer situação</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dca94e]/25 pt-4">
+                <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Carolina! Gostaria de tirar dúvidas com você sobre o meu caso."
+                      "Olá, Dra. Mariana! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e0a12] transition-all hover:border-[#911e24] hover:bg-[#dca94e] hover:text-[#0f0508]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#9e1836] hover:bg-[#9e1836] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Carolina
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Mariana
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Firmeza Técnica e Especialização */}
+              {/* Card 2 */}
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 shadow-[0_8px_30px_rgba(26,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.2)] sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#dca94e]/40 bg-[#fbf8f5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#911e24]">
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e1836]">
                       <Award size={14} /> Solidez & Domínio Processual
                     </span>
-                    <span className="text-xs font-semibold text-[#911e24]">
-                      +300 Processos Conduzidos
+                    <span className="text-xs font-semibold text-[#9e1836]">
+                      OAB/MG 241.996
                     </span>
                   </div>
-                  <h3 className="mt-4 font-serif text-2xl leading-tight text-[#1e0a12] sm:text-[1.75rem]">
-                    Especialização em Famílias, Pensão, Guarda & Sucessões
+                  <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
+                    Rigor Técnico, Estratégia Processual & Apoio Regional
                   </h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#624738]">
-                    Demandas familiares exigem estratégias processuais refinadas: investigação de ocultação de bens, pedidos cautelares de urgência e defesa dos direitos dos filhos. A Dra. Carolina constrói teses contundentes para garantir acordos justos ou vitórias expressivas em Juízo.
+                  <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
+                    Demandas jurídicas exigem estratégias processuais refinadas: elaboração de petições contundentes, pedidos cautelares de urgência e condução impecável perante Juizados e Varas Cíveis, de Família e do Trabalho. A Dra. Mariana constrói teses sólidas para resguardar seus direitos.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs font-medium text-[#2c151c]">
+                  <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Estratégia pericial para comprovação de rendimentos reais e patrimônio oculto</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Análise aprofundada da documentação e da jurisprudência atual</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Atuação rápida para obtenção de alimentos provisionais e medidas de urgência</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Atuação rápida para pedidos liminares e tutelas de urgência</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#911e24]" />
-                      <span>Experiência comprovada com mais de 300 processos em apenas dois anos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <span>Presença atuante na Comarca de Mutum e comarcas circunvizinhas</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-[#dca94e]/25 pt-4">
+                <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Carolina! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Mariana! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#1e0a12] transition-all hover:border-[#911e24] hover:bg-[#dca94e] hover:text-[#0f0508]"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#9e1836] hover:bg-[#9e1836] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1245,27 +1202,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Método de Trabalho em 3 Passos */}
-        <section className="relative overflow-hidden border-t border-[#dca94e]/25 bg-[#17090d] py-20 text-[#fbfaf5] sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#dca94e]/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#a4332b]/10 blur-3xl" />
-
+        {/* DOBRA 6: MÉTODO EM 3 PASSOS (PRETO - Dobra Escura) */}
+        <section className="relative overflow-hidden border-b border-zinc-800 bg-[#111113] py-20 text-white sm:py-24 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
+                theme="dark"
                 eyebrow="COMO CUIDAMOS DO SEU CASO"
-                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seu patrimônio e a proteção dos seus filhos."
+                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o patrimônio da sua família."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
-                  resolver sua questão familiar com dignidade e segurança.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
+                  resolver sua questão com segurança e dignidade.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-[#dca94e]/35 bg-[#1c0b11] p-6 font-serif text-base italic leading-7 text-[#fbfaf5] shadow-card">
-                &ldquo;Cada caso de família é único. Nosso compromisso é trazer 100% de transparência em todas as etapas, garantindo que você se sinta seguro e respaldado do início até a conclusão final.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#fdd984]">
-                  — Dra. Carolina Vasconcelos · Advogada Familiarista
+              <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#18181b] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
+                &ldquo;Cada cliente e cada processo são únicos. Nosso compromisso é trazer 100% de clareza e dedicação em todas as etapas, garantindo que você se sinta seguro e amparado do início até a conclusão final.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#c53150]">
+                  — Dra. Mariana Brum Bahia · OAB/MG 241.996
                 </footer>
               </blockquote>
             </div>
@@ -1275,18 +1230,18 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-[#dca94e]/25"
+              className="divide-y divide-zinc-800"
             >
               {[
                 [
                   "01",
                   "Escuta Humanizada & Diagnóstico Jurídico",
-                  "Conversa reservada pelo WhatsApp ou em nosso escritório para entender os fatos com respeito e sigilo. Análise da documentação, bens, despesas e necessidades da família.",
+                  "Conversa reservada pelo WhatsApp ou em nosso escritório em Mutum para entender os fatos com respeito e sigilo. Análise detalhada de documentos, prazos e direitos aplicáveis.",
                 ],
                 [
                   "02",
                   "Estratégia Sob Medida & Ação Rápida",
-                  "Apresentação das alternativas mais seguras e econômicas (acordo extrajudicial em cartório ou ação judicial firme) com protocolo célere de pedidos urgentes de alimentos e medidas protetivas.",
+                  "Apresentação das alternativas mais seguras e econômicas (via extrajudicial ou ação judicial combativa), com protocolo célere de pedidos urgentes e defesa intransigente.",
                 ],
                 [
                   "03",
@@ -1299,12 +1254,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#fdd984]">
+                  <span className="font-serif text-2xl font-semibold text-[#c53150]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-[#e3d3be]">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-zinc-400">
                       {description}
                     </p>
                   </div>
@@ -1314,194 +1269,159 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações / Depoimentos Reais no Google Meu Negócio - Dobra Clara (Alabastro & Marfim) */}
+        {/* DOBRA 7: AVALIAÇÕES GOOGLE 5.0 (BRANCO - Dobra Clara) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-t border-[#dca94e]/30 bg-[#fbf8f5] py-20 text-[#1e0a12] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-[#f8fafc] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos autênticos e públicos de clientes sobre a competência, a transparência e o acolhimento da Dra. Carolina Vasconcelos em Paraguaçu e região."
+                description="Veja depoimentos de clientes sobre a competência, a transparência e o acolhimento da Dra. Mariana Brum Bahia em Mutum e região."
               >
                 Avaliada com 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#911e24] via-[#c8953c] to-[#671b25]">
-                  21 avaliações no Google pela dedicação e atendimento humanizado.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
+                  16 avaliações no Google.
                 </span>
               </Heading>
 
-              {/* Verified Google Badge Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-[#dca94e]/35 bg-white p-5 shadow-[0_8px_30px_rgba(26,20,18,0.08)] sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#dca94e]/30 bg-[#fbf8f5] shadow-xs">
-                  <GoogleIcon size={30} />
+              {/* Google Verified Card */}
+              <div className="flex flex-col gap-3 rounded-xl border border-stone-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="grid size-12 place-items-center rounded-lg bg-stone-50 border border-stone-200 shrink-0">
+                  <GoogleIcon size={24} />
                 </div>
                 <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#1e0a12]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-serif text-2xl font-bold text-slate-900">
                       5,0
                     </span>
-                    <div className="flex gap-0.5 text-[#dca94e]">
-                      {Array.from({ length: 5 }, (_, i) => (
-                        <Star
-                          key={i}
-                          size={14}
-                          className="fill-[#dca94e] text-[#dca94e]"
-                        />
+                    <div className="flex text-[#dfa968]">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={15} className="fill-[#dfa968]" />
                       ))}
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-[#624738]">
-                    Carolina Vasconcelos — Advocacia
+                  <p className="text-xs font-semibold text-slate-900">
+                    Mariana Brum Bahia Advocacia
                   </p>
-                  <a
-                    href={GOOGLE_SEARCH_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[#911e24] transition-colors hover:text-[#1e0a12]"
-                  >
-                    21 avaliações no Google (100% 5 Estrelas) <ArrowUpRight size={13} />
-                  </a>
+                  <p className="text-[11px] text-slate-500">
+                    16 avaliações 100% 5 estrelas no Google
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Client Reviews Grid */}
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={stagger}
+              className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            >
               {clientReviews.map((review) => (
-                <article
+                <motion.article
                   key={review.name}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[#dca94e]/30 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#c8953c] hover:shadow-[0_12px_36px_rgba(220,169,78,0.22)] shadow-[0_4px_20px_rgba(26,20,18,0.05)] sm:p-8"
+                  variants={reveal}
+                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md"
                 >
                   <div>
-                    {/* Header: Stars + Badge */}
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-1 text-[#dca94e]">
-                        {Array.from({ length: review.rating }, (_, i) => (
-                          <Star
-                            key={i}
-                            size={14}
-                            className="fill-[#dca94e] text-[#dca94e]"
-                          />
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-[#dfa968]">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} size={14} className="fill-[#dfa968]" />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#dca94e]/35 bg-[#fbf8f5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#911e24] shadow-xs">
-                        {review.badge}
+                      <span className="rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9e1836]">
+                        Google Verificado
                       </span>
                     </div>
 
-                    {/* Review content */}
-                    <p className="mt-5 text-[14px] italic leading-relaxed text-[#2c151c]">
+                    <p className="mt-3 font-serif text-sm font-bold text-slate-900">
+                      {review.badge}
+                    </p>
+
+                    <p className="mt-2 text-xs leading-relaxed text-slate-600">
                       &ldquo;{review.content}&rdquo;
                     </p>
 
                     {review.reply && (
-                      <div className="mt-4 rounded-lg border-l-2 border-[#911e24] bg-[#fbf8f5] p-3 text-[12px] text-[#624738]">
-                        <p className="font-semibold text-[#911e24]">Resposta da Dra. Carolina:</p>
-                        <p className="mt-0.5 italic">{review.reply}</p>
+                      <div className="mt-3 rounded-lg border-l-2 border-[#9e1836] bg-[#fdf2f4] p-2.5 text-[11px] leading-5 text-slate-700">
+                        <p className="font-semibold text-[#9e1836]">Resposta da Dra. Mariana:</p>
+                        <p className="italic">{review.reply}</p>
                       </div>
                     )}
                   </div>
 
-                  {/* Reviewer info */}
-                  <div className="mt-6 flex items-center gap-3 border-t border-[#dca94e]/25 pt-4">
-                    <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-[#dca94e]/40 bg-[#fbf8f5] font-serif text-sm font-semibold text-[#911e24] shadow-xs">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-serif text-base font-semibold text-[#1e0a12]">
-                        {review.name}
-                      </p>
-                      <p className="text-[10px] uppercase tracking-wider text-[#7d6b5e]">
-                        {review.reviewerTag}
-                      </p>
-                    </div>
+                  <div className="mt-5 border-t border-stone-100 pt-3">
+                    <p className="font-serif text-sm font-semibold text-slate-900">
+                      {review.name}
+                    </p>
+                    <p className="text-[10px] text-slate-500">
+                      {review.reviewerTag}
+                    </p>
                   </div>
-                </article>
+                </motion.article>
               ))}
-            </div>
+            </motion.div>
 
-            {/* Bottom Actions and Trust Tags */}
-            <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-[#dca94e]/25 pt-8 sm:flex-row">
-              <div className="flex flex-wrap items-center gap-2">
-                {[
-                  "Advogada Familiarista em Paraguaçu - MG",
-                  "Direito de Família & Sucessões",
-                  "Especialista em Divórcio & Partilha",
-                  "Pensão Alimentícia & Execução de Atrasados",
-                  "Guarda dos Filhos & Convivência",
-                  "Nota 5,0 ★ no Google (21 avaliações)",
-                  "Atendimento Humanizado & Sigiloso",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[#dca94e]/30 bg-white px-3.5 py-1.5 text-[11px] font-medium text-[#1e0a12] shadow-xs"
-                  >
-                    <CheckCircle2 size={13} className="text-[#911e24]" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
+            {/* Google Link Action */}
+            <div className="mt-12 text-center">
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#911e24] transition-colors hover:text-[#1e0a12]"
+                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#9e1836] hover:text-[#9e1836]"
               >
-                Ver Todas as Avaliações no Google{" "}
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
+                <GoogleIcon size={16} /> Ver todas as avaliações no Google <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
         </section>
 
-        {/* FAQ - Perguntas Frequentes */}
+        {/* DOBRA 8: PERGUNTAS FREQUENTES / FAQ (PRETO - Dobra Escura) */}
         <section
           id="faq"
-          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#17090d] py-20 text-[#fbfaf5] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-zinc-800 bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
         >
-          <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-4xl px-5 sm:px-8">
             <div className="text-center">
-              <p className="eyebrow-light justify-center">TIRE SUAS DÚVIDAS</p>
-              <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#fbfaf5] sm:text-4xl lg:text-[3.15rem]">
-                Perguntas Frequentes sobre{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
-                  Direito de Família e Sucessões
+              <p className="eyebrow-light justify-center">DÚVIDAS FREQUENTES</p>
+              <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.15rem]">
+                Respostas diretas e esclarecedoras sobre os{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
+                  seus direitos e nosso atendimento.
                 </span>
               </h2>
-              <p className="mt-4 text-[15px] leading-7 text-[#e3d3be]">
-                Respostas diretas e esclarecedoras para as principais dúvidas de quem busca orientação jurídica.
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-zinc-400">
+                Transparência desde o primeiro instante. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Mariana no WhatsApp.
               </p>
             </div>
 
             <div className="mt-12 space-y-4">
               {faqs.map((faq, index) => {
-                const isOpen = openFaq === index;
+                const isOpen = openFaqIndex === index;
                 return (
                   <div
-                    key={index}
-                    className="overflow-hidden rounded-xl border border-[#dca94e]/30 bg-[#1c0b11] transition-all"
+                    key={faq.q}
+                    className="overflow-hidden rounded-xl border border-zinc-800 bg-[#121215] transition-colors hover:border-zinc-700"
                   >
                     <button
                       type="button"
-                      onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between p-6 text-left font-serif text-lg font-semibold text-white transition-colors hover:text-[#fdd984]"
+                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-sm font-semibold text-white sm:text-base cursor-pointer"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        size={20}
-                        className={`shrink-0 text-[#dca94e] transition-transform duration-200 ${
+                        size={18}
+                        className={`shrink-0 text-[#c53150] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     {isOpen && (
-                      <div className="border-t border-[#dca94e]/20 px-6 pb-6 pt-4 text-sm leading-7 text-[#e3d3be]">
+                      <div className="border-t border-zinc-800 px-6 pb-6 pt-4 text-sm leading-7 text-zinc-300">
                         {faq.a}
                       </div>
                     )}
@@ -1511,106 +1431,107 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-sm text-[#b8a594]">
+              <p className="text-sm text-zinc-400">
                 Tem uma dúvida específica sobre a sua situação?
               </p>
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina! Gostaria de tirar uma dúvida sobre a minha situação de família."
+                    "Olá, Dra. Mariana! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
-                  variant="gold"
+                  variant="ruby"
                 >
-                  <WhatsAppIcon size={16} className="text-[#0f0508]" /> Enviar Mensagem no WhatsApp
+                  <WhatsAppIcon size={16} /> Enviar Mensagem no WhatsApp
                 </GlowingButton>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contato & Sede */}
+        {/* DOBRA 9: CONTATO & SEDE (BRANCO - Dobra Clara) */}
         <section
           id="contato"
-          className="scroll-mt-24 border-t border-[#dca94e]/25 bg-[#0f0508] py-20 text-[#fbfaf5] sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
+                theme="light"
                 eyebrow="CONTATO & AGENDAMENTO"
-                description="Fale diretamente com a Dra. Carolina Vasconcelos pelo WhatsApp para orientação imediata com sigilo absoluto e acolhimento humano."
+                description="Fale diretamente com a Dra. Mariana Brum Bahia pelo WhatsApp para orientação imediata com sigilo absoluto e acolhimento humano."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#fbefb4] via-[#fdd984] to-[#dca94e]">
-                  acolher sua história e defender a sua família.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
+                  acolher sua história e defender os seus direitos.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="gold"
+                  variant="ruby"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} className="text-[#0f0508]" /> Falar no WhatsApp com a Dra. Carolina
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Mariana
                 </GlowingButton>
-                <p className="text-[11px] leading-5 text-[#e3d3be]">
+                <p className="text-[11px] leading-5 text-slate-600">
                   WhatsApp e telefone direto:{" "}
-                  <strong className="text-white">{PHONE_DISPLAY}</strong>
+                  <strong className="text-slate-900">{PHONE_DISPLAY}</strong>
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-[#e3d3be]">
+              <div className="mt-10 space-y-4 text-xs text-slate-700">
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dca94e]"
+                    className="mt-0.5 shrink-0 text-[#9e1836]"
                   />
                   <div>
-                    <p className="font-semibold text-white">
+                    <p className="font-semibold text-slate-900">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#fdd984] font-bold">
+                    <p className="mt-0.5 text-[#9e1836] font-bold">
                       Segunda a Sexta · Abre às 08:00
                     </p>
-                    <p className="text-[11px] text-[#b8a594]">
+                    <p className="text-[11px] text-slate-500">
                       Atendimento com horário agendado para dedicação exclusiva ao seu caso
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#dca94e]" />
+                  <Phone size={16} className="shrink-0 text-[#9e1836]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-white transition-colors hover:text-[#fdd984]"
+                    className="font-medium text-slate-900 transition-colors hover:text-[#9e1836]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#dca94e]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#9e1836]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#fdd984] text-white"
+                    className="transition-colors hover:text-[#9e1836] text-slate-900 font-medium"
                   >
-                    {INSTAGRAM_HANDLE} (Instagram Oficial com 6.000+ seguidores)
+                    {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#dca94e]" />
+                  <Mail size={16} className="shrink-0 text-[#9e1836]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#fdd984] text-white"
+                    className="transition-colors hover:text-[#9e1836] text-slate-900 font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1619,13 +1540,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#dca94e]"
+                    className="mt-0.5 shrink-0 text-[#9e1836]"
                   />
                   <div>
-                    <span className="text-white font-medium">{ADDRESS_TEXT}</span>
+                    <span className="text-slate-900 font-medium">{ADDRESS_TEXT}</span>
                     <br />
-                    <span className="text-[11px] text-[#b8a594]">
-                      Sede no Centro de Paraguaçu - MG e assessoria jurídica digital em todo o Brasil
+                    <span className="text-[11px] text-slate-500">
+                      Sede na Praça Benedito Valadares - Mutum, MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1633,46 +1554,46 @@ export default function Home() {
             </div>
 
             {/* Brand Presentation Card */}
-            <div className="relative overflow-hidden rounded-xl border border-[#dca94e]/35 bg-[#1c0b11] p-7 shadow-card sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#911e24] via-[#dca94e] to-[#fdd984]" />
+            <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-lg sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#dfa968]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative size-16 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma CV Carolina Vasconcelos"
+                    alt="Monograma Mariana Brum Bahia Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fdd984]">
-                    CAROLINA VASCONCELOS
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e1836]">
+                    MARIANA BRUM BAHIA
                   </p>
-                  <p className="font-serif text-xl sm:text-2xl font-bold text-white">
+                  <p className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
                     ADVOCACIA
                   </p>
                 </div>
               </div>
 
               {/* Photo Presentation */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-[#dca94e]/30 bg-[#0f0508] shadow-xs">
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-stone-200 bg-stone-100 shadow-xs">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Carolina Vasconcelos em seu escritório"
+                  alt="Dra. Mariana Brum Bahia em seu escritório em Mutum"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 text-white">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Atendimento Acolhedor, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-300">Paraguaçu · Sul de Minas & Brasil</p>
+                  <p className="text-[10px] text-stone-200">Mutum · Leste de Minas & Brasil</p>
                 </div>
               </div>
 
-              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-[#e3d3be]">
-                <strong className="font-semibold text-white">
+              <address className="mt-6 max-w-md text-[14px] not-italic leading-7 text-slate-700">
+                <strong className="font-semibold text-slate-900">
                   {FIRM_NAME}
                 </strong>
                 <br />
@@ -1682,227 +1603,248 @@ export default function Home() {
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-[#dca94e]/25 bg-[#0f0508] p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#fdd984]">
+              <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#9e1836]">
                   Atendimento & Horários
                 </p>
-                <div className="grid grid-cols-2 gap-y-1.5 text-[#e3d3be]">
+                <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#fdd984]">
+                  <span className="text-right font-semibold text-[#9e1836]">
                     Abre às 08:00
                   </span>
                   <span>Sábados e Domingos</span>
-                  <span className="text-right font-medium text-[#b8a594]">
+                  <span className="text-right font-medium text-slate-500">
                     Plantão via WhatsApp
                   </span>
-                  <span>Sede Física</span>
-                  <span className="text-right text-white">Paraguaçu · MG</span>
-                  <span>Avaliações Google</span>
-                  <span className="text-right font-semibold text-[#fdd984]">5,0 ★ (21 avaliações)</span>
-                  <span>Especialidade</span>
-                  <span className="text-right text-white">Família & Sucessões</span>
+                  <span>Localização</span>
+                  <span className="text-right text-slate-900 font-semibold">Mutum · MG</span>
                 </div>
               </div>
 
-              <div className="my-7 h-px bg-[#dca94e]/25" />
-
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-[#b8a594]">
-                  Atendimento sob estrito sigilo profissional e conformidade com o Código de Ética da OAB
-                </p>
-                <a
+              <div className="mt-7 flex flex-col gap-3">
+                <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina Vasconcelos! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-[#dca94e]/50 bg-[#240e15] px-5 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#fdd984] hover:bg-[#dca94e] hover:text-[#0f0508]"
+                  size="md"
+                  variant="ruby"
+                  className="w-full justify-center"
                 >
-                  <WhatsAppIcon size={14} /> Falar no WhatsApp <ArrowUpRight size={14} />
-                </a>
+                  <WhatsAppIcon size={16} /> Iniciar Conversa no WhatsApp
+                </GlowingButton>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip */}
-        <section className="border-t border-[#dca94e]/25 bg-gradient-to-r from-[#0f0508] via-[#1c0b11] to-[#0f0508] px-5 py-14 text-[#fbfaf5] shadow-card sm:px-8 sm:py-16 lg:px-12">
-          <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
+        {/* DOBRA 10: PRÉ-FOOTER BANNER (PRETO) */}
+        <section className="border-t border-zinc-800 bg-[#111113] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
-                <Sparkles size={13} /> CAROLINA VASCONCELOS — ADVOCACIA
+              <p className="eyebrow-light">
+                <Sparkles size={13} className="text-[#c53150]" /> MARIANA BRUM BAHIA — ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Precisa de segurança jurídica para proteger sua família, seus filhos ou seus bens?
+                Pronta para resguardar seus direitos com segurança, ética e dedicação incondicional.
               </h2>
             </div>
-            <a
+            <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dra. Carolina! Preciso de orientação jurídica sobre a minha família."
+                "Olá, Dra. Mariana! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
-              rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-lg border border-[#fbefb4]/90 bg-gradient-to-r from-[#c8953c] via-[#fdd984] to-[#a67528] px-8 py-4 text-[11px] font-black uppercase tracking-[0.15em] text-[#0f0508] shadow-[0_8px_24px_-4px_rgba(220,169,78,0.5),inset_0_1px_1.5px_rgba(255,255,255,0.9)] transition-all hover:-translate-y-0.5 hover:from-[#dca94e] hover:via-[#fbfaf3] hover:to-[#c8953c] hover:shadow-[0_12px_32px_rgba(220,169,78,0.7)]"
+              size="lg"
+              variant="ruby"
+              className="rounded-lg shadow-lg whitespace-nowrap"
             >
-              <WhatsAppIcon size={17} className="text-[#0f0508]" /> Iniciar Atendimento Agora{" "}
-              <ArrowUpRight size={15} className="text-[#0f0508]" />
-            </a>
+              <WhatsAppIcon size={17} /> Falar no WhatsApp Agora
+            </GlowingButton>
           </div>
         </section>
 
-        {/* Footer - Elegant Luxury Noir */}
-        <footer className="border-t border-[#dca94e]/25 bg-[#0f0508] px-5 py-14 text-[#fbfaf5] sm:px-8 lg:px-12">
-          <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
-            <div>
+        {/* DOBRA 11: RODAPÉ INSTITUCIONAL (PRETO) */}
+        <footer className="border-t border-zinc-800 bg-[#09090b] px-5 py-14 text-zinc-400 sm:px-8 lg:px-12">
+          <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
+            {/* Col 1: Brand */}
+            <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Carolina Vasconcelos — Advocacia"
-                className="inline-block transition-transform hover:scale-[1.01]"
+                aria-label="Mariana Brum Bahia — Advocacia"
+                className="flex items-center gap-3"
               >
-                <div className="flex items-center gap-3">
-                  <div className="relative size-14 shrink-0">
-                    <Image
-                      src={LOGO_SYMBOL_SRC}
-                      alt="Monograma CV Carolina Vasconcelos"
-                      fill
-                      unoptimized
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-serif text-lg font-bold tracking-wider text-[#fbfaf5] leading-tight">
-                      CAROLINA VASCONCELOS
-                    </span>
-                    <span className="text-[11px] font-semibold tracking-[0.22em] text-[#fdd984] uppercase">
-                      ADVOCACIA
-                    </span>
-                  </div>
+                <div className="relative size-12 shrink-0">
+                  <Image
+                    src={LOGO_SYMBOL_SRC}
+                    alt="Monograma Mariana Brum Bahia Advocacia"
+                    fill
+                    unoptimized
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="font-serif text-lg font-bold tracking-[0.14em] text-white">
+                    MARIANA BRUM BAHIA
+                  </p>
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#c53150] uppercase">
+                    ADVOCACIA · OAB/MG 241.996
+                  </p>
                 </div>
               </a>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-[#b8a594]">
-                ⚖️ PENSÃO | GUARDA | DIVÓRCIO | INVENTÁRIO. Advocacia especializada em Direito das Famílias e Sucessões com acolhimento humano, seriedade e compromisso inegociável com a sua tranquilidade em Paraguaçu e em todo o Brasil.
-              </p>
-              <p className="mt-3 text-[11px] font-semibold text-[#fdd984]">
-                {LAWYER_NAME} — {LAWYER_TITLE}
-              </p>
-            </div>
 
-            <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
-                Navegação
-              </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-[#e3d3be]">
-                <a className="footer-link" href="#inicio">
-                  Início
-                </a>
-                <a className="footer-link" href="#sobre">
-                  A Advogada
-                </a>
-                <a className="footer-link" href="#atuacao">
-                  Especialidades
-                </a>
-                <a className="footer-link" href="#diferenciais">
-                  Diferenciais
-                </a>
-                <a className="footer-link" href="#avaliacoes">
-                  Avaliações de Clientes (5,0 ★)
-                </a>
-                <a className="footer-link" href="#faq">
-                  Dúvidas Frequentes
-                </a>
-                <a className="footer-link" href="#contato">
-                  Contato & Sede
-                </a>
-              </div>
-            </div>
+              <p className="mt-4 max-w-md text-xs leading-6 text-zinc-400">
+                Advocacia especializada em Direito das Famílias, Sucessões, Previdenciário (INSS), Cível e Trabalhista com acolhimento humano, seriedade e compromisso inegociável com a sua tranquilidade em Mutum, Leste de Minas e em todo o Brasil.
+              </p>
 
-            <div>
-              <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#fdd984]">
-                Contato & Atendimento
-              </h2>
-              <div className="mt-4 flex flex-col items-start gap-2.5 text-xs text-[#e3d3be]">
-                <a
-                  href={getWhatsAppUrl(
-                    "Olá, Dra. Carolina! Gostaria de falar com seu escritório."
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2 font-medium text-white"
-                >
-                  <WhatsAppIcon size={15} /> WhatsApp: {PHONE_DISPLAY}
-                </a>
-                <a
-                  href={`tel:+${WHATSAPP_NUMBER}`}
-                  className="footer-link inline-flex items-center gap-2"
-                >
-                  <Phone size={15} className="shrink-0" /> Telefone: {PHONE_DISPLAY}
-                </a>
+              <div className="mt-5 flex items-center gap-3 text-xs">
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="footer-link inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#c53150] hover:text-white"
                 >
-                  <InstagramIcon size={15} className="shrink-0" /> Instagram: {INSTAGRAM_HANDLE}
+                  <InstagramIcon size={14} className="text-[#c53150]" /> Instagram @marianabrumbahia.adv
                 </a>
                 <a
-                  href={`mailto:${EMAIL_CONTACT}`}
-                  className="footer-link inline-flex items-center gap-2"
+                  href={GOOGLE_SEARCH_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#c53150] hover:text-white"
                 >
-                  <Mail size={15} className="shrink-0" /> {EMAIL_CONTACT}
+                  <GoogleIcon size={14} /> Google 5,0 ★ (16 avaliações)
                 </a>
-                <div className="footer-link inline-flex items-start gap-2">
-                  <MapPin size={15} className="mt-0.5 shrink-0" />
-                  <span>{ADDRESS_TEXT}</span>
-                </div>
-                <p className="inline-flex items-center gap-2 pt-1 text-[11px] text-[#fdd984] font-semibold">
-                  <Clock size={14} className="shrink-0 text-[#dca94e]" /> Segunda a Sexta a partir das 08:00
-                </p>
               </div>
+            </div>
+
+            {/* Col 2: Navigation */}
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                Navegação Rápida
+              </p>
+              <ul className="mt-4 space-y-2.5 text-xs">
+                <li>
+                  <a className="footer-link" href="#inicio">
+                    Início
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#sobre">
+                    A Advogada (Dra. Mariana)
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#atuacao">
+                    Áreas de Atuação
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#diferenciais">
+                    Diferenciais do Escritório
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#avaliacoes">
+                    Avaliações no Google (5,0 ★)
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#faq">
+                    Perguntas Frequentes
+                  </a>
+                </li>
+                <li>
+                  <a className="footer-link" href="#contato">
+                    Contato & Endereço
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Col 3: Contact & Info */}
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                Atendimento & Sede
+              </p>
+              <ul className="mt-4 space-y-2.5 text-xs text-zinc-400">
+                <li>
+                  <strong className="text-white">Telefone / WhatsApp:</strong>
+                  <br />
+                  <a
+                    href={getWhatsAppUrl("Olá, Dra. Mariana! Gostaria de falar com seu escritório.")}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#c53150] hover:underline"
+                  >
+                    {PHONE_DISPLAY}
+                  </a>
+                </li>
+                <li>
+                  <strong className="text-white">Endereço:</strong>
+                  <br />
+                  {ADDRESS_TEXT}
+                </li>
+                <li>
+                  <strong className="text-white">Horário:</strong>
+                  <br />
+                  Segunda a Sexta · Abre às 08:00
+                </li>
+                <li>
+                  <strong className="text-white">E-mail:</strong>
+                  <br />
+                  <a href={`mailto:${EMAIL_CONTACT}`} className="hover:text-white">
+                    {EMAIL_CONTACT}
+                  </a>
+                </li>
+                <li>
+                  <strong className="text-white">Inscrição Profissional:</strong>
+                  <br />
+                  {LAWYER_OAB}
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-[#dca94e]/25 pt-6 text-[10px] text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-800/80 pt-6 text-center text-[11px] text-zinc-500">
             <p>
-              © {new Date().getFullYear()} CAROLINA VASCONCELOS ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} MARIANA BRUM BAHIA ADVOCACIA · OAB/MG 241.996. Todos os direitos reservados.
             </p>
-            <p>
-              Conteúdo de caráter exclusivamente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
+            <p className="mt-1 text-[10px]">
+              Praça Benedito Valadares - Mutum, MG, 36955-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
 
-        {/* Floating WhatsApp Quick Action Button - Luxury Concierge Jewel */}
+        {/* Floating Quick WhatsApp CTA Button (Bottom Right) */}
         <aside
-          aria-label="Acesso rápido WhatsApp"
-          className="fixed bottom-6 right-6 z-50"
+          aria-label="Atendimento no WhatsApp"
+          className="fixed bottom-5 right-5 z-40 sm:bottom-6 sm:right-6"
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Carolina! Gostaria de um atendimento sobre Direito de Família pelo WhatsApp."
+              "Olá, Dra. Mariana! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Carolina Vasconcelos"
-            className="group relative flex size-14 items-center justify-center rounded-full border-2 border-[#dca94e]/80 bg-gradient-to-b from-[#240e15] via-[#1c0b11] to-[#0f0508] text-[#fdd984] shadow-[0_8px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(220,169,78,0.35)] transition-all duration-300 hover:scale-110 hover:border-[#fbefb4] hover:shadow-[0_10px_35px_rgba(220,169,78,0.6)] focus:outline-none focus:ring-4 focus:ring-[#dca94e]/40"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Mariana Brum Bahia"
+            className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
-            {/* Live pulsating status beacon */}
-            <span className="absolute -top-0.5 -right-0.5 flex size-3.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dca94e] opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full border-2 border-[#0f0508] bg-[#fbefb4]"></span>
+            <span className="relative flex size-3">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-75"></span>
+              <span className="relative inline-flex size-3 rounded-full bg-[#25D366]"></span>
             </span>
-            <WhatsAppIcon size={26} className="text-[#fbefb4] transition-transform duration-300 group-hover:scale-110" />
-            <span className="pointer-events-none absolute right-16 hidden whitespace-nowrap rounded-lg border border-[#dca94e]/60 bg-[#0f0508]/95 px-3.5 py-1.5 text-xs font-semibold text-[#fbfaf5] shadow-2xl backdrop-blur-md transition-opacity group-hover:block">
-              <span className="text-[#fdd984]">WhatsApp Direto</span> · Dra. Carolina Vasconcelos
+            <WhatsAppIcon size={18} className="text-white" />
+            <span className="hidden sm:inline">
+              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Mariana Brum Bahia
             </span>
+            <span className="sm:hidden font-bold">WhatsApp</span>
           </a>
         </aside>
 
-        {/* Modal de Detalhes da Especialidade */}
+        {/* Modal Dialog for Practice Area Detailed Topics */}
         <AnimatePresence>
           {activeArea && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-end justify-center bg-black/80 p-0 backdrop-blur-md sm:items-center sm:p-6"
+              className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 p-0 backdrop-blur-md sm:items-center sm:p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1917,31 +1859,31 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-[#dca94e]/40 bg-[#17090d] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-[#fbfaf5]"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-zinc-700 bg-[#121215] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-[#dca94e]/30 bg-[#240e15] text-[#fbfaf5] transition-colors hover:border-[#fdd984] hover:text-[#fbefb4] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#c53150] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-[#dca94e]/40 bg-[#0f0508] p-1 shadow-xs">
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-zinc-700 bg-black p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma CV Carolina Vasconcelos"
+                      alt="Monograma Mariana Brum Bahia Advocacia"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">CAROLINA VASCONCELOS ADVOCACIA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#fdd984] uppercase">
-                      {LAWYER_NAME} · {LAWYER_TITLE}
+                    <p className="eyebrow-light">MARIANA BRUM BAHIA ADVOCACIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#c53150] uppercase">
+                      {LAWYER_NAME} · {LAWYER_OAB}
                     </p>
                   </div>
                 </div>
@@ -1953,21 +1895,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-[#e3d3be]">
+                <p className="mt-5 text-sm leading-7 text-zinc-300">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-[#dca94e]/25 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#fdd984]">
+                <div className="mt-6 border-t border-zinc-800 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#c53150]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-[#e3d3be]"
+                        className="flex items-center gap-3 text-sm text-zinc-300"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#dca94e]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#c53150]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1979,15 +1921,15 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="gold"
+                    variant="ruby"
                     className="rounded-lg shadow-md"
                   >
-                    <WhatsAppIcon size={16} className="text-[#0f0508]" /> Consultar sobre esta demanda
+                    <WhatsAppIcon size={16} /> Consultar sobre esta demanda
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-[#b8a594] transition-colors hover:text-white cursor-pointer"
+                    className="px-5 py-3 text-xs font-semibold text-zinc-400 transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>

@@ -10,14 +10,13 @@ interface GlowingButtonProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   variant?:
+    | "ruby"
     | "gold"
-    | "emerald"
     | "dark"
-    | "champagne"
-    | "outline"
     | "white"
-    | "navy"
-    | "ruby";
+    | "emerald"
+    | "outline"
+    | "outline-dark";
 }
 
 export default function GlowingButton({
@@ -27,7 +26,7 @@ export default function GlowingButton({
   onClick,
   className = "",
   size = "md",
-  variant = "gold",
+  variant = "ruby",
 }: GlowingButtonProps) {
   const sizeClasses = {
     sm: "px-5 py-2.5 text-[10px] tracking-[0.14em]",
@@ -35,57 +34,53 @@ export default function GlowingButton({
     lg: "px-8 py-4 text-xs tracking-[0.15em]",
   }[size];
 
-  // Haute prestige styling aligned with Dra. Carolina Vasconcelos visual identity
+  // High-contrast prestige styling (black & white with signature wine red secondary)
   const variantClasses = {
-    // Primary Signature: Brushed Metallic Imperial Gold with Specular Highlight & Warm Radiant Aura
-    gold:
-      "relative border border-[#fbefb4]/90 bg-gradient-to-r from-[#c8953c] via-[#fdd984] to-[#a67528] text-[#0f0508] font-black tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(220,169,78,0.5),inset_0_1px_1.5px_rgba(255,255,255,0.9),inset_0_-1px_1.5px_rgba(0,0,0,0.35)] " +
-      "hover:-translate-y-0.5 hover:from-[#dca94e] hover:via-[#fbfaf3] hover:to-[#c8953c] " +
-      "hover:shadow-[0_10px_32px_-2px_rgba(253,217,132,0.75),inset_0_1px_2px_rgba(255,255,255,1)] " +
-      "hover:border-[#ffffff] active:translate-y-0 active:shadow-[0_3px_12px_rgba(220,169,78,0.4)]",
-
-    // Deep Velvet Burgundy with Gold Border
+    // Primary Signature: Metallic Ruby Wine & Marsala (Logo color)
     ruby:
-      "relative border border-[#dca94e]/70 bg-gradient-to-r from-[#4c2025] via-[#911e24] to-[#4c2025] text-[#fbfaf5] font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(145,30,36,0.6),inset_0_1px_1px_rgba(253,217,132,0.5),inset_0_-1px_1px_rgba(0,0,0,0.5)] " +
-      "hover:-translate-y-0.5 hover:border-[#fbefb4] hover:from-[#671b25] hover:via-[#a4332b] hover:to-[#671b25] " +
-      "hover:shadow-[0_10px_30px_-2px_rgba(185,28,40,0.75),0_0_20px_rgba(220,169,78,0.35)]",
+      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(158,24,54,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
+      "hover:-translate-y-0.5 hover:from-[#b91c28] hover:via-[#dc264e] hover:to-[#9e1836] " +
+      "hover:shadow-[0_10px_28px_-2px_rgba(197,49,80,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(158,24,54,0.4)]",
 
-    // Emerald / WhatsApp High-Conversion Action
-    emerald:
-      "relative border border-[#25D366]/70 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] text-[#ffffff] font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(37,211,102,0.45),inset_0_1px_1.5px_rgba(255,255,255,0.5)] " +
-      "hover:-translate-y-0.5 hover:border-[#25D366] hover:brightness-110 " +
-      "hover:shadow-[0_10px_30px_rgba(37,211,102,0.6)]",
+    // Champagne Gold Accent
+    gold:
+      "relative border border-[#f9eedc]/90 bg-gradient-to-r from-[#c88e4b] via-[#f4d8a8] to-[#a67035] text-[#09090b] font-black tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(200,142,75,0.4)] hover:-translate-y-0.5 hover:from-[#dfa968] hover:via-white hover:to-[#c88e4b] " +
+      "hover:shadow-[0_10px_28px_rgba(244,216,168,0.6)]",
 
-    champagne:
-      "relative border border-[#fdd984] bg-gradient-to-r from-[#91632c] via-[#dca94e] to-[#91632c] text-[#0f0508] font-black tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(220,169,78,0.4),inset_0_1px_1px_rgba(255,255,255,0.7)] " +
-      "hover:-translate-y-0.5 hover:from-[#a67528] hover:via-[#fbefb4] hover:to-[#a67528] hover:shadow-[0_10px_28px_rgba(220,169,78,0.6)]",
-
-    // Luxury Velvet Noir Surface with Gold Rim
+    // High-Contrast Solid Black (ideal on White folds)
     dark:
-      "relative border border-[#dca94e]/45 bg-[#17090d] text-[#fbfaf5] font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_20px_rgba(0,0,0,0.65),inset_0_1px_0_rgba(255,255,255,0.08)] " +
-      "hover:-translate-y-0.5 hover:bg-[#240e15] hover:border-[#fdd984] hover:text-white " +
-      "hover:shadow-[0_8px_25px_rgba(220,169,78,0.3)]",
+      "relative border border-stone-800 bg-[#09090b] text-white font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#18181b] hover:border-stone-700 " +
+      "hover:shadow-[0_10px_24px_rgba(0,0,0,0.35)]",
 
-    // Outline with Gold Accent & Glassmorphism
-    outline:
-      "relative border border-[#dca94e]/60 bg-[#0f0508]/60 backdrop-blur-md text-[#fdd984] font-bold tracking-[0.13em] " +
-      "shadow-[0_4px_16px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.05)] " +
-      "hover:-translate-y-0.5 hover:border-[#fbefb4] hover:bg-[#dca94e]/15 hover:text-white " +
-      "hover:shadow-[0_6px_20px_rgba(220,169,78,0.3)]",
-
+    // High-Contrast Pure White (ideal on Black folds)
     white:
-      "border border-[#ede0cd]/20 bg-white/10 text-white backdrop-blur-md shadow-sm hover:-translate-y-0.5 hover:bg-white/15 hover:border-white/40",
-    navy:
-      "border border-[#dca94e]/60 bg-gradient-to-r from-[#17090d] via-[#240e15] to-[#17090d] text-[#fbfaf5] font-bold shadow-md shadow-black/60 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg hover:border-[#fdd984]",
+      "relative border border-white bg-white text-[#09090b] font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:bg-stone-100 hover:border-stone-200 " +
+      "hover:shadow-[0_10px_26px_rgba(255,255,255,0.2)]",
+
+    // Outline on Dark Folds
+    outline:
+      "relative border border-white/20 bg-white/5 text-white font-bold tracking-[0.13em] backdrop-blur-md " +
+      "hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/10 hover:text-white",
+
+    // Outline on Light Folds
+    "outline-dark":
+      "relative border border-stone-300 bg-white/80 text-[#0f172a] font-bold tracking-[0.13em] " +
+      "hover:-translate-y-0.5 hover:border-[#9e1836] hover:text-[#9e1836] hover:bg-stone-50",
+
+    // WhatsApp Green CTA
+    emerald:
+      "relative border border-[#25D366]/70 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(37,211,102,0.4)] hover:-translate-y-0.5 hover:brightness-110 " +
+      "hover:shadow-[0_10px_26px_rgba(37,211,102,0.55)]",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2.5 rounded-lg font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#fdd984] select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2.5 rounded-lg font-bold uppercase transition-all duration-200 select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

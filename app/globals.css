@@ -1,51 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
+  color-scheme: light dark;
   
-  /* Deep Luxury Imperial Bordeaux & Velvet Noir Canvas */
-  --brand-noir-deep: #090204;
-  --brand-noir-canvas: #0f0508;
-  --brand-noir-surface: #17090d;
-  --brand-noir-elevated: #240e15;
-  --brand-noir-card: #1c0b11;
-  --brand-noir-card-hover: #291018;
-  --brand-border-subtle: rgba(255, 255, 255, 0.08);
-  --brand-border-gold: rgba(220, 169, 78, 0.32);
-  --brand-border-gold-bright: rgba(253, 217, 132, 0.65);
+  /* Primary Contrast: Pure Black & Pure White */
+  --color-black-pure: #09090b;
+  --color-black-surface: #121215;
+  --color-black-card: #18181b;
+  --color-black-hover: #222226;
 
-  /* Metallic Imperial Gold Palette (Extracted directly from Carolina Vasconcelos Logo) */
-  --brand-gold-specular: #fbfaf3;
-  --brand-gold-light: #fbefb4;
-  --brand-gold-luminous: #fdd984;
-  --brand-gold-highlight: #eec06f;
-  --brand-gold-accent: #dca94e;
-  --brand-gold: #c8953c;
-  --brand-gold-dark: #a67528;
-  --brand-gold-bronze: #91632c;
-  --brand-gold-deep: #4a3218;
+  --color-white-pure: #ffffff;
+  --color-white-surface: #f8fafc;
+  --color-white-card: #ffffff;
+  --color-white-muted: #f1f5f9;
 
-  /* Royal Burgundy & Carmine Palette (Office Wall & Blazer) */
-  --brand-ruby-vibrant: #b91c28;
-  --brand-ruby-crimson: #a4332b;
-  --brand-ruby-rich: #911e24;
-  --brand-ruby-velvet: #671b25;
-  --brand-ruby-deep: #4c2025;
-  --brand-ruby-midnight: #240910;
+  /* Secondary Brand Accent: Signature Metallic Ruby Wine / Red */
+  --brand-ruby-vibrant: #dc264e;
+  --brand-ruby-crimson: #c53150;
+  --brand-ruby-rich: #9e1836;
+  --brand-ruby-velvet: #7b1028;
+  --brand-ruby-deep: #54091a;
 
-  /* Warm Pearl, Alabaster & Champagne Inks */
-  --brand-plat-pure: #ffffff;
-  --brand-plat-highlight: #fbfaf5;
-  --brand-plat-light: #f5ebd4;
-  --brand-plat-steel: #e3d3be;
-  --brand-plat-muted: #b8a594;
-  --brand-plat-dark: #7d6b5e;
-
-  /* Text & Inks */
-  --brand-text-primary: #fbfaf5;
-  --brand-text-secondary: #e3d3be;
-  --brand-text-muted: #b8a594;
-  --brand-text-gold: #fdd984;
+  /* Accent Champagne Gold (Subtle Highlights) */
+  --brand-gold-accent: #dfa968;
+  --brand-gold-light: #f4d8a8;
 }
 
 @theme inline {
@@ -53,89 +31,43 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-canvas: #0f0508;
-  --color-surface: #17090d;
-  --color-elevated: #240e15;
-  --color-card: #1c0b11;
-
-  /* Metallic Imperial Gold */
-  --color-gold-50: #fbfaf3;
-  --color-gold-100: #fbefb4;
-  --color-gold-200: #fdd984;
-  --color-gold-300: #eec06f;
-  --color-gold-400: #dca94e;
-  --color-gold-500: #c8953c;
-  --color-gold-600: #a67528;
-  --color-gold-700: #91632c;
-  --color-gold-800: #68451b;
-  --color-gold-900: #4a3218;
-
-  /* Royal Burgundy */
-  --color-ruby-50: #fbf0f2;
-  --color-ruby-100: #f5d6dc;
-  --color-ruby-200: #e8a6b3;
-  --color-ruby-300: #cf667b;
-  --color-ruby-400: #b91c28;
-  --color-ruby-500: #a4332b;
-  --color-ruby-600: #911e24;
-  --color-ruby-700: #671b25;
-  --color-ruby-800: #4c2025;
-  --color-ruby-900: #240910;
-
-  /* Warm Pearl Alabaster */
-  --color-plat-50: #ffffff;
-  --color-plat-100: #fbfaf5;
-  --color-plat-200: #f5ebd4;
-  --color-plat-300: #ede0cd;
-  --color-plat-400: #e3d3be;
-  --color-plat-500: #b8a594;
-  --color-plat-600: #8c7969;
-  --color-plat-700: #685749;
-  --color-plat-800: #42362c;
-  --color-plat-900: #231b14;
-
-  /* Luxury Velvet Noir */
-  --color-noir-50: #291018;
-  --color-noir-100: #240e15;
-  --color-noir-200: #1c0b11;
-  --color-noir-300: #17090d;
-  --color-noir-400: #12070a;
-  --color-noir-500: #0f0508;
-  --color-noir-900: #090204;
-
-  --shadow-card: 0 10px 35px -5px rgba(0, 0, 0, 0.75);
-  --shadow-gold: 0 10px 30px -8px rgba(220, 169, 78, 0.4);
-  --shadow-gold-lg: 0 18px 45px -10px rgba(220, 169, 78, 0.5);
-  --shadow-glow: 0 0 45px rgba(253, 217, 132, 0.28);
-  --shadow-gold-xl: 0 20px 50px -10px rgba(220, 169, 78, 0.6);
+  --color-ruby-50: #fdf2f4;
+  --color-ruby-100: #fbe2e7;
+  --color-ruby-200: #f7c5ce;
+  --color-ruby-300: #ef98a8;
+  --color-ruby-400: #df5e78;
+  --color-ruby-500: #c53150;
+  --color-ruby-600: #9e1836;
+  --color-ruby-700: #7b1028;
+  --color-ruby-800: #54091a;
+  --color-ruby-900: #33040e;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7.5rem;
-  background-color: #0f0508;
+  background-color: #ffffff;
 }
 
 body {
-  background: #0f0508;
-  color: #fbfaf5;
+  background: #ffffff;
+  color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #fdd984;
+  caret-color: #9e1836;
 }
 
 ::selection {
-  background: #dca94e;
-  color: #0f0508;
+  background: #9e1836;
+  color: #ffffff;
 }
 
 .font-cinzel {
   font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
-.eyebrow,
-.eyebrow-light,
-.eyebrow-gold,
-.eyebrow-dark {
+.eyebrow-ruby,
+.eyebrow-dark,
+.eyebrow-light {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -146,26 +78,21 @@ body {
   text-transform: uppercase;
 }
 
-.eyebrow {
-  color: #e3d3be;
-}
-
-.eyebrow-light {
-  color: #fdd984;
-}
-
-.eyebrow-gold {
-  color: #dca94e;
+.eyebrow-ruby {
+  color: #9e1836;
 }
 
 .eyebrow-dark {
-  color: #91632c;
+  color: #334155;
 }
 
-.eyebrow::before,
-.eyebrow-light::before,
-.eyebrow-gold::before,
-.eyebrow-dark::before {
+.eyebrow-light {
+  color: #f4d8a8;
+}
+
+.eyebrow-ruby::before,
+.eyebrow-dark::before,
+.eyebrow-light::before {
   width: 1.75rem;
   height: 1.5px;
   flex: none;
@@ -176,8 +103,8 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #e3d3be;
-  font-size: 0.68rem;
+  color: #334155;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -187,7 +114,7 @@ body {
 
 @media (min-width: 1280px) {
   .nav-link {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     letter-spacing: 0.12em;
   }
 }
@@ -198,7 +125,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #dca94e, #fdd984);
+  background: #9e1836;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -206,7 +133,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #9e1836;
 }
 
 .nav-link:hover::after {
@@ -218,26 +145,26 @@ body {
 }
 
 .footer-link:hover {
-  color: #fdd984;
+  color: #ffffff;
 }
 
-/* Custom Metallic Imperial Gold Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0508;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #0f0508;
+  border: 2px solid #09090b;
   border-radius: 999px;
-  background: #91632c;
+  background: #9e1836;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #dca94e;
+  background: #c53150;
 }
 
 @media (prefers-reduced-motion: reduce) {
