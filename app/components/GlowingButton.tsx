@@ -10,8 +10,9 @@ interface GlowingButtonProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   variant?:
-    | "ruby"
     | "gold"
+    | "wine"
+    | "ruby"
     | "dark"
     | "white"
     | "emerald"
@@ -26,7 +27,7 @@ export default function GlowingButton({
   onClick,
   className = "",
   size = "md",
-  variant = "ruby",
+  variant = "gold",
 }: GlowingButtonProps) {
   const sizeClasses = {
     sm: "px-5 py-2.5 text-[10px] tracking-[0.14em]",
@@ -34,26 +35,36 @@ export default function GlowingButton({
     lg: "px-8 py-4 text-xs tracking-[0.15em]",
   }[size];
 
-  // High-contrast prestige styling (black & white with signature wine red secondary)
+  // High-contrast prestige styling (black & white with signature metallic bronze-gold & wine accents)
   const variantClasses = {
-    // Primary Signature: Metallic Ruby Wine & Marsala (Logo color)
-    ruby:
-      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028] text-white font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(158,24,54,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
-      "hover:-translate-y-0.5 hover:from-[#b91c28] hover:via-[#dc264e] hover:to-[#9e1836] " +
-      "hover:shadow-[0_10px_28px_-2px_rgba(197,49,80,0.6)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(158,24,54,0.4)]",
-
-    // Champagne Gold Accent
+    // Primary Signature: Metallic Bronze-Gold & Champagne (Logo color)
     gold:
-      "relative border border-[#f9eedc]/90 bg-gradient-to-r from-[#c88e4b] via-[#f4d8a8] to-[#a67035] text-[#09090b] font-black tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(200,142,75,0.4)] hover:-translate-y-0.5 hover:from-[#dfa968] hover:via-white hover:to-[#c88e4b] " +
-      "hover:shadow-[0_10px_28px_rgba(244,216,168,0.6)]",
+      "relative border border-[#f9eedc]/90 bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#8d4d20] text-white font-black tracking-[0.14em] " +
+      "shadow-[0_6px_22px_-2px_rgba(184,120,62,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +
+      "hover:-translate-y-0.5 hover:from-[#b8783e] hover:via-[#dfa968] hover:to-[#9e6231] " +
+      "hover:shadow-[0_10px_30px_rgba(223,169,104,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(184,120,62,0.4)]",
+
+    // Secondary Accent: Signature Velvet Marsala / Wine (Photo blouse color)
+    wine:
+      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#80182a] via-[#a41f3d] to-[#6a0f21] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(128,24,42,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
+      "hover:-translate-y-0.5 hover:from-[#9e1836] hover:via-[#c53150] hover:to-[#80182a] " +
+      "hover:shadow-[0_10px_28px_-2px_rgba(164,31,61,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(128,24,42,0.4)]",
+
+    // Alias ruby to wine
+    ruby:
+      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#80182a] via-[#a41f3d] to-[#6a0f21] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(128,24,42,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
+      "hover:-translate-y-0.5 hover:from-[#9e1836] hover:via-[#c53150] hover:to-[#80182a] " +
+      "hover:shadow-[0_10px_28px_-2px_rgba(164,31,61,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(128,24,42,0.4)]",
 
     // High-Contrast Solid Black (ideal on White folds)
     dark:
       "relative border border-stone-800 bg-[#09090b] text-white font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#18181b] hover:border-stone-700 " +
+      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#18181b] hover:border-[#b8783e] " +
       "hover:shadow-[0_10px_24px_rgba(0,0,0,0.35)]",
 
     // High-Contrast Pure White (ideal on Black folds)
@@ -65,12 +76,12 @@ export default function GlowingButton({
     // Outline on Dark Folds
     outline:
       "relative border border-white/20 bg-white/5 text-white font-bold tracking-[0.13em] backdrop-blur-md " +
-      "hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/10 hover:text-white",
+      "hover:-translate-y-0.5 hover:border-[#dfa968] hover:bg-white/10 hover:text-[#fae6c8]",
 
     // Outline on Light Folds
     "outline-dark":
       "relative border border-stone-300 bg-white/80 text-[#0f172a] font-bold tracking-[0.13em] " +
-      "hover:-translate-y-0.5 hover:border-[#9e1836] hover:text-[#9e1836] hover:bg-stone-50",
+      "hover:-translate-y-0.5 hover:border-[#b8783e] hover:text-[#b8783e] hover:bg-stone-50",
 
     // WhatsApp Green CTA
     emerald:

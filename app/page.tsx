@@ -17,41 +17,42 @@ import {
   Scale,
   Sparkles,
   Star,
-  Users,
   Shield,
   FileText,
-  ShieldAlert,
   HelpCircle,
   X,
   ChevronDown,
+  Building2,
+  Landmark,
+  Wheat,
+  BadgeCheck,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533999997644";
-const PHONE_DISPLAY = "(33) 99999-7644";
-const EMAIL_CONTACT = "contato@marianabrumbahia.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/marianabrumbahia.adv?igsh=ZW55cXhmbTRvMTVj";
-const INSTAGRAM_HANDLE = "@marianabrumbahia.adv";
-const LAWYER_NAME = "Dra. Mariana Brum Bahia";
-const LAWYER_OAB = "OAB/MG 241.996";
-const LAWYER_TITLE = "Advogada · OAB/MG 241.996";
-const FIRM_NAME = "Mariana Brum Bahia — Advocacia";
-const ADDRESS_TEXT = "Praça Benedito Valadares - Mutum, MG, 36955-000";
-const REGION_TEXT = "Mutum · Lajinha · Aimorés · Ipanema · Manhuaçu · Leste de Minas & Atuação Nacional";
+const WHATSAPP_NUMBER = "5537999720495";
+const PHONE_DISPLAY = "(37) 99972-0495";
+const EMAIL_CONTACT = "contato@mariaeduardanoronha.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/adv.marianoronha";
+const INSTAGRAM_HANDLE = "@adv.marianoronha";
+const LAWYER_NAME = "Dra. Maria Eduarda Noronha";
+const LAWYER_TITLE = "Advogada Bancária e do Agronegócio · Procuradora do INPI";
+const FIRM_NAME = "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica";
+const ADDRESS_TEXT = "R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, 35595-000";
+const REGION_TEXT = "Luz · Bom Despacho · Lagoa da Prata · Dores do Indaiá · Centro-Oeste Mineiro & Atuação Nacional";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Mariana+Brum+Bahia+Advocacia%0AMutum+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Maria+Eduarda+Noronha+%E2%80%94+Advocacia%0ALuz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/mariana-brum-hero.jpg";
-const FOTO_SOBRE_SRC = "/mariana-brum-sobre.jpg";
+const FOTO_HERO_SRC = "/maria-eduarda-hero.jpg";
+const FOTO_SOBRE_SRC = "/maria-eduarda-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Mariana Brum Bahia! Gostaria de tirar dúvidas e agendar uma consulta jurídica.";
+    "Olá, Dra. Maria Eduarda Noronha! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -137,7 +138,7 @@ function GoogleIcon({
 interface PracticeArea {
   id: string;
   title: string;
-  icon: typeof HeartHandshake;
+  icon: typeof Landmark;
   tag: string;
   summary: string;
   details: string;
@@ -147,227 +148,263 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-de-familia",
-    title: "Direito de Família (Divórcio, Guarda & Pensão)",
-    icon: HeartHandshake,
-    tag: "Divórcio · Pensão Alimentícia · Guarda Compartilhada · Partilha de Bens",
+    id: "direito-bancario",
+    title: "Direito Bancário & Defesa Financeira",
+    icon: Landmark,
+    tag: "Revisão Contratual · Juros Abusivos · Execuções · Suspensão de Leilões",
     summary:
-      "Acolhimento humanizado e proteção jurídica incondicional para sua família, filhos e patrimônio nas transições mais sensíveis da vida.",
+      "Defesa contundente contra abusos de instituições financeiras, revisão de cláusulas ilegais, proteção do patrimônio e blindagem contra execuções.",
     details:
-      "Questões familiares demandam respeito, escuta acolhedora e condução técnica de alta precisão. A Dra. Mariana Brum Bahia atua na prevenção e na resolução de conflitos conjugais e parentais, buscando prioritariamente acordos vantajosos e pacificadores, ou defendendo com máxima combatividade os direitos dos clientes em Juízo.",
+      "As relações bancárias frequentemente impõem juros extorsivos, capitalização indevida e garantias desproporcionais que sufocam a saúde financeira de empresas, famílias e produtores rurais. A Dra. Maria Eduarda Noronha atua de forma firme e especializada na análise minuciosa de contratos de financiamento, empréstimos com garantia e cédulas de crédito, desconstituindo abusividades e suspendendo atos expropriatórios.",
     topics: [
-      "Divórcio Consensual em Cartório (rápido e discreto) ou Divórcio Judicial Litigioso",
-      "Ação de Fixação, Revisão (aumento ou redução) e Execução de Cobrança de Pensão Alimentícia",
-      "Definição de Guarda Compartilhada ou Unilateral e Estruturação de Plano de Convivência",
-      "Partilha Justa de Bens, Imóveis, Veículos, Contas e Empresas do Casal",
-      "Reconhecimento e Dissolução de União Estável com apuração patrimonial integral",
-      "Defesa e proteção contra Alienação Parental e medidas protetivas urgentes",
+      "Ação Revisional de Contratos de Financiamento, Cédulas Bancárias e Cartões com exclusão de juros abusivos",
+      "Defesa técnica e embargos contra Ações de Execução de Título Extrajudicial movidas por instituições financeiras",
+      "Pedido liminar urgente para suspensão e anulação de leilão judicial e extrajudicial de imóveis e veículos",
+      "Renegociação global de passivos bancários com deságio e alongamento sustentável do fluxo de pagamento",
+      "Ações indenizatórias por fraudes bancárias, golpes do Pix, boletos falsos e empréstimos consignados fraudulentos",
+      "Desbloqueio cautelar imediato de contas correntes, contas-salário e investimentos bloqueados indevidamente",
     ],
     whatsAppText:
-      "Olá, Dra. Mariana! Gostaria de uma consultoria jurídica sobre Direito de Família (divórcio, guarda ou pensão).",
+      "Olá, Dra. Maria Eduarda! Gostaria de consultoria jurídica especializada sobre Direito Bancário (revisão de contrato, execução ou leilão).",
   },
   {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário (Benefícios & Aposentadorias INSS)",
+    id: "direito-do-agronegocio",
+    title: "Direito do Agronegócio & Crédito Rural",
+    icon: Wheat,
+    tag: "Prorrogação de Dívidas Rurais (MCR) · CPR & CCR · Contratos Agrários",
+    summary:
+      "Segurança jurídica e proteção incondicional para o produtor rural perante bancos, tradings e fornecedores, assegurando a continuidade da safra.",
+    details:
+      "O agronegócio opera sob riscos climáticos, flutuações severas de mercado e custos elevados de insumos. Conhecedora profunda da realidade do campo e do Manual de Crédito Rural (MCR), a Dra. Maria Eduarda Noronha garante o direito legítimo do produtor ao alongamento de suas dívidas de custeio e investimento, impedindo que adversidades momentâneas ameacem suas terras e maquinários.",
+    topics: [
+      "Prorrogação e alongamento de parcelas de Crédito Rural com fundamento na Súmula 298 do STJ e Manual de Crédito Rural (MCR)",
+      "Defesa e renegociação de Cédula de Produto Rural (CPR física e financeira), CCR e Cédula Imobiliária Rural",
+      "Elaboração, análise preventiva e repactuação de Contratos de Arrendamento Rural, Parceria Agrícola e Pastoreio",
+      "Defesa patrimonial da propriedade rural, benfeitorias, rebanhos e safras contra penhoras e busca e apreensão",
+      "Assessoria jurídica em aquisições de insumos agrícolas, fertilizantes, defensivos e maquinários pesados",
+      "Estruturação societária da atividade agropecuária e assessoria preventiva para produtores e cooperativas",
+    ],
+    whatsAppText:
+      "Olá, Dra. Maria Eduarda! Gostaria de atendimento sobre Direito do Agronegócio (crédito rural, prorrogação de dívida ou contratos agrários).",
+  },
+  {
+    id: "direito-imobiliario",
+    title: "Direito Imobiliário & Regularização Fundiária",
+    icon: Building2,
+    tag: "Regularização de Imóveis e Fazendas · Usucapião · Contratos · Posse",
+    summary:
+      "Garantia documental e segurança jurídica absoluta para propriedades rurais e urbanas, evitando litígios e valorizando o patrimônio.",
+    details:
+      "A posse sem a regularização jurídica formal gera vulnerabilidade, dificulta o acesso ao crédito rural ou bancário e prejudica a valorização do bem. Atuamos com rigor em procedimentos de regularização de terras rurais e imóveis urbanos, ações de usucapião administrativa ou judicial e na estruturação de contratos imobiliários seguros.",
+    topics: [
+      "Regularização fundiária completa de propriedades rurais (fazendas, glebas e sítios) e imóveis urbanos",
+      "Processamento de Usucapião Extrajudicial em Cartório de Notas e Usucapião Judicial contenciosa",
+      "Auditoria jurídica e análise de riscos (Due Diligence Imobiliária) para compra e venda segura de imóveis",
+      "Ações Possessórias: Reintegração de Posse, Manutenção e Interdito Proibitório em defesa da terra",
+      "Desmembramento, unificação de matrículas, retificação de área e averbações junto aos Cartórios de Registro",
+      "Distrato de contratos imobiliários, devolução de parcelas retidas e reparação por atraso em entregas",
+    ],
+    whatsAppText:
+      "Olá, Dra. Maria Eduarda! Gostaria de consultoria sobre Direito Imobiliário (regularização de imóvel, usucapião ou contrato).",
+  },
+  {
+    id: "registro-de-marcas",
+    title: "Registro de Marcas no INPI (Procuradora do INPI)",
+    icon: BadgeCheck,
+    tag: "Exclusividade de Marca · Agro & Comércio · Combate a Plágio · Notificações",
+    summary:
+      "Como Procuradora habilitada no INPI, blindamos sua marca em todo o Brasil, garantindo exclusividade comercial e valor patrimonial inestimável.",
+    details:
+      "A marca é um dos ativos mais valiosos de qualquer negócio ou produtor agropecuário. Sem o registro oficial no Instituto Nacional da Propriedade Industrial (INPI), você corre o risco de perder o nome construído com anos de dedicação ou ser processado por uso indevido. Realizamos busca prévia criteriosa, protocolo e defesa contínua da sua propriedade intelectual.",
+    topics: [
+      "Registro de marcas comerciais, industriais, serviços e produtos agropecuários perante o INPI em âmbito nacional",
+      "Busca prévia aprofundada de anterioridade e viabilidade jurídica para minimizar riscos de indeferimento",
+      "Monitoramento permanente da Revista da Propriedade Industrial (RPI) para detectar marcas conflitantes",
+      "Apresentação de Oposição técnica contra pedidos de terceiros que tentem imitar ou diluir sua marca",
+      "Envio de notificações extrajudiciais e ações cíveis imediatas contra contrafação, pirataria e uso indevido",
+      "Gestão de renovação decenal de registros, transferências societárias e contratos de licenciamento de uso",
+    ],
+    whatsAppText:
+      "Olá, Dra. Maria Eduarda! Gostaria de orientação para registrar minha marca no INPI e garantir exclusividade.",
+  },
+  {
+    id: "planejamento-patrimonial-sucessorio",
+    title: "Planejamento Patrimonial, Sucessório & Holding",
     icon: Shield,
-    tag: "Aposentadorias · BPC/LOAS · Auxílio por Incapacidade · Pensão por Morte",
+    tag: "Holding Familiar · Sucessão no Campo e na Cidade · Inventário · Herança",
     summary:
-      "Atuação especializada e estratégica na conquista e no restabelecimento dos seus benefícios e aposentadorias perante o INSS e na Justiça Federal.",
+      "Proteção legal dos bens conquistados por gerações, garantindo transmissão pacífica aos herdeiros com expressiva economia tributária.",
     details:
-      "Com atuação dedicada e vinculação institucional à comissão temática da OAB/MG, a Dra. Mariana Brum Bahia conduz análises detalhadas do histórico contributivo e requerimentos de benefícios previdenciários, revertendo negativas indevidas do INSS e conquistando o melhor valor de aposentadoria para cada trabalhador urbano e rural.",
+      "A preservação do patrimônio familiar exige antecipação estratégica. Estruturamos holdings familiares e instrumentos sucessórios personalizados que protegem o patrimônio contra contingências futuras, evitam brigas familiares desgastantes e reduzem significativamente os custos com impostos de transmissão (ITCD) e cartórios.",
     topics: [
-      "Aposentadoria por Idade e Tempo de Contribuição (Regras de Transição e Direito Adquirido)",
-      "Aposentadoria do Trabalhador Rural, Segurado Especial e Regime Misto",
-      "Aposentadoria por Incapacidade Permanente (Invalidez) e Auxílio por Incapacidade Temporária",
-      "Benefício de Prestação Continuada (BPC/LOAS) para Idosos e Pessoas com Deficiência",
-      "Pensão por Morte e Auxílio-Reclusão para dependentes com comprovação união/parentesco",
-      "Planejamento Previdenciário preventivo e Cálculos de Tempo e Salário de Benefício",
+      "Estruturação de Holding Familiar para produtores rurais e famílias empresárias com planejamento fiscal",
+      "Doação de bens em vida com reserva de usufruto, cláusulas de incomunicabilidade e inalienabilidade",
+      "Inventário Extrajudicial em Cartório ágil e econômico ou Inventário Judicial com partilha equilibrada",
+      "Elaboração técnica de testamentos, pactos antenupciais e acordos de sócios para governança familiar",
+      "Estratégia de redução lícita da carga tributária sobre a herança e custos judiciais e cartorários",
+      "Blindagem preventiva de bens familiares contra riscos operacionais e contingências mercadológicas",
     ],
     whatsAppText:
-      "Olá, Dra. Mariana! Gostaria de consultoria jurídica sobre benefício ou aposentadoria do INSS.",
+      "Olá, Dra. Maria Eduarda! Gostaria de consultoria sobre Planejamento Patrimonial, Holding Familiar ou Inventário.",
   },
   {
-    id: "inventario-sucessoes",
-    title: "Inventário, Partilha de Bens & Sucessões",
+    id: "contratos-consultoria-empresarial",
+    title: "Contratos Estratégicos & Consultoria Empresarial",
     icon: FileText,
-    tag: "Inventário em Cartório · Judicial · Testamentos · Regularização de Herança",
+    tag: "Contratos Comerciais · Cobrança de Títulos · Notificações · Gestão de Passivos",
     summary:
-      "Agilidade, rigor técnico e equilíbrio na partilha de herança e na regularização do patrimônio da família com economia tributária.",
+      "Assessoria jurídica consultiva e contenciosa de alto impacto para empresas, cooperativas e empreendedores em Minas Gerais e no Brasil.",
     details:
-      "A perda de um ente querido é um momento delicado que exige segurança jurídica sem burocracias desgastantes. Assessoramos herdeiros e meeiras na condução ágil de inventários em cartório (quando não há menores e há acordo) ou judiciais complexos, garantindo a regularização documental de imóveis urbanos e rurais.",
+      "Contratos mal redigidos são o maior foco de perdas financeiras nos negócios. Prestamos assessoria preventiva e contenciosa com rigor inegociável, redigindo instrumentos blindados e executando títulos de crédito para garantir liquidez e estabilidade às operações corporativas e comerciais.",
     topics: [
-      "Inventário Extrajudicial em Cartório de Notas célere, econômico e amigável",
-      "Inventário Judicial Contencioso com partilha de bens, herdeiros em desacordo e menores",
-      "Planejamento Sucessório Familiar preventivo com elaboração de testamentos e doações",
-      "Avaliação precisa de ITCD, desonerações tributárias e cálculos de partilha",
-      "Regularização de imóveis herdados, escrituras públicas e sobrepartilha de bens omitidos",
-      "Remoção de inventariante por desídia ou ocultação de bens da herança",
+      "Elaboração, revisão minuciosa e blindagem de Contratos Comerciais, Fornecimento e Prestação de Serviços",
+      "Cobrança jurídica extrajudicial e Ações de Execução de Títulos de Crédito (duplicatas, cheques e notas promissórias)",
+      "Emissão de Notificações Extrajudiciais com validade jurídica para formalização de mora e cobrança",
+      "Assessoria em resolução de conflitos entre sócios, apuração de haveres e dissoluções societárias",
+      "Auditoria jurídica preventiva (Due Diligence) de passivos trabalhistas, cíveis e fiscais em empresas",
+      "Consultoria jurídica mensal (advocacia de partido) para suporte jurídico integral às decisões empresariais",
     ],
     whatsAppText:
-      "Olá, Dra. Mariana! Preciso de assessoria jurídica especializada para inventário e partilha de bens.",
-  },
-  {
-    id: "direito-civil-contratos",
-    title: "Direito Civil, Contratos & Reparação de Danos",
-    icon: Scale,
-    tag: "Indenizações · Danos Morais e Materiais · Contratos Imobiliários · Cobranças",
-    summary:
-      "Defesa contundente de direitos patrimoniais, reparação por danos morais/materiais e assessoria contratual preventiva.",
-    details:
-      "No âmbito cível, cada detalhe de uma cláusula contratual ou prejuízo sofrido pode fazer a diferença entre a tranquilidade e a perda patrimonial. Atuamos em ações de indenização por negativação indevida, cobranças indevidas, inadimplemento contratual e assessoria na compra e venda de bens imóveis em Mutum e região.",
-    topics: [
-      "Ação Indenizatória por Danos Morais, Materiais e Lucros Cessantes",
-      "Elaboração, análise de riscos e revisão segura de Contratos de Compra e Venda e Locação",
-      "Ações de Cobrança, Execução de Títulos Judiciais e Extrajudiciais",
-      "Resolução de conflitos de vizinhança, posse e propriedade imobiliária",
-      "Direito do Consumidor e reparação por falha na prestação de serviços essenciais",
-      "Notificações extrajudiciais e acordos preventivos com validade jurídica",
-    ],
-    whatsAppText:
-      "Olá, Dra. Mariana! Gostaria de orientação jurídica na área Cível / Contratos.",
-  },
-  {
-    id: "direito-do-trabalho",
-    title: "Direito do Trabalho & Resguardo Laboral",
-    icon: Users,
-    tag: "Rescisão Indireta · Verbas Rescisórias · Horas Extras · Acidentes de Trabalho",
-    summary:
-      "Combate aos abusos nas relações de emprego e garantia integral de todas as verbas rescisórias e direitos previstos em lei.",
-    details:
-      "Garantimos a defesa enérgica dos trabalhadores que tiveram direitos sonegados pelo empregador. Realizamos cálculos detalhados de diferenças salariais, horas extraordinárias, adicionais de periculosidade ou insalubridade, assédio moral e pedidos de rescisão indireta quando o ambiente se torna insustentável.",
-    topics: [
-      "Ação Trabalhista para Cobrança de Verbas Rescisórias Integrais e Multas da CLT",
-      "Rescisão Indireta do Contrato de Trabalho (demissão por culpa do empregador)",
-      "Cobrança de Horas Extras, Intervalos Intrajornada e Trabalho em Feriados",
-      "Reconhecimento de Vínculo Empregatício em Carteira de Trabalho",
-      "Adicionais de Insalubridade, Periculosidade e Acidentes de Trabalho",
-      "Indenização por Assédio Moral, Perseguição e Danos Psicológicos no Trabalho",
-    ],
-    whatsAppText:
-      "Olá, Dra. Mariana! Gostaria de consultoria jurídica sobre meus direitos trabalhistas.",
-  },
-  {
-    id: "correspondencia-juridica",
-    title: "Correspondência Jurídica & Apoio Estratégico em Mutum",
-    icon: Award,
-    tag: "Audiências · Diligências · Despachos · Comarca de Mutum & Região",
-    summary:
-      "Parceria jurídica ágil, ética e com relatórios imediatos para escritórios de advocacia e empresas de todo o território nacional.",
-    details:
-      "Comarca polo e estratégica no Leste de Minas Gerais, Mutum e seus termos exigem presença física qualificada e conhecedora do cotidiano forense local. A Dra. Mariana Brum Bahia presta serviços de apoio de altíssimo nível para escritórios e departamentos jurídicos externos, garantindo cumprimento pontual e excelência processual.",
-    topics: [
-      "Realização de Audiências de Conciliação, Instrução e Julgamento (Presenciais e Virtuais)",
-      "Despachos presenciais estratégicos com Magistrados, Promotores e Chefes de Secretaria",
-      "Cópias integrais de processos físicos, certidões forenses e protocolos urgentes",
-      "Acompanhamento de Oficiais de Justiça em mandados de busca, penhora e intimação",
-      "Diligências e alvarás perante Cartórios de Registro de Imóveis, Tabelionatos e Órgãos Públicos",
-      "Atuação ampla na Comarca de Mutum e extensão às comarcas vizinhas (Lajinha, Ipanema, Aimorés, Manhuaçu)",
-    ],
-    whatsAppText:
-      "Olá, Dra. Mariana! Sou de outro escritório/empresa e necessito de correspondente jurídica na Comarca de Mutum.",
-  },
-  {
-    id: "urgencias-medidas-protetivas",
-    title: "Medidas Protetivas & Atuação de Urgência",
-    icon: ShieldAlert,
-    tag: "Acolhimento Imediato · Sigilo Absoluto · Liminares · Proteção Integral",
-    summary:
-      "A proteção física, moral e psicológica de pessoas vulneráveis não pode esperar. Atuação emergencial com sigilo rigoroso.",
-    details:
-      "Situações que envolvem risco iminente, violência doméstica, abuso ou desvio patrimonial requerem pronta resposta da Justiça. Atendemos com extrema discrição e empatia, pleiteando medidas protetivas urgentes de afastamento do agressor, guarda cautelar de urgência e busca e apreensão de documentos.",
-    topics: [
-      "Pedido e acompanhamento imediato de Medidas Protetivas de Urgência no Plantão Judiciário",
-      "Afastamento emergencial do agressor do lar com suporte à integridade da vítima",
-      "Fixação liminar urgente de alimentos provisionais e guarda cautelar",
-      "Bloqueio de contas e arrolamento de bens contra fraudes patrimoniais",
-      "Acompanhamento em delegacias, depoimentos especiais e audiências de custódia",
-      "Acolhimento com sigilo absoluto, respeito e escuta humanizada",
-    ],
-    whatsAppText:
-      "Olá, Dra. Mariana! Preciso de orientação jurídica urgente e acolhimento com total sigilo.",
+      "Olá, Dra. Maria Eduarda! Gostaria de consultoria jurídica sobre contratos ou assessoria para a minha empresa.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Camila Rodrigues Silva",
-    reviewerTag: "Local Guide · 12 avaliações no Google",
-    badge: "Atendimento Impecável & Muita Competência",
+    name: "DIVISA AGRÍCOLA",
+    reviewerTag: "Cliente Corporativo · Agronegócio · 5 estrelas no Google",
+    badge: "Atendimento Sério, Eficiente & Altíssimo Conhecimento Técnico",
     rating: 5,
     content:
-      "A Dra. Mariana é uma profissional excepcional! Muito atenciosa, humana e com profundo conhecimento jurídico. Me atendeu com paciência, explicou cada etapa do processo e sempre me manteve informada de tudo. Recomendo de olhos fechados em Mutum!",
-    reply: "Muito obrigada pelo carinho e pela confiança, Camila! Foi uma honra defender seus direitos.",
+      "Contratamos os serviços jurídicos do escritório e ficamos extremamente satisfeitos com o atendimento. Comunicação clara, excelente conhecimento técnico e muita dedicação em cada detalhe da demanda. Atendimento sério, eficiente e muito profissional. Certamente indicamos.",
+    reply: "É uma enorme honra assessorar a Divisa Agrícola! Agradeço a confiança na nossa atuação técnica e dedicada.",
   },
   {
-    name: "Rodrigo Almeida Santos",
-    reviewerTag: "5 avaliações no Google",
-    badge: "Transparência Total & Agilidade",
+    name: "Samuel Duarte Carvalho",
+    reviewerTag: "Avaliação verificada no Google",
+    badge: "Atendimento Extremamente Profissional e Humano",
     rating: 5,
     content:
-      "Contratei os serviços da Dra. Mariana Brum Bahia e fiquei impressionado com a agilidade e a dedicação. Ela respondeu todas as dúvidas pelo WhatsApp com clareza e resolveu a situação muito mais rápido do que imaginei. Uma advogada de extrema confiança!",
-    reply: "Obrigado pela confiança no meu trabalho, Rodrigo! Transparência e rapidez são prioridades aqui.",
+      "Atendimento extremamente profissional e humano. Fui muito bem orientado durante todo o processo, sempre com clareza, atenção e agilidade. Dá pra perceber o comprometimento e a competência no que faz. Recomendo sem dúvidas.",
+    reply: "Muito obrigada pelas palavras e pela confiança em nosso trabalho, Samuel! Nosso compromisso é sempre com a sua clareza e segurança.",
   },
   {
-    name: "Juliana Ferreira de Souza",
-    reviewerTag: "8 avaliações no Google",
-    badge: "Advogada Humanizada & Firmeza em Juízo",
+    name: "Euler CP",
+    reviewerTag: "1 avaliação · 3 fotos no Google",
+    badge: "Conseguiu Resolver o Problema! Super Indico",
     rating: 5,
     content:
-      "Excelente advogada! Em um momento muito delicado na área de família, a Dra. Mariana me deu todo o suporte necessário com muito acolhimento e postura firme perante a Justiça. Gratidão imensa pelo trabalho!",
-    reply: "Minha missão é sempre acolher e proteger quem precisa. Muito obrigada pela confiança, Juliana!",
+      "Doutora muito eficiente, gostei do serviço que prestou para um cliente que eu atendia. Conseguiu resolver o problema! Super indico.",
+    reply: "Obrigada pela recomendação, Euler! A busca pela solução mais célere e eficaz é sempre nossa prioridade.",
   },
   {
-    name: "Marcos Vinícius Costa",
-    reviewerTag: "Correspondência Jurídica · Advogado Parceiro",
-    badge: "Parceria Jurídica de Alto Nível",
+    name: "Paula Araújo",
+    reviewerTag: "Avaliação verificada no Google",
+    badge: "Inteligente, Competente & Empática",
     rating: 5,
     content:
-      "Nosso escritório de Belo Horizonte contratou a Dra. Mariana para realizar audiências e diligências na Comarca de Mutum. Profissional pontualíssima, com relatório completo minutos após a audiência e domínio técnico admirável. Parceira indispensável na região!",
-    reply: "Prazer enorme em atuar como correspondente para seu escritório, Dr. Marcos! Conte sempre comigo.",
+      "Excelente profissional, inteligente, competente e empática! Com uma excelente assistência jurídica, compreende a dor do cliente e busca a melhor forma de ajudá-lo. Recomendo!",
+    reply: "Acolhimento e empatia são a base do nosso escritório, Paula. Muito grata pela confiança e carinho!",
   },
   {
-    name: "Luciana Martins Ribeiro",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Benefício INSS Concedido com Sucesso",
-    rating: 5,
-    content:
-      "A Dra. Mariana cuidou do pedido de benefício da minha mãe junto ao INSS depois de termos tido negativa. Com a intervenção correta dela, tudo deu certo rapidamente. Profissional muito dedicada, ética e carinhosa!",
-    reply: "Fico imensamente feliz em ver a justiça sendo feita para a sua mãe! Um grande abraço a vocês.",
-  },
-  {
-    name: "Felipe Nogueira Dias",
+    name: "Ana Couto",
     reviewerTag: "3 avaliações no Google",
-    badge: "Ética, Competente e Pontual",
+    badge: "Confio de Olhos Fechados!",
     rating: 5,
     content:
-      "Profissional com ética inegociável, comunicação clara e muita precisão técnica. Em Mutum e comarcas vizinhas, é sem dúvida a melhor referência na advocacia. Super recomendo!",
+      "Advogada muito competente e excelente profissional, com ótimo atendimento e assistência jurídica. Confio de olhos fechados!",
+    reply: "Sua confiança é a maior recompensa, Ana. Conte sempre com nossa dedicação!",
+  },
+  {
+    name: "Allan Gonçalves",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Atenciosa, Ágil & Excelente Profissional",
+    rating: 5,
+    content:
+      "Excelente profissional, atenciosa e ágil. Indico sempre.",
+  },
+  {
+    name: "Gabriela Monique",
+    reviewerTag: "5 avaliações no Google",
+    badge: "Me Auxiliou de Forma Rápida!",
+    rating: 5,
+    content:
+      "Ótima profissional. Me auxiliou com meu caso de forma rápida!",
+  },
+  {
+    name: "Ana Luisa Alves",
+    reviewerTag: "2 avaliações · 2 fotos no Google",
+    badge: "Ágil, Proativa & Muito Dedicada",
+    rating: 5,
+    content:
+      "Excelente profissional, ela é ágil, proativa e muito dedicada ❤️",
+  },
+  {
+    name: "Luis Felipe Bonifácio",
+    reviewerTag: "Avaliação verificada no Google",
+    badge: "Dedicada & Amplo Conhecimento",
+    rating: 5,
+    content:
+      "Ótima profissional, dedicada, atenciosa e com amplo conhecimento.",
+  },
+  {
+    name: "Tales Caetano",
+    reviewerTag: "4 avaliações · 1 foto no Google",
+    badge: "Confio Muito no Profissionalismo",
+    rating: 5,
+    content:
+      "Excelente advogada, confio muito em seu profissionalismo!",
+  },
+  {
+    name: "Bianca Lino",
+    reviewerTag: "4 avaliações no Google",
+    badge: "Muito Competente, Indico Sempre",
+    rating: 5,
+    content:
+      "Ótima profissional, muito competente. Indico sempre.",
+  },
+  {
+    name: "Jéssica Bernardes",
+    reviewerTag: "5 avaliações · 20 fotos no Google",
+    badge: "Profissional Competente e Dedicada!",
+    rating: 5,
+    content:
+      "Profissional competente e dedicada!",
+  },
+  {
+    name: "Vanessa Figueiredo Santos",
+    reviewerTag: "2 avaliações no Google",
+    badge: "Excelente Profissional",
+    rating: 5,
+    content:
+      "Excelente profissional.",
   },
 ];
 
 const faqs = [
   {
-    q: "A Dra. Mariana atende apenas em Mutum ou também online para outras cidades?",
-    a: "Atendemos presencialmente em nosso escritório na Praça Benedito Valadares, no centro de Mutum (MG), e também de forma 100% online para clientes em cidades vizinhas (Lajinha, Ipanema, Aimorés, Manhuaçu, Taparuba) e em todo o Brasil. Através de reuniões por vídeo e assinatura digital, você tem atendimento ágil e seguro sem precisar se deslocar.",
+    q: "A Dra. Maria Eduarda atende apenas presencialmente em Luz ou também online?",
+    a: "Atendemos presencialmente em nosso escritório na R. Monsenhor Geraldo Mendes Vasconcelos, 280, no bairro Dom Belchior em Luz (MG), e também de forma 100% digital e segura para produtores rurais, empresas e clientes particulares em todo o estado de Minas Gerais e demais regiões do Brasil. Reuniões por videoconferência, envio digital de documentos e assinaturas eletrônicas com validade jurídica garantem a mesma eficácia e agilidade sem você precisar sair de casa ou da fazenda.",
   },
   {
-    q: "Como funciona o primeiro contato e a consulta jurídica?",
-    a: "O primeiro contato é simples e direto pelo nosso WhatsApp oficial (33) 99999-7644. Você conversa com a Dra. Mariana e relata brevemente sua necessidade. Agendamos um horário com dedicação exclusiva para ouvir sua história, analisar a documentação e traçar o plano de ação jurídica mais vantajoso.",
+    q: "O que fazer se recebi uma cobrança judicial ou notificação de execução bancária?",
+    a: "O tempo é crucial em execuções bancárias. Os prazos para apresentação de embargos à execução ou impugnações costumam ser exíguos (muitas vezes de apenas 15 dias). É indispensável acionar imediatamente a Dra. Maria Eduarda para que os contratos sejam periciados e as medidas cabíveis sejam protocoladas para resguardar seus bens, evitar penhora de faturamento, bloqueio de contas e leilão de propriedades.",
   },
   {
-    q: "O que é mais vantajoso: inventário em cartório ou inventário judicial?",
-    a: "Quando todos os herdeiros são maiores, capazes e estão de pleno acordo sobre a divisão, e o falecido não deixou testamento com restrições, o inventário extrajudicial em cartório de notas é muito mais rápido (frequentemente concluído em poucas semanas) e menos oneroso. Havendo menores, incapazes ou discordância entre herdeiros, conduzimos a via judicial com máxima combatividade para resguardar sua cota de herança.",
+    q: "Como funciona o direito de prorrogação e alongamento de dívidas rurais?",
+    a: "A prorrogação do vencimento de operações de crédito rural não é um favor do banco, mas sim um direito subjetivo garantido por lei ao produtor rural (Súmula 298 do STJ e Manual de Crédito Rural - MCR) quando comprovada a quebra de safra por intempéries climáticas, frustração de receitas ou dificuldade de comercialização. Realizamos todo o requerimento administrativo e a condução judicial para impedir a inadimplência forçada e a cobrança de juros moratórios abusivos.",
   },
   {
-    q: "Como requerer benefício ou aposentadoria no INSS com segurança?",
-    a: "Muitos pedidos são negados pelo INSS por pequenos erros cadastrais ou falta de documentos comprobatórios do tempo de trabalho urbano ou rural. A Dra. Mariana realiza um estudo previdenciário prévio, reúne a documentação indispensável e ingressa com o pedido administrativo ou com ação na Justiça Federal para reverter negativas e assegurar o melhor valor mensal.",
+    q: "Por que o registro de marca no INPI é indispensável para o meu negócio ou propriedade?",
+    a: "O registro no INPI é a única garantia legal que concede a você a propriedade exclusiva do nome ou logotipo do seu negócio em todo o território nacional. Ter apenas CNPJ ou inscrição na Junta Comercial não protege sua marca. Sem o registro no INPI, qualquer concorrente pode registrar o seu nome antes e exigir que você deixe de utilizá-lo, além de cobrar indenizações pesadas. Como Procuradora perante o INPI, a Dra. Maria Eduarda conduz todo o processo com máxima segurança técnica.",
   },
   {
-    q: "Como funciona a contratação de correspondência jurídica na Comarca de Mutum?",
-    a: "Escritórios de qualquer estado do país podem acionar nosso WhatsApp ou e-mail com as diretrizes da diligência ou audiência. Atuamos com extrema pontualidade, envio de relatórios circunstanciados logo após a realização e remessa rápida de cópias e certidões solicitadas.",
+    q: "Como iniciar uma regularização de imóvel rural ou usucapião?",
+    a: "O primeiro passo é uma análise detalhada da cadeia dominial, certidões de matrícula, contratos de gaveta e histórico da posse. Sempre que preenchidos os requisitos legais e havendo anuência dos confrontantes, priorizamos a via extrajudicial em Cartório de Registro de Imóveis, que é muito mais rápida e econômica do que uma ação judicial tradicional.",
   },
   {
-    q: "Como fico informado sobre o andamento do meu processo?",
-    a: "A transparência é um dos nossos maiores compromissos. Você é informado diretamente pelo WhatsApp a cada movimentação relevante do seu processo, em linguagem simples e clara, sem termos técnicos complicados. Você sabe exatamente o que está acontecendo do início ao fim.",
+    q: "Como fico informado sobre cada andamento do meu caso?",
+    a: "A transparência e a agilidade na comunicação são os pilares mais elogiados pelos nossos clientes. Você é informado diretamente pelo WhatsApp a cada movimentação relevante do seu processo, em linguagem simples e compreensível, sem jargões jurídicos confusos. Você acompanha cada vitória em tempo real.",
   },
 ];
 
@@ -404,7 +441,7 @@ function Heading({
   const isDark = theme === "dark";
   return (
     <div className={`max-w-2xl ${className}`}>
-      <p className={isDark ? "eyebrow-light" : "eyebrow-ruby"}>{eyebrow}</p>
+      <p className={isDark ? "eyebrow-light" : "eyebrow-gold"}>{eyebrow}</p>
       <h2
         className={`mt-3 font-serif text-3xl leading-[1.15] tracking-[-0.02em] sm:text-4xl lg:text-[2.85rem] ${
           isDark ? "text-white" : "text-[#0f172a]"
@@ -443,14 +480,14 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen selection:bg-[#9e1836] selection:text-white">
+      <main className="relative min-h-screen selection:bg-[#b8783e] selection:text-white">
         {/* DOBRA 0: Top Announcement Bar (PRETO - Alto Contraste) */}
         <div className="border-b border-zinc-800 bg-[#09090b] px-4 py-2.5 text-center text-xs text-zinc-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 font-medium text-white">
-              <MapPin size={13} className="text-[#c53150]" />
-              <strong>Sede em Mutum - MG</strong>
-              <span className="hidden md:inline text-zinc-400">· Praça Benedito Valadares · Atendimento Regional & Nacional</span>
+              <MapPin size={13} className="text-[#dfa968]" />
+              <strong>Sede em Luz - MG</strong>
+              <span className="hidden md:inline text-zinc-400">· R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Atendimento Presencial & Nacional</span>
             </span>
 
             <a
@@ -464,12 +501,12 @@ export default function Home() {
                   <Star key={i} size={11} className="fill-[#dfa968]" />
                 ))}
               </span>
-              <span>5,0 ★ no Google (16 avaliações)</span>
+              <span>5,0 ★ no Google (14 avaliações unânimes)</span>
             </a>
           </div>
         </div>
 
-        {/* Global Floating Header (BRANCO - Clean, Elegante) */}
+        {/* Global Floating Header (BRANCO - Clean, Elegante, Baseado no Logo) */}
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             isScrolled
@@ -481,14 +518,14 @@ export default function Home() {
             {/* Logo on Left */}
             <a
               href="#inicio"
-              aria-label="Mariana Brum Bahia — Advocacia - Início"
+              aria-label="Maria Eduarda Noronha — Advocacia e Consultoria Jurídica - Início"
               onClick={closeMenu}
-              className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95"
+              className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-12"
             >
-              <div className="relative size-10 sm:size-12 shrink-0">
+              <div className="relative size-10 sm:size-11 shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma Mariana Brum Bahia Advocacia"
+                  alt="Monograma MN - Maria Eduarda Noronha Advocacia"
                   fill
                   priority
                   unoptimized
@@ -496,11 +533,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-sm sm:text-base font-bold tracking-[0.14em] text-slate-900 leading-tight">
-                  MARIANA BRUM BAHIA
+                <span className="font-serif text-[13px] sm:text-[14.5px] font-bold tracking-[0.12em] text-slate-900 leading-tight">
+                  MARIA EDUARDA NORONHA
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] text-[#9e1836] uppercase">
-                  ADVOCACIA · OAB/MG 241.996
+                <span className="text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.2em] text-[#b8783e] uppercase">
+                  ADVOCACIA E CONSULTORIA JURÍDICA
                 </span>
               </div>
             </a>
@@ -508,11 +545,8 @@ export default function Home() {
             {/* Desktop Navigation Menu (Center) */}
             <nav
               aria-label="Navegação principal"
-              className="hidden lg:flex items-center gap-4 xl:gap-6 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
+              className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
             >
-              <a className="nav-link" href="#inicio">
-                Início
-              </a>
               <a className="nav-link" href="#sobre">
                 A Advogada
               </a>
@@ -533,18 +567,20 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: Primary WhatsApp Button (Red/Ruby Signature) */}
-            <div className="hidden lg:flex items-center gap-3 shrink-0">
+            {/* Right Action: Primary WhatsApp Button (Gold / Bronze Signature) */}
+            <div className="hidden lg:flex items-center gap-3 shrink-0 ml-auto lg:ml-6 xl:ml-8">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar uma consulta jurídica."
+                  "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar uma consulta jurídica."
                 )}
                 target="_blank"
                 size="sm"
-                variant="ruby"
+                variant="gold"
                 className="rounded-lg shadow-sm text-[11px] px-4 py-2.5 xl:px-5 xl:py-3 whitespace-nowrap"
               >
-                <WhatsAppIcon size={15} /> Falar no WhatsApp{" "}
+                <WhatsAppIcon size={15} />
+                <span className="hidden xl:inline">Falar no WhatsApp</span>
+                <span className="xl:hidden">WhatsApp</span>
                 <ArrowUpRight size={13} />
               </GlowingButton>
             </div>
@@ -587,16 +623,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#9e1836]"
+                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#b8783e]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#8d4d20] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Mariana! Gostaria de conversar com você sobre uma questão jurídica."
+                        "Olá, Dra. Maria Eduarda! Gostaria de conversar com você sobre uma questão jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -605,13 +641,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#9e1836]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#b8783e]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (16 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (14 avaliações)
                     </a>
                   </div>
                 </div>
@@ -626,8 +662,8 @@ export default function Home() {
           className="relative isolate scroll-mt-24 border-b border-stone-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
         >
           {/* Subtle warm luxury background aura */}
-          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(197,49,80,0.06),transparent_65%)]" />
-          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(223,169,104,0.08),transparent_65%)]" />
+          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(223,169,104,0.09),transparent_65%)]" />
+          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(128,24,42,0.06),transparent_65%)]" />
 
           <div className="mx-auto grid min-h-[600px] max-w-7xl items-center gap-10 px-5 sm:px-8 lg:min-h-[660px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-14 lg:px-12">
             <motion.div
@@ -636,25 +672,25 @@ export default function Home() {
               variants={stagger}
               className="relative z-10 max-w-2xl"
             >
-              {/* Secondary Red Accent Eyebrow Pill */}
+              {/* Secondary Gold Accent Eyebrow Pill */}
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e1836] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6231] shadow-xs"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c53150] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#9e1836]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfa968] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#b8783e]"></span>
                 </span>
-                <span>DRA. MARIANA BRUM BAHIA · OAB/MG 241.996 · MUTUM - MG</span>
+                <span>DRA. MARIA EDUARDA NORONHA · ADVOGADA BANCÁRIA E DO AGRO · LUZ - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.15] tracking-[-0.02em] text-[#0f172a] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Defesa jurídica combativa e humanizada:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
-                  protegendo seus direitos, seu patrimônio e a sua família.
+                Defesa patrimonial intransigente e estratégia jurídica de alto nível:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                  protegendo o produtor rural, seu patrimônio bancário e os negócios da sua vida.
                 </span>
               </motion.h1>
 
@@ -662,7 +698,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a condução da <strong className="font-semibold text-slate-900">Dra. Mariana Brum Bahia</strong> (OAB/MG 241.996), nosso escritório une rigor técnico intransigente, ética e atendimento próximo e transparente em <strong className="font-semibold text-slate-900">Direito de Família, Sucessões, Previdenciário (INSS), Cível, Trabalhista e Correspondência Jurídica</strong>. Avaliação máxima 5,0 ★ unânime no Google em Mutum, Leste de Minas e em todo o Brasil.
+                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Maria Eduarda Noronha</strong>, nosso escritório une profundo rigor técnico, combatividade processual e atendimento humanizado em <strong className="font-semibold text-slate-900">Direito Bancário, Direito do Agronegócio, Direito Imobiliário e Registro de Marcas no INPI</strong>. Avaliação máxima 5,0 ★ unânime no Google em Luz, Centro-Oeste de Minas e em todo o Brasil.
               </motion.p>
 
               {/* Action Buttons */}
@@ -672,11 +708,11 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento para analisar meu caso."
+                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento para analisar meu caso."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="ruby"
+                  variant="gold"
                   className="rounded-lg shadow-lg"
                 >
                   <WhatsAppIcon size={17} /> Falar no WhatsApp
@@ -698,21 +734,21 @@ export default function Home() {
                 className="mt-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-200 sm:grid-cols-3 text-xs text-slate-600"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
-                  <span>Atendimento com Sigilo Absoluto</span>
+                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
+                  <span>Sigilo Absoluto e Rigor Técnico</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
-                  <span>Presencial e Digital (Brasil todo)</span>
+                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
+                  <span>Presencial em Luz e Online (Brasil todo)</span>
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
                   <span>Comunicação Clara e Ágil</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Visual presentation - Dra. Mariana Portrait (Perfeito no fundo branco) */}
+            {/* Visual presentation - Dra. Maria Eduarda Portrait (Perfeito no fundo branco) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -722,7 +758,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200 bg-stone-50 shadow-2xl ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Mariana Brum Bahia — Advogada OAB/MG 241.996 em Mutum - MG"
+                  alt="Dra. Maria Eduarda Noronha — Advogada Bancária e do Agronegócio em Luz - MG"
                   fill
                   priority
                   unoptimized
@@ -733,26 +769,26 @@ export default function Home() {
                 <div className="absolute inset-x-4 bottom-4 rounded-xl border border-stone-200 bg-white/95 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#9e1836]">
-                        Mariana Brum Bahia Advocacia
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b8783e]">
+                        Maria Eduarda Noronha Advocacia
                       </p>
                       <p className="font-serif text-base font-bold text-slate-900 sm:text-lg">
-                        Dra. Mariana Brum Bahia
+                        Dra. Maria Eduarda Noronha
                       </p>
                     </div>
-                    <span className="rounded-md border border-[#9e1836]/30 bg-[#fdf2f4] px-2.5 py-1 text-[10px] font-bold text-[#9e1836]">
-                      OAB/MG 241.996
+                    <span className="rounded-md border border-[#b8783e]/30 bg-[#fdfaf5] px-2.5 py-1 text-[10px] font-bold text-[#9e6231]">
+                      Bancário & Agro
                     </span>
                   </div>
                   <p className="mt-1 text-[11px] text-slate-600">
-                    Praça Benedito Valadares · Mutum - MG
+                    R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Luz - MG
                   </p>
                 </div>
               </div>
 
               {/* Decorative subtle corner border */}
-              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#9e1836]/40 sm:-left-5 sm:-top-5 sm:size-28" />
-              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#9e1836]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
+              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#b8783e]/40 sm:-left-5 sm:-top-5 sm:size-28" />
+              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#b8783e]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
 
               {/* Floating Google Review Badge */}
               <a
@@ -770,7 +806,7 @@ export default function Home() {
                     <span className="text-[10px] text-[#dfa968]">★★★★★</span>
                   </div>
                   <p className="text-[10px] font-medium text-slate-600">
-                    16 avaliações verificadas
+                    14 avaliações unânimes
                   </p>
                 </div>
               </a>
@@ -787,19 +823,19 @@ export default function Home() {
             {[
               [
                 "5,0 ★ no Google",
-                "nota máxima unânime em 16 avaliações comprovando atendimento ético e ágil",
+                "nota máxima unânime em 14 avaliações comprovando eficácia técnica e agilidade",
               ],
               [
-                "OAB/MG 241.996",
-                "atuação jurídica qualificada com registro oficial e representação institucional",
+                "Bancário & Agro",
+                "foco estratégico em defesa contra juros abusivos, prorrogação de dívidas e CPR",
               ],
               [
-                "Comarca de Mutum",
-                "sede física central e ampla atuação regional no Leste de MG e correspondência",
+                "Procuradora INPI",
+                "registro exclusivo de marcas para proteção comercial e no agronegócio",
               ],
               [
-                "Atendimento Próximo",
-                "escuta atenta, sem termos complicados e aviso imediato de cada movimentação",
+                "Sede em Luz - MG",
+                "atendimento presencial acolhedor no Centro-Oeste mineiro e digital para todo o país",
               ],
             ].map(([value, label], index) => (
               <div
@@ -827,7 +863,7 @@ export default function Home() {
           className="scroll-mt-24 border-b border-stone-200 bg-[#f8fafc] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Mariana Portrait Photo */}
+            {/* Visual presentation - Dra. Maria Eduarda Portrait Photo */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -838,7 +874,7 @@ export default function Home() {
               <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Mariana Brum Bahia em seu escritório em Mutum - MG"
+                  alt="Dra. Maria Eduarda Noronha — Advocacia e Consultoria Jurídica"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -847,24 +883,24 @@ export default function Home() {
 
               {/* Authority badge card */}
               <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-stone-200 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#9e1836]">
+                <div className="flex items-center gap-2 text-[#b8783e]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e1836]">
-                    Advocacia Estratégica & Humanizada
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b8783e]">
+                    Advocacia Estratégica & Resolutiva
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
-                  Mariana Brum Bahia — Advocacia
+                  Maria Eduarda Noronha — Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#9e1836]">
-                  Família · Previdenciário · Sucessões · Cível · Trabalhista
+                <p className="mt-0.5 text-[11px] font-medium text-[#b8783e]">
+                  Bancário · Agronegócio · Imobiliário · Registro de Marcas
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-slate-500">
-                  Praça Benedito Valadares · Mutum - MG · CEP 36955-000
+                  R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Luz - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#9e1836]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b8783e]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -876,9 +912,9 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e1836] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e6231] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#9e1836]" />
+                <span className="size-2 shrink-0 rounded-full bg-[#b8783e]" />
                 <span>SOBRE A ADVOGADA & COMPROMISSO</span>
               </motion.div>
 
@@ -886,9 +922,9 @@ export default function Home() {
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0f172a] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia pautada na ética, escuta acolhedora e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
-                  defesa intransigente dos seus direitos.
+                Uma advocacia pautada na precisão técnica, escuta atenta e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                  defesa intransigente dos seus direitos patrimoniais.
                 </span>
               </motion.h2>
 
@@ -896,26 +932,26 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                O exercício da advocacia vai muito além de protocolos judiciais: <strong className="font-bold text-slate-900">ele lida com a vida, o sustento e os projetos construídos com anos de dedicação</strong>. Cada demanda familiar, benefício do INSS, herança ou direito violado carrega anseios reais que exigem acolhimento humano e rigor técnico inabalável.
+                O exercício da advocacia estratégica vai além de meras petições judiciais: <strong className="font-bold text-slate-900">ele resguarda o patrimônio, a produção e os negócios construídos com anos de suor</strong>. Seja combatendo a imposição de juros ilegais por instituições financeiras, assegurando a prorrogação de financiamentos agrícolas ou registrando a marca da sua empresa perante o INPI, cada demanda exige dedicação absoluta e estratégia personalizada.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                A <strong className="font-bold text-slate-900">Dra. Mariana Brum Bahia</strong> (OAB/MG 241.996) estruturou seu trabalho sobre alicerces sólidos: atendimento direto, transparente e ágil em cada fase processual. Com 100% de avaliações 5 estrelas no Google e forte atuação na Comarca de Mutum e comissões da OAB/MG, sua missão é entregar segurança, rapidez e soluções jurídicas definitivas.
+                A <strong className="font-bold text-slate-900">Dra. Maria Eduarda Noronha</strong> consolidou uma atuação de referência no Centro-Oeste de Minas Gerais e em âmbito nacional pela sua capacidade de encontrar soluções jurídicas resolutivas para questões complexas. Com 100% de avaliações 5 estrelas no Google e reconhecimento expressivo de produtores rurais e clientes corporativos, o escritório é sinônimo de segurança, clareza e combate a injustiças.
               </motion.p>
 
-              {/* Client Quote Card from Google Reviews */}
+              {/* Client Quote Card from Google Reviews (Divisa Agrícola) */}
               <motion.div
                 variants={reveal}
                 className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
-                  &ldquo;A Dra. Mariana é uma profissional excepcional! Muito atenciosa, humana e com profundo conhecimento jurídico. Me atendeu com paciência, explicou cada etapa e sempre me manteve informada de tudo.&rdquo;
+                  &ldquo;Contratamos os serviços jurídicos do escritório e ficamos extremamente satisfeitos com o atendimento. Comunicação clara, excelente conhecimento técnico e muita dedicação em cada detalhe da demanda. Atendimento sério, eficiente e muito profissional. Certamente indicamos.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#9e1836]">
-                  — Avaliação real no Google Meu Negócio (5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b8783e]">
+                  — DIVISA AGRÍCOLA (Avaliação verificada no Google Meu Negócio · 5,0 ★)
                 </p>
               </motion.div>
 
@@ -927,19 +963,19 @@ export default function Home() {
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">5,0 ★ no Google</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    16 avaliações 100% 5 estrelas
+                    14 avaliações 100% 5 estrelas
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-slate-900">OAB/MG 241.996</p>
+                  <p className="font-bold text-slate-900">Procuradora do INPI</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Comissões Temáticas OAB/MG
+                    Registro & Proteção de Marcas
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
                   <p className="font-bold text-slate-900">Transparência Total</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Você sabe de tudo em primeira mão
+                    Você sabe de tudo em tempo real
                   </p>
                 </div>
               </motion.div>
@@ -949,25 +985,25 @@ export default function Home() {
                 className="mt-8 flex flex-col gap-3 text-xs text-slate-800"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
-                  <span>Sede física na Praça Benedito Valadares - Mutum, MG</span>
+                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
+                  <span>Sede própria na R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Luz, MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#9e1836] shrink-0" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Mariana</span>
+                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Maria Eduarda Noronha</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana! Gostaria de agendar uma consulta para conversar sobre o meu caso."
+                    "Olá, Dra. Maria Eduarda! Gostaria de agendar uma consulta para conversar sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
-                  variant="ruby"
+                  variant="gold"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Mariana Brum Bahia
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Maria Eduarda Noronha
                 </GlowingButton>
               </motion.div>
             </motion.div>
@@ -987,15 +1023,15 @@ export default function Home() {
                 description="Conheça nossos principais pilares jurídicos. Clique em qualquer especialidade para ver detalhes, procedimentos adotados e orientações sob medida."
               >
                 Soluções jurídicas estratégicas em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
-                  Mutum, Minas Gerais e em todo o Brasil.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
+                  Luz, Minas Gerais e em todo o território nacional.
                 </span>
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana! Tenho dúvidas sobre uma área jurídica e gostaria de atendimento."
+                    "Olá, Dra. Maria Eduarda! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1020,19 +1056,19 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121215] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:bg-[#18181b] hover:shadow-[0_12px_36px_rgba(158,24,54,0.2)]"
+                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121215] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:bg-[#18181b] hover:shadow-[0_12px_36px_rgba(184,120,62,0.22)]"
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1c20] text-[#c53150] transition-colors group-hover:border-[#9e1836] group-hover:bg-[#9e1836] group-hover:text-white">
+                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1c20] text-[#dfa968] transition-colors group-hover:border-[#b8783e] group-hover:bg-[#b8783e] group-hover:text-white">
                           <Icon size={22} />
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#c53150]">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#dfa968]">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#f7c5ce]">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#fae6c8]">
                         {area.title}
                       </h3>
 
@@ -1049,7 +1085,7 @@ export default function Home() {
                       <button
                         type="button"
                         onClick={() => setActiveArea(area)}
-                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#c53150] cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#dfa968] cursor-pointer"
                       >
                         Ver Detalhes & Tópicos <ArrowRight size={13} />
                       </button>
@@ -1080,11 +1116,11 @@ export default function Home() {
             <Heading
               theme="light"
               eyebrow="POR QUE NOS ESCOLHER"
-              description="A combinação entre domínio da técnica jurídica, celeridade no atendimento e postura profundamente ética faz a diferença nos resultados que entregamos."
+              description="A combinação entre especialização em Direito Bancário e do Agro, celeridade no atendimento e postura profundamente ética faz a diferença nos resultados que entregamos."
             >
               O que diferencia a atuação da{" "}
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
-                Dra. Mariana Brum Bahia?
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                Dra. Maria Eduarda Noronha?
               </span>
             </Heading>
 
@@ -1095,49 +1131,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e1836]">
-                      <HeartHandshake size={14} /> Acolhimento & Respeito
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e6231]">
+                      <HeartHandshake size={14} /> Acolhimento & Agilidade
                     </span>
-                    <span className="text-xs font-semibold text-[#9e1836]">
+                    <span className="text-xs font-semibold text-[#b8783e]">
                       5,0 ★ Google
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Atendimento Humanizado, Sem Julgamentos & Acessível
+                    Atendimento Humanizado, Claro & Focado em Soluções
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Mariana é aliar alto rigor técnico a um atendimento empático. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
+                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Maria Eduarda é aliar sólido conhecimento técnico a uma escuta verdadeiramente atenta. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
-                      <span>Comunicação em linguagem direta e acessível</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <span>Comunicação direta sem juridiquês ininteligível</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
                       <span>Retorno ágil de mensagens e dúvidas no WhatsApp</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
-                      <span>Tratamento respeitoso, ético e empático em qualquer situação</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <span>Comprometimento integral com a segurança do cliente</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Mariana! Gostaria de tirar dúvidas com você sobre o meu caso."
+                      "Olá, Dra. Maria Eduarda! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#9e1836] hover:bg-[#9e1836] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b8783e] hover:bg-[#b8783e] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Mariana
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Maria Eduarda
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1150,46 +1186,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e1836]">
-                      <Award size={14} /> Solidez & Domínio Processual
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e6231]">
+                      <Award size={14} /> Especialização Bancária & Agro
                     </span>
-                    <span className="text-xs font-semibold text-[#9e1836]">
-                      OAB/MG 241.996
+                    <span className="text-xs font-semibold text-[#b8783e]">
+                      Procuradora INPI
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Rigor Técnico, Estratégia Processual & Apoio Regional
+                    Rigor Técnico, Estratégia Processual & Visão de Negócio
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Demandas jurídicas exigem estratégias processuais refinadas: elaboração de petições contundentes, pedidos cautelares de urgência e condução impecável perante Juizados e Varas Cíveis, de Família e do Trabalho. A Dra. Mariana constrói teses sólidas para resguardar seus direitos.
+                    Demandas bancárias e do agronegócio exigem estratégias refinadas: elaboração de perícias de juros, pedidos liminares para suspensão de leilões, prorrogação de créditos rurais e registro exclusivo de marcas no INPI. O escritório atua com combatividade técnica para proteger o patrimônio e a atividade do produtor.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
-                      <span>Análise aprofundada da documentação e da jurisprudência atual</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <span>Análise aprofundada de contratos bancários e jurisprudência</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
-                      <span>Atuação rápida para pedidos liminares e tutelas de urgência</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <span>Atuação rápida para tutelas de urgência e suspensão de atos expropriatórios</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#9e1836]" />
-                      <span>Presença atuante na Comarca de Mutum e comarcas circunvizinhas</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <span>Assessoria jurídica integral para produtores rurais e empresas</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Mariana! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Maria Eduarda! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#9e1836] hover:bg-[#9e1836] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b8783e] hover:bg-[#b8783e] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1209,18 +1245,18 @@ export default function Home() {
               <Heading
                 theme="dark"
                 eyebrow="COMO CUIDAMOS DO SEU CASO"
-                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o patrimônio da sua família."
+                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o patrimônio da sua família e negócio."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
-                  resolver sua questão com segurança e dignidade.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
+                  proteger seu patrimônio e resolver sua demanda com segurança.
                 </span>
               </Heading>
 
               <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#18181b] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
-                &ldquo;Cada cliente e cada processo são únicos. Nosso compromisso é trazer 100% de clareza e dedicação em todas as etapas, garantindo que você se sinta seguro e amparado do início até a conclusão final.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#c53150]">
-                  — Dra. Mariana Brum Bahia · OAB/MG 241.996
+                &ldquo;Cada cliente e cada demanda patrimonial são únicos. Nosso compromisso é trazer 100% de clareza, dedicação e técnica em todas as fases, assegurando que você tenha amparo irrestrito e uma defesa combativa do início ao fim.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfa968]">
+                  — Dra. Maria Eduarda Noronha · Advogada Bancária e do Agro
                 </footer>
               </blockquote>
             </div>
@@ -1235,18 +1271,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Escuta Humanizada & Diagnóstico Jurídico",
-                  "Conversa reservada pelo WhatsApp ou em nosso escritório em Mutum para entender os fatos com respeito e sigilo. Análise detalhada de documentos, prazos e direitos aplicáveis.",
+                  "Escuta Acolhedora & Diagnóstico Jurídico Pericial",
+                  "Conversa reservada pelo WhatsApp ou em nosso escritório em Luz para entender sua situação em profundidade. Análise minuciosa de contratos bancários, certidões fundiárias ou registros de marcas.",
                 ],
                 [
                   "02",
                   "Estratégia Sob Medida & Ação Rápida",
-                  "Apresentação das alternativas mais seguras e econômicas (via extrajudicial ou ação judicial combativa), com protocolo célere de pedidos urgentes e defesa intransigente.",
+                  "Definição da linha de ação mais vantajosa (via extrajudicial resolutiva ou ação judicial combativa), com protocolo imediato de tutelas de urgência para estancar prejuízos e suspender leilões ou cobranças indevidas.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Próximo & Atualização Contínua",
-                  "Você nunca fica sem saber o que está acontecendo. Informamos cada andamento do processo em tempo real, com linguagem simples e transparência total até a vitória jurídica.",
+                  "Acompanhamento Transparente & Informação Contínua",
+                  "Você nunca fica sem saber o que está acontecendo. Informamos cada andamento do processo em tempo real, com linguagem simples e transparência total até a vitória jurídica definitiva.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1254,7 +1290,7 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#c53150]">
+                  <span className="font-serif text-2xl font-semibold text-[#dfa968]">
                     {number}
                   </span>
                   <div>
@@ -1279,11 +1315,11 @@ export default function Home() {
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos de clientes sobre a competência, a transparência e o acolhimento da Dra. Mariana Brum Bahia em Mutum e região."
+                description="Veja depoimentos reais de clientes e empresas sobre a competência, a agilidade e o atendimento acolhedor da Dra. Maria Eduarda Noronha em Luz e região."
               >
                 Avaliada com 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
-                  16 avaliações no Google.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                  14 avaliações unânimes no Google.
                 </span>
               </Heading>
 
@@ -1304,10 +1340,10 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-slate-900">
-                    Mariana Brum Bahia Advocacia
+                    Maria Eduarda Noronha — Advocacia
                   </p>
                   <p className="text-[11px] text-slate-500">
-                    16 avaliações 100% 5 estrelas no Google
+                    14 avaliações 100% 5 estrelas no Google
                   </p>
                 </div>
               </div>
@@ -1320,11 +1356,11 @@ export default function Home() {
               variants={stagger}
               className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {clientReviews.map((review) => (
+              {clientReviews.slice(0, 9).map((review) => (
                 <motion.article
                   key={review.name}
                   variants={reveal}
-                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#9e1836] hover:shadow-md"
+                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between">
@@ -1333,7 +1369,7 @@ export default function Home() {
                           <Star key={i} size={14} className="fill-[#dfa968]" />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#9e1836]/25 bg-[#fdf2f4] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9e1836]">
+                      <span className="rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9e6231]">
                         Google Verificado
                       </span>
                     </div>
@@ -1347,8 +1383,8 @@ export default function Home() {
                     </p>
 
                     {review.reply && (
-                      <div className="mt-3 rounded-lg border-l-2 border-[#9e1836] bg-[#fdf2f4] p-2.5 text-[11px] leading-5 text-slate-700">
-                        <p className="font-semibold text-[#9e1836]">Resposta da Dra. Mariana:</p>
+                      <div className="mt-3 rounded-lg border-l-2 border-[#b8783e] bg-[#fdfaf5] p-2.5 text-[11px] leading-5 text-slate-700">
+                        <p className="font-semibold text-[#9e6231]">Resposta da Dra. Maria Eduarda:</p>
                         <p className="italic">{review.reply}</p>
                       </div>
                     )}
@@ -1372,9 +1408,9 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#9e1836] hover:text-[#9e1836]"
+                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#b8783e] hover:text-[#b8783e]"
               >
-                <GoogleIcon size={16} /> Ver todas as avaliações no Google <ArrowUpRight size={14} />
+                <GoogleIcon size={16} /> Ver todas as 14 avaliações no Google <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
@@ -1390,12 +1426,12 @@ export default function Home() {
               <p className="eyebrow-light justify-center">DÚVIDAS FREQUENTES</p>
               <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.15rem]">
                 Respostas diretas e esclarecedoras sobre os{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[#c53150]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
                   seus direitos e nosso atendimento.
                 </span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-zinc-400">
-                Transparência desde o primeiro instante. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Mariana no WhatsApp.
+                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Maria Eduarda no WhatsApp.
               </p>
             </div>
 
@@ -1415,7 +1451,7 @@ export default function Home() {
                       <span>{faq.q}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#c53150] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#dfa968] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -1437,11 +1473,11 @@ export default function Home() {
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
+                    "Olá, Dra. Maria Eduarda! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
-                  variant="ruby"
+                  variant="gold"
                 >
                   <WhatsAppIcon size={16} /> Enviar Mensagem no WhatsApp
                 </GlowingButton>
@@ -1460,25 +1496,25 @@ export default function Home() {
               <Heading
                 theme="light"
                 eyebrow="CONTATO & AGENDAMENTO"
-                description="Fale diretamente com a Dra. Mariana Brum Bahia pelo WhatsApp para orientação imediata com sigilo absoluto e acolhimento humano."
+                description="Fale diretamente com a Dra. Maria Eduarda Noronha pelo WhatsApp para orientação imediata com sigilo absoluto e rigor técnico."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#7b1028]">
-                  acolher sua história e defender os seus direitos.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                  atender suas necessidades e defender seus direitos.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
-                  variant="ruby"
+                  variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Mariana
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Maria Eduarda
                 </GlowingButton>
                 <p className="text-[11px] leading-5 text-slate-600">
                   WhatsApp e telefone direto:{" "}
@@ -1490,48 +1526,48 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#9e1836]"
+                    className="mt-0.5 shrink-0 text-[#b8783e]"
                   />
                   <div>
                     <p className="font-semibold text-slate-900">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#9e1836] font-bold">
-                      Segunda a Sexta · Abre às 08:00
+                    <p className="mt-0.5 text-[#9e6231] font-bold">
+                      Segunda a Sexta · 08:00 às 17:00
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Atendimento com horário agendado para dedicação exclusiva ao seu caso
+                      Atendimento com horário agendado para dedicação exclusiva à sua demanda
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#9e1836]" />
+                  <Phone size={16} className="shrink-0 text-[#b8783e]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-slate-900 transition-colors hover:text-[#9e1836]"
+                    className="font-medium text-slate-900 transition-colors hover:text-[#b8783e]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#9e1836]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#b8783e]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#9e1836] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b8783e] text-slate-900 font-medium"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#9e1836]" />
+                  <Mail size={16} className="shrink-0 text-[#b8783e]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#9e1836] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b8783e] text-slate-900 font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1540,13 +1576,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#9e1836]"
+                    className="mt-0.5 shrink-0 text-[#b8783e]"
                   />
                   <div>
                     <span className="text-slate-900 font-medium">{ADDRESS_TEXT}</span>
                     <br />
                     <span className="text-[11px] text-slate-500">
-                      Sede na Praça Benedito Valadares - Mutum, MG e assessoria jurídica digital em todo o Brasil
+                      Sede em Luz - MG e assessoria jurídica digital em todo o território nacional
                     </span>
                   </div>
                 </div>
@@ -1555,24 +1591,24 @@ export default function Home() {
 
             {/* Brand Presentation Card */}
             <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-lg sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#9e1836] via-[#c53150] to-[#dfa968]" />
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b8783e] via-[#dfa968] to-[#80182a]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative size-16 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma Mariana Brum Bahia Advocacia"
+                    alt="Monograma MN - Maria Eduarda Noronha Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e1836]">
-                    MARIANA BRUM BAHIA
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#b8783e]">
+                    MARIA EDUARDA NORONHA
                   </p>
                   <p className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
-                    ADVOCACIA
+                    ADVOCACIA E CONSULTORIA
                   </p>
                 </div>
               </div>
@@ -1581,14 +1617,14 @@ export default function Home() {
               <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-stone-200 bg-stone-100 shadow-xs">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Mariana Brum Bahia em seu escritório em Mutum"
+                  alt="Dra. Maria Eduarda Noronha em seu escritório em Luz - MG"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Atendimento Acolhedor, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-200">Mutum · Leste de Minas & Brasil</p>
+                  <p className="text-[10px] text-stone-200">Luz · Centro-Oeste de Minas & Brasil</p>
                 </div>
               </div>
 
@@ -1604,31 +1640,31 @@ export default function Home() {
 
               {/* Weekly schedule table */}
               <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#9e1836]">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b8783e]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#9e1836]">
-                    Abre às 08:00
+                  <span className="text-right font-semibold text-[#9e6231]">
+                    08:00 às 17:00
                   </span>
                   <span>Sábados e Domingos</span>
                   <span className="text-right font-medium text-slate-500">
                     Plantão via WhatsApp
                   </span>
                   <span>Localização</span>
-                  <span className="text-right text-slate-900 font-semibold">Mutum · MG</span>
+                  <span className="text-right text-slate-900 font-semibold">Luz · MG</span>
                 </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Mariana Brum Bahia! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="md"
-                  variant="ruby"
+                  variant="gold"
                   className="w-full justify-center"
                 >
                   <WhatsAppIcon size={16} /> Iniciar Conversa no WhatsApp
@@ -1643,19 +1679,19 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
               <p className="eyebrow-light">
-                <Sparkles size={13} className="text-[#c53150]" /> MARIANA BRUM BAHIA — ADVOCACIA
+                <Sparkles size={13} className="text-[#dfa968]" /> MARIA EDUARDA NORONHA — ADVOCACIA E CONSULTORIA JURÍDICA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Pronta para resguardar seus direitos com segurança, ética e dedicação incondicional.
+                Pronta para blindar seu patrimônio e garantir segurança jurídica aos seus negócios.
               </h2>
             </div>
             <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dra. Mariana! Preciso de orientação jurídica para o meu caso."
+                "Olá, Dra. Maria Eduarda! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
               size="lg"
-              variant="ruby"
+              variant="gold"
               className="rounded-lg shadow-lg whitespace-nowrap"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp Agora
@@ -1670,13 +1706,13 @@ export default function Home() {
             <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Mariana Brum Bahia — Advocacia"
+                aria-label="Maria Eduarda Noronha — Advocacia e Consultoria Jurídica"
                 className="flex items-center gap-3"
               >
                 <div className="relative size-12 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma Mariana Brum Bahia Advocacia"
+                    alt="Monograma MN - Maria Eduarda Noronha Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
@@ -1684,16 +1720,16 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-serif text-lg font-bold tracking-[0.14em] text-white">
-                    MARIANA BRUM BAHIA
+                    MARIA EDUARDA NORONHA
                   </p>
-                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#c53150] uppercase">
-                    ADVOCACIA · OAB/MG 241.996
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#dfa968] uppercase">
+                    ADVOCACIA E CONSULTORIA JURÍDICA
                   </p>
                 </div>
               </a>
 
               <p className="mt-4 max-w-md text-xs leading-6 text-zinc-400">
-                Advocacia especializada em Direito das Famílias, Sucessões, Previdenciário (INSS), Cível e Trabalhista com acolhimento humano, seriedade e compromisso inegociável com a sua tranquilidade em Mutum, Leste de Minas e em todo o Brasil.
+                Advocacia especializada em Direito Bancário, Direito do Agronegócio, Direito Imobiliário e Registro de Marcas no INPI com atuação séria, estratégica e humanizada em Luz, Centro-Oeste mineiro e em todo o Brasil.
               </p>
 
               <div className="mt-5 flex items-center gap-3 text-xs">
@@ -1701,17 +1737,17 @@ export default function Home() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#c53150] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#dfa968] hover:text-white"
                 >
-                  <InstagramIcon size={14} className="text-[#c53150]" /> Instagram @marianabrumbahia.adv
+                  <InstagramIcon size={14} className="text-[#dfa968]" /> Instagram @adv.marianoronha
                 </a>
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#c53150] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#dfa968] hover:text-white"
                 >
-                  <GoogleIcon size={14} /> Google 5,0 ★ (16 avaliações)
+                  <GoogleIcon size={14} /> Google 5,0 ★ (14 avaliações)
                 </a>
               </div>
             </div>
@@ -1729,7 +1765,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#sobre">
-                    A Advogada (Dra. Mariana)
+                    A Advogada (Dra. Maria Eduarda)
                   </a>
                 </li>
                 <li>
@@ -1770,10 +1806,10 @@ export default function Home() {
                   <strong className="text-white">Telefone / WhatsApp:</strong>
                   <br />
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Mariana! Gostaria de falar com seu escritório.")}
+                    href={getWhatsAppUrl("Olá, Dra. Maria Eduarda! Gostaria de falar com seu escritório.")}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#c53150] hover:underline"
+                    className="text-[#dfa968] hover:underline"
                   >
                     {PHONE_DISPLAY}
                   </a>
@@ -1786,7 +1822,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Horário:</strong>
                   <br />
-                  Segunda a Sexta · Abre às 08:00
+                  Segunda a Sexta · 08:00 às 17:00
                 </li>
                 <li>
                   <strong className="text-white">E-mail:</strong>
@@ -1796,9 +1832,9 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <strong className="text-white">Inscrição Profissional:</strong>
+                  <strong className="text-white">Especialização:</strong>
                   <br />
-                  {LAWYER_OAB}
+                  Direito Bancário & Agro · INPI
                 </li>
               </ul>
             </div>
@@ -1806,10 +1842,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-800/80 pt-6 text-center text-[11px] text-zinc-500">
             <p>
-              © {new Date().getFullYear()} MARIANA BRUM BAHIA ADVOCACIA · OAB/MG 241.996. Todos os direitos reservados.
+              © {new Date().getFullYear()} MARIA EDUARDA NORONHA — ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
             </p>
             <p className="mt-1 text-[10px]">
-              Praça Benedito Valadares - Mutum, MG, 36955-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
+              R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, 35595-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1821,11 +1857,11 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Mariana! Gostaria de um atendimento jurídico pelo WhatsApp."
+              "Olá, Dra. Maria Eduarda! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Mariana Brum Bahia"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Maria Eduarda Noronha"
             className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
             <span className="relative flex size-3">
@@ -1834,7 +1870,7 @@ export default function Home() {
             </span>
             <WhatsAppIcon size={18} className="text-white" />
             <span className="hidden sm:inline">
-              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Mariana Brum Bahia
+              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Maria Eduarda Noronha
             </span>
             <span className="sm:hidden font-bold">WhatsApp</span>
           </a>
@@ -1865,7 +1901,7 @@ export default function Home() {
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#c53150] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#dfa968] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
@@ -1874,16 +1910,16 @@ export default function Home() {
                   <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-zinc-700 bg-black p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma Mariana Brum Bahia Advocacia"
+                      alt="Monograma MN - Maria Eduarda Noronha Advocacia"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">MARIANA BRUM BAHIA ADVOCACIA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#c53150] uppercase">
-                      {LAWYER_NAME} · {LAWYER_OAB}
+                    <p className="eyebrow-light">MARIA EDUARDA NORONHA ADVOCACIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#dfa968] uppercase">
+                      {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
                 </div>
@@ -1900,7 +1936,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 border-t border-zinc-800 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#c53150]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfa968]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1909,7 +1945,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-zinc-300"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#c53150]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#dfa968]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1921,7 +1957,7 @@ export default function Home() {
                     href={getWhatsAppUrl(activeArea.whatsAppText)}
                     target="_blank"
                     size="md"
-                    variant="ruby"
+                    variant="gold"
                     className="rounded-lg shadow-md"
                   >
                     <WhatsAppIcon size={16} /> Consultar sobre esta demanda

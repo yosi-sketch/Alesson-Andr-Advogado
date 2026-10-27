@@ -14,16 +14,20 @@
   --color-white-card: #ffffff;
   --color-white-muted: #f1f5f9;
 
-  /* Secondary Brand Accent: Signature Metallic Ruby Wine / Red */
-  --brand-ruby-vibrant: #dc264e;
-  --brand-ruby-crimson: #c53150;
-  --brand-ruby-rich: #9e1836;
-  --brand-ruby-velvet: #7b1028;
-  --brand-ruby-deep: #54091a;
-
-  /* Accent Champagne Gold (Subtle Highlights) */
-  --brand-gold-accent: #dfa968;
+  /* Primary Logo Metallic Bronze & Champagne Gold */
+  --brand-gold-champagne: #fae6c8;
   --brand-gold-light: #f4d8a8;
+  --brand-gold-accent: #dfa968;
+  --brand-gold-warm: #c58a4d;
+  --brand-gold-bronze: #b8783e;
+  --brand-gold-rich: #9e6231;
+  --brand-gold-deep: #6e3914;
+  --brand-gold-noir: #24140b;
+
+  /* Secondary Brand Accent: Signature Velvet Marsala / Wine Red */
+  --brand-wine-crimson: #c53150;
+  --brand-wine-rich: #80182a;
+  --brand-wine-deep: #54091a;
 }
 
 @theme inline {
@@ -31,16 +35,27 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-ruby-50: #fdf2f4;
-  --color-ruby-100: #fbe2e7;
-  --color-ruby-200: #f7c5ce;
-  --color-ruby-300: #ef98a8;
-  --color-ruby-400: #df5e78;
-  --color-ruby-500: #c53150;
-  --color-ruby-600: #9e1836;
-  --color-ruby-700: #7b1028;
-  --color-ruby-800: #54091a;
-  --color-ruby-900: #33040e;
+  --color-gold-50: #fdfaf5;
+  --color-gold-100: #fae6c8;
+  --color-gold-200: #f4d8a8;
+  --color-gold-300: #dfa968;
+  --color-gold-400: #c58a4d;
+  --color-gold-500: #b8783e;
+  --color-gold-600: #9e6231;
+  --color-gold-700: #7a431c;
+  --color-gold-800: #4a250d;
+  --color-gold-900: #24140b;
+
+  --color-wine-50: #fdf2f4;
+  --color-wine-100: #fbe2e7;
+  --color-wine-200: #f7c5ce;
+  --color-wine-300: #ef98a8;
+  --color-wine-400: #df5e78;
+  --color-wine-500: #c53150;
+  --color-wine-600: #80182a;
+  --color-wine-700: #6a0f21;
+  --color-wine-800: #54091a;
+  --color-wine-900: #33040e;
 }
 
 html {
@@ -53,11 +68,11 @@ body {
   background: #ffffff;
   color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #9e1836;
+  caret-color: #b8783e;
 }
 
 ::selection {
-  background: #9e1836;
+  background: #b8783e;
   color: #ffffff;
 }
 
@@ -65,7 +80,8 @@ body {
   font-family: var(--font-cinzel), "Cinzel", "Playfair Display", serif;
 }
 
-.eyebrow-ruby,
+.eyebrow-gold,
+.eyebrow-wine,
 .eyebrow-dark,
 .eyebrow-light {
   display: flex;
@@ -78,8 +94,12 @@ body {
   text-transform: uppercase;
 }
 
-.eyebrow-ruby {
-  color: #9e1836;
+.eyebrow-gold {
+  color: #9e6231;
+}
+
+.eyebrow-wine {
+  color: #80182a;
 }
 
 .eyebrow-dark {
@@ -90,7 +110,8 @@ body {
   color: #f4d8a8;
 }
 
-.eyebrow-ruby::before,
+.eyebrow-gold::before,
+.eyebrow-wine::before,
 .eyebrow-dark::before,
 .eyebrow-light::before {
   width: 1.75rem;
@@ -125,7 +146,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #9e1836;
+  background: #b8783e;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -133,7 +154,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #9e1836;
+  color: #b8783e;
 }
 
 .nav-link:hover::after {
@@ -145,7 +166,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #ffffff;
+  color: #dfa968;
 }
 
 /* Custom Scrollbar */
@@ -160,11 +181,11 @@ body {
 ::-webkit-scrollbar-thumb {
   border: 2px solid #09090b;
   border-radius: 999px;
-  background: #9e1836;
+  background: #b8783e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c53150;
+  background: #dfa968;
 }
 
 @media (prefers-reduced-motion: reduce) {

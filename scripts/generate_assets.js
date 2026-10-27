@@ -2,51 +2,50 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/54e992b2-c55c-4fe1-b69e-d000555438f7/.user_uploaded/media_1793104898372_fb7b5d99.png';
-const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/54e992b2-c55c-4fe1-b69e-d000555438f7/.user_uploaded/media_1793104916308_738b2a75.jpg';
+const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/2954665d-7fa3-4235-8302-f854b5a7ee31/.user_uploaded/media_1793129364009_cfd7c98f.jpg';
+const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/2954665d-7fa3-4235-8302-f854b5a7ee31/.user_uploaded/media_1793129373398_3c1e1b40.png';
 
 async function generateAssets() {
   const pubDir = path.resolve('public');
   const appDir = path.resolve('app');
   if (!fs.existsSync(pubDir)) fs.mkdirSync(pubDir, { recursive: true });
 
-  console.log('Generating assets for Mariana Brum Bahia Advocacia...');
+  console.log('Generating assets for Maria Eduarda Noronha Advocacia e Consultoria Jurídica...');
 
-  // 1. Raw & Portrait Photo
+  // 1. Raw Portrait Photo
   await sharp(pPhoto)
-    .jpeg({ quality: 92, mozjpeg: true })
-    .toFile(path.join(pubDir, 'mariana-brum.jpg'));
+    .jpeg({ quality: 94, mozjpeg: true })
+    .toFile(path.join(pubDir, 'maria-eduarda.jpg'));
 
-  // 2. Hero photo (portrait framing)
+  // 2. Hero photo (portrait framing focusing on upper torso and head)
   await sharp(pPhoto)
-    .resize(767, 1024, { fit: 'cover', position: 'top' })
-    .jpeg({ quality: 92, mozjpeg: true })
-    .toFile(path.join(pubDir, 'mariana-brum-hero.jpg'));
+    .resize(682, 880, { fit: 'cover', position: 'top' })
+    .jpeg({ quality: 94, mozjpeg: true })
+    .toFile(path.join(pubDir, 'maria-eduarda-hero.jpg'));
 
   // 3. Sobre photo
   await sharp(pPhoto)
-    .resize(767, 950, { fit: 'cover', position: 'center' })
-    .jpeg({ quality: 90, mozjpeg: true })
-    .toFile(path.join(pubDir, 'mariana-brum-sobre.jpg'));
+    .resize(682, 850, { fit: 'cover', position: 'top' })
+    .jpeg({ quality: 92, mozjpeg: true })
+    .toFile(path.join(pubDir, 'maria-eduarda-sobre.jpg'));
 
   // 4. Logo full
   await sharp(pLogo)
     .png()
     .toFile(path.join(pubDir, 'logo.png'));
 
-  // 5. Monogram symbol: The "M" + Scales of justice
-  // Bounds determined: minX: 283, maxX: 701, minY: 52, maxY: 335 (width: 418, height: 283)
-  // Let's crop tight with slight safety padding
+  // 5. Monogram symbol: The "MN" monogram in the golden square frame
+  // Bounds: minX: 401, maxX: 622, minY: 17, maxY: 222
   const symbolCrop = await sharp(pLogo)
-    .extract({ left: 275, top: 48, width: 435, height: 295 })
+    .extract({ left: 395, top: 12, width: 235, height: 218 })
     .toBuffer();
 
   // Place into a square 512x512 with transparent padding
   await sharp(symbolCrop)
-    .resize(450, 450, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(450, 418, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .extend({
-      top: 31,
-      bottom: 31,
+      top: 47,
+      bottom: 47,
       left: 31,
       right: 31,
       background: { r: 0, g: 0, b: 0, alpha: 0 }
@@ -54,29 +53,30 @@ async function generateAssets() {
     .png()
     .toFile(path.join(pubDir, 'logo-symbol.png'));
 
-  // 6. Favicon Badge: Luxury Wine/Noir Badge with Burgundy Metallic & Rose Gold Border
+  // 6. Favicon Badge: Luxury Noir & Bronze/Gold Badge with Rose/Champagne Gold Beveled Rim
   const badgeSvg = `
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="bgGrad" cx="50%" cy="38%" r="65%">
-          <stop offset="0%" stop-color="#360a14" />
-          <stop offset="55%" stop-color="#1c050a" />
-          <stop offset="100%" stop-color="#0a0204" />
+        <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+          <stop offset="0%" stop-color="#24140b" />
+          <stop offset="55%" stop-color="#140b06" />
+          <stop offset="100%" stop-color="#070302" />
         </radialGradient>
-        <linearGradient id="goldWineRim" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f5d6dc" />
-          <stop offset="30%" stop-color="#e8a6b3" />
-          <stop offset="60%" stop-color="#a4332b" />
-          <stop offset="100%" stop-color="#4a0e1e" />
+        <linearGradient id="goldBronzeRim" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fae6c8" />
+          <stop offset="25%" stop-color="#dfa968" />
+          <stop offset="60%" stop-color="#a86432" />
+          <stop offset="85%" stop-color="#5a2c14" />
+          <stop offset="100%" stop-color="#2d1307" />
         </linearGradient>
       </defs>
-      <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
-      <rect x="12" y="12" width="488" height="488" rx="108" fill="none" stroke="url(#goldWineRim)" stroke-width="16" stroke-opacity="0.9" />
+      <rect width="512" height="512" rx="124" fill="url(#bgGrad)" />
+      <rect x="14" y="14" width="484" height="484" rx="112" fill="none" stroke="url(#goldBronzeRim)" stroke-width="18" stroke-opacity="0.95" />
     </svg>
   `;
 
   const symbolBadge = await sharp(symbolCrop)
-    .resize(380, 380, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(360, 334, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .toBuffer();
 
   const icon512 = await sharp(Buffer.from(badgeSvg))
@@ -84,14 +84,16 @@ async function generateAssets() {
     .png()
     .toBuffer();
 
-  // Save favicon formats
+  // Save favicon formats to public/
   await sharp(icon512).resize(512, 512).png().toFile(path.join(pubDir, 'icon-512x512.png'));
   await sharp(icon512).resize(192, 192).png().toFile(path.join(pubDir, 'icon.png'));
-  await sharp(icon512).resize(192, 192).png().toFile(path.join(appDir, 'icon.png'));
   await sharp(icon512).resize(180, 180).png().toFile(path.join(pubDir, 'apple-icon.png'));
-  await sharp(icon512).resize(180, 180).png().toFile(path.join(appDir, 'apple-icon.png'));
   await sharp(icon512).resize(32, 32).png().toFile(path.join(pubDir, 'favicon-32x32.png'));
   await sharp(icon512).resize(16, 16).png().toFile(path.join(pubDir, 'favicon-16x16.png'));
+
+  // Also save to app/ for Next.js App Router root route icons
+  await sharp(icon512).resize(192, 192).png().toFile(path.join(appDir, 'icon.png'));
+  await sharp(icon512).resize(180, 180).png().toFile(path.join(appDir, 'apple-icon.png'));
 
   // Multi-resolution ICO (16x16 + 32x32)
   const png16 = await sharp(icon512).resize(16, 16).png().toBuffer();
@@ -135,7 +137,7 @@ async function generateAssets() {
   fs.writeFileSync(path.join(pubDir, 'favicon.ico'), icoBuffer);
   fs.writeFileSync(path.join(appDir, 'favicon.ico'), icoBuffer);
 
-  console.log('Successfully generated all brand assets and favicons!');
+  console.log('✅ Successfully generated all brand assets and favicons for Maria Eduarda Noronha!');
 }
 
 generateAssets().catch(err => {

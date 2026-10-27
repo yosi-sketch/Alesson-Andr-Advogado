@@ -1,45 +1,46 @@
-# MARIANA BRUM BAHIA — ADVOCACIA
-## Dra. Mariana Brum Bahia · OAB/MG 241.996 · Mutum - MG
+# MARIA EDUARDA NORONHA — ADVOCACIA E CONSULTORIA JURÍDICA
+## Dra. Maria Eduarda Noronha · Advogada Bancária e do Agro · Procuradora do INPI · Luz - MG
 
 ## Plataforma
-Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion, projetada para transmitir acolhimento humanizado, segurança jurídica inabalável e prestígio, respaldada por 16 avaliações no Google Meu Negócio com nota máxima 5,0 ★ (100% 5 estrelas), navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp para agendamento de atendimentos ágeis e humanizados.
+Site institucional e landing page responsiva de altíssimo padrão desenvolvida em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion, projetada para transmitir autoridade jurídica, sofisticação e combate implacável a abusos patrimoniais, respaldada por 14 avaliações unânimes no Google Meu Negócio com nota máxima 5,0 ★ (100% 5 estrelas), navegação fluida, modais interativos para detalhamento das especialidades e integração direta com WhatsApp para agendamento de atendimentos ágeis e estratégicos.
 
 ## Público
-Famílias, trabalhadores, segurados do INSS, herdeiros e cidadãos em Mutum, Lajinha, Aimorés, Ipanema, Manhuaçu, Taparuba, região do Leste de Minas Gerais e em todo o território nacional (atendimento presencial e online), além de escritórios de advocacia parceiros que necessitam de correspondência jurídica de alta precisão na Comarca de Mutum.
+Produtores rurais, cooperativas, empresas do agronegócio, empresários, comerciantes e famílias em Luz, Bom Despacho, Lagoa da Prata, Dores do Indaiá, Santo Antônio do Monte, região do Centro-Oeste de Minas Gerais e em todo o território nacional (atendimento presencial e online).
 
 ## Proposta de Valor & Slogan
-- *"Defesa jurídica combativa e humanizada: protegendo seus direitos, seu patrimônio e a sua família."*
-- *"FAMÍLIA | PREVIDENCIÁRIO | SUCESSÕES | CÍVEL | TRABALHISTA | CORRESPONDÊNCIA"*
-- *"Atuação pautada na ética, escuta acolhedora e defesa intransigente com nota máxima 5,0 ★ no Google."*
+- *"Defesa patrimonial intransigente e estratégia jurídica de alto nível: protegendo o produtor rural, seu patrimônio bancário e os negócios da sua vida."*
+- *"DIREITO BANCÁRIO | AGRONEGÓCIO & CRÉDITO RURAL | IMOBILIÁRIO | REGISTRO DE MARCAS NO INPI"*
+- *"Atuação técnica e combativa com nota máxima 5,0 ★ unânime no Google."*
 
 ## Identidade Visual (Extraída Diretamente do Logotipo Oficial)
-- **Marca:** Mariana Brum Bahia — Advocacia.
-- **Advogada Titular:** Dra. Mariana Brum Bahia (OAB/MG 241.996).
-- **Logotipo:** Monograma escultural "M" entrelaçado com a Balança da Justiça em acabamento metálico chanfrado 3D bordeaux/vinho com reflexos em ouro champanhe e rose gold (`public/logo.png`, `public/logo-symbol.png`).
-- **Tema Visual:** Metallic Ruby Wine & Velvet Wine Noir (Modo Escuro Editorial de Alto Padrão com Superfícies Velvet Noir `#0e0307` e `#17050d`, Acentos em Vinho Carmim Metálico `#c53150`, `#9e1836`, Ouro Champanhe `#dfa968`, `#f4d8a8`, e dobras claras em Alabastro Pérola `#fcfbf8` e `#f6eedf`), transmitindo autoridade, humanidade e máxima sofisticação.
+- **Marca:** Maria Eduarda Noronha — Advocacia e Consultoria Jurídica.
+- **Advogada Titular:** Dra. Maria Eduarda Noronha (Advogada Bancária e do Agronegócio · Procuradora do INPI).
+- **Logotipo:** Monograma escultural "MN" entrelaçado em moldura quadrada com acabamento metálico chanfrado 3D em bronze-ouro, reflexos champanhe e rose gold (`public/logo.png`, `public/logo-symbol.png`).
+- **Tema Visual:** Metallic Bronze-Gold & Champagne Luxe com acento Marsala Velvet (Modo Escuro Editorial de Alto Padrão com Superfícies Obsidian Black `#09090b` e `#121215`, Acentos em Bronze Dourado Metálico `#b8783e`, `#c58a4d`, Ouro Champanhe `#dfa968`, `#f4d8a8`, e dobras claras em Branco Puro `#ffffff` e Alabastro Suave `#f8fafc`), harmonizado com a blusa marsala/vinho de alta costura da foto de Dra. Maria Eduarda.
 - **Paleta de Cores Extraída do Logotipo:**
-  - Vinho Nobre & Rubi Metálico (`#dc264e`, `#c53150`, `#9e1836`, `#7b1028`, `#520919`, `#28040b`)
-  - Ouro Champanhe & Rose Gold (`#fdfaf6`, `#f9eedc`, `#f4d8a8`, `#eabf84`, `#dfa968`, `#c88e4b`)
-  - Pérola & Alabastro Quente (`#ffffff`, `#fcfbf8`, `#f6eedf`, `#eee3d2`, `#eedfcb`, `#baa493`)
-  - Velvet Noir & Deep Canvas (`#0a0104`, `#0e0307`, `#120309`, `#17050d`, `#1b0610`, `#220813`)
-- **Tipografia:** Cinzel (`--font-cinzel`) para autoridade clássica alinhada à marca, Playfair Display (`--font-serif`) e Cormorant Garamond (`--font-display`) para títulos editoriais, e Plus Jakarta Sans (`--font-body`) para máxima clareza e legibilidade.
+  - Ouro Champanhe & Reflexos Claros (`#fcfbe3`, `#fae6c8`, `#f4d8a8`)
+  - Bronze-Ouro Metálico (`#dfa968`, `#d4944d`, `#c58a4d`, `#b8783e`)
+  - Bronze Profundo & Sombra Noir (`#9e6231`, `#7a431c`, `#4a250d`, `#24140b`)
+  - Acento Marsala / Vinho Nobre (`#c53150`, `#80182a`, `#6a0f21`, `#54091a`)
+  - Superfícies Claras (`#ffffff`, `#f8fafc`, `#f1f5f9`)
+  - Obsidian Noir (`#09090b`, `#121215`, `#18181b`)
+- **Tipografia:** Cinzel (`--font-cinzel`) para autoridade clássica alinhada ao monograma MN, Playfair Display (`--font-serif`) e Cormorant Garamond (`--font-display`) para títulos editoriais, e Plus Jakarta Sans (`--font-body`) para máxima clareza e legibilidade.
 
 ## Informações de Contato & Dados Oficiais
-- Logotipo oficial com monograma M e balança em acabamento bordeaux metálico (`public/logo.png`).
-- Monograma M escultural (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico`).
-- Fotografia oficial da Dra. Mariana Brum Bahia em seu escritório (`public/mariana-brum-hero.jpg`, `public/mariana-brum.jpg`, `public/mariana-brum-sobre.jpg`).
-- Telefone / WhatsApp: (33) 99999-7644 (`https://wa.me/5533999997644`).
-- E-mail: contato@marianabrumbahia.adv.br.
-- Redes Sociais: Instagram @marianabrumbahia.adv (`https://www.instagram.com/marianabrumbahia.adv?igsh=ZW55cXhmbTRvMTVj`).
-- Endereço / Sede: Praça Benedito Valadares - Mutum, MG, CEP 36955-000.
-- Horário de Atendimento: Segunda a Sexta a partir das 08:00 (Abre às 08h).
-- Prova Social: 5,0 ★ comprovada com 16 avaliações 100% 5 estrelas verificadas no Google Meu Negócio.
+- Logotipo oficial com monograma MN e tipografia em acabamento bronze dourado metálico (`public/logo.png`).
+- Monograma MN escultural em insígnia de alto contraste (`public/logo-symbol.png`, `app/icon.png`, `app/apple-icon.png`, `public/icon.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico`).
+- Fotografia oficial da Dra. Maria Eduarda Noronha em seu escritório (`public/maria-eduarda-hero.jpg`, `public/maria-eduarda.jpg`, `public/maria-eduarda-sobre.jpg`).
+- Telefone / WhatsApp: (37) 99972-0495 (`https://wa.me/5537999720495`).
+- E-mail: contato@mariaeduardanoronha.adv.br.
+- Redes Sociais: Instagram @adv.marianoronha (`https://www.instagram.com/adv.marianoronha`).
+- Endereço / Sede: R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, CEP 35595-000.
+- Horário de Atendimento: Segunda a Sexta das 08:00 às 17:00.
+- Prova Social: 5,0 ★ unânime comprovada com 14 avaliações 100% 5 estrelas verificadas no Google Meu Negócio.
 
 ## Pilares de Atuação
-1. Direito das Famílias & Planejamento Familiar (Divórcio, Pensão Alimentícia, Guarda, União Estável)
-2. Direito Previdenciário (Benefícios e Aposentadorias do INSS, BPC/LOAS, Auxílios, Pensão por Morte)
-3. Inventário & Planejamento Sucessório (Judicial e Extrajudicial em Cartório, Testamentos, Partilha)
-4. Direito Civil, Contratos & Reparação de Danos (Indenizações, Danos Morais/Materiais, Contratos Imobiliários)
-5. Direito do Trabalho & Resguardo Laboral (Rescisão Indireta, Horas Extras, Verbas Rescisórias)
-6. Correspondência Jurídica & Apoio Estratégico (Audiências, Diligências e Despachos na Comarca de Mutum e Região)
-7. Medidas Protetivas & Atuação de Urgência (Acolhimento humanizado, liminares e proteção integral)
+1. Direito Bancário & Defesa Financeira (Revisão de Contratos, Juros Abusivos, Execuções Bancárias, Suspensão de Leilões)
+2. Direito do Agronegócio & Crédito Rural (Prorrogação de Dívidas Rurais - MCR, Renegociação de CPR e CCR, Contratos Agrários, Arrendamento)
+3. Direito Imobiliário & Regularização Fundiária (Regularização de Imóveis Rurais e Urbanos, Usucapião, Contratos, Ações Possessórias)
+4. Registro de Marcas no INPI - Procuradora do INPI (Registro de Marcas Comerciais e do Agro, Oposições, Defesa contra Contrafação)
+5. Planejamento Patrimonial, Sucessório & Holding (Holding Familiar Rural e Urbana, Blindagem Patrimonial, Inventário, Herança)
+6. Contratos Estratégicos & Consultoria Empresarial (Contratos Comerciais, Cobrança e Execução de Títulos, Auditoria de Passivos)
