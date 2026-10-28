@@ -3,28 +3,28 @@
 :root {
   color-scheme: light dark;
   
-  /* Primary Contrast: Pure Black & Pure White */
-  --color-black-pure: #09090b;
-  --color-black-surface: #121215;
-  --color-black-card: #18181b;
-  --color-black-hover: #222226;
+  /* Primary Contrast: Obsidian Pure Black & Silk White */
+  --color-black-pure: #090a0d;
+  --color-black-surface: #111317;
+  --color-black-card: #171920;
+  --color-black-hover: #21232c;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #f8fafc;
+  --color-white-surface: #fbf9f5;
   --color-white-card: #ffffff;
-  --color-white-muted: #f1f5f9;
+  --color-white-muted: #f4efe6;
 
-  /* Primary Logo Metallic Bronze & Champagne Gold */
-  --brand-gold-champagne: #fae6c8;
-  --brand-gold-light: #f4d8a8;
-  --brand-gold-accent: #dfa968;
-  --brand-gold-warm: #c58a4d;
-  --brand-gold-bronze: #b8783e;
-  --brand-gold-rich: #9e6231;
-  --brand-gold-deep: #6e3914;
-  --brand-gold-noir: #24140b;
+  /* Primary Logo Metallic Polished Gold */
+  --brand-gold-champagne: #faecd3;
+  --brand-gold-light: #f3db9d;
+  --brand-gold-accent: #e2be67;
+  --brand-gold-warm: #cda142;
+  --brand-gold-primary: #b88628;
+  --brand-gold-rich: #9b6e1b;
+  --brand-gold-deep: #6e4a0d;
+  --brand-gold-noir: #201404;
 
-  /* Secondary Brand Accent: Signature Velvet Marsala / Wine Red */
+  /* Secondary Brand Accent: Soft Velvet Marsala / Warm Wine */
   --brand-wine-crimson: #c53150;
   --brand-wine-rich: #80182a;
   --brand-wine-deep: #54091a;
@@ -35,16 +35,16 @@
   --font-cinzel: var(--font-cinzel), "Cinzel", "Trajan Pro", serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
-  --color-gold-50: #fdfaf5;
-  --color-gold-100: #fae6c8;
-  --color-gold-200: #f4d8a8;
-  --color-gold-300: #dfa968;
-  --color-gold-400: #c58a4d;
-  --color-gold-500: #b8783e;
-  --color-gold-600: #9e6231;
-  --color-gold-700: #7a431c;
-  --color-gold-800: #4a250d;
-  --color-gold-900: #24140b;
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #faecd3;
+  --color-gold-200: #f3db9d;
+  --color-gold-300: #e2be67;
+  --color-gold-400: #cda142;
+  --color-gold-500: #b88628;
+  --color-gold-600: #9b6e1b;
+  --color-gold-700: #78510f;
+  --color-gold-800: #4d3208;
+  --color-gold-900: #201404;
 
   --color-wine-50: #fdf2f4;
   --color-wine-100: #fbe2e7;
@@ -68,11 +68,11 @@ body {
   background: #ffffff;
   color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #b8783e;
+  caret-color: #b88628;
 }
 
 ::selection {
-  background: #b8783e;
+  background: #b88628;
   color: #ffffff;
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 .eyebrow-gold {
-  color: #9e6231;
+  color: #9b6e1b;
 }
 
 .eyebrow-wine {
@@ -107,7 +107,7 @@ body {
 }
 
 .eyebrow-light {
-  color: #f4d8a8;
+  color: #f3db9d;
 }
 
 .eyebrow-gold::before,
@@ -146,7 +146,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #b8783e;
+  background: #b88628;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -154,7 +154,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #b8783e;
+  color: #b88628;
 }
 
 .nav-link:hover::after {
@@ -166,7 +166,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #dfa968;
+  color: #e2be67;
 }
 
 /* Custom Scrollbar */
@@ -175,17 +175,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #090a0d;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #09090b;
+  border: 2px solid #090a0d;
   border-radius: 999px;
-  background: #b8783e;
+  background: #b88628;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #dfa968;
+  background: #e2be67;
 }
 
 @media (prefers-reduced-motion: reduce) {

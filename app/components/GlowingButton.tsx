@@ -35,17 +35,17 @@ export default function GlowingButton({
     lg: "px-8 py-4 text-xs tracking-[0.15em]",
   }[size];
 
-  // High-contrast prestige styling (black & white with signature metallic bronze-gold & wine accents)
+  // High-contrast prestige styling (black & white with signature polished gold & warm wine accents)
   const variantClasses = {
-    // Primary Signature: Metallic Bronze-Gold & Champagne (Logo color)
+    // Primary Signature: Polished Imperial Gold & Champagne (From Ana Paula Lima Logo)
     gold:
-      "relative border border-[#f9eedc]/90 bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#8d4d20] text-white font-black tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(184,120,62,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +
-      "hover:-translate-y-0.5 hover:from-[#b8783e] hover:via-[#dfa968] hover:to-[#9e6231] " +
-      "hover:shadow-[0_10px_30px_rgba(223,169,104,0.6)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(184,120,62,0.4)]",
+      "relative border border-[#fdf5e2]/90 bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] text-white font-black tracking-[0.14em] " +
+      "shadow-[0_6px_22px_-2px_rgba(184,134,40,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +
+      "hover:-translate-y-0.5 hover:from-[#b88628] hover:via-[#e2be67] hover:to-[#9b6e1b] " +
+      "hover:shadow-[0_10px_30px_rgba(226,190,103,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(184,134,40,0.4)]",
 
-    // Secondary Accent: Signature Velvet Marsala / Wine (Photo blouse color)
+    // Secondary Accent: Signature Velvet Wine / Marsala
     wine:
       "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#80182a] via-[#a41f3d] to-[#6a0f21] text-white font-bold tracking-[0.14em] " +
       "shadow-[0_6px_20px_-2px_rgba(128,24,42,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
@@ -63,25 +63,25 @@ export default function GlowingButton({
 
     // High-Contrast Solid Black (ideal on White folds)
     dark:
-      "relative border border-stone-800 bg-[#09090b] text-white font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#18181b] hover:border-[#b8783e] " +
+      "relative border border-stone-800 bg-[#090a0d] text-white font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#171920] hover:border-[#b88628] " +
       "hover:shadow-[0_10px_24px_rgba(0,0,0,0.35)]",
 
     // High-Contrast Pure White (ideal on Black folds)
     white:
-      "relative border border-white bg-white text-[#09090b] font-bold tracking-[0.13em] " +
+      "relative border border-white bg-white text-[#090a0d] font-bold tracking-[0.13em] " +
       "shadow-[0_6px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:bg-stone-100 hover:border-stone-200 " +
       "hover:shadow-[0_10px_26px_rgba(255,255,255,0.2)]",
 
     // Outline on Dark Folds
     outline:
       "relative border border-white/20 bg-white/5 text-white font-bold tracking-[0.13em] backdrop-blur-md " +
-      "hover:-translate-y-0.5 hover:border-[#dfa968] hover:bg-white/10 hover:text-[#fae6c8]",
+      "hover:-translate-y-0.5 hover:border-[#e2be67] hover:bg-white/10 hover:text-[#faecd3]",
 
     // Outline on Light Folds
     "outline-dark":
       "relative border border-stone-300 bg-white/80 text-[#0f172a] font-bold tracking-[0.13em] " +
-      "hover:-translate-y-0.5 hover:border-[#b8783e] hover:text-[#b8783e] hover:bg-stone-50",
+      "hover:-translate-y-0.5 hover:border-[#b88628] hover:text-[#b88628] hover:bg-stone-50",
 
     // WhatsApp Green CTA
     emerald:

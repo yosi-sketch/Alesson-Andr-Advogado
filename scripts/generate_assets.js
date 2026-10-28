@@ -2,81 +2,81 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/2954665d-7fa3-4235-8302-f854b5a7ee31/.user_uploaded/media_1793129364009_cfd7c98f.jpg';
-const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/2954665d-7fa3-4235-8302-f854b5a7ee31/.user_uploaded/media_1793129373398_3c1e1b40.png';
+const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/112317be-af78-4d1f-84d0-1632d1a6da9b/.user_uploaded/media_1793137721206_934c4177.jpg';
+const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/112317be-af78-4d1f-84d0-1632d1a6da9b/.user_uploaded/media_1793137691459_c3c09d22.png';
 
 async function generateAssets() {
   const pubDir = path.resolve('public');
   const appDir = path.resolve('app');
   if (!fs.existsSync(pubDir)) fs.mkdirSync(pubDir, { recursive: true });
 
-  console.log('Generating assets for Maria Eduarda Noronha Advocacia e Consultoria Jurídica...');
+  console.log('Generating brand assets for Ana Paula Lima Advocacia...');
 
   // 1. Raw Portrait Photo
   await sharp(pPhoto)
-    .jpeg({ quality: 94, mozjpeg: true })
-    .toFile(path.join(pubDir, 'maria-eduarda.jpg'));
+    .jpeg({ quality: 96, mozjpeg: true })
+    .toFile(path.join(pubDir, 'ana-paula-lima.jpg'));
 
-  // 2. Hero photo (portrait framing focusing on upper torso and head)
+  // 2. Hero photo (portrait framing focused on upper torso and head, optimal for hero section)
   await sharp(pPhoto)
-    .resize(682, 880, { fit: 'cover', position: 'top' })
-    .jpeg({ quality: 94, mozjpeg: true })
-    .toFile(path.join(pubDir, 'maria-eduarda-hero.jpg'));
+    .resize(750, 920, { fit: 'cover', position: 'top' })
+    .jpeg({ quality: 95, mozjpeg: true })
+    .toFile(path.join(pubDir, 'ana-paula-hero.jpg'));
 
-  // 3. Sobre photo
+  // 3. Sobre photo (portrait framing with warm ambiance)
   await sharp(pPhoto)
-    .resize(682, 850, { fit: 'cover', position: 'top' })
-    .jpeg({ quality: 92, mozjpeg: true })
-    .toFile(path.join(pubDir, 'maria-eduarda-sobre.jpg'));
+    .resize(750, 900, { fit: 'cover', position: 'top' })
+    .jpeg({ quality: 95, mozjpeg: true })
+    .toFile(path.join(pubDir, 'ana-paula-sobre.jpg'));
 
   // 4. Logo full
   await sharp(pLogo)
     .png()
     .toFile(path.join(pubDir, 'logo.png'));
 
-  // 5. Monogram symbol: The "MN" monogram in the golden square frame
-  // Bounds: minX: 401, maxX: 622, minY: 17, maxY: 222
+  // 5. Monogram symbol: The "AP" monogram with scales of justice
+  // Bounds found: minX: 344, maxX: 687, minY: 7, maxY: 357 (width ~343, height ~350)
   const symbolCrop = await sharp(pLogo)
-    .extract({ left: 395, top: 12, width: 235, height: 218 })
+    .extract({ left: 340, top: 5, width: 352, height: 354 })
     .toBuffer();
 
-  // Place into a square 512x512 with transparent padding
+  // Place into a square 512x512 with transparent padding for standalone symbol use
   await sharp(symbolCrop)
-    .resize(450, 418, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(440, 440, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .extend({
-      top: 47,
-      bottom: 47,
-      left: 31,
-      right: 31,
+      top: 36,
+      bottom: 36,
+      left: 36,
+      right: 36,
       background: { r: 0, g: 0, b: 0, alpha: 0 }
     })
     .png()
     .toFile(path.join(pubDir, 'logo-symbol.png'));
 
-  // 6. Favicon Badge: Luxury Noir & Bronze/Gold Badge with Rose/Champagne Gold Beveled Rim
+  // 6. Favicon Badge: Luxury Obsidian Noir with Polished Gold Rim and AP Justice Scales Monogram
   const badgeSvg = `
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
-          <stop offset="0%" stop-color="#24140b" />
-          <stop offset="55%" stop-color="#140b06" />
-          <stop offset="100%" stop-color="#070302" />
+          <stop offset="0%" stop-color="#1f180e" />
+          <stop offset="60%" stop-color="#100d07" />
+          <stop offset="100%" stop-color="#060503" />
         </radialGradient>
-        <linearGradient id="goldBronzeRim" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#fae6c8" />
-          <stop offset="25%" stop-color="#dfa968" />
-          <stop offset="60%" stop-color="#a86432" />
-          <stop offset="85%" stop-color="#5a2c14" />
-          <stop offset="100%" stop-color="#2d1307" />
+        <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fdf4d8" />
+          <stop offset="25%" stop-color="#e8be67" />
+          <stop offset="60%" stop-color="#b88428" />
+          <stop offset="85%" stop-color="#7a4e10" />
+          <stop offset="100%" stop-color="#4a2d07" />
         </linearGradient>
       </defs>
-      <rect width="512" height="512" rx="124" fill="url(#bgGrad)" />
-      <rect x="14" y="14" width="484" height="484" rx="112" fill="none" stroke="url(#goldBronzeRim)" stroke-width="18" stroke-opacity="0.95" />
+      <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+      <rect x="14" y="14" width="484" height="484" rx="114" fill="none" stroke="url(#goldRim)" stroke-width="18" stroke-opacity="0.95" />
     </svg>
   `;
 
   const symbolBadge = await sharp(symbolCrop)
-    .resize(360, 334, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(370, 370, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .toBuffer();
 
   const icon512 = await sharp(Buffer.from(badgeSvg))
@@ -137,7 +137,21 @@ async function generateAssets() {
   fs.writeFileSync(path.join(pubDir, 'favicon.ico'), icoBuffer);
   fs.writeFileSync(path.join(appDir, 'favicon.ico'), icoBuffer);
 
-  console.log('✅ Successfully generated all brand assets and favicons for Maria Eduarda Noronha!');
+  // Clean up any remaining previous client files in public
+  const oldFiles = [
+    'maria-eduarda.jpg',
+    'maria-eduarda-hero.jpg',
+    'maria-eduarda-sobre.jpg'
+  ];
+  for (const f of oldFiles) {
+    const full = path.join(pubDir, f);
+    if (fs.existsSync(full)) {
+      fs.unlinkSync(full);
+      console.log(`Cleaned up obsolete file: ${f}`);
+    }
+  }
+
+  console.log('✅ Successfully generated all brand assets and favicons for Ana Paula Lima Advocacia!');
 }
 
 generateAssets().catch(err => {

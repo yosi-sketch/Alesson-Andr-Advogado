@@ -1,30 +1,26 @@
-# Maria Eduarda Noronha — Advocacia e Consultoria Jurídica
+# Ana Paula Lima Advocacia
 
-Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para **Dra. Maria Eduarda Noronha — Advogada Bancária e do Agronegócio · Procuradora do INPI**, com sede na R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, atuando em toda a região do Centro-Oeste de Minas Gerais e com atendimento digital em todo o Brasil.
+Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para o escritório **Ana Paula Lima Advocacia**, liderado pela **Dra. Ana Paula Lima** em Monte Azul - MG.
 
-## Principais Recursos
+## Destaques da Plataforma
+- **Identidade Visual Fiel ao Logo:** Paleta extraída diretamente do logotipo oficial metálico dourado com símbolo das Balanças da Justiça e monograma AP, utilizando Ouro Imperial (`#b88628`, `#cda142`, `#e2be67`), fundos Obsidian Noir (`#090a0d`) e superfícies Silk White (`#ffffff`, `#fbf9f5`).
+- **Especialidades Jurídicas:** Cível, Família, Previdenciário (Aposentadoria Rural/Urbana e BPC/LOAS) e Trabalhista.
+- **Autoridade Comprovada:** Nota máxima 5,0 ★ no Google Meu Negócio (13 avaliações).
+- **Atendimento Híbrido:** Escritório físico acolhedor em Monte Azul (MG) e assessoria jurídica 100% digital com validade jurídica nacional para clientes de todo o Brasil.
+- **Conversão Otimizada:** Botões de CTA direcionando diretamente para o WhatsApp com mensagens personalizadas e pré-preenchidas por especialidade.
+- **Favicons & Ícones de Alta Resolução:** Ícones multi-resolução aplicados no navegador (`favicon.ico`, `favicon-32x32.png`, `apple-icon.png`, `icon.png`, etc.).
 
-- **Especialidades Jurídicas:** Direito Bancário & Defesa Financeira (juros abusivos, execuções, suspensão de leilões), Direito do Agronegócio & Crédito Rural (prorrogação de dívidas rurais - MCR, CPR, contratos agrários), Direito Imobiliário & Regularização Fundiária (usucapião, posse, fazendas), Registro de Marcas no INPI (marcas comerciais e do agro), Planejamento Patrimonial Sucessório e Contratos Empresariais.
-- **Autoridade Comprovada:** Nota máxima 5,0 ★ no Google Meu Negócio (100% 5 estrelas em 14 avaliações unânimes), Procuradora habilitada no INPI e atendimento comprovado a empresas e produtores (como a Divisa Agrícola).
-- **Identidade Visual Premium:** Bronze-ouro metálico 3D (`#b8783e`, `#c58a4d`, `#dfa968`), acentos em ouro champanhe (`#fae6c8`, `#f4d8a8`) e contraste com fundo obsidian noir (`#09090b`, `#121215`) e toques em marsala velvet (`#80182a`, `#c53150`), extraídos diretamente do novo logotipo oficial com o monograma "MN".
-- **Integração WhatsApp:** Botões de alta conversão (`GlowingButton`) com redirecionamento direto para o WhatsApp oficial `(37) 99972-0495`.
-- **Favicon & PWA:** Multi-resolução (.ico 16x16 e 32x32, png 192x192, 512x512, apple-icon 180x180) apresentando o monograma oficial MN em relevo bronze-dourado e aro champanhe sobre badge noir.
+## Dados do Cliente
+- **Profissional:** Dra. Ana Paula Lima
+- **Escritório:** Ana Paula Lima Advocacia
+- **WhatsApp / Telefone:** (38) 99830-8579
+- **E-mail:** contato@anapaulalima.adv.br
+- **Endereço / Sede:** R. Três de Outubro, 109, Monte Azul - MG, 39500-000
+- **Instagram:** [@adv.anapaulalimab](https://www.instagram.com/adv.anapaulalimab)
+- **Horário:** Segunda a Sexta das 08:00 às 18:00
 
-## Informações de Contato
-
-- **Profissional:** Dra. Maria Eduarda Noronha (Advogada Bancária e do Agronegócio · Procuradora do INPI)
-- **WhatsApp / Telefone:** (37) 99972-0495
-- **E-mail:** contato@mariaeduardanoronha.adv.br
-- **Endereço / Sede:** R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, 35595-000
-- **Instagram:** [@adv.marianoronha](https://www.instagram.com/adv.marianoronha)
-- **Horário:** Segunda a Sexta das 08:00 às 17:00
-
-## Como Executar
-
+## Comandos para Execução
 ```bash
-npm install
 npm run dev
-# ou
 npm run build
-npm start
 ```

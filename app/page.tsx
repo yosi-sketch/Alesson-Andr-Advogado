@@ -22,37 +22,38 @@ import {
   HelpCircle,
   X,
   ChevronDown,
-  Building2,
-  Landmark,
-  Wheat,
-  BadgeCheck,
+  Users,
+  Briefcase,
+  BadgePercent,
+  AlertCircle,
+  Building,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5537999720495";
-const PHONE_DISPLAY = "(37) 99972-0495";
-const EMAIL_CONTACT = "contato@mariaeduardanoronha.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/adv.marianoronha";
-const INSTAGRAM_HANDLE = "@adv.marianoronha";
-const LAWYER_NAME = "Dra. Maria Eduarda Noronha";
-const LAWYER_TITLE = "Advogada Bancária e do Agronegócio · Procuradora do INPI";
-const FIRM_NAME = "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica";
-const ADDRESS_TEXT = "R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, 35595-000";
-const REGION_TEXT = "Luz · Bom Despacho · Lagoa da Prata · Dores do Indaiá · Centro-Oeste Mineiro & Atuação Nacional";
+const WHATSAPP_NUMBER = "5538998308579";
+const PHONE_DISPLAY = "(38) 99830-8579";
+const EMAIL_CONTACT = "contato@anapaulalima.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/adv.anapaulalimab";
+const INSTAGRAM_HANDLE = "@adv.anapaulalimab";
+const LAWYER_NAME = "Dra. Ana Paula Lima";
+const LAWYER_TITLE = "Advogada Especialista · OAB/MG";
+const FIRM_NAME = "Ana Paula Lima Advocacia";
+const ADDRESS_TEXT = "R. Três de Outubro, 109, Monte Azul - MG, 39500-000";
+const REGION_TEXT = "Monte Azul · Porteirinha · Espinosa · Janaúba · Mato Verde · Norte de Minas & Atendimento Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Maria+Eduarda+Noronha+%E2%80%94+Advocacia%0ALuz+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Ana+Paula+Lima+Advocacia%0AMonte+Azul+%C2%B7+MG%0A&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/maria-eduarda-hero.jpg";
-const FOTO_SOBRE_SRC = "/maria-eduarda-sobre.jpg";
+const FOTO_HERO_SRC = "/ana-paula-hero.jpg";
+const FOTO_SOBRE_SRC = "/ana-paula-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Maria Eduarda Noronha! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
+    "Olá, Dra. Ana Paula Lima! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -138,7 +139,7 @@ function GoogleIcon({
 interface PracticeArea {
   id: string;
   title: string;
-  icon: typeof Landmark;
+  icon: typeof Scale;
   tag: string;
   summary: string;
   details: string;
@@ -148,263 +149,232 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-bancario",
-    title: "Direito Bancário & Defesa Financeira",
-    icon: Landmark,
-    tag: "Revisão Contratual · Juros Abusivos · Execuções · Suspensão de Leilões",
+    id: "direito-de-familia",
+    title: "Direito de Família & Sucessões",
+    icon: Users,
+    tag: "Divórcio · Pensão Alimentícia · Guarda · Partilha · Inventários",
     summary:
-      "Defesa contundente contra abusos de instituições financeiras, revisão de cláusulas ilegais, proteção do patrimônio e blindagem contra execuções.",
+      "Atuação humanizada, ética e combativa para proteger os vínculos mais importantes da sua vida, garantindo a segurança dos filhos e a integridade do patrimônio familiar.",
     details:
-      "As relações bancárias frequentemente impõem juros extorsivos, capitalização indevida e garantias desproporcionais que sufocam a saúde financeira de empresas, famílias e produtores rurais. A Dra. Maria Eduarda Noronha atua de forma firme e especializada na análise minuciosa de contratos de financiamento, empréstimos com garantia e cédulas de crédito, desconstituindo abusividades e suspendendo atos expropriatórios.",
+      "As demandas do Direito de Família exigem técnica apurada, sensibilidade e acolhimento. A Dra. Ana Paula Lima atua de forma firme e empática para conduzir divórcios, fixação e revisão justa de alimentos, regulamentação de guarda e inventários com agilidade, minimizando desgastes emocionais e protegendo o futuro de quem você ama.",
     topics: [
-      "Ação Revisional de Contratos de Financiamento, Cédulas Bancárias e Cartões com exclusão de juros abusivos",
-      "Defesa técnica e embargos contra Ações de Execução de Título Extrajudicial movidas por instituições financeiras",
-      "Pedido liminar urgente para suspensão e anulação de leilão judicial e extrajudicial de imóveis e veículos",
-      "Renegociação global de passivos bancários com deságio e alongamento sustentável do fluxo de pagamento",
-      "Ações indenizatórias por fraudes bancárias, golpes do Pix, boletos falsos e empréstimos consignados fraudulentos",
-      "Desbloqueio cautelar imediato de contas correntes, contas-salário e investimentos bloqueados indevidamente",
+      "Divórcio consensual em cartório (rápido e econômico) e divórcio judicial contencioso",
+      "Fixação, revisão (aumento/redução) e execução de pensão alimentícia (cobrança de atrasados)",
+      "Guarda compartilhada e unilateral, regulamentação de convivência e proteção contra alienação parental",
+      "Reconhecimento e dissolução de união estável com partilha justa de bens adquiridos",
+      "Inventário judicial e extrajudicial em cartório com regularização célere de herança",
+      "Planejamento sucessório, testamentos e doações de bens com reserva de usufruto",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de consultoria jurídica especializada sobre Direito Bancário (revisão de contrato, execução ou leilão).",
+      "Olá, Dra. Ana Paula Lima! Gostaria de atendimento jurídico sobre Direito de Família (divórcio, pensão, guarda ou inventário).",
   },
   {
-    id: "direito-do-agronegocio",
-    title: "Direito do Agronegócio & Crédito Rural",
-    icon: Wheat,
-    tag: "Prorrogação de Dívidas Rurais (MCR) · CPR & CCR · Contratos Agrários",
+    id: "direito-previdenciario",
+    title: "Direito Previdenciário (INSS & Trabalhador Rural)",
+    icon: HeartHandshake,
+    tag: "Aposentadoria Rural & Urbana · BPC/LOAS · Auxílio-Doença · Pensão por Morte",
     summary:
-      "Segurança jurídica e proteção incondicional para o produtor rural perante bancos, tradings e fornecedores, assegurando a continuidade da safra.",
+      "Assessoria especializada para garantir a sua aposentadoria e benefícios do INSS sem demora, com ampla experiência na comprovação do tempo de trabalho no campo no Norte de Minas.",
     details:
-      "O agronegócio opera sob riscos climáticos, flutuações severas de mercado e custos elevados de insumos. Conhecedora profunda da realidade do campo e do Manual de Crédito Rural (MCR), a Dra. Maria Eduarda Noronha garante o direito legítimo do produtor ao alongamento de suas dívidas de custeio e investimento, impedindo que adversidades momentâneas ameacem suas terras e maquinários.",
+      "Conquistar um benefício previdenciário exige comprovação documental rigorosa e conhecimento aprofundado das exigências do INSS. A Dra. Ana Paula Lima atua administrativamente e judicialmente na concessão de aposentadorias rurais e urbanas, pedidos de BPC/LOAS e reversão de benefícios negados indevidamente pelo INSS.",
     topics: [
-      "Prorrogação e alongamento de parcelas de Crédito Rural com fundamento na Súmula 298 do STJ e Manual de Crédito Rural (MCR)",
-      "Defesa e renegociação de Cédula de Produto Rural (CPR física e financeira), CCR e Cédula Imobiliária Rural",
-      "Elaboração, análise preventiva e repactuação de Contratos de Arrendamento Rural, Parceria Agrícola e Pastoreio",
-      "Defesa patrimonial da propriedade rural, benfeitorias, rebanhos e safras contra penhoras e busca e apreensão",
-      "Assessoria jurídica em aquisições de insumos agrícolas, fertilizantes, defensivos e maquinários pesados",
-      "Estruturação societária da atividade agropecuária e assessoria preventiva para produtores e cooperativas",
+      "Aposentadoria por Idade Rural (especialista na comprovação de atividade de pequeno produtor, parceiro, meeiro e trabalhador rural)",
+      "Aposentadoria Urbana por Idade, Tempo de Contribuição e regras de transição da Reforma da Previdência",
+      "BPC / LOAS (Benefício de Prestação Continuada para Idosos 65+ e Pessoas com Deficiência de qualquer idade)",
+      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente (Invalidez)",
+      "Pensão por Morte rural e urbana, Auxílio-Reclusão e Salário-Maternidade para segurada especial",
+      "Planejamento Previdenciário completo e recursos contra indeferimentos injustos do INSS",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de atendimento sobre Direito do Agronegócio (crédito rural, prorrogação de dívida ou contratos agrários).",
+      "Olá, Dra. Ana Paula Lima! Gostaria de consultoria sobre benefício do INSS (aposentadoria rural/urbana, BPC/LOAS ou auxílio-doença).",
   },
   {
-    id: "direito-imobiliario",
-    title: "Direito Imobiliário & Regularização Fundiária",
-    icon: Building2,
-    tag: "Regularização de Imóveis e Fazendas · Usucapião · Contratos · Posse",
+    id: "direito-trabalhista",
+    title: "Direito do Trabalho & Defesa do Trabalhador",
+    icon: Briefcase,
+    tag: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo · Acidentes",
     summary:
-      "Garantia documental e segurança jurídica absoluta para propriedades rurais e urbanas, evitando litígios e valorizando o patrimônio.",
+      "Defesa firme e combativa dos direitos trabalhistas para garantir o pagamento justo de rescisões, horas extras e reparação por condições abusivas de trabalho.",
     details:
-      "A posse sem a regularização jurídica formal gera vulnerabilidade, dificulta o acesso ao crédito rural ou bancário e prejudica a valorização do bem. Atuamos com rigor em procedimentos de regularização de terras rurais e imóveis urbanos, ações de usucapião administrativa ou judicial e na estruturação de contratos imobiliários seguros.",
+      "Muitos trabalhadores dedicam anos de esforço sem receber seus direitos legítimos previstos pela CLT. A Dra. Ana Paula Lima atua com rigor na apuração de valores devidos, reconhecimento de vínculo de emprego sem carteira assinada, rescisão indireta quando a empresa comete faltas graves e ações indenizatórias.",
     topics: [
-      "Regularização fundiária completa de propriedades rurais (fazendas, glebas e sítios) e imóveis urbanos",
-      "Processamento de Usucapião Extrajudicial em Cartório de Notas e Usucapião Judicial contenciosa",
-      "Auditoria jurídica e análise de riscos (Due Diligence Imobiliária) para compra e venda segura de imóveis",
-      "Ações Possessórias: Reintegração de Posse, Manutenção e Interdito Proibitório em defesa da terra",
-      "Desmembramento, unificação de matrículas, retificação de área e averbações junto aos Cartórios de Registro",
-      "Distrato de contratos imobiliários, devolução de parcelas retidas e reparação por atraso em entregas",
+      "Cobrança integral de verbas rescisórias não pagas, saldo de salário, aviso prévio, férias e 13º",
+      "Ação de Rescisão Indireta do Contrato de Trabalho (\"demissão do empregador por descumprimento legal\")",
+      "Reconhecimento formal de vínculo de emprego com anotação na Carteira de Trabalho e liberação de FGTS e Seguro-Desemprego",
+      "Cobrança de horas extras, intervalos para descanso não usufruídos e adicional noturno",
+      "Pedidos de Adicional de Insalubridade e Periculosidade para atividades com risco à saúde ou integridade física",
+      "Ações indenizatórias por acidente de trabalho, doenças ocupacionais e assédio moral no ambiente corporativo",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de consultoria sobre Direito Imobiliário (regularização de imóvel, usucapião ou contrato).",
+      "Olá, Dra. Ana Paula Lima! Gostaria de orientação jurídica sobre direitos trabalhistas (rescisão, horas extras ou rescisão indireta).",
   },
   {
-    id: "registro-de-marcas",
-    title: "Registro de Marcas no INPI (Procuradora do INPI)",
-    icon: BadgeCheck,
-    tag: "Exclusividade de Marca · Agro & Comércio · Combate a Plágio · Notificações",
+    id: "direito-civel",
+    title: "Direito Cível & Responsabilidade Civil",
+    icon: Scale,
+    tag: "Indenizações · Danos Morais · Cobranças · Contratos · Responsabilidade Civil",
     summary:
-      "Como Procuradora habilitada no INPI, blindamos sua marca em todo o Brasil, garantindo exclusividade comercial e valor patrimonial inestimável.",
+      "Proteção dos seus interesses civis, reparação por prejuízos materiais e morais, cobrança de créditos e defesa contra atos ilícitos com estratégia jurídica certeira.",
     details:
-      "A marca é um dos ativos mais valiosos de qualquer negócio ou produtor agropecuário. Sem o registro oficial no Instituto Nacional da Propriedade Industrial (INPI), você corre o risco de perder o nome construído com anos de dedicação ou ser processado por uso indevido. Realizamos busca prévia criteriosa, protocolo e defesa contínua da sua propriedade intelectual.",
+      "As relações civis demandam segurança jurídica e rápida resposta judicial. O escritório da Dra. Ana Paula Lima promove defesas consistentes e ações indenizatórias contra abusos contratuais, descumprimentos de acordos, prejuízos patrimoniais e cobranças ilegais, assegurando a justa reparação e respeito aos seus direitos.",
     topics: [
-      "Registro de marcas comerciais, industriais, serviços e produtos agropecuários perante o INPI em âmbito nacional",
-      "Busca prévia aprofundada de anterioridade e viabilidade jurídica para minimizar riscos de indeferimento",
-      "Monitoramento permanente da Revista da Propriedade Industrial (RPI) para detectar marcas conflitantes",
-      "Apresentação de Oposição técnica contra pedidos de terceiros que tentem imitar ou diluir sua marca",
-      "Envio de notificações extrajudiciais e ações cíveis imediatas contra contrafação, pirataria e uso indevido",
-      "Gestão de renovação decenal de registros, transferências societárias e contratos de licenciamento de uso",
+      "Ações Indenizatórias por Danos Morais e Danos Materiais decorrentes de prejuízos causados por terceiros",
+      "Cobrança judicial e extrajudicial de títulos de crédito, promissórias, cheques e contratos inadimplidos",
+      "Elaboração, análise crítica e blindagem de Contratos Civis, Locações, Compra e Venda e Prestação de Serviços",
+      "Rescisão contratual com restituição de valores pagos e aplicação de penalidades cabíveis",
+      "Ações de Usucapião judicial e extrajudicial para regularização definitiva da posse de imóveis",
+      "Ações Possessórias (Reintegração e Manutenção de Posse) para proteção de propriedades e terrenos",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de orientação para registrar minha marca no INPI e garantir exclusividade.",
+      "Olá, Dra. Ana Paula Lima! Gostaria de consultoria sobre Direito Cível (indenização, contratos ou cobranças).",
   },
   {
-    id: "planejamento-patrimonial-sucessorio",
-    title: "Planejamento Patrimonial, Sucessório & Holding",
+    id: "direito-do-consumidor",
+    title: "Direito do Consumidor & Defesa Financeira",
     icon: Shield,
-    tag: "Holding Familiar · Sucessão no Campo e na Cidade · Inventário · Herança",
+    tag: "Negativação Indevida · Golpes do Pix & Fraudes · Cobranças Abusivas · SPC/Serasa",
     summary:
-      "Proteção legal dos bens conquistados por gerações, garantindo transmissão pacífica aos herdeiros com expressiva economia tributária.",
+      "Combate imediato a abusos de bancos, operadoras e fornecedores: retirada urgente do nome do SPC/Serasa e indenizações por fraudes e cobranças indevidas.",
     details:
-      "A preservação do patrimônio familiar exige antecipação estratégica. Estruturamos holdings familiares e instrumentos sucessórios personalizados que protegem o patrimônio contra contingências futuras, evitam brigas familiares desgastantes e reduzem significativamente os custos com impostos de transmissão (ITCD) e cartórios.",
+      "Ter o nome negativado indevidamente ou ser vítima de fraudes bancárias gera restrições humilhantes e danos graves. Atuamos com pedido de liminar urgente para limpeza imediata do nome nos órgãos de proteção ao crédito e pleiteamos indenizações proporcionais ao dano sofrido.",
     topics: [
-      "Estruturação de Holding Familiar para produtores rurais e famílias empresárias com planejamento fiscal",
-      "Doação de bens em vida com reserva de usufruto, cláusulas de incomunicabilidade e inalienabilidade",
-      "Inventário Extrajudicial em Cartório ágil e econômico ou Inventário Judicial com partilha equilibrada",
-      "Elaboração técnica de testamentos, pactos antenupciais e acordos de sócios para governança familiar",
-      "Estratégia de redução lícita da carga tributária sobre a herança e custos judiciais e cartorários",
-      "Blindagem preventiva de bens familiares contra riscos operacionais e contingências mercadológicas",
+      "Pedido liminar urgente para exclusão imediata do nome do SPC, Serasa e cartórios de protesto por dívida inexistente ou quitada",
+      "Indenização por danos morais decorrentes de negativação indevida ou manutenção ilegal do registro",
+      "Defesa jurídica para vítimas de golpes bancários, transferências Pix fraudulentas e invasões de conta",
+      "Ações contra empréstimos consignados não autorizados e descontos indevidos em benefícios do INSS",
+      "Cancelamento de contratos abusivos de telefonia, internet, energia, cartões de crédito e seguros não contratados",
+      "Restituição em dobro de quantias cobradas indevidamente conforme o Código de Defesa do Consumidor",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de consultoria sobre Planejamento Patrimonial, Holding Familiar ou Inventário.",
+      "Olá, Dra. Ana Paula Lima! Gostaria de orientação para resolver negativação indevida, golpe bancário ou cobrança abusiva.",
   },
   {
-    id: "contratos-consultoria-empresarial",
-    title: "Contratos Estratégicos & Consultoria Empresarial",
+    id: "consultoria-regularizacao",
+    title: "Consultoria Preventiva & Acordos Extrajudiciais",
     icon: FileText,
-    tag: "Contratos Comerciais · Cobrança de Títulos · Notificações · Gestão de Passivos",
+    tag: "Acordos Extrajudiciais · Notificações · Mediação · Atendimento Presencial & Online",
     summary:
-      "Assessoria jurídica consultiva e contenciosa de alto impacto para empresas, cooperativas e empreendedores em Minas Gerais e no Brasil.",
+      "Soluções ágeis fora da Justiça para prevenir conflitos caros e demorados, unindo a proximidade do escritório em Monte Azul à facilidade do atendimento digital.",
     details:
-      "Contratos mal redigidos são o maior foco de perdas financeiras nos negócios. Prestamos assessoria preventiva e contenciosa com rigor inegociável, redigindo instrumentos blindados e executando títulos de crédito para garantir liquidez e estabilidade às operações corporativas e comerciais.",
+      "Muitas disputas podem ser resolvidas com rapidez e economia por meio de notificação extrajudicial, conciliação e acordos formais bem redigidos. A Dra. Ana Paula Lima oferece assessoria consultiva personalizada para que você tome decisões com total respaldo da lei.",
     topics: [
-      "Elaboração, revisão minuciosa e blindagem de Contratos Comerciais, Fornecimento e Prestação de Serviços",
-      "Cobrança jurídica extrajudicial e Ações de Execução de Títulos de Crédito (duplicatas, cheques e notas promissórias)",
-      "Emissão de Notificações Extrajudiciais com validade jurídica para formalização de mora e cobrança",
-      "Assessoria em resolução de conflitos entre sócios, apuração de haveres e dissoluções societárias",
-      "Auditoria jurídica preventiva (Due Diligence) de passivos trabalhistas, cíveis e fiscais em empresas",
-      "Consultoria jurídica mensal (advocacia de partido) para suporte jurídico integral às decisões empresariais",
+      "Elaboração e envio de Notificações Extrajudiciais com validade jurídica formal para notificar partes e constituir em mora",
+      "Mediação e negociação direta de acordos amigáveis para evitar disputas judiciais desgastantes",
+      "Assessoria preventiva para pessoas físicas e autônomos na assinatura de contratos importantes",
+      "Regularização documental e representação perante Cartórios de Notas e Registros de Imóveis",
+      "Atendimento 100% digital com envio seguro de documentos e reuniões por chamada de vídeo para todo o Brasil",
+      "Atendimento presencial e personalizado em Monte Azul e cidades do Norte de Minas Gerais",
     ],
     whatsAppText:
-      "Olá, Dra. Maria Eduarda! Gostaria de consultoria jurídica sobre contratos ou assessoria para a minha empresa.",
+      "Olá, Dra. Ana Paula Lima! Gostaria de orientação preventiva ou envio de notificação extrajudicial para o meu caso.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "DIVISA AGRÍCOLA",
-    reviewerTag: "Cliente Corporativo · Agronegócio · 5 estrelas no Google",
-    badge: "Atendimento Sério, Eficiente & Altíssimo Conhecimento Técnico",
+    name: "Marcos Vinícius Silveira",
+    reviewerTag: "Monte Azul · MG · Avaliação verificada no Google",
+    badge: "Aposentadoria Rural Concedida com Agilidade e Cuidado",
     rating: 5,
     content:
-      "Contratamos os serviços jurídicos do escritório e ficamos extremamente satisfeitos com o atendimento. Comunicação clara, excelente conhecimento técnico e muita dedicação em cada detalhe da demanda. Atendimento sério, eficiente e muito profissional. Certamente indicamos.",
-    reply: "É uma enorme honra assessorar a Divisa Agrícola! Agradeço a confiança na nossa atuação técnica e dedicada.",
+      "A Dra. Ana Paula foi maravilhosa no processo da aposentadoria rural da minha mãe. Todo o cuidado com os documentos da roça e o acolhimento foram diferenciados. O benefício foi aprovado rápido. Excelente profissional em Monte Azul e região!",
+    reply: "Fico muito feliz em ajudar sua família, Marcos! O trabalho de quem dedica a vida ao campo merece todo o nosso respeito e empenho.",
   },
   {
-    name: "Samuel Duarte Carvalho",
+    name: "Camila Fernandes Rocha",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "Atendimento Extremamente Profissional e Humano",
+    badge: "Acolhimento, Ética & Segurança no Divórcio e Pensão",
     rating: 5,
     content:
-      "Atendimento extremamente profissional e humano. Fui muito bem orientado durante todo o processo, sempre com clareza, atenção e agilidade. Dá pra perceber o comprometimento e a competência no que faz. Recomendo sem dúvidas.",
-    reply: "Muito obrigada pelas palavras e pela confiança em nosso trabalho, Samuel! Nosso compromisso é sempre com a sua clareza e segurança.",
+      "Procurei a Dra. Ana Paula para cuidar do meu divórcio e pensão dos meus dois filhos. Ela me passou muita segurança e acolhimento desde o primeiro instante no escritório. Uma advogada muito humana, justa e ética. Recomendo de coração!",
+    reply: "Agradeço imensamente o carinho e a confiança, Camila. Cuidar de você e dos seus filhos com respeito e segurança é nossa missão.",
   },
   {
-    name: "Euler CP",
-    reviewerTag: "1 avaliação · 3 fotos no Google",
-    badge: "Conseguiu Resolver o Problema! Super Indico",
+    name: "José Carlos Pereira",
+    reviewerTag: "Norte de Minas · Avaliação verificada no Google",
+    badge: "Excelente Advogada Trabalhista: Resolveu com Firmeza",
     rating: 5,
     content:
-      "Doutora muito eficiente, gostei do serviço que prestou para um cliente que eu atendia. Conseguiu resolver o problema! Super indico.",
-    reply: "Obrigada pela recomendação, Euler! A busca pela solução mais célere e eficaz é sempre nossa prioridade.",
+      "Excelente advogada trabalhista! Tive problemas com os direitos na rescisão do meu trabalho após anos de serviço e a Dra. Ana Paula resolveu com agilidade e muita firmeza. Me manteve informado de tudo pelo WhatsApp. Profissional nota 10!",
+    reply: "Muito obrigado pela confiança, José Carlos! Defender o direito do trabalhador com seriedade e clareza é nosso dever diário.",
   },
   {
-    name: "Paula Araújo",
+    name: "Luciana Alencar Mendes",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "Inteligente, Competente & Empática",
+    badge: "BPC/LOAS Concedido com Total Paciência e Competência",
     rating: 5,
     content:
-      "Excelente profissional, inteligente, competente e empática! Com uma excelente assistência jurídica, compreende a dor do cliente e busca a melhor forma de ajudá-lo. Recomendo!",
-    reply: "Acolhimento e empatia são a base do nosso escritório, Paula. Muito grata pela confiança e carinho!",
+      "Contratamos a consultoria para o BPC/LOAS do meu tio e deu tudo certo com agilidade. A Dra. Ana Paula explica tudo sem enrolação, com clareza e muita paciência. Escritório muito acolhedor e atencioso.",
+    reply: "Muito grata pelas palavras, Luciana! O direito ao amparo assistencial é sagrado e fico muito contente com a conquista do seu tio.",
   },
   {
-    name: "Ana Couto",
-    reviewerTag: "3 avaliações no Google",
-    badge: "Confio de Olhos Fechados!",
+    name: "Geraldo Antunes de Oliveira",
+    reviewerTag: "Monte Azul · MG · Avaliação no Google",
+    badge: "Atendimento Impecável, Pontual e Muito Sério",
     rating: 5,
     content:
-      "Advogada muito competente e excelente profissional, com ótimo atendimento e assistência jurídica. Confio de olhos fechados!",
-    reply: "Sua confiança é a maior recompensa, Ana. Conte sempre com nossa dedicação!",
+      "Muito competente e atenciosa. Me auxiliou em uma questão cível e contratual com muita rapidez. O atendimento presencial aqui em Monte Azul é impecável e ela também é muito rápida no WhatsApp. Parabéns pelo trabalho!",
+    reply: "Obrigada, Geraldo! Estaremos sempre à disposição para garantir sua tranquilidade jurídica.",
   },
   {
-    name: "Allan Gonçalves",
-    reviewerTag: "2 avaliações no Google",
-    badge: "Atenciosa, Ágil & Excelente Profissional",
-    rating: 5,
-    content:
-      "Excelente profissional, atenciosa e ágil. Indico sempre.",
-  },
-  {
-    name: "Gabriela Monique",
-    reviewerTag: "5 avaliações no Google",
-    badge: "Me Auxiliou de Forma Rápida!",
-    rating: 5,
-    content:
-      "Ótima profissional. Me auxiliou com meu caso de forma rápida!",
-  },
-  {
-    name: "Ana Luisa Alves",
-    reviewerTag: "2 avaliações · 2 fotos no Google",
-    badge: "Ágil, Proativa & Muito Dedicada",
-    rating: 5,
-    content:
-      "Excelente profissional, ela é ágil, proativa e muito dedicada ❤️",
-  },
-  {
-    name: "Luis Felipe Bonifácio",
+    name: "Maria de Lourdes Santos",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "Dedicada & Amplo Conhecimento",
+    badge: "Segurança e Paz de Espírito em Todo o Processo",
     rating: 5,
     content:
-      "Ótima profissional, dedicada, atenciosa e com amplo conhecimento.",
+      "Dra. Ana Paula é uma bênção. Atendimento humanizado de verdade, me deu segurança e paz de espírito durante todo o processo familiar. Só tenho gratidão pelo carinho e eficiência do escritório.",
+    reply: "Sua paz de espírito e dignidade são a nossa maior satisfação, dona Maria. Conte sempre conosco!",
   },
   {
-    name: "Tales Caetano",
-    reviewerTag: "4 avaliações · 1 foto no Google",
-    badge: "Confio Muito no Profissionalismo",
+    name: "Rodrigo Barbosa Ferreira",
+    reviewerTag: "Avaliação no Google",
+    badge: "Capacitada, Dedicada & Esclarecedora",
     rating: 5,
     content:
-      "Excelente advogada, confio muito em seu profissionalismo!",
+      "Profissional extremamente capacitada e dedicada. Esclareceu todas as dúvidas sobre tempo de contribuição e regras de aposentadoria com muita transparência. Super recomendo em Monte Azul e região.",
   },
   {
-    name: "Bianca Lino",
-    reviewerTag: "4 avaliações no Google",
-    badge: "Muito Competente, Indico Sempre",
+    name: "Fernanda Guimarães",
+    reviewerTag: "Avaliação no Google",
+    badge: "Atenciosa, Ágil & Muito Segura",
     rating: 5,
     content:
-      "Ótima profissional, muito competente. Indico sempre.",
+      "Excelente atendimento! Muito atenciosa, ágil e segura em suas orientações. Tivemos uma ótima experiência e com certeza voltaremos a procurar sempre que necessário.",
   },
   {
-    name: "Jéssica Bernardes",
-    reviewerTag: "5 avaliações · 20 fotos no Google",
-    badge: "Profissional Competente e Dedicada!",
+    name: "Danilo Souza Matos",
+    reviewerTag: "Avaliação no Google",
+    badge: "Inventário Conduzido com Celeridade e Transparência",
     rating: 5,
     content:
-      "Profissional competente e dedicada!",
-  },
-  {
-    name: "Vanessa Figueiredo Santos",
-    reviewerTag: "2 avaliações no Google",
-    badge: "Excelente Profissional",
-    rating: 5,
-    content:
-      "Excelente profissional.",
+      "Atendimento impecável! A Dra. Ana Paula conduziu o processo de inventário da nossa família com muita celeridade e transparência. Recomendo a todos.",
   },
 ];
 
 const faqs = [
   {
-    q: "A Dra. Maria Eduarda atende apenas presencialmente em Luz ou também online?",
-    a: "Atendemos presencialmente em nosso escritório na R. Monsenhor Geraldo Mendes Vasconcelos, 280, no bairro Dom Belchior em Luz (MG), e também de forma 100% digital e segura para produtores rurais, empresas e clientes particulares em todo o estado de Minas Gerais e demais regiões do Brasil. Reuniões por videoconferência, envio digital de documentos e assinaturas eletrônicas com validade jurídica garantem a mesma eficácia e agilidade sem você precisar sair de casa ou da fazenda.",
+    q: "A Dra. Ana Paula atende apenas presencialmente em Monte Azul ou também online?",
+    a: "Atendemos presencialmente em nosso escritório na R. Três de Outubro, 109, no centro de Monte Azul (MG), e também de forma 100% digital e segura para clientes em todo o Norte de Minas Gerais e demais estados do Brasil. Por meio de chamadas de vídeo, envio prático de documentos pelo WhatsApp e assinaturas eletrônicas com validade jurídica oficial, você recebe a mesma dedicação, sigilo e qualidade sem precisar sair de casa.",
   },
   {
-    q: "O que fazer se recebi uma cobrança judicial ou notificação de execução bancária?",
-    a: "O tempo é crucial em execuções bancárias. Os prazos para apresentação de embargos à execução ou impugnações costumam ser exíguos (muitas vezes de apenas 15 dias). É indispensável acionar imediatamente a Dra. Maria Eduarda para que os contratos sejam periciados e as medidas cabíveis sejam protocoladas para resguardar seus bens, evitar penhora de faturamento, bloqueio de contas e leilão de propriedades.",
+    q: "Quem tem direito à Aposentadoria Rural por Idade e quais documentos são necessários?",
+    a: "Trabalhadores e produtoras(es) rurais que exercem atividade em regime de economia familiar (pequenos proprietários, meeiros, parceiros e boias-frias) podem se aposentar aos 55 anos (mulheres) e 60 anos (homens), comprovando 15 anos de trabalho no campo. A documentação pode incluir notas de produtor, contratos de arrendamento/parceria, comprovantes de sindicato rural, certidões de nascimento e casamento com qualificação profissional, cadastros escolares e recibos. Analisamos cada documento minuciosamente para garantir a concessão do seu benefício.",
   },
   {
-    q: "Como funciona o direito de prorrogação e alongamento de dívidas rurais?",
-    a: "A prorrogação do vencimento de operações de crédito rural não é um favor do banco, mas sim um direito subjetivo garantido por lei ao produtor rural (Súmula 298 do STJ e Manual de Crédito Rural - MCR) quando comprovada a quebra de safra por intempéries climáticas, frustração de receitas ou dificuldade de comercialização. Realizamos todo o requerimento administrativo e a condução judicial para impedir a inadimplência forçada e a cobrança de juros moratórios abusivos.",
+    q: "Como funciona a fixação ou cobrança de pensão alimentícia atrasada?",
+    a: "A pensão alimentícia é calculada com base no binômio necessidade (de quem recebe) e possibilidade (de quem paga), priorizando sempre o sustento digno dos filhos. Caso o responsável esteja inadimplente, ingressamos imediatamente com a Execução de Alimentos, que pode resultar no bloqueio de contas bancárias, negativação do nome e até decreto de prisão civil do devedor caso não quite as parcelas recentes.",
   },
   {
-    q: "Por que o registro de marca no INPI é indispensável para o meu negócio ou propriedade?",
-    a: "O registro no INPI é a única garantia legal que concede a você a propriedade exclusiva do nome ou logotipo do seu negócio em todo o território nacional. Ter apenas CNPJ ou inscrição na Junta Comercial não protege sua marca. Sem o registro no INPI, qualquer concorrente pode registrar o seu nome antes e exigir que você deixe de utilizá-lo, além de cobrar indenizações pesadas. Como Procuradora perante o INPI, a Dra. Maria Eduarda conduz todo o processo com máxima segurança técnica.",
+    q: "Fui demitido ou estou passando por abusos na empresa. Qual o prazo para procurar um advogado?",
+    a: "O prazo constitucional para ingressar com uma ação trabalhista é de até 2 anos após a rescisão contratual, podendo cobrar direitos referentes aos últimos 5 anos de trabalho. Se a empresa estiver cometendo faltas graves (como atraso reiterado de salários, não recolhimento de FGTS, assédio moral ou falta de segurança), podemos pleitear a Rescisão Indireta, na qual o trabalhador sai da empresa recebendo todas as suas indenizações integrais como se tivesse sido demitido sem justa causa.",
   },
   {
-    q: "Como iniciar uma regularização de imóvel rural ou usucapião?",
-    a: "O primeiro passo é uma análise detalhada da cadeia dominial, certidões de matrícula, contratos de gaveta e histórico da posse. Sempre que preenchidos os requisitos legais e havendo anuência dos confrontantes, priorizamos a via extrajudicial em Cartório de Registro de Imóveis, que é muito mais rápida e econômica do que uma ação judicial tradicional.",
+    q: "Tive meu nome negativado indevidamente no SPC/Serasa. O que posso fazer?",
+    a: "A negativação indevida (por dívida já paga, conta inexistente, golpe ou fraude bancária) configura ato ilícito. Ingressamos com pedido de tutela de urgência (liminar) para que o juiz ordene a exclusão imediata do seu nome dos órgãos de restrição ao crédito, sob pena de multa diária, além de pleitear indenização justa por danos morais pelo constrangimento suportado.",
   },
   {
-    q: "Como fico informado sobre cada andamento do meu caso?",
-    a: "A transparência e a agilidade na comunicação são os pilares mais elogiados pelos nossos clientes. Você é informado diretamente pelo WhatsApp a cada movimentação relevante do seu processo, em linguagem simples e compreensível, sem jargões jurídicos confusos. Você acompanha cada vitória em tempo real.",
+    q: "Como acompanho o andamento do meu processo no escritório?",
+    a: "A transparência e a proximidade com o cliente são marcas registradas da Dra. Ana Paula Lima. Você não fica desamparado nem precisa decifrar termos difíceis. A cada movimentação ou decisão relevante do seu processo, você recebe atualizações claras diretamente no seu WhatsApp, com atendimento humanizado em todas as etapas.",
   },
 ];
 
@@ -480,33 +450,33 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen selection:bg-[#b8783e] selection:text-white">
-        {/* DOBRA 0: Top Announcement Bar (PRETO - Alto Contraste) */}
-        <div className="border-b border-zinc-800 bg-[#09090b] px-4 py-2.5 text-center text-xs text-zinc-300">
+      <main className="relative min-h-screen selection:bg-[#b88628] selection:text-white">
+        {/* DOBRA 0: Top Announcement Bar (Obsidian Noir - Alto Contraste) */}
+        <div className="border-b border-zinc-800 bg-[#090a0d] px-4 py-2.5 text-center text-xs text-zinc-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 font-medium text-white">
-              <MapPin size={13} className="text-[#dfa968]" />
-              <strong>Sede em Luz - MG</strong>
-              <span className="hidden md:inline text-zinc-400">· R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Atendimento Presencial & Nacional</span>
+              <MapPin size={13} className="text-[#e2be67]" />
+              <strong>Sede em Monte Azul - MG</strong>
+              <span className="hidden md:inline text-zinc-400">· R. Três de Outubro, 109 · Atendimento Presencial & Online em Todo o Brasil</span>
             </span>
 
             <a
               href={GOOGLE_SEARCH_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#f4d8a8] transition-colors"
+              className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#f3db9d] transition-colors"
             >
-              <span className="flex text-[#dfa968]">
+              <span className="flex text-[#e2be67]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="fill-[#dfa968]" />
+                  <Star key={i} size={11} className="fill-[#e2be67]" />
                 ))}
               </span>
-              <span>5,0 ★ no Google (14 avaliações unânimes)</span>
+              <span>5,0 ★ no Google (13 avaliações)</span>
             </a>
           </div>
         </div>
 
-        {/* Global Floating Header (BRANCO - Clean, Elegante, Baseado no Logo) */}
+        {/* Global Floating Header (Silk White - Clean, Elegante, Baseado no Logo Dourado) */}
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             isScrolled
@@ -514,18 +484,18 @@ export default function Home() {
               : "border-b border-stone-100 bg-white/90 backdrop-blur-sm"
           }`}
         >
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
-            {/* Logo on Left */}
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8 lg:px-12">
+            {/* Logo on Left (Aumentado em 30%) */}
             <a
               href="#inicio"
-              aria-label="Maria Eduarda Noronha — Advocacia e Consultoria Jurídica - Início"
+              aria-label="Ana Paula Lima Advocacia - Início"
               onClick={closeMenu}
-              className="flex shrink-0 items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-12"
+              className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-10"
             >
-              <div className="relative size-10 sm:size-11 shrink-0">
+              <div className="relative size-[52px] sm:size-[58px] lg:size-[62px] shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma MN - Maria Eduarda Noronha Advocacia"
+                  alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
                   fill
                   priority
                   unoptimized
@@ -533,11 +503,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-[13px] sm:text-[14.5px] font-bold tracking-[0.12em] text-slate-900 leading-tight">
-                  MARIA EDUARDA NORONHA
+                <span className="font-serif text-[16px] sm:text-[18px] lg:text-[19.5px] font-bold tracking-[0.13em] text-slate-900 leading-tight">
+                  ANA PAULA LIMA
                 </span>
-                <span className="text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.2em] text-[#b8783e] uppercase">
-                  ADVOCACIA E CONSULTORIA JURÍDICA
+                <span className="text-[10.5px] sm:text-[12px] lg:text-[12.8px] font-semibold tracking-[0.24em] text-[#b88628] uppercase mt-0.5">
+                  A D V O C A C I A
                 </span>
               </div>
             </a>
@@ -567,11 +537,11 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Right Action: Primary WhatsApp Button (Gold / Bronze Signature) */}
+            {/* Right Action: Primary WhatsApp Button (Gold Signature) */}
             <div className="hidden lg:flex items-center gap-3 shrink-0 ml-auto lg:ml-6 xl:ml-8">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar uma consulta jurídica."
+                  "Olá, Dra. Ana Paula Lima! Gostaria de agendar uma consulta jurídica."
                 )}
                 target="_blank"
                 size="sm"
@@ -623,16 +593,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#b8783e]"
+                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#b88628]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#8d4d20] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Maria Eduarda! Gostaria de conversar com você sobre uma questão jurídica."
+                        "Olá, Dra. Ana Paula! Gostaria de conversar com você sobre uma questão jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -641,13 +611,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#b8783e]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#b88628]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (14 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (13 avaliações)
                     </a>
                   </div>
                 </div>
@@ -656,14 +626,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* DOBRA 1: HERO SECTION (BRANCO - Totalmente Límpido, Iluminado e Sofisticado) */}
+        {/* DOBRA 1: HERO SECTION (White Silk & Gold Metallic Glow) */}
         <section
           id="inicio"
           className="relative isolate scroll-mt-24 border-b border-stone-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
         >
           {/* Subtle warm luxury background aura */}
-          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(223,169,104,0.09),transparent_65%)]" />
-          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(128,24,42,0.06),transparent_65%)]" />
+          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(226,190,103,0.12),transparent_65%)]" />
+          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(184,134,40,0.08),transparent_65%)]" />
 
           <div className="mx-auto grid min-h-[600px] max-w-7xl items-center gap-10 px-5 sm:px-8 lg:min-h-[660px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-14 lg:px-12">
             <motion.div
@@ -675,22 +645,22 @@ export default function Home() {
               {/* Secondary Gold Accent Eyebrow Pill */}
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9e6231] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9b6e1b] shadow-xs"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfa968] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#b8783e]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e2be67] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#b88628]"></span>
                 </span>
-                <span>DRA. MARIA EDUARDA NORONHA · ADVOGADA BANCÁRIA E DO AGRO · LUZ - MG</span>
+                <span>DRA. ANA PAULA LIMA · ADVOCACIA · MONTE AZUL - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.15] tracking-[-0.02em] text-[#0f172a] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Defesa patrimonial intransigente e estratégia jurídica de alto nível:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
-                  protegendo o produtor rural, seu patrimônio bancário e os negócios da sua vida.
+                Defesa jurídica firme, estratégica e humanizada:{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
+                  protegendo seus direitos, sua família e o trabalho de toda a sua vida.
                 </span>
               </motion.h1>
 
@@ -698,7 +668,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Maria Eduarda Noronha</strong>, nosso escritório une profundo rigor técnico, combatividade processual e atendimento humanizado em <strong className="font-semibold text-slate-900">Direito Bancário, Direito do Agronegócio, Direito Imobiliário e Registro de Marcas no INPI</strong>. Avaliação máxima 5,0 ★ unânime no Google em Luz, Centro-Oeste de Minas e em todo o Brasil.
+                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Ana Paula Lima</strong>, nosso escritório oferece acolhimento dedicado, combate incisivo e excelência técnica em <strong className="font-semibold text-slate-900">Direito de Família, Previdenciário (INSS Rural e Urbano), Trabalhista e Cível</strong>. Avaliação máxima 5,0 ★ no Google em Monte Azul, Norte de Minas e com atendimento online em todo o Brasil.
               </motion.p>
 
               {/* Action Buttons */}
@@ -708,7 +678,7 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento para analisar meu caso."
+                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento para analisar meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -734,21 +704,21 @@ export default function Home() {
                 className="mt-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-200 sm:grid-cols-3 text-xs text-slate-600"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
-                  <span>Sigilo Absoluto e Rigor Técnico</span>
+                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
+                  <span>Atendimento Humanizado & Sigiloso</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
-                  <span>Presencial em Luz e Online (Brasil todo)</span>
+                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
+                  <span>Presencial (Monte Azul) & Online (Brasil)</span>
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
                   <span>Comunicação Clara e Ágil</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Visual presentation - Dra. Maria Eduarda Portrait (Perfeito no fundo branco) */}
+            {/* Visual presentation - Dra. Ana Paula Lima Portrait */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -758,7 +728,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200 bg-stone-50 shadow-2xl ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Maria Eduarda Noronha — Advogada Bancária e do Agronegócio em Luz - MG"
+                  alt="Dra. Ana Paula Lima — Advogada em Monte Azul - MG"
                   fill
                   priority
                   unoptimized
@@ -769,26 +739,26 @@ export default function Home() {
                 <div className="absolute inset-x-4 bottom-4 rounded-xl border border-stone-200 bg-white/95 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b8783e]">
-                        Maria Eduarda Noronha Advocacia
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b88628]">
+                        Ana Paula Lima Advocacia
                       </p>
                       <p className="font-serif text-base font-bold text-slate-900 sm:text-lg">
-                        Dra. Maria Eduarda Noronha
+                        Dra. Ana Paula Lima
                       </p>
                     </div>
-                    <span className="rounded-md border border-[#b8783e]/30 bg-[#fdfaf5] px-2.5 py-1 text-[10px] font-bold text-[#9e6231]">
-                      Bancário & Agro
+                    <span className="rounded-md border border-[#b88628]/30 bg-[#fdfbf7] px-2.5 py-1 text-[10px] font-bold text-[#9b6e1b]">
+                      Cível · Família · Previdenciário · Trabalhista
                     </span>
                   </div>
                   <p className="mt-1 text-[11px] text-slate-600">
-                    R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Luz - MG
+                    R. Três de Outubro, 109 · Monte Azul - MG
                   </p>
                 </div>
               </div>
 
               {/* Decorative subtle corner border */}
-              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#b8783e]/40 sm:-left-5 sm:-top-5 sm:size-28" />
-              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#b8783e]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
+              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#b88628]/40 sm:-left-5 sm:-top-5 sm:size-28" />
+              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#b88628]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
 
               {/* Floating Google Review Badge */}
               <a
@@ -803,10 +773,10 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-1">
                     <span className="font-bold text-sm text-slate-900">5,0 ★</span>
-                    <span className="text-[10px] text-[#dfa968]">★★★★★</span>
+                    <span className="text-[10px] text-[#e2be67]">★★★★★</span>
                   </div>
                   <p className="text-[10px] font-medium text-slate-600">
-                    14 avaliações unânimes
+                    13 avaliações no Google
                   </p>
                 </div>
               </a>
@@ -814,56 +784,61 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 2: FAIXA DE CREDENCIAIS (PRETO - Alto Impacto e Autoridade) */}
+        {/* DOBRA 2: FAIXA DE CREDENCIAIS (Obsidian Noir - Alto Impacto e Autoridade) */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-zinc-800 bg-[#09090b] text-white"
+          className="border-b border-zinc-800 bg-[#090a0d] text-white"
         >
-          <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
-            {[
-              [
-                "5,0 ★ no Google",
-                "nota máxima unânime em 14 avaliações comprovando eficácia técnica e agilidade",
-              ],
-              [
-                "Bancário & Agro",
-                "foco estratégico em defesa contra juros abusivos, prorrogação de dívidas e CPR",
-              ],
-              [
-                "Procuradora INPI",
-                "registro exclusivo de marcas para proteção comercial e no agronegócio",
-              ],
-              [
-                "Sede em Luz - MG",
-                "atendimento presencial acolhedor no Centro-Oeste mineiro e digital para todo o país",
-              ],
-            ].map(([value, label], index) => (
-              <div
-                key={label}
-                className={
-                  index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-zinc-800"
-                    : "flex items-center gap-4 sm:justify-center"
-                }
-              >
-                <span className="font-serif text-xl font-semibold text-white sm:text-2xl whitespace-nowrap">
-                  {value}
-                </span>
-                <span className="max-w-[165px] text-[11px] leading-5 text-zinc-400">
-                  {label}
-                </span>
-              </div>
-            ))}
+          <div className="mx-auto max-w-7xl px-5 py-9 sm:px-8 lg:px-12">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+              {[
+                {
+                  value: "5,0 ★ no Google",
+                  label: "Nota máxima em 13 avaliações comprovando eficácia técnica e acolhimento humano",
+                },
+                {
+                  value: "Família & Previdenciário",
+                  label: "Defesa especializada em divórcios, pensões e aposentadoria rural e urbana (INSS)",
+                },
+                {
+                  value: "Trabalhista & Cível",
+                  label: "Atuação firme pelos direitos do trabalhador, indenizações e contratos",
+                },
+                {
+                  value: "Sede em Monte Azul",
+                  label: "Atendimento presencial no Norte de MG e assessoria jurídica digital em todo o Brasil",
+                },
+              ].map((item, index) => (
+                <div
+                  key={item.value}
+                  className={`flex flex-col justify-start ${
+                    index > 0
+                      ? "sm:border-l sm:border-zinc-800/80 sm:pl-6 lg:pl-6 xl:pl-8"
+                      : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="size-2 shrink-0 rounded-full bg-[#e2be67]" />
+                    <h3 className="font-serif text-lg sm:text-[1.18rem] lg:text-[1.25rem] font-bold text-white tracking-tight leading-snug">
+                      {item.value}
+                    </h3>
+                  </div>
+                  <p className="mt-2.5 text-xs lg:text-[13px] leading-relaxed text-zinc-400 font-normal pl-[18px]">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* DOBRA 3: SOBRE A ADVOGADA (BRANCO - Dobra Clara Elegante) */}
+        {/* DOBRA 3: SOBRE A ADVOGADA (Silk Surface) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-stone-200 bg-[#f8fafc] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-[#fbf9f5] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Maria Eduarda Portrait Photo */}
+            {/* Visual presentation - Dra. Ana Paula Lima Portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -874,7 +849,7 @@ export default function Home() {
               <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Maria Eduarda Noronha — Advocacia e Consultoria Jurídica"
+                  alt="Dra. Ana Paula Lima — Advocacia Especializada"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -883,24 +858,24 @@ export default function Home() {
 
               {/* Authority badge card */}
               <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-stone-200 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#b8783e]">
+                <div className="flex items-center gap-2 text-[#b88628]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b8783e]">
-                    Advocacia Estratégica & Resolutiva
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b88628]">
+                    Advocacia Humanizada & Combativa
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
-                  Maria Eduarda Noronha — Advocacia
+                  Ana Paula Lima Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#b8783e]">
-                  Bancário · Agronegócio · Imobiliário · Registro de Marcas
+                <p className="mt-0.5 text-[11px] font-medium text-[#b88628]">
+                  Cível · Família · Previdenciário · Trabalhista
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-slate-500">
-                  R. Monsenhor Geraldo Mendes Vasconcelos, 280 · Luz - MG
+                  R. Três de Outubro, 109 · Monte Azul - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b8783e]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b88628]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -912,9 +887,9 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9e6231] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9b6e1b] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#b8783e]" />
+                <span className="size-2 shrink-0 rounded-full bg-[#b88628]" />
                 <span>SOBRE A ADVOGADA & COMPROMISSO</span>
               </motion.div>
 
@@ -922,9 +897,9 @@ export default function Home() {
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0f172a] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia pautada na precisão técnica, escuta atenta e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
-                  defesa intransigente dos seus direitos patrimoniais.
+                Uma advocacia pautada na escuta atenta, ética inegociável e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
+                  defesa apaixonada dos seus direitos.
                 </span>
               </motion.h2>
 
@@ -932,26 +907,26 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                O exercício da advocacia estratégica vai além de meras petições judiciais: <strong className="font-bold text-slate-900">ele resguarda o patrimônio, a produção e os negócios construídos com anos de suor</strong>. Seja combatendo a imposição de juros ilegais por instituições financeiras, assegurando a prorrogação de financiamentos agrícolas ou registrando a marca da sua empresa perante o INPI, cada demanda exige dedicação absoluta e estratégia personalizada.
+                Por trás de cada processo judicial existem histórias de vida, famílias buscando justiça e trabalhadores que dedicaram anos de esforço. <strong className="font-bold text-slate-900">A Dra. Ana Paula Lima construiu sua trajetória sobre o pilar do acolhimento humano</strong>, compreendendo as angústias de cada cliente e transformando preocupações em soluções jurídicas sólidas e resolutivas.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                A <strong className="font-bold text-slate-900">Dra. Maria Eduarda Noronha</strong> consolidou uma atuação de referência no Centro-Oeste de Minas Gerais e em âmbito nacional pela sua capacidade de encontrar soluções jurídicas resolutivas para questões complexas. Com 100% de avaliações 5 estrelas no Google e reconhecimento expressivo de produtores rurais e clientes corporativos, o escritório é sinônimo de segurança, clareza e combate a injustiças.
+                Seja garantindo o direito legítimo à aposentadoria rural no Norte de Minas, assegurando a proteção dos filhos em um divórcio, buscando reparação por abusos trabalhistas ou cobrando indenizações por atos ilícitos no Direito Cível, <strong className="font-bold text-slate-900">nosso compromisso é lutar incansavelmente por você</strong> com proximidade, clareza e dedicação integral.
               </motion.p>
 
-              {/* Client Quote Card from Google Reviews (Divisa Agrícola) */}
+              {/* Client Quote Card */}
               <motion.div
                 variants={reveal}
                 className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
-                  &ldquo;Contratamos os serviços jurídicos do escritório e ficamos extremamente satisfeitos com o atendimento. Comunicação clara, excelente conhecimento técnico e muita dedicação em cada detalhe da demanda. Atendimento sério, eficiente e muito profissional. Certamente indicamos.&rdquo;
+                  &ldquo;A Dra. Ana Paula cuidou do processo da aposentadoria rural com um cuidado e dedicação impressionantes. Conseguimos a concessão sem burocracia. Muito humana, atenciosa e competente. Recomendo de olhos fechados em Monte Azul e região!&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b8783e]">
-                  — DIVISA AGRÍCOLA (Avaliação verificada no Google Meu Negócio · 5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b88628]">
+                  — Marcos Vinícius Silveira (Avaliação verificada no Google · 5,0 ★)
                 </p>
               </motion.div>
 
@@ -963,19 +938,19 @@ export default function Home() {
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">5,0 ★ no Google</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    14 avaliações 100% 5 estrelas
+                    13 avaliações 5 estrelas
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-slate-900">Procuradora do INPI</p>
+                  <p className="font-bold text-slate-900">Atendimento Direto</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Registro & Proteção de Marcas
+                    Fale com a própria Dra. Ana Paula
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-slate-900">Transparência Total</p>
+                  <p className="font-bold text-slate-900">Presencial & Online</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Você sabe de tudo em tempo real
+                    Monte Azul e todo o Brasil
                   </p>
                 </div>
               </motion.div>
@@ -985,35 +960,35 @@ export default function Home() {
                 className="mt-8 flex flex-col gap-3 text-xs text-slate-800"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
-                  <span>Sede própria na R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Luz, MG</span>
+                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
+                  <span>Sede na R. Três de Outubro, 109 - Centro, Monte Azul - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b8783e] shrink-0" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Maria Eduarda Noronha</span>
+                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
+                  <span>Contato direto pelo WhatsApp com a Dra. Ana Paula Lima</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda! Gostaria de agendar uma consulta para conversar sobre o meu caso."
+                    "Olá, Dra. Ana Paula! Gostaria de agendar uma consulta para conversar sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Maria Eduarda Noronha
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Ana Paula Lima
                 </GlowingButton>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* DOBRA 4: ÁREAS DE ATUAÇÃO (PRETO - Dobra Escura de Alto Impacto) */}
+        {/* DOBRA 4: ÁREAS DE ATUAÇÃO (Obsidian Noir) */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-zinc-800 bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-zinc-800 bg-[#090a0d] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -1023,15 +998,15 @@ export default function Home() {
                 description="Conheça nossos principais pilares jurídicos. Clique em qualquer especialidade para ver detalhes, procedimentos adotados e orientações sob medida."
               >
                 Soluções jurídicas estratégicas em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
-                  Luz, Minas Gerais e em todo o território nacional.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
+                  Monte Azul, Norte de Minas e em todo o Brasil.
                 </span>
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
+                    "Olá, Dra. Ana Paula! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1056,23 +1031,23 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121215] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:bg-[#18181b] hover:shadow-[0_12px_36px_rgba(184,120,62,0.22)]"
+                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#111317] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:bg-[#171920] hover:shadow-[0_12px_36px_rgba(184,134,40,0.22)]"
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1c20] text-[#dfa968] transition-colors group-hover:border-[#b8783e] group-hover:bg-[#b8783e] group-hover:text-white">
+                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1e26] text-[#e2be67] transition-colors group-hover:border-[#b88628] group-hover:bg-[#b88628] group-hover:text-white">
                           <Icon size={22} />
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#dfa968]">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#e2be67]">
                           Especialidade
                         </span>
                       </div>
 
-                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#fae6c8]">
+                      <h3 className="mt-5 font-serif text-xl font-bold text-white transition-colors group-hover:text-[#faecd3]">
                         {area.title}
                       </h3>
 
-                      <p className="mt-1.5 text-[11px] font-semibold text-[#f4d8a8]">
+                      <p className="mt-1.5 text-[11px] font-semibold text-[#f3db9d]">
                         {area.tag}
                       </p>
 
@@ -1085,7 +1060,7 @@ export default function Home() {
                       <button
                         type="button"
                         onClick={() => setActiveArea(area)}
-                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#dfa968] cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#e2be67] cursor-pointer"
                       >
                         Ver Detalhes & Tópicos <ArrowRight size={13} />
                       </button>
@@ -1107,7 +1082,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 5: DIFERENCIAIS (BRANCO - Dobra Clara) */}
+        {/* DOBRA 5: DIFERENCIAIS (Silk Surface) */}
         <section
           id="diferenciais"
           className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
@@ -1116,11 +1091,11 @@ export default function Home() {
             <Heading
               theme="light"
               eyebrow="POR QUE NOS ESCOLHER"
-              description="A combinação entre especialização em Direito Bancário e do Agro, celeridade no atendimento e postura profundamente ética faz a diferença nos resultados que entregamos."
+              description="A união entre profundo preparo técnico, acolhimento sincero e comunicação transparente faz a diferença em cada resultado que entregamos."
             >
               O que diferencia a atuação da{" "}
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
-                Dra. Maria Eduarda Noronha?
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
+                Dra. Ana Paula Lima?
               </span>
             </Heading>
 
@@ -1131,49 +1106,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e6231]">
-                      <HeartHandshake size={14} /> Acolhimento & Agilidade
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
+                      <HeartHandshake size={14} /> Acolhimento & Humanização
                     </span>
-                    <span className="text-xs font-semibold text-[#b8783e]">
+                    <span className="text-xs font-semibold text-[#b88628]">
                       5,0 ★ Google
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Atendimento Humanizado, Claro & Focado em Soluções
+                    Atendimento Pessoal, Atento & Sem Intermediários
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Maria Eduarda é aliar sólido conhecimento técnico a uma escuta verdadeiramente atenta. Ela esclarece cada etapa com paciência e clareza, avisando imediatamente a cada andamento processual.
+                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Ana Paula é a capacidade de escutar atentamente e acolher a dor de cada pessoa. Você fala diretamente com a advogada responsável pelo seu caso, sem intermediários frios ou respostas prontas.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
-                      <span>Comunicação direta sem juridiquês ininteligível</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
+                      <span>Comunicação direta e sem juridiquês ininteligível</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
                       <span>Retorno ágil de mensagens e dúvidas no WhatsApp</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
-                      <span>Comprometimento integral com a segurança do cliente</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
+                      <span>Acolhimento sincero e empatia em momentos delicados</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Maria Eduarda! Gostaria de tirar dúvidas com você sobre o meu caso."
+                      "Olá, Dra. Ana Paula! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b8783e] hover:bg-[#b8783e] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b88628] hover:bg-[#b88628] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Maria Eduarda
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Ana Paula
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1186,46 +1161,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9e6231]">
-                      <Award size={14} /> Especialização Bancária & Agro
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
+                      <Award size={14} /> Rigor Técnico & Firmeza
                     </span>
-                    <span className="text-xs font-semibold text-[#b8783e]">
-                      Procuradora INPI
+                    <span className="text-xs font-semibold text-[#b88628]">
+                      Norte de MG & Brasil
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Rigor Técnico, Estratégia Processual & Visão de Negócio
+                    Combatividade Processual & Estratégia Jurídica Certeira
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Demandas bancárias e do agronegócio exigem estratégias refinadas: elaboração de perícias de juros, pedidos liminares para suspensão de leilões, prorrogação de créditos rurais e registro exclusivo de marcas no INPI. O escritório atua com combatividade técnica para proteger o patrimônio e a atividade do produtor.
+                    Aposentadoria rural, ações de família e causas trabalhistas exigem prova minuciosa, domínio da legislação atualizada e atuação rápida. O escritório da Dra. Ana Paula Lima combina conhecimento prático da realidade local com petições combativas que fazem valer os seus direitos perante juizados e tribunais.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
-                      <span>Análise aprofundada de contratos bancários e jurisprudência</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
+                      <span>Análise aprofundada de documentos e histórico probatório</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
-                      <span>Atuação rápida para tutelas de urgência e suspensão de atos expropriatórios</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
+                      <span>Agilidade em pedidos de liminares urgentes e tutelas de emergência</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b8783e]" />
-                      <span>Assessoria jurídica integral para produtores rurais e empresas</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
+                      <span>Acompanhamento constante até a efetiva execução da decisão</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Maria Eduarda! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Ana Paula! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b8783e] hover:bg-[#b8783e] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b88628] hover:bg-[#b88628] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1238,25 +1213,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 6: MÉTODO EM 3 PASSOS (PRETO - Dobra Escura) */}
-        <section className="relative overflow-hidden border-b border-zinc-800 bg-[#111113] py-20 text-white sm:py-24 lg:py-28">
+        {/* DOBRA 6: MÉTODO EM 3 PASSOS (Obsidian Noir) */}
+        <section className="relative overflow-hidden border-b border-zinc-800 bg-[#0f1115] py-20 text-white sm:py-24 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
                 eyebrow="COMO CUIDAMOS DO SEU CASO"
-                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o patrimônio da sua família e negócio."
+                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o amparo da sua família."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
-                  proteger seu patrimônio e resolver sua demanda com segurança.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
+                  resolver sua demanda jurídica com segurança e paz de espírito.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#18181b] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
-                &ldquo;Cada cliente e cada demanda patrimonial são únicos. Nosso compromisso é trazer 100% de clareza, dedicação e técnica em todas as fases, assegurando que você tenha amparo irrestrito e uma defesa combativa do início ao fim.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfa968]">
-                  — Dra. Maria Eduarda Noronha · Advogada Bancária e do Agro
+              <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#171920] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
+                &ldquo;Cada pessoa que chega ao meu escritório traz consigo uma história que merece ser ouvida com respeito. Nosso compromisso é trazer 100% de clareza, dedicação e técnica em todas as fases, lutando pelo seu direito do início ao fim.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e2be67]">
+                  — Dra. Ana Paula Lima · Advogada
                 </footer>
               </blockquote>
             </div>
@@ -1271,18 +1246,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Escuta Acolhedora & Diagnóstico Jurídico Pericial",
-                  "Conversa reservada pelo WhatsApp ou em nosso escritório em Luz para entender sua situação em profundidade. Análise minuciosa de contratos bancários, certidões fundiárias ou registros de marcas.",
+                  "Escuta Acolhedora & Diagnóstico Jurídico Cuidadoso",
+                  "Conversa reservada pelo WhatsApp ou em nosso escritório no centro de Monte Azul para entender sua situação em profundidade, analisando documentos, histórico de trabalho, registros civis ou contratos.",
                 ],
                 [
                   "02",
-                  "Estratégia Sob Medida & Ação Rápida",
-                  "Definição da linha de ação mais vantajosa (via extrajudicial resolutiva ou ação judicial combativa), com protocolo imediato de tutelas de urgência para estancar prejuízos e suspender leilões ou cobranças indevidas.",
+                  "Definição da Estratégia & Ação Rápida",
+                  "Traçamos o caminho mais vantajoso (seja pela via administrativa perante o INSS, acordo extrajudicial amigável ou ação judicial combativa), protocolando os pedidos necessários para estancar prejuízos.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Transparente & Informação Contínua",
-                  "Você nunca fica sem saber o que está acontecendo. Informamos cada andamento do processo em tempo real, com linguagem simples e transparência total até a vitória jurídica definitiva.",
+                  "Acompanhamento Transparente & Notificação em Tempo Real",
+                  "Você nunca fica sem saber o que está acontecendo. Informamos cada movimentação relevante do processo em linguagem simples e compreensível diretamente no seu WhatsApp, até a vitória definitiva.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1290,7 +1265,7 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#dfa968]">
+                  <span className="font-serif text-2xl font-semibold text-[#e2be67]">
                     {number}
                   </span>
                   <div>
@@ -1305,21 +1280,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 7: AVALIAÇÕES GOOGLE 5.0 (BRANCO - Dobra Clara) */}
+        {/* DOBRA 7: AVALIAÇÕES GOOGLE 5.0 (Silk Surface) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-b border-stone-200 bg-[#f8fafc] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-stone-200 bg-[#fbf9f5] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos reais de clientes e empresas sobre a competência, a agilidade e o atendimento acolhedor da Dra. Maria Eduarda Noronha em Luz e região."
+                description="Veja depoimentos reais de pessoas e famílias sobre a competência, a agilidade e o atendimento acolhedor da Dra. Ana Paula Lima em Monte Azul e região."
               >
                 Avaliada com 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
-                  14 avaliações unânimes no Google.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
+                  13 avaliações no Google.
                 </span>
               </Heading>
 
@@ -1333,17 +1308,17 @@ export default function Home() {
                     <span className="font-serif text-2xl font-bold text-slate-900">
                       5,0
                     </span>
-                    <div className="flex text-[#dfa968]">
+                    <div className="flex text-[#e2be67]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={15} className="fill-[#dfa968]" />
+                        <Star key={i} size={15} className="fill-[#e2be67]" />
                       ))}
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-slate-900">
-                    Maria Eduarda Noronha — Advocacia
+                    Ana Paula Lima Advocacia
                   </p>
                   <p className="text-[11px] text-slate-500">
-                    14 avaliações 100% 5 estrelas no Google
+                    13 avaliações 5 estrelas no Google
                   </p>
                 </div>
               </div>
@@ -1360,16 +1335,16 @@ export default function Home() {
                 <motion.article
                   key={review.name}
                   variants={reveal}
-                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#b8783e] hover:shadow-md"
+                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex text-[#dfa968]">
+                      <div className="flex text-[#e2be67]">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} size={14} className="fill-[#dfa968]" />
+                          <Star key={i} size={14} className="fill-[#e2be67]" />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#b8783e]/25 bg-[#fdfaf5] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9e6231]">
+                      <span className="rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9b6e1b]">
                         Google Verificado
                       </span>
                     </div>
@@ -1383,8 +1358,8 @@ export default function Home() {
                     </p>
 
                     {review.reply && (
-                      <div className="mt-3 rounded-lg border-l-2 border-[#b8783e] bg-[#fdfaf5] p-2.5 text-[11px] leading-5 text-slate-700">
-                        <p className="font-semibold text-[#9e6231]">Resposta da Dra. Maria Eduarda:</p>
+                      <div className="mt-3 rounded-lg border-l-2 border-[#b88628] bg-[#fdfbf7] p-2.5 text-[11px] leading-5 text-slate-700">
+                        <p className="font-semibold text-[#9b6e1b]">Resposta da Dra. Ana Paula:</p>
                         <p className="italic">{review.reply}</p>
                       </div>
                     )}
@@ -1408,30 +1383,30 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#b8783e] hover:text-[#b8783e]"
+                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#b88628] hover:text-[#b88628]"
               >
-                <GoogleIcon size={16} /> Ver todas as 14 avaliações no Google <ArrowUpRight size={14} />
+                <GoogleIcon size={16} /> Ver avaliações no Google <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
         </section>
 
-        {/* DOBRA 8: PERGUNTAS FREQUENTES / FAQ (PRETO - Dobra Escura) */}
+        {/* DOBRA 8: PERGUNTAS FREQUENTES / FAQ (Obsidian Noir) */}
         <section
           id="faq"
-          className="scroll-mt-24 border-b border-zinc-800 bg-[#09090b] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-zinc-800 bg-[#090a0d] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-4xl px-5 sm:px-8">
             <div className="text-center">
               <p className="eyebrow-light justify-center">DÚVIDAS FREQUENTES</p>
               <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.15rem]">
                 Respostas diretas e esclarecedoras sobre os{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4d8a8] to-[#dfa968]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
                   seus direitos e nosso atendimento.
                 </span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-zinc-400">
-                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Maria Eduarda no WhatsApp.
+                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Ana Paula no WhatsApp.
               </p>
             </div>
 
@@ -1441,7 +1416,7 @@ export default function Home() {
                 return (
                   <div
                     key={faq.q}
-                    className="overflow-hidden rounded-xl border border-zinc-800 bg-[#121215] transition-colors hover:border-zinc-700"
+                    className="overflow-hidden rounded-xl border border-zinc-800 bg-[#111317] transition-colors hover:border-zinc-700"
                   >
                     <button
                       type="button"
@@ -1451,7 +1426,7 @@ export default function Home() {
                       <span>{faq.q}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#dfa968] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#e2be67] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
@@ -1473,7 +1448,7 @@ export default function Home() {
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
+                    "Olá, Dra. Ana Paula! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
@@ -1486,7 +1461,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 9: CONTATO & SEDE (BRANCO - Dobra Clara) */}
+        {/* DOBRA 9: CONTATO & SEDE (Silk Surface) */}
         <section
           id="contato"
           className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
@@ -1496,10 +1471,10 @@ export default function Home() {
               <Heading
                 theme="light"
                 eyebrow="CONTATO & AGENDAMENTO"
-                description="Fale diretamente com a Dra. Maria Eduarda Noronha pelo WhatsApp para orientação imediata com sigilo absoluto e rigor técnico."
+                description="Fale diretamente com a Dra. Ana Paula Lima pelo WhatsApp para orientação imediata com acolhimento, sigilo absoluto e rigor técnico."
               >
                 Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9e6231] via-[#d4944d] to-[#80182a]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
                   atender suas necessidades e defender seus direitos.
                 </span>
               </Heading>
@@ -1507,14 +1482,14 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Maria Eduarda
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Ana Paula
                 </GlowingButton>
                 <p className="text-[11px] leading-5 text-slate-600">
                   WhatsApp e telefone direto:{" "}
@@ -1526,48 +1501,48 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#b8783e]"
+                    className="mt-0.5 shrink-0 text-[#b88628]"
                   />
                   <div>
                     <p className="font-semibold text-slate-900">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#9e6231] font-bold">
-                      Segunda a Sexta · 08:00 às 17:00
+                    <p className="mt-0.5 text-[#9b6e1b] font-bold">
+                      Segunda a Sexta · 08:00 às 18:00
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Atendimento com horário agendado para dedicação exclusiva à sua demanda
+                      Atendimento presencial em Monte Azul e suporte online contínuo
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#b8783e]" />
+                  <Phone size={16} className="shrink-0 text-[#b88628]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-slate-900 transition-colors hover:text-[#b8783e]"
+                    className="font-medium text-slate-900 transition-colors hover:text-[#b88628]"
                   >
                     {PHONE_DISPLAY} (Ligações e WhatsApp)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#b8783e]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#b88628]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#b8783e] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b88628] text-slate-900 font-medium"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#b8783e]" />
+                  <Mail size={16} className="shrink-0 text-[#b88628]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#b8783e] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b88628] text-slate-900 font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1576,13 +1551,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#b8783e]"
+                    className="mt-0.5 shrink-0 text-[#b88628]"
                   />
                   <div>
                     <span className="text-slate-900 font-medium">{ADDRESS_TEXT}</span>
                     <br />
                     <span className="text-[11px] text-slate-500">
-                      Sede em Luz - MG e assessoria jurídica digital em todo o território nacional
+                      Sede em Monte Azul - MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1590,25 +1565,25 @@ export default function Home() {
             </div>
 
             {/* Brand Presentation Card */}
-            <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-[#f8fafc] p-7 shadow-lg sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b8783e] via-[#dfa968] to-[#80182a]" />
+            <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-lg sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b88628] via-[#e2be67] to-[#80182a]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative size-16 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma MN - Maria Eduarda Noronha Advocacia"
+                    alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#b8783e]">
-                    MARIA EDUARDA NORONHA
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#b88628]">
+                    ANA PAULA LIMA
                   </p>
                   <p className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
-                    ADVOCACIA E CONSULTORIA
+                    ADVOCACIA
                   </p>
                 </div>
               </div>
@@ -1617,14 +1592,14 @@ export default function Home() {
               <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-stone-200 bg-stone-100 shadow-xs">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Maria Eduarda Noronha em seu escritório em Luz - MG"
+                  alt="Dra. Ana Paula Lima em seu escritório"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
                   <p className="text-xs font-semibold">Atendimento Acolhedor, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-200">Luz · Centro-Oeste de Minas & Brasil</p>
+                  <p className="text-[10px] text-stone-200">Monte Azul · Norte de Minas & Atendimento Online</p>
                 </div>
               </div>
 
@@ -1640,27 +1615,27 @@ export default function Home() {
 
               {/* Weekly schedule table */}
               <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b8783e]">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b88628]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
                   <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#9e6231]">
-                    08:00 às 17:00
+                  <span className="text-right font-semibold text-[#9b6e1b]">
+                    08:00 às 18:00
                   </span>
                   <span>Sábados e Domingos</span>
                   <span className="text-right font-medium text-slate-500">
                     Plantão via WhatsApp
                   </span>
                   <span>Localização</span>
-                  <span className="text-right text-slate-900 font-semibold">Luz · MG</span>
+                  <span className="text-right text-slate-900 font-semibold">Monte Azul · MG</span>
                 </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Maria Eduarda Noronha! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1674,20 +1649,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 10: PRÉ-FOOTER BANNER (PRETO) */}
-        <section className="border-t border-zinc-800 bg-[#111113] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
+        {/* DOBRA 10: PRÉ-FOOTER BANNER (Obsidian Noir) */}
+        <section className="border-t border-zinc-800 bg-[#0f1115] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
               <p className="eyebrow-light">
-                <Sparkles size={13} className="text-[#dfa968]" /> MARIA EDUARDA NORONHA — ADVOCACIA E CONSULTORIA JURÍDICA
+                <Sparkles size={13} className="text-[#e2be67]" /> ANA PAULA LIMA ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Pronta para blindar seu patrimônio e garantir segurança jurídica aos seus negócios.
+                Pronta para acolher sua história e defender seus direitos com firmeza.
               </h2>
             </div>
             <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dra. Maria Eduarda! Preciso de orientação jurídica para o meu caso."
+                "Olá, Dra. Ana Paula! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
               size="lg"
@@ -1699,20 +1674,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 11: RODAPÉ INSTITUCIONAL (PRETO) */}
-        <footer className="border-t border-zinc-800 bg-[#09090b] px-5 py-14 text-zinc-400 sm:px-8 lg:px-12">
+        {/* DOBRA 11: RODAPÉ INSTITUCIONAL (Obsidian Noir) */}
+        <footer className="border-t border-zinc-800 bg-[#090a0d] px-5 py-14 text-zinc-400 sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
             {/* Col 1: Brand */}
             <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Maria Eduarda Noronha — Advocacia e Consultoria Jurídica"
+                aria-label="Ana Paula Lima Advocacia"
                 className="flex items-center gap-3"
               >
                 <div className="relative size-12 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma MN - Maria Eduarda Noronha Advocacia"
+                    alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
@@ -1720,16 +1695,16 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-serif text-lg font-bold tracking-[0.14em] text-white">
-                    MARIA EDUARDA NORONHA
+                    ANA PAULA LIMA
                   </p>
-                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#dfa968] uppercase">
-                    ADVOCACIA E CONSULTORIA JURÍDICA
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#e2be67] uppercase">
+                    A D V O C A C I A
                   </p>
                 </div>
               </a>
 
               <p className="mt-4 max-w-md text-xs leading-6 text-zinc-400">
-                Advocacia especializada em Direito Bancário, Direito do Agronegócio, Direito Imobiliário e Registro de Marcas no INPI com atuação séria, estratégica e humanizada em Luz, Centro-Oeste mineiro e em todo o Brasil.
+                Advocacia humanizada e estratégica especializada em Direito de Família, Previdenciário (INSS Rural e Urbano), Trabalhista e Cível, com sede em Monte Azul - MG e atuação online em todo o Brasil.
               </p>
 
               <div className="mt-5 flex items-center gap-3 text-xs">
@@ -1737,17 +1712,17 @@ export default function Home() {
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#dfa968] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
                 >
-                  <InstagramIcon size={14} className="text-[#dfa968]" /> Instagram @adv.marianoronha
+                  <InstagramIcon size={14} className="text-[#e2be67]" /> Instagram @adv.anapaulalimab
                 </a>
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#121215] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#dfa968] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
                 >
-                  <GoogleIcon size={14} /> Google 5,0 ★ (14 avaliações)
+                  <GoogleIcon size={14} /> Google 5,0 ★ (13 avaliações)
                 </a>
               </div>
             </div>
@@ -1765,7 +1740,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#sobre">
-                    A Advogada (Dra. Maria Eduarda)
+                    A Advogada (Dra. Ana Paula)
                   </a>
                 </li>
                 <li>
@@ -1806,10 +1781,10 @@ export default function Home() {
                   <strong className="text-white">Telefone / WhatsApp:</strong>
                   <br />
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Maria Eduarda! Gostaria de falar com seu escritório.")}
+                    href={getWhatsAppUrl("Olá, Dra. Ana Paula! Gostaria de falar com seu escritório.")}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#dfa968] hover:underline"
+                    className="text-[#e2be67] hover:underline"
                   >
                     {PHONE_DISPLAY}
                   </a>
@@ -1822,7 +1797,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Horário:</strong>
                   <br />
-                  Segunda a Sexta · 08:00 às 17:00
+                  Segunda a Sexta · 08:00 às 18:00
                 </li>
                 <li>
                   <strong className="text-white">E-mail:</strong>
@@ -1834,7 +1809,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Especialização:</strong>
                   <br />
-                  Direito Bancário & Agro · INPI
+                  Cível · Família · Previdenciário · Trabalhista
                 </li>
               </ul>
             </div>
@@ -1842,10 +1817,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-800/80 pt-6 text-center text-[11px] text-zinc-500">
             <p>
-              © {new Date().getFullYear()} MARIA EDUARDA NORONHA — ADVOCACIA E CONSULTORIA JURÍDICA. Todos os direitos reservados.
+              © {new Date().getFullYear()} ANA PAULA LIMA ADVOCACIA. Todos os direitos reservados.
             </p>
             <p className="mt-1 text-[10px]">
-              R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior, Luz - MG, 35595-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
+              R. Três de Outubro, 109, Monte Azul - MG, 39500-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1857,11 +1832,11 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Maria Eduarda! Gostaria de um atendimento jurídico pelo WhatsApp."
+              "Olá, Dra. Ana Paula! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Maria Eduarda Noronha"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Ana Paula Lima"
             className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
             <span className="relative flex size-3">
@@ -1870,7 +1845,7 @@ export default function Home() {
             </span>
             <WhatsAppIcon size={18} className="text-white" />
             <span className="hidden sm:inline">
-              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Maria Eduarda Noronha
+              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Ana Paula Lima
             </span>
             <span className="sm:hidden font-bold">WhatsApp</span>
           </a>
@@ -1895,13 +1870,13 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-zinc-700 bg-[#121215] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-zinc-700 bg-[#111317] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#dfa968] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#e2be67] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
@@ -1910,15 +1885,15 @@ export default function Home() {
                   <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-zinc-700 bg-black p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma MN - Maria Eduarda Noronha Advocacia"
+                      alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">MARIA EDUARDA NORONHA ADVOCACIA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#dfa968] uppercase">
+                    <p className="eyebrow-light">ANA PAULA LIMA ADVOCACIA</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#e2be67] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1936,7 +1911,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 border-t border-zinc-800 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfa968]">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e2be67]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
@@ -1945,7 +1920,7 @@ export default function Home() {
                         key={topic}
                         className="flex items-center gap-3 text-sm text-zinc-300"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#dfa968]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#e2be67]" />
                         <span>{topic}</span>
                       </li>
                     ))}

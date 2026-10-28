@@ -36,69 +36,77 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#09090b",
+  themeColor: "#090a0d",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mariaeduardanoronha.adv.br"),
-  title: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica | Luz · MG",
+  metadataBase: new URL("https://www.anapaulalima.adv.br"),
+  title: "Ana Paula Lima Advocacia | Monte Azul · MG | Atendimento Presencial e Online",
   description:
-    "⚖️ Dra. Maria Eduarda Noronha — Advocacia Especializada em Direito Bancário, Agronegócio, Imobiliário e Registro de Marcas no INPI. Sede em Luz - MG e Atendimento em Todo o Brasil. Nota Máxima 5,0 ★ no Google (14 avaliações).",
+    "⚖️ Dra. Ana Paula Lima — Advocacia Especializada em Direito de Família, Previdenciário (INSS), Trabalhista e Cível. Sede em Monte Azul - MG e Atendimento Online em Todo o Brasil. Nota Máxima 5,0 ★ no Google (13 avaliações).",
   keywords: [
-    "Maria Eduarda Noronha Advocacia",
-    "Dra Maria Eduarda Noronha",
-    "Advogada em Luz MG",
-    "Advogado Luz Minas Gerais",
-    "Advogada Bancária e do Agro",
-    "Direito Bancário Luz MG",
-    "Revisão de Contratos Bancários",
-    "Juros Abusivos e Execuções",
-    "Direito do Agronegócio Minas Gerais",
-    "Crédito Rural e Dívidas Rurais",
-    "Renegociação de CPR e MCR",
-    "Contratos Agrários e Arrendamento",
-    "Direito Imobiliário Luz MG",
-    "Regularização Fundiária e Usucapião",
-    "Procuradora do INPI",
-    "Registro de Marcas INPI",
-    "Registro de Marcas Agronegócio",
-    "Divisa Agrícola Advocacia",
+    "Ana Paula Lima Advocacia",
+    "Dra Ana Paula Lima",
+    "Advogada em Monte Azul MG",
+    "Advogado Monte Azul Minas Gerais",
+    "Advogada Previdenciária Monte Azul",
+    "Aposentadoria Rural e Urbana INSS",
+    "BPC LOAS Monte Azul",
+    "Auxílio Doença INSS Monte Azul",
+    "Direito de Família Monte Azul",
+    "Divórcio e Pensão Alimentícia",
+    "Guarda de Filhos e Partilha",
+    "Inventário e Sucessões MG",
+    "Advogada Trabalhista Monte Azul",
+    "Direitos do Trabalhador e Rescisão",
+    "Horas Extras e Acidente de Trabalho",
+    "Direito Cível e Consumidor",
+    "Ações de Indenização Monte Azul",
+    "Norte de Minas Gerais Advocacia",
+    "Atendimento Jurídico Online Brasil",
   ],
-  authors: [{ name: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica" }],
-  creator: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica",
-  publisher: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica",
+  authors: [{ name: "Ana Paula Lima Advocacia" }],
+  creator: "Ana Paula Lima Advocacia",
+  publisher: "Ana Paula Lima Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=men2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=men2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=men2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=men2", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=men2", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=apl1", sizes: "any" },
+      { url: "/favicon-32x32.png?v=apl1", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=apl1", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=apl1", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=apl1", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=men2",
-    apple: [{ url: "/apple-icon.png?v=men2", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=apl1",
+    apple: [{ url: "/apple-icon.png?v=apl1", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.mariaeduardanoronha.adv.br",
-    title: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica | Luz · MG",
+    url: "https://www.anapaulalima.adv.br",
+    title: "Ana Paula Lima Advocacia | Monte Azul · MG | Atendimento Presencial e Online",
     description:
-      "⚖️ Advocacia Especializada em Direito Bancário, Agronegócio, Imobiliário e Registro de Marcas no INPI. Nota máxima 5,0 ★ no Google (14 avaliações). R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Luz, MG.",
-    siteName: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica",
+      "⚖️ Advocacia Especializada em Direito de Família, Previdenciário (INSS), Trabalhista e Cível. Nota máxima 5,0 ★ no Google (13 avaliações). R. Três de Outubro, 109, Monte Azul - MG.",
+    siteName: "Ana Paula Lima Advocacia",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 341,
-        alt: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica",
+        height: 512,
+        alt: "Ana Paula Lima Advocacia",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ana Paula Lima Advocacia | Monte Azul · MG",
+    description:
+      "⚖️ Advocacia Humanizada e Combativa em Direito de Família, Previdenciário, Trabalhista e Cível. Nota máxima 5,0 ★ no Google.",
+    images: ["/logo.png"],
   },
 };
 
@@ -110,36 +118,38 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Maria Eduarda Noronha — Advocacia e Consultoria Jurídica",
-    alternateName: "Dra. Maria Eduarda Noronha Advocacia",
-    legalName: "Maria Eduarda Noronha Advocacia e Consultoria Jurídica",
-    telephone: "+55-37-99972-0495",
-    email: "contato@mariaeduardanoronha.adv.br",
-    url: "https://www.mariaeduardanoronha.adv.br",
-    image: "https://www.mariaeduardanoronha.adv.br/logo.png",
+    name: "Ana Paula Lima Advocacia",
+    alternateName: "Dra. Ana Paula Lima",
+    legalName: "Ana Paula Lima Advocacia",
+    telephone: "+55-38-99830-8579",
+    email: "contato@anapaulalima.adv.br",
+    url: "https://www.anapaulalima.adv.br",
+    image: "https://www.anapaulalima.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Monsenhor Geraldo Mendes Vasconcelos, 280 - Dom Belchior",
-      addressLocality: "Luz",
+      streetAddress: "R. Três de Outubro, 109",
+      addressLocality: "Monte Azul",
       addressRegion: "MG",
-      postalCode: "35595-000",
+      postalCode: "39500-000",
       addressCountry: "BR",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "14",
+      reviewCount: "13",
     },
     areaServed: [
-      "Luz",
-      "Bom Despacho",
-      "Lagoa da Prata",
-      "Dores do Indaiá",
-      "Santo Antônio do Monte",
-      "Formiga",
+      "Monte Azul",
+      "Porteirinha",
+      "Espinosa",
+      "Janaúba",
+      "Mato Verde",
+      "Catuti",
+      "Gameleiras",
+      "Montes Claros",
       "Minas Gerais",
-      "Centro-Oeste de Minas",
+      "Norte de Minas",
       "Brasil",
     ],
     openingHoursSpecification: [
@@ -153,12 +163,12 @@ export default function RootLayout({
           "Friday",
         ],
         opens: "08:00",
-        closes: "17:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/adv.marianoronha",
-      "https://wa.me/5537999720495",
+      "https://www.instagram.com/adv.anapaulalimab",
+      "https://wa.me/5538998308579",
     ],
   };
 
@@ -168,19 +178,19 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=men2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=men2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=men2" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=men2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=men2" />
-        <link rel="shortcut icon" href="/favicon.ico?v=men2" />
-        <meta name="theme-color" content="#09090b" />
+        <link rel="icon" href="/favicon.ico?v=apl1" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=apl1" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=apl1" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=apl1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=apl1" />
+        <link rel="shortcut icon" href="/favicon.ico?v=apl1" />
+        <meta name="theme-color" content="#090a0d" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#b8783e] selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#b88628] selection:text-white">
         {children}
       </body>
     </html>
