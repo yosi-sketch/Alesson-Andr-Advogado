@@ -37,7 +37,7 @@ export default function GlowingButton({
 
   // High-contrast prestige styling (black & white with signature polished gold & warm wine accents)
   const variantClasses = {
-    // Primary Signature: Polished Imperial Gold & Champagne (From Ana Paula Lima Logo)
+    // Primary Signature: Polished Imperial Gold & Champagne (From Valéria Raposo Logo)
     gold:
       "relative border border-[#fdf5e2]/90 bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] text-white font-black tracking-[0.14em] " +
       "shadow-[0_6px_22px_-2px_rgba(184,134,40,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +

@@ -2,42 +2,42 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/112317be-af78-4d1f-84d0-1632d1a6da9b/.user_uploaded/media_1793137721206_934c4177.jpg';
-const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/112317be-af78-4d1f-84d0-1632d1a6da9b/.user_uploaded/media_1793137691459_c3c09d22.png';
+const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/827a0cb2-d46e-438d-b223-d51de8f16a7d/.user_uploaded/media_1793195495811_dd8247b9.jpg';
+const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/827a0cb2-d46e-438d-b223-d51de8f16a7d/.user_uploaded/media_1793195459222_fc5bb032.png';
 
 async function generateAssets() {
   const pubDir = path.resolve('public');
   const appDir = path.resolve('app');
   if (!fs.existsSync(pubDir)) fs.mkdirSync(pubDir, { recursive: true });
 
-  console.log('Generating brand assets for Ana Paula Lima Advocacia...');
+  console.log('Generating brand assets for Valéria Raposo — Advogada...');
 
   // 1. Raw Portrait Photo
   await sharp(pPhoto)
     .jpeg({ quality: 96, mozjpeg: true })
-    .toFile(path.join(pubDir, 'ana-paula-lima.jpg'));
+    .toFile(path.join(pubDir, 'valeria-raposo.jpg'));
 
-  // 2. Hero photo (portrait framing focused on upper torso and head, optimal for hero section)
+  // 2. Hero photo (portrait framing focused on head & upper torso)
   await sharp(pPhoto)
     .resize(750, 920, { fit: 'cover', position: 'top' })
     .jpeg({ quality: 95, mozjpeg: true })
-    .toFile(path.join(pubDir, 'ana-paula-hero.jpg'));
+    .toFile(path.join(pubDir, 'valeria-raposo-hero.jpg'));
 
-  // 3. Sobre photo (portrait framing with warm ambiance)
+  // 3. Sobre photo (portrait framing)
   await sharp(pPhoto)
     .resize(750, 900, { fit: 'cover', position: 'top' })
     .jpeg({ quality: 95, mozjpeg: true })
-    .toFile(path.join(pubDir, 'ana-paula-sobre.jpg'));
+    .toFile(path.join(pubDir, 'valeria-raposo-sobre.jpg'));
 
   // 4. Logo full
   await sharp(pLogo)
     .png()
     .toFile(path.join(pubDir, 'logo.png'));
 
-  // 5. Monogram symbol: The "AP" monogram with scales of justice
-  // Bounds found: minX: 344, maxX: 687, minY: 7, maxY: 357 (width ~343, height ~350)
+  // 5. Monogram symbol: The "VR" inside the gold square frame
+  // Crop bounds: left 330, top 24, width 364, height 310
   const symbolCrop = await sharp(pLogo)
-    .extract({ left: 340, top: 5, width: 352, height: 354 })
+    .extract({ left: 330, top: 24, width: 364, height: 310 })
     .toBuffer();
 
   // Place into a square 512x512 with transparent padding for standalone symbol use
@@ -53,7 +53,7 @@ async function generateAssets() {
     .png()
     .toFile(path.join(pubDir, 'logo-symbol.png'));
 
-  // 6. Favicon Badge: Luxury Obsidian Noir with Polished Gold Rim and AP Justice Scales Monogram
+  // 6. Favicon Badge: Luxury Obsidian Noir with Polished Gold Rim and VR Monogram
   const badgeSvg = `
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -76,7 +76,7 @@ async function generateAssets() {
   `;
 
   const symbolBadge = await sharp(symbolCrop)
-    .resize(370, 370, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(360, 360, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .toBuffer();
 
   const icon512 = await sharp(Buffer.from(badgeSvg))
@@ -139,9 +139,9 @@ async function generateAssets() {
 
   // Clean up any remaining previous client files in public
   const oldFiles = [
-    'maria-eduarda.jpg',
-    'maria-eduarda-hero.jpg',
-    'maria-eduarda-sobre.jpg'
+    'ana-paula-lima.jpg',
+    'ana-paula-hero.jpg',
+    'ana-paula-sobre.jpg'
   ];
   for (const f of oldFiles) {
     const full = path.join(pubDir, f);
@@ -151,7 +151,7 @@ async function generateAssets() {
     }
   }
 
-  console.log('✅ Successfully generated all brand assets and favicons for Ana Paula Lima Advocacia!');
+  console.log('✅ Successfully generated all brand assets and favicons for Valéria Raposo — Advogada!');
 }
 
 generateAssets().catch(err => {

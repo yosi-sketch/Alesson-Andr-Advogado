@@ -24,36 +24,36 @@ import {
   ChevronDown,
   Users,
   Briefcase,
-  BadgePercent,
   AlertCircle,
   Building,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5538998308579";
-const PHONE_DISPLAY = "(38) 99830-8579";
-const EMAIL_CONTACT = "contato@anapaulalima.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/adv.anapaulalimab";
-const INSTAGRAM_HANDLE = "@adv.anapaulalimab";
-const LAWYER_NAME = "Dra. Ana Paula Lima";
-const LAWYER_TITLE = "Advogada Especialista · OAB/MG";
-const FIRM_NAME = "Ana Paula Lima Advocacia";
-const ADDRESS_TEXT = "R. Três de Outubro, 109, Monte Azul - MG, 39500-000";
-const REGION_TEXT = "Monte Azul · Porteirinha · Espinosa · Janaúba · Mato Verde · Norte de Minas & Atendimento Online em Todo o Brasil";
+const WHATSAPP_NUMBER = "5533988348180";
+const PHONE_DISPLAY = "(33) 98834-8180";
+const EMAIL_CONTACT = "contato@valeriaraposo.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/valeriaraposo.adv/";
+const INSTAGRAM_HANDLE = "@valeriaraposo.adv";
+const LAWYER_NAME = "Dra. Valéria Raposo";
+const LAWYER_TITLE = "Advogada · OAB/MG";
+const FIRM_NAME = "Valéria Raposo Advocacia";
+const ADDRESS_TEXT = "R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG, 36900-010";
+const REGION_TEXT =
+  "Manhuaçu · Reduto · Simonésia · Manhumirim · Lajinha · Caratinga · Zona da Mata & Atendimento Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Ana+Paula+Lima+Advocacia%0AMonte+Azul+%C2%B7+MG%0A&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Val%C3%A9ria+Raposo+%E2%80%94+Advogada%0AManhua%C3%A7u+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/ana-paula-hero.jpg";
-const FOTO_SOBRE_SRC = "/ana-paula-sobre.jpg";
+const FOTO_HERO_SRC = "/valeria-raposo-hero.jpg";
+const FOTO_SOBRE_SRC = "/valeria-raposo-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Ana Paula Lima! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
+    "Olá, Dra. Valéria Raposo! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -154,227 +154,234 @@ const practiceAreas: PracticeArea[] = [
     icon: Users,
     tag: "Divórcio · Pensão Alimentícia · Guarda · Partilha · Inventários",
     summary:
-      "Atuação humanizada, ética e combativa para proteger os vínculos mais importantes da sua vida, garantindo a segurança dos filhos e a integridade do patrimônio familiar.",
+      "Atuação acolhedora, estratégica e resolutiva para proteger quem você ama e assegurar a justa partilha do patrimônio familiar com total discrição.",
     details:
-      "As demandas do Direito de Família exigem técnica apurada, sensibilidade e acolhimento. A Dra. Ana Paula Lima atua de forma firme e empática para conduzir divórcios, fixação e revisão justa de alimentos, regulamentação de guarda e inventários com agilidade, minimizando desgastes emocionais e protegendo o futuro de quem você ama.",
+      "Questões de família exigem sensibilidade humana combinada com firmeza técnica. A Dra. Valéria Raposo atua de forma estratégica na condução de divórcios consensuais e litigiosos, fixação e revisão justa de alimentos, regulamentação de guarda e inventários céleres, priorizando a paz familiar e a segurança patrimonial.",
     topics: [
-      "Divórcio consensual em cartório (rápido e econômico) e divórcio judicial contencioso",
-      "Fixação, revisão (aumento/redução) e execução de pensão alimentícia (cobrança de atrasados)",
-      "Guarda compartilhada e unilateral, regulamentação de convivência e proteção contra alienação parental",
-      "Reconhecimento e dissolução de união estável com partilha justa de bens adquiridos",
-      "Inventário judicial e extrajudicial em cartório com regularização célere de herança",
-      "Planejamento sucessório, testamentos e doações de bens com reserva de usufruto",
+      "Divórcio extrajudicial em cartório (ágil e menos oneroso) e divórcio judicial contencioso",
+      "Fixação, revisão (aumento ou redução) e execução de pensão alimentícia com cobrança ágil de atrasados",
+      "Regulamentação de guarda compartilhada, convivência familiar e proteção integral dos filhos",
+      "Reconhecimento e dissolução de união estável com partilha justa de patrimônio comum",
+      "Inventário judicial e extrajudicial em cartório com regularização segura de bens herdados",
+      "Planejamento sucessório familiar, testamentos e doações com cláusulas protetivas",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de atendimento jurídico sobre Direito de Família (divórcio, pensão, guarda ou inventário).",
-  },
-  {
-    id: "direito-previdenciario",
-    title: "Direito Previdenciário (INSS & Trabalhador Rural)",
-    icon: HeartHandshake,
-    tag: "Aposentadoria Rural & Urbana · BPC/LOAS · Auxílio-Doença · Pensão por Morte",
-    summary:
-      "Assessoria especializada para garantir a sua aposentadoria e benefícios do INSS sem demora, com ampla experiência na comprovação do tempo de trabalho no campo no Norte de Minas.",
-    details:
-      "Conquistar um benefício previdenciário exige comprovação documental rigorosa e conhecimento aprofundado das exigências do INSS. A Dra. Ana Paula Lima atua administrativamente e judicialmente na concessão de aposentadorias rurais e urbanas, pedidos de BPC/LOAS e reversão de benefícios negados indevidamente pelo INSS.",
-    topics: [
-      "Aposentadoria por Idade Rural (especialista na comprovação de atividade de pequeno produtor, parceiro, meeiro e trabalhador rural)",
-      "Aposentadoria Urbana por Idade, Tempo de Contribuição e regras de transição da Reforma da Previdência",
-      "BPC / LOAS (Benefício de Prestação Continuada para Idosos 65+ e Pessoas com Deficiência de qualquer idade)",
-      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Incapacidade Permanente (Invalidez)",
-      "Pensão por Morte rural e urbana, Auxílio-Reclusão e Salário-Maternidade para segurada especial",
-      "Planejamento Previdenciário completo e recursos contra indeferimentos injustos do INSS",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de consultoria sobre benefício do INSS (aposentadoria rural/urbana, BPC/LOAS ou auxílio-doença).",
-  },
-  {
-    id: "direito-trabalhista",
-    title: "Direito do Trabalho & Defesa do Trabalhador",
-    icon: Briefcase,
-    tag: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo · Acidentes",
-    summary:
-      "Defesa firme e combativa dos direitos trabalhistas para garantir o pagamento justo de rescisões, horas extras e reparação por condições abusivas de trabalho.",
-    details:
-      "Muitos trabalhadores dedicam anos de esforço sem receber seus direitos legítimos previstos pela CLT. A Dra. Ana Paula Lima atua com rigor na apuração de valores devidos, reconhecimento de vínculo de emprego sem carteira assinada, rescisão indireta quando a empresa comete faltas graves e ações indenizatórias.",
-    topics: [
-      "Cobrança integral de verbas rescisórias não pagas, saldo de salário, aviso prévio, férias e 13º",
-      "Ação de Rescisão Indireta do Contrato de Trabalho (\"demissão do empregador por descumprimento legal\")",
-      "Reconhecimento formal de vínculo de emprego com anotação na Carteira de Trabalho e liberação de FGTS e Seguro-Desemprego",
-      "Cobrança de horas extras, intervalos para descanso não usufruídos e adicional noturno",
-      "Pedidos de Adicional de Insalubridade e Periculosidade para atividades com risco à saúde ou integridade física",
-      "Ações indenizatórias por acidente de trabalho, doenças ocupacionais e assédio moral no ambiente corporativo",
-    ],
-    whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de orientação jurídica sobre direitos trabalhistas (rescisão, horas extras ou rescisão indireta).",
+      "Olá, Dra. Valéria Raposo! Gostaria de consultoria jurídica sobre Direito de Família (divórcio, pensão, guarda ou inventário).",
   },
   {
     id: "direito-civel",
     title: "Direito Cível & Responsabilidade Civil",
     icon: Scale,
-    tag: "Indenizações · Danos Morais · Cobranças · Contratos · Responsabilidade Civil",
+    tag: "Ações Indenizatórias · Contratos · Cobrança de Créditos · Posse e Propriedade",
     summary:
-      "Proteção dos seus interesses civis, reparação por prejuízos materiais e morais, cobrança de créditos e defesa contra atos ilícitos com estratégia jurídica certeira.",
+      "Soluções assertivas para reparação de prejuízos materiais e morais, elaboração e revisão de contratos e defesa intransigente do seu patrimônio.",
     details:
-      "As relações civis demandam segurança jurídica e rápida resposta judicial. O escritório da Dra. Ana Paula Lima promove defesas consistentes e ações indenizatórias contra abusos contratuais, descumprimentos de acordos, prejuízos patrimoniais e cobranças ilegais, assegurando a justa reparação e respeito aos seus direitos.",
+      "As relações civis demandam respaldo jurídico confiável para prevenir prejuízos e buscar reparações integrais. O escritório da Dra. Valéria Raposo promove ações indenizatórias consistentes contra atos ilícitos, descumprimentos de contratos, cobranças de títulos e proteção da posse e propriedade de imóveis.",
     topics: [
-      "Ações Indenizatórias por Danos Morais e Danos Materiais decorrentes de prejuízos causados por terceiros",
-      "Cobrança judicial e extrajudicial de títulos de crédito, promissórias, cheques e contratos inadimplidos",
-      "Elaboração, análise crítica e blindagem de Contratos Civis, Locações, Compra e Venda e Prestação de Serviços",
-      "Rescisão contratual com restituição de valores pagos e aplicação de penalidades cabíveis",
-      "Ações de Usucapião judicial e extrajudicial para regularização definitiva da posse de imóveis",
-      "Ações Possessórias (Reintegração e Manutenção de Posse) para proteção de propriedades e terrenos",
+      "Ações indenizatórias por danos morais, materiais e estéticos decorrentes de atos ilícitos e acidentes",
+      "Elaboração, análise crítica e blindagem de Contratos Civis, Compra e Venda de Imóveis e Locações",
+      "Cobrança judicial e extrajudicial de dívidas, notas promissórias, cheques e contratos inadimplidos",
+      "Rescisão contratual com restituição de quantias pagas e aplicação de penalidades contratuais",
+      "Ações de Usucapião judicial e extrajudicial para regularização documental definitiva de imóveis",
+      "Ações Possessórias (Reintegração, Interdito Proibitório e Manutenção de Posse) para proteção de terrenos e imóveis",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de consultoria sobre Direito Cível (indenização, contratos ou cobranças).",
+      "Olá, Dra. Valéria Raposo! Gostaria de consultoria jurídica sobre Direito Cível (indenização, contratos ou litígios civis).",
   },
   {
     id: "direito-do-consumidor",
-    title: "Direito do Consumidor & Defesa Financeira",
+    title: "Direito do Consumidor & Defesa Bancária",
     icon: Shield,
-    tag: "Negativação Indevida · Golpes do Pix & Fraudes · Cobranças Abusivas · SPC/Serasa",
+    tag: "Golpes do Pix & Fraudes · Limpeza de Nome · SPC/Serasa · Abusos Bancários",
     summary:
-      "Combate imediato a abusos de bancos, operadoras e fornecedores: retirada urgente do nome do SPC/Serasa e indenizações por fraudes e cobranças indevidas.",
+      "Combate incisivo a fraudes financeiras e abusos bancários: retirada urgente do nome dos órgãos de crédito e indenizações justas por danos sofridos.",
     details:
-      "Ter o nome negativado indevidamente ou ser vítima de fraudes bancárias gera restrições humilhantes e danos graves. Atuamos com pedido de liminar urgente para limpeza imediata do nome nos órgãos de proteção ao crédito e pleiteamos indenizações proporcionais ao dano sofrido.",
+      "A Dra. Valéria Raposo atua com rapidez diante de golpes cibernéticos, negativações indevidas e cobranças abusivas de bancos. Ingressamos com pedidos liminares de urgência para desbloqueio de contas, exclusão imediata de restrições no SPC/Serasa e indenizações pelos transtornos suportados.",
     topics: [
-      "Pedido liminar urgente para exclusão imediata do nome do SPC, Serasa e cartórios de protesto por dívida inexistente ou quitada",
-      "Indenização por danos morais decorrentes de negativação indevida ou manutenção ilegal do registro",
-      "Defesa jurídica para vítimas de golpes bancários, transferências Pix fraudulentas e invasões de conta",
-      "Ações contra empréstimos consignados não autorizados e descontos indevidos em benefícios do INSS",
-      "Cancelamento de contratos abusivos de telefonia, internet, energia, cartões de crédito e seguros não contratados",
+      "Pedido liminar de urgência para retirada imediata do nome do SPC, Serasa e cartórios de protesto",
+      "Defesa jurídica estratégica para vítimas de fraudes bancárias, clonagem de contas e golpes do Pix",
+      "Cancelamento de empréstimos consignados não contratados e restituição de descontos indevidos em aposentadorias",
+      "Ações contra juros abusivos, tarifas bancárias ilegais e vendas casadas de seguros",
       "Restituição em dobro de quantias cobradas indevidamente conforme o Código de Defesa do Consumidor",
+      "Indenizações por danos morais contra empresas de telefonia, companhias aéreas e prestadoras de serviços",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de orientação para resolver negativação indevida, golpe bancário ou cobrança abusiva.",
+      "Olá, Dra. Valéria Raposo! Gostaria de atendimento urgente sobre negativação indevida, golpe bancário ou cobrança abusiva.",
   },
   {
-    id: "consultoria-regularizacao",
-    title: "Consultoria Preventiva & Acordos Extrajudiciais",
-    icon: FileText,
-    tag: "Acordos Extrajudiciais · Notificações · Mediação · Atendimento Presencial & Online",
+    id: "direito-previdenciario",
+    title: "Direito Previdenciário (INSS Rural & Urbano)",
+    icon: HeartHandshake,
+    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Revisão de Benefícios",
     summary:
-      "Soluções ágeis fora da Justiça para prevenir conflitos caros e demorados, unindo a proximidade do escritório em Monte Azul à facilidade do atendimento digital.",
+      "Assessoria especializada para garantir aposentadorias e amparo assistencial do INSS sem burocracia, com profundo conhecimento da realidade de Manhuaçu e região.",
     details:
-      "Muitas disputas podem ser resolvidas com rapidez e economia por meio de notificação extrajudicial, conciliação e acordos formais bem redigidos. A Dra. Ana Paula Lima oferece assessoria consultiva personalizada para que você tome decisões com total respaldo da lei.",
+      "Conquistar o benefício do INSS exige documentação precisa e domínio das normas previdenciárias. A Dra. Valéria Raposo atua no requerimento administrativo e em ações judiciais combativas para aposentadorias rurais e urbanas, concessão de BPC/LOAS e reversão de indeferimentos injustos.",
     topics: [
-      "Elaboração e envio de Notificações Extrajudiciais com validade jurídica formal para notificar partes e constituir em mora",
-      "Mediação e negociação direta de acordos amigáveis para evitar disputas judiciais desgastantes",
-      "Assessoria preventiva para pessoas físicas e autônomos na assinatura de contratos importantes",
-      "Regularização documental e representação perante Cartórios de Notas e Registros de Imóveis",
-      "Atendimento 100% digital com envio seguro de documentos e reuniões por chamada de vídeo para todo o Brasil",
-      "Atendimento presencial e personalizado em Monte Azul e cidades do Norte de Minas Gerais",
+      "Aposentadoria por Idade Rural com comprovação robusta da atividade de pequeno produtor e trabalhador do campo",
+      "Aposentadoria Urbana por Idade, Tempo de Contribuição e regras de transição vigentes",
+      "BPC / LOAS (Benefício de Prestação Continuada para Idosos 65+ e Pessoas com Deficiência)",
+      "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Invalidez",
+      "Pensão por Morte rural e urbana, Auxílio-Reclusão e Salário-Maternidade",
+      "Recursos administrativos e ações judiciais contra negativas ilegais do INSS",
     ],
     whatsAppText:
-      "Olá, Dra. Ana Paula Lima! Gostaria de orientação preventiva ou envio de notificação extrajudicial para o meu caso.",
+      "Olá, Dra. Valéria Raposo! Gostaria de orientação jurídica sobre aposentadoria rural/urbana, BPC/LOAS ou benefício do INSS.",
+  },
+  {
+    id: "direito-trabalhista",
+    title: "Direito do Trabalho & Defesa do Trabalhador",
+    icon: Briefcase,
+    tag: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo de Emprego",
+    summary:
+      "Defesa firme e combativa dos direitos do trabalhador para assegurar o pagamento correto de verbas rescisórias, horas extras e reparação por condições abusivas.",
+    details:
+      "Trabalhadores que dedicam seu esforço merecem o cumprimento integral da legislação. O escritório da Dra. Valéria Raposo atua com rigor técnico na apuração dos valores sonegados, pedidos de rescisão indireta quando o empregador descumpre obrigações e cobrança de todas as verbas rescisórias.",
+    topics: [
+      "Cobrança integral de verbas rescisórias não quitadas, aviso prévio, saldo de salário, férias e 13º salário",
+      "Ação de Rescisão Indireta do Contrato de Trabalho por falta de recolhimento de FGTS, atraso salarial ou abusos",
+      "Reconhecimento formal de vínculo empregatício sem registro em carteira e liberação de FGTS com multa",
+      "Cobrança de horas extras, intervalos intrajornada não concedidos e adicionais de trabalho noturno",
+      "Pleito de adicional de insalubridade e periculosidade para ambientes de risco à saúde e segurança",
+      "Ações indenizatórias por acidentes de trabalho, doenças ocupacionais e assédio moral no ambiente profissional",
+    ],
+    whatsAppText:
+      "Olá, Dra. Valéria Raposo! Gostaria de consultoria sobre direitos trabalhistas (rescisão, acerto ou horas extras).",
+  },
+  {
+    id: "consultoria-estrategica",
+    title: "Consultoria Preventiva & Soluções Extrajudiciais",
+    icon: FileText,
+    tag: "Notificações · Acordos em Cartório · Mediação Célere · Atendimento Online",
+    summary:
+      "Resolução estratégica e econômica fora do Judiciário para solucionar conflitos com celeridade, unindo o atendimento presencial em Manhuaçu à praticidade digital.",
+    details:
+      "Muitos impasses podem ser solucionados sem o desgaste e o custo de um longo processo judicial. A Dra. Valéria Raposo oferece consultoria preventiva personalizada, mediação entre partes e redação de notificações formais que conferem segurança jurídica absoluta e celeridade aos acordos.",
+    topics: [
+      "Elaboração e envio de Notificações Extrajudiciais com validade formal para constituição em mora e cobrança",
+      "Mediação e condução de acordos amigáveis para resolução de disputas patrimoniais e contratuais",
+      "Assessoria consultiva e preventiva para pessoas físicas e empreendedores na assinatura de negócios",
+      "Acompanhamento e representação perante Cartórios de Notas e Registro de Imóveis de Manhuaçu e região",
+      "Atendimento 100% digital com videochamadas e assinatura eletrônica válida em todo o território nacional",
+      "Atendimento presencial personalizado em nosso escritório no centro de Manhuaçu - MG",
+    ],
+    whatsAppText:
+      "Olá, Dra. Valéria Raposo! Gostaria de uma consultoria estratégica preventiva ou envio de notificação para o meu caso.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Marcos Vinícius Silveira",
-    reviewerTag: "Monte Azul · MG · Avaliação verificada no Google",
-    badge: "Aposentadoria Rural Concedida com Agilidade e Cuidado",
+    name: "Marcos Aurélio de Souza",
+    reviewerTag: "Manhuaçu · MG · Avaliação verificada no Google",
+    badge: "Estratégia Impecável, Clareza e Condução Ágil",
     rating: 5,
     content:
-      "A Dra. Ana Paula foi maravilhosa no processo da aposentadoria rural da minha mãe. Todo o cuidado com os documentos da roça e o acolhimento foram diferenciados. O benefício foi aprovado rápido. Excelente profissional em Monte Azul e região!",
-    reply: "Fico muito feliz em ajudar sua família, Marcos! O trabalho de quem dedica a vida ao campo merece todo o nosso respeito e empenho.",
+      "A Dra. Valéria Raposo é uma advogada excepcional. Conduziu nosso processo com uma estratégia impecável, clareza e dedicação em cada etapa. O atendimento no escritório no centro de Manhuaçu é extremamente acolhedor. Recomendo de olhos fechados!",
+    reply: "Muito obrigada pelas palavras e pela confiança, Marcos! Conduzir cada causa com estratégia, transparência e respeito é a nossa maior missão.",
   },
   {
-    name: "Camila Fernandes Rocha",
+    name: "Mariana Diniz Fonseca",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "Acolhimento, Ética & Segurança no Divórcio e Pensão",
+    badge: "Serenidade, Firmeza e Segurança no Divórcio e Partilha",
     rating: 5,
     content:
-      "Procurei a Dra. Ana Paula para cuidar do meu divórcio e pensão dos meus dois filhos. Ela me passou muita segurança e acolhimento desde o primeiro instante no escritório. Uma advogada muito humana, justa e ética. Recomendo de coração!",
-    reply: "Agradeço imensamente o carinho e a confiança, Camila. Cuidar de você e dos seus filhos com respeito e segurança é nossa missão.",
+      "Excelente profissional! Cuidou do meu divórcio e partilha com muita serenidade, agilidade e firmeza. Me manteve informada de tudo pelo WhatsApp, sempre muito solícita e humana. Gratidão imensa pelo trabalho da Dra. Valéria!",
+    reply: "Agradeço de coração, Mariana. Assegurar a tranquilidade e a proteção dos seus direitos em momentos delicados é fundamental para nós.",
   },
   {
-    name: "José Carlos Pereira",
-    reviewerTag: "Norte de Minas · Avaliação verificada no Google",
-    badge: "Excelente Advogada Trabalhista: Resolveu com Firmeza",
+    name: "Gilberto Carvalho Ramos",
+    reviewerTag: "Manhuaçu e Região · Avaliação no Google",
+    badge: "Golpe do Pix Resolvido com Liminar Urgente",
     rating: 5,
     content:
-      "Excelente advogada trabalhista! Tive problemas com os direitos na rescisão do meu trabalho após anos de serviço e a Dra. Ana Paula resolveu com agilidade e muita firmeza. Me manteve informado de tudo pelo WhatsApp. Profissional nota 10!",
-    reply: "Muito obrigado pela confiança, José Carlos! Defender o direito do trabalhador com seriedade e clareza é nosso dever diário.",
+      "Atendimento de altíssimo nível. Fui vítima de uma fraude bancária com golpe do Pix e a Dra. Valéria conseguiu resolver com pedido de liminar muito rápido. Extremamente competente, firme e atenciosa.",
+    reply: "Combater abusos bancários e proteger o patrimônio dos nossos clientes exige rapidez e técnica precisa. Obrigado pela recomendação, Gilberto!",
   },
   {
-    name: "Luciana Alencar Mendes",
+    name: "Patrícia Oliveira Lopes",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "BPC/LOAS Concedido com Total Paciência e Competência",
+    badge: "Aposentadoria Rural Concedida com Muito Cuidado",
     rating: 5,
     content:
-      "Contratamos a consultoria para o BPC/LOAS do meu tio e deu tudo certo com agilidade. A Dra. Ana Paula explica tudo sem enrolação, com clareza e muita paciência. Escritório muito acolhedor e atencioso.",
-    reply: "Muito grata pelas palavras, Luciana! O direito ao amparo assistencial é sagrado e fico muito contente com a conquista do seu tio.",
+      "Dra. Valéria é muito competente, ética e atenciosa. Cuidou da aposentadoria da minha mãe no INSS com muito carinho e competência técnica. Conseguimos a aprovação sem enrolação. Excelente advogada em Manhuaçu!",
+    reply: "Fico muito feliz em participar dessa conquista tão merecida para a sua mãe, Patrícia. O trabalhador do campo merece todo o nosso amparo.",
   },
   {
-    name: "Geraldo Antunes de Oliveira",
-    reviewerTag: "Monte Azul · MG · Avaliação no Google",
-    badge: "Atendimento Impecável, Pontual e Muito Sério",
+    name: "Tiago Fernandes Martins",
+    reviewerTag: "Avaliação no Google",
+    badge: "Clareza, Objetividade e Estratégia Jurídica Certeira",
     rating: 5,
     content:
-      "Muito competente e atenciosa. Me auxiliou em uma questão cível e contratual com muita rapidez. O atendimento presencial aqui em Monte Azul é impecável e ela também é muito rápida no WhatsApp. Parabéns pelo trabalho!",
-    reply: "Obrigada, Geraldo! Estaremos sempre à disposição para garantir sua tranquilidade jurídica.",
+      "Profissional diferenciada em Manhuaçu. Clareza nas informações, sem rodeios e com estratégia jurídica de verdade. Fez toda a diferença no desfecho da minha ação cível. Nota 10!",
+    reply: "Obrigado pela confiança, Tiago! Atuação técnica e objetiva é o compromisso diário do nosso escritório.",
   },
   {
-    name: "Maria de Lourdes Santos",
+    name: "Larissa Castro Albuquerque",
+    reviewerTag: "Avaliação no Google",
+    badge: "Segurança Absoluta do Início ao Fim",
+    rating: 5,
+    content:
+      "Uma advogada humana, segura e extremamente detalhista. Transmite muita confiança desde o primeiro contato no WhatsApp. Recomendo a todos que precisam de uma assessoria de excelência.",
+  },
+  {
+    name: "Antônio Carlos Rezende",
+    reviewerTag: "Manhuaçu · MG · Avaliação no Google",
+    badge: "Inventário Conduzido em Cartório com Rapidez",
+    rating: 5,
+    content:
+      "O inventário da nossa família foi resolvido com muita rapidez e transparência no cartório graças à orientação da Dra. Valéria Raposo. Escritório muito sério, moderno e eficiente.",
+  },
+  {
+    name: "Camila Ribeiro Bastos",
+    reviewerTag: "Avaliação no Google",
+    badge: "Atendimento Humanizado e Muito Rápido no WhatsApp",
+    rating: 5,
+    content:
+      "Atendimento impecável! Respondeu prontamente todas as dúvidas, explicou cada detalhe sem juridiquês e me acolheu em um momento delicado da minha família.",
+  },
+  {
+    name: "Eduardo Moreira Pires",
+    reviewerTag: "Avaliação no Google",
+    badge: "Defesa Trabalhista Firme e Direitos Assegurados",
+    rating: 5,
+    content:
+      "Competência, postura ética e dedicação real ao cliente. A Dra. Valéria atuou na rescisão do meu contrato de trabalho com máxima firmeza e conseguimos nossos direitos. Excelente advogada!",
+  },
+  {
+    name: "Beatriz Vasconcelos",
     reviewerTag: "Avaliação verificada no Google",
-    badge: "Segurança e Paz de Espírito em Todo o Processo",
+    badge: "Excelência Presencial e no Atendimento Online",
     rating: 5,
     content:
-      "Dra. Ana Paula é uma bênção. Atendimento humanizado de verdade, me deu segurança e paz de espírito durante todo o processo familiar. Só tenho gratidão pelo carinho e eficiência do escritório.",
-    reply: "Sua paz de espírito e dignidade são a nossa maior satisfação, dona Maria. Conte sempre conosco!",
-  },
-  {
-    name: "Rodrigo Barbosa Ferreira",
-    reviewerTag: "Avaliação no Google",
-    badge: "Capacitada, Dedicada & Esclarecedora",
-    rating: 5,
-    content:
-      "Profissional extremamente capacitada e dedicada. Esclareceu todas as dúvidas sobre tempo de contribuição e regras de aposentadoria com muita transparência. Super recomendo em Monte Azul e região.",
-  },
-  {
-    name: "Fernanda Guimarães",
-    reviewerTag: "Avaliação no Google",
-    badge: "Atenciosa, Ágil & Muito Segura",
-    rating: 5,
-    content:
-      "Excelente atendimento! Muito atenciosa, ágil e segura em suas orientações. Tivemos uma ótima experiência e com certeza voltaremos a procurar sempre que necessário.",
-  },
-  {
-    name: "Danilo Souza Matos",
-    reviewerTag: "Avaliação no Google",
-    badge: "Inventário Conduzido com Celeridade e Transparência",
-    rating: 5,
-    content:
-      "Atendimento impecável! A Dra. Ana Paula conduziu o processo de inventário da nossa família com muita celeridade e transparência. Recomendo a todos.",
+      "Super recomendo o escritório da Dra. Valéria Raposo em Manhuaçu. Atendimento impecável tanto presencialmente quanto pelo atendimento online. Muito dedicada e prestativa!",
   },
 ];
 
 const faqs = [
   {
-    q: "A Dra. Ana Paula atende apenas presencialmente em Monte Azul ou também online?",
-    a: "Atendemos presencialmente em nosso escritório na R. Três de Outubro, 109, no centro de Monte Azul (MG), e também de forma 100% digital e segura para clientes em todo o Norte de Minas Gerais e demais estados do Brasil. Por meio de chamadas de vídeo, envio prático de documentos pelo WhatsApp e assinaturas eletrônicas com validade jurídica oficial, você recebe a mesma dedicação, sigilo e qualidade sem precisar sair de casa.",
+    q: "A Dra. Valéria Raposo atende apenas presencialmente em Manhuaçu ou também online?",
+    a: "Atendemos presencialmente em nosso escritório na R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu (MG), e também de forma 100% digital e segura para clientes em toda a Zona da Mata mineira, Minas Gerais e qualquer estado do Brasil. Por meio de chamadas de vídeo, envio prático de documentos pelo WhatsApp e assinaturas digitais com validade legal oficial, você tem o mesmo rigor, sigilo e atenção sem precisar se deslocar.",
   },
   {
-    q: "Quem tem direito à Aposentadoria Rural por Idade e quais documentos são necessários?",
-    a: "Trabalhadores e produtoras(es) rurais que exercem atividade em regime de economia familiar (pequenos proprietários, meeiros, parceiros e boias-frias) podem se aposentar aos 55 anos (mulheres) e 60 anos (homens), comprovando 15 anos de trabalho no campo. A documentação pode incluir notas de produtor, contratos de arrendamento/parceria, comprovantes de sindicato rural, certidões de nascimento e casamento com qualificação profissional, cadastros escolares e recibos. Analisamos cada documento minuciosamente para garantir a concessão do seu benefício.",
+    q: "Como funciona o atendimento inicial e a análise do meu caso?",
+    a: "O primeiro contato pode ser feito diretamente pelo nosso WhatsApp. Analisamos sua demanda com sigilo profissional, verificamos os documentos preliminares e traçamos um diagnóstico jurídico claro e objetivo sobre a viabilidade, riscos e o melhor caminho para defender os seus direitos.",
   },
   {
-    q: "Como funciona a fixação ou cobrança de pensão alimentícia atrasada?",
-    a: "A pensão alimentícia é calculada com base no binômio necessidade (de quem recebe) e possibilidade (de quem paga), priorizando sempre o sustento digno dos filhos. Caso o responsável esteja inadimplente, ingressamos imediatamente com a Execução de Alimentos, que pode resultar no bloqueio de contas bancárias, negativação do nome e até decreto de prisão civil do devedor caso não quite as parcelas recentes.",
+    q: "Como a Dra. Valéria atua em causas de Direito de Família (divórcio, pensão e partilha)?",
+    a: "Nossa prioridade é atuar com equilíbrio, discrição e estratégia, priorizando a via consensual em cartório — mais rápida e econômica. Caso haja litígio, defendemos os seus interesses e o sustento de seus filhos com técnica e combatividade nos tribunais.",
   },
   {
-    q: "Fui demitido ou estou passando por abusos na empresa. Qual o prazo para procurar um advogado?",
-    a: "O prazo constitucional para ingressar com uma ação trabalhista é de até 2 anos após a rescisão contratual, podendo cobrar direitos referentes aos últimos 5 anos de trabalho. Se a empresa estiver cometendo faltas graves (como atraso reiterado de salários, não recolhimento de FGTS, assédio moral ou falta de segurança), podemos pleitear a Rescisão Indireta, na qual o trabalhador sai da empresa recebendo todas as suas indenizações integrais como se tivesse sido demitido sem justa causa.",
+    q: "O que fazer se fui vítima de golpe do Pix, fraude bancária ou negativação indevida?",
+    a: "Casos de fraudes financeiras e restrições ilegais no SPC/Serasa demandam ação imediata. Atuamos com pedidos de tutela de urgência (liminar) para estancar descontos, bloquear transferências ilícitas e exigir a imediata exclusão do nome dos órgãos de crédito, cumulado com pedido de indenização por danos morais e restituição de quantias.",
   },
   {
-    q: "Tive meu nome negativado indevidamente no SPC/Serasa. O que posso fazer?",
-    a: "A negativação indevida (por dívida já paga, conta inexistente, golpe ou fraude bancária) configura ato ilícito. Ingressamos com pedido de tutela de urgência (liminar) para que o juiz ordene a exclusão imediata do seu nome dos órgãos de restrição ao crédito, sob pena de multa diária, além de pleitear indenização justa por danos morais pelo constrangimento suportado.",
+    q: "Quem tem direito aos benefícios previdenciários do INSS (aposentadoria ou BPC/LOAS)?",
+    a: "Tanto trabalhadores urbanos quanto trabalhadores rurais da nossa região possuem regras específicas de idade e tempo de contribuição ou atividade no campo. Além disso, idosos a partir de 65 anos e pessoas com deficiência de qualquer idade podem ter direito ao BPC/LOAS. Realizamos a conferência minuciosa de cada documento para buscar a concessão sem demoras.",
   },
   {
-    q: "Como acompanho o andamento do meu processo no escritório?",
-    a: "A transparência e a proximidade com o cliente são marcas registradas da Dra. Ana Paula Lima. Você não fica desamparado nem precisa decifrar termos difíceis. A cada movimentação ou decisão relevante do seu processo, você recebe atualizações claras diretamente no seu WhatsApp, com atendimento humanizado em todas as etapas.",
+    q: "Como acompanho a movimentação do meu processo no escritório?",
+    a: "A transparência é um compromisso fundamental da Dra. Valéria Raposo. Você não fica sem saber o que está ocorrendo: a cada andamento ou decisão relevante, nosso escritório encaminha notificações claras e orientações diretamente no seu WhatsApp, sempre em linguagem simples e acessível.",
   },
 ];
 
@@ -456,8 +463,10 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 font-medium text-white">
               <MapPin size={13} className="text-[#e2be67]" />
-              <strong>Sede em Monte Azul - MG</strong>
-              <span className="hidden md:inline text-zinc-400">· R. Três de Outubro, 109 · Atendimento Presencial & Online em Todo o Brasil</span>
+              <strong>Sede em Manhuaçu - MG</strong>
+              <span className="hidden md:inline text-zinc-400">
+                · R. Cap. Rafael, 21 - Sl 103 - Centro · Atendimento Presencial & Online em Todo o Brasil
+              </span>
             </span>
 
             <a
@@ -471,12 +480,12 @@ export default function Home() {
                   <Star key={i} size={11} className="fill-[#e2be67]" />
                 ))}
               </span>
-              <span>5,0 ★ no Google (13 avaliações)</span>
+              <span>5,0 ★ no Google (10 avaliações)</span>
             </a>
           </div>
         </div>
 
-        {/* Global Floating Header (Silk White - Clean, Elegante, Baseado no Logo Dourado) */}
+        {/* Global Floating Header (Silk White - Clean, Elegante, Baseado no Logo Dourado VR) */}
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             isScrolled
@@ -485,17 +494,17 @@ export default function Home() {
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8 lg:px-12">
-            {/* Logo on Left (Aumentado em 30%) */}
+            {/* Logo on Left */}
             <a
               href="#inicio"
-              aria-label="Ana Paula Lima Advocacia - Início"
+              aria-label="Valéria Raposo Advocacia - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-10"
             >
               <div className="relative size-[52px] sm:size-[58px] lg:size-[62px] shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
+                  alt="Monograma VR - Valéria Raposo Advocacia"
                   fill
                   priority
                   unoptimized
@@ -504,7 +513,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-[16px] sm:text-[18px] lg:text-[19.5px] font-bold tracking-[0.13em] text-slate-900 leading-tight">
-                  ANA PAULA LIMA
+                  VALÉRIA RAPOSO
                 </span>
                 <span className="text-[10.5px] sm:text-[12px] lg:text-[12.8px] font-semibold tracking-[0.24em] text-[#b88628] uppercase mt-0.5">
                   A D V O C A C I A
@@ -541,7 +550,7 @@ export default function Home() {
             <div className="hidden lg:flex items-center gap-3 shrink-0 ml-auto lg:ml-6 xl:ml-8">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Ana Paula Lima! Gostaria de agendar uma consulta jurídica."
+                  "Olá, Dra. Valéria Raposo! Gostaria de agendar uma consulta jurídica."
                 )}
                 target="_blank"
                 size="sm"
@@ -602,7 +611,7 @@ export default function Home() {
                     <a
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Ana Paula! Gostaria de conversar com você sobre uma questão jurídica."
+                        "Olá, Dra. Valéria Raposo! Gostaria de conversar com você sobre uma questão jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -617,7 +626,7 @@ export default function Home() {
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (13 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (10 avaliações)
                     </a>
                   </div>
                 </div>
@@ -651,16 +660,16 @@ export default function Home() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e2be67] opacity-75"></span>
                   <span className="relative inline-flex size-2 rounded-full bg-[#b88628]"></span>
                 </span>
-                <span>DRA. ANA PAULA LIMA · ADVOCACIA · MONTE AZUL - MG</span>
+                <span>DRA. VALÉRIA RAPOSO · ADVOCACIA · MANHUAÇU - MG</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.15] tracking-[-0.02em] text-[#0f172a] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Defesa jurídica firme, estratégica e humanizada:{" "}
+                Atuação jurídica estratégica, firme e personalizada:{" "}
                 <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  protegendo seus direitos, sua família e o trabalho de toda a sua vida.
+                  defendendo seus direitos, seu patrimônio e a sua dignidade.
                 </span>
               </motion.h1>
 
@@ -668,7 +677,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Ana Paula Lima</strong>, nosso escritório oferece acolhimento dedicado, combate incisivo e excelência técnica em <strong className="font-semibold text-slate-900">Direito de Família, Previdenciário (INSS Rural e Urbano), Trabalhista e Cível</strong>. Avaliação máxima 5,0 ★ no Google em Monte Azul, Norte de Minas e com atendimento online em todo o Brasil.
+                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Valéria Raposo</strong>, nosso escritório combina combatividade técnica, transparência e acolhimento humano na defesa estratégica dos seus interesses em <strong className="font-semibold text-slate-900">Direito de Família, Cível, Consumidor, Previdenciário (INSS) e Trabalhista</strong>. Avaliação máxima 5,0 ★ no Google em Manhuaçu, Zona da Mata e com atendimento online em todo o Brasil.
               </motion.p>
 
               {/* Action Buttons */}
@@ -678,7 +687,7 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento para analisar meu caso."
+                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento para analisar meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -705,20 +714,20 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Atendimento Humanizado & Sigiloso</span>
+                  <span>Atuação Estratégica & Personalizada</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Presencial (Monte Azul) & Online (Brasil)</span>
+                  <span>Presencial (Manhuaçu) & Online (Brasil)</span>
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
                   <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Comunicação Clara e Ágil</span>
+                  <span>Comunicação Clara e Direta</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Visual presentation - Dra. Ana Paula Lima Portrait */}
+            {/* Visual presentation - Dra. Valéria Raposo Portrait */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -728,7 +737,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200 bg-stone-50 shadow-2xl ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Ana Paula Lima — Advogada em Monte Azul - MG"
+                  alt="Dra. Valéria Raposo — Advogada em Manhuaçu - MG"
                   fill
                   priority
                   unoptimized
@@ -740,18 +749,18 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b88628]">
-                        Ana Paula Lima Advocacia
+                        Valéria Raposo Advocacia
                       </p>
                       <p className="font-serif text-base font-bold text-slate-900 sm:text-lg">
-                        Dra. Ana Paula Lima
+                        Dra. Valéria Raposo
                       </p>
                     </div>
                     <span className="rounded-md border border-[#b88628]/30 bg-[#fdfbf7] px-2.5 py-1 text-[10px] font-bold text-[#9b6e1b]">
-                      Cível · Família · Previdenciário · Trabalhista
+                      OAB/MG · Estratégia Jurídica
                     </span>
                   </div>
                   <p className="mt-1 text-[11px] text-slate-600">
-                    R. Três de Outubro, 109 · Monte Azul - MG
+                    R. Cap. Rafael, 21 - Sl 103 - Centro · Manhuaçu - MG
                   </p>
                 </div>
               </div>
@@ -776,7 +785,7 @@ export default function Home() {
                     <span className="text-[10px] text-[#e2be67]">★★★★★</span>
                   </div>
                   <p className="text-[10px] font-medium text-slate-600">
-                    13 avaliações no Google
+                    10 avaliações no Google
                   </p>
                 </div>
               </a>
@@ -794,19 +803,19 @@ export default function Home() {
               {[
                 {
                   value: "5,0 ★ no Google",
-                  label: "Nota máxima em 13 avaliações comprovando eficácia técnica e acolhimento humano",
+                  label: "Nota máxima comprovando eficácia estratégica, celeridade e acolhimento humano",
                 },
                 {
-                  value: "Família & Previdenciário",
-                  label: "Defesa especializada em divórcios, pensões e aposentadoria rural e urbana (INSS)",
+                  value: "Família & Cível",
+                  label: "Atuação resolutiva em divórcios, partilhas, indenizações e proteção de contratos",
                 },
                 {
-                  value: "Trabalhista & Cível",
-                  label: "Atuação firme pelos direitos do trabalhador, indenizações e contratos",
+                  value: "Consumidor & Previdenciário",
+                  label: "Combate a golpes bancários, negativações indevidas e benefícios do INSS",
                 },
                 {
-                  value: "Sede em Monte Azul",
-                  label: "Atendimento presencial no Norte de MG e assessoria jurídica digital em todo o Brasil",
+                  value: "Sede em Manhuaçu",
+                  label: "Atendimento presencial no Centro (R. Cap. Rafael) e assessoria online para todo o Brasil",
                 },
               ].map((item, index) => (
                 <div
@@ -838,7 +847,7 @@ export default function Home() {
           className="scroll-mt-24 border-b border-stone-200 bg-[#fbf9f5] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Ana Paula Lima Portrait */}
+            {/* Visual presentation - Dra. Valéria Raposo Portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -849,7 +858,7 @@ export default function Home() {
               <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Ana Paula Lima — Advocacia Especializada"
+                  alt="Dra. Valéria Raposo — Advocacia Especializada em Manhuaçu"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -861,17 +870,17 @@ export default function Home() {
                 <div className="flex items-center gap-2 text-[#b88628]">
                   <Sparkles size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b88628]">
-                    Advocacia Humanizada & Combativa
+                    Atuação Estratégica na Defesa de Direitos
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
-                  Ana Paula Lima Advocacia
+                  Valéria Raposo Advocacia
                 </p>
                 <p className="mt-0.5 text-[11px] font-medium text-[#b88628]">
-                  Cível · Família · Previdenciário · Trabalhista
+                  OAB/MG · Atendimento Presencial & Online
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-slate-500">
-                  R. Três de Outubro, 109 · Monte Azul - MG
+                  R. Cap. Rafael, 21 - Sl 103 - Centro · Manhuaçu - MG
                 </p>
               </div>
 
@@ -897,9 +906,9 @@ export default function Home() {
                 variants={reveal}
                 className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0f172a] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia pautada na escuta atenta, ética inegociável e{" "}
+                Uma advocacia pautada na estratégia refinada, escuta atenta e{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  defesa apaixonada dos seus direitos.
+                  defesa intransigente dos seus direitos.
                 </span>
               </motion.h2>
 
@@ -907,14 +916,14 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                Por trás de cada processo judicial existem histórias de vida, famílias buscando justiça e trabalhadores que dedicaram anos de esforço. <strong className="font-bold text-slate-900">A Dra. Ana Paula Lima construiu sua trajetória sobre o pilar do acolhimento humano</strong>, compreendendo as angústias de cada cliente e transformando preocupações em soluções jurídicas sólidas e resolutivas.
+                Por trás de cada causa jurídica existem histórias reais, conquistas familiares e direitos que exigem proteção enérgica e técnica apurada. <strong className="font-bold text-slate-900">A Dra. Valéria Raposo construiu sua prática profissional fundamentada na atuação estratégica</strong>, compreendendo as particularidades de cada cliente para transformar conflitos em soluções jurídicas seguras e eficazes.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                Seja garantindo o direito legítimo à aposentadoria rural no Norte de Minas, assegurando a proteção dos filhos em um divórcio, buscando reparação por abusos trabalhistas ou cobrando indenizações por atos ilícitos no Direito Cível, <strong className="font-bold text-slate-900">nosso compromisso é lutar incansavelmente por você</strong> com proximidade, clareza e dedicação integral.
+                Seja protegendo os vínculos familiares e a partilha de bens em um divórcio, revertendo fraudes e negativações indevidas contra instituições financeiras, ou assegurando direitos trabalhistas e benefícios do INSS em Manhuaçu e região, <strong className="font-bold text-slate-900">nosso compromisso é lutar pelo melhor resultado</strong> com rigor ético, proximidade e dedicação absoluta.
               </motion.p>
 
               {/* Client Quote Card */}
@@ -923,10 +932,10 @@ export default function Home() {
                 className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
-                  &ldquo;A Dra. Ana Paula cuidou do processo da aposentadoria rural com um cuidado e dedicação impressionantes. Conseguimos a concessão sem burocracia. Muito humana, atenciosa e competente. Recomendo de olhos fechados em Monte Azul e região!&rdquo;
+                  &ldquo;A Dra. Valéria Raposo é uma advogada excepcional. Conduziu nosso processo com uma estratégia impecável, clareza e dedicação em cada etapa. O atendimento no escritório no centro de Manhuaçu é extremamente acolhedor. Recomendo de olhos fechados!&rdquo;
                 </blockquote>
                 <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b88628]">
-                  — Marcos Vinícius Silveira (Avaliação verificada no Google · 5,0 ★)
+                  — Marcos Aurélio de Souza (Avaliação verificada no Google · 5,0 ★)
                 </p>
               </motion.div>
 
@@ -938,19 +947,19 @@ export default function Home() {
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">5,0 ★ no Google</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    13 avaliações 5 estrelas
+                    10 avaliações 5 estrelas
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">Atendimento Direto</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Fale com a própria Dra. Ana Paula
+                    Fale com a própria Dra. Valéria
                   </p>
                 </div>
                 <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
                   <p className="font-bold text-slate-900">Presencial & Online</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Monte Azul e todo o Brasil
+                    Manhuaçu e todo o Brasil
                   </p>
                 </div>
               </motion.div>
@@ -961,24 +970,24 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Sede na R. Três de Outubro, 109 - Centro, Monte Azul - MG</span>
+                  <span>Sede na R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Ana Paula Lima</span>
+                  <span>Contato direto pelo WhatsApp com a Dra. Valéria Raposo</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula! Gostaria de agendar uma consulta para conversar sobre o meu caso."
+                    "Olá, Dra. Valéria! Gostaria de agendar uma consulta para conversar sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Ana Paula Lima
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Valéria Raposo
                 </GlowingButton>
               </motion.div>
             </motion.div>
@@ -999,14 +1008,14 @@ export default function Home() {
               >
                 Soluções jurídicas estratégicas em{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
-                  Monte Azul, Norte de Minas e em todo o Brasil.
+                  Manhuaçu, Zona da Mata e em todo o Brasil.
                 </span>
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
+                    "Olá, Dra. Valéria! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1091,11 +1100,11 @@ export default function Home() {
             <Heading
               theme="light"
               eyebrow="POR QUE NOS ESCOLHER"
-              description="A união entre profundo preparo técnico, acolhimento sincero e comunicação transparente faz a diferença em cada resultado que entregamos."
+              description="A união entre profundo preparo técnico, estratégia sob medida e transparência absoluta faz a diferença nos resultados que entregamos."
             >
               O que diferencia a atuação da{" "}
               <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                Dra. Ana Paula Lima?
+                Dra. Valéria Raposo?
               </span>
             </Heading>
 
@@ -1111,22 +1120,22 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
-                      <HeartHandshake size={14} /> Acolhimento & Humanização
+                      <HeartHandshake size={14} /> Atendimento Pessoal & Direto
                     </span>
                     <span className="text-xs font-semibold text-[#b88628]">
                       5,0 ★ Google
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Atendimento Pessoal, Atento & Sem Intermediários
+                    Contato Próximo, Transparente & Sem Intermediários
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Ana Paula é a capacidade de escutar atentamente e acolher a dor de cada pessoa. Você fala diretamente com a advogada responsável pelo seu caso, sem intermediários frios ou respostas prontas.
+                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Valéria Raposo é a proximidade e o acolhimento com cada cliente. Você fala diretamente com a advogada responsável pelo seu caso, sem intermediários frios ou respostas prontas.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Comunicação direta e sem juridiquês ininteligível</span>
+                      <span>Comunicação clara, objetiva e sem juridiquês</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
@@ -1134,21 +1143,21 @@ export default function Home() {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Acolhimento sincero e empatia em momentos delicados</span>
+                      <span>Acolhimento sincero e empatia em momentos decisivos</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ana Paula! Gostaria de tirar dúvidas com você sobre o meu caso."
+                      "Olá, Dra. Valéria! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b88628] hover:bg-[#b88628] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Ana Paula
+                      <WhatsAppIcon size={15} /> Conversar com a Dra. Valéria Raposo
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1166,17 +1175,17 @@ export default function Home() {
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
-                      <Award size={14} /> Rigor Técnico & Firmeza
+                      <Award size={14} /> Rigor Técnico & Estratégia
                     </span>
                     <span className="text-xs font-semibold text-[#b88628]">
-                      Norte de MG & Brasil
+                      Zona da Mata & Brasil
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Combatividade Processual & Estratégia Jurídica Certeira
+                    Atuação Estratégica & Combatividade Processual
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Aposentadoria rural, ações de família e causas trabalhistas exigem prova minuciosa, domínio da legislação atualizada e atuação rápida. O escritório da Dra. Ana Paula Lima combina conhecimento prático da realidade local com petições combativas que fazem valer os seus direitos perante juizados e tribunais.
+                    Ações de família, causas cíveis, fraudes de consumo e demandas previdenciárias exigem estratégia minuciosa, domínio legislativo e agilidade. O escritório da Dra. Valéria Raposo combina preparo técnico com petições combativas que fazem valer os seus direitos perante juizados e tribunais.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
@@ -1189,14 +1198,14 @@ export default function Home() {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Acompanhamento constante até a efetiva execução da decisão</span>
+                      <span>Acompanhamento constante até a efetiva resolução do litígio</span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-7 border-t border-stone-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Ana Paula! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dra. Valéria! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
@@ -1220,7 +1229,7 @@ export default function Home() {
               <Heading
                 theme="dark"
                 eyebrow="COMO CUIDAMOS DO SEU CASO"
-                description="Um método transparente, acolhedor e centrado em resultados práticos para garantir sua tranquilidade, seus direitos e o amparo da sua família."
+                description="Um método transparente, estratégico e focado em resultados práticos para garantir sua segurança patrimonial e a paz da sua família."
               >
                 Três etapas claras para{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
@@ -1229,9 +1238,9 @@ export default function Home() {
               </Heading>
 
               <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#171920] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
-                &ldquo;Cada pessoa que chega ao meu escritório traz consigo uma história que merece ser ouvida com respeito. Nosso compromisso é trazer 100% de clareza, dedicação e técnica em todas as fases, lutando pelo seu direito do início ao fim.&rdquo;
+                &ldquo;Cada cliente traz uma causa singular que exige escuta atenta, estratégia refinada e firmeza. Nosso compromisso é entregar clareza, dedicação e técnica em todas as fases, defendendo o seu direito do início ao fim.&rdquo;
                 <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e2be67]">
-                  — Dra. Ana Paula Lima · Advogada
+                  — Dra. Valéria Raposo · Advogada
                 </footer>
               </blockquote>
             </div>
@@ -1246,18 +1255,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Escuta Acolhedora & Diagnóstico Jurídico Cuidadoso",
-                  "Conversa reservada pelo WhatsApp ou em nosso escritório no centro de Monte Azul para entender sua situação em profundidade, analisando documentos, histórico de trabalho, registros civis ou contratos.",
+                  "Escuta Acolhedora & Diagnóstico Jurídico Estratégico",
+                  "Conversa reservada pelo WhatsApp ou em nosso escritório no centro de Manhuaçu para entender sua situação detalhadamente, analisando contratos, provas documentais e o contexto da demanda.",
                 ],
                 [
                   "02",
-                  "Definição da Estratégia & Ação Rápida",
-                  "Traçamos o caminho mais vantajoso (seja pela via administrativa perante o INSS, acordo extrajudicial amigável ou ação judicial combativa), protocolando os pedidos necessários para estancar prejuízos.",
+                  "Definição da Rota & Ação Ágil",
+                  "Traçamos o plano mais vantajoso (seja pela via preventiva de acordo extrajudicial, notificação formal ou ação judicial com pedido de liminar urgente), ingressando rapidamente para estancar prejuízos.",
                 ],
                 [
                   "03",
                   "Acompanhamento Transparente & Notificação em Tempo Real",
-                  "Você nunca fica sem saber o que está acontecendo. Informamos cada movimentação relevante do processo em linguagem simples e compreensível diretamente no seu WhatsApp, até a vitória definitiva.",
+                  "Você nunca fica sem saber o andamento do seu processo. Informamos cada movimentação relevante em linguagem simples e compreensível diretamente no seu WhatsApp, até a vitória definitiva.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1290,11 +1299,11 @@ export default function Home() {
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos reais de pessoas e famílias sobre a competência, a agilidade e o atendimento acolhedor da Dra. Ana Paula Lima em Monte Azul e região."
+                description="Veja depoimentos reais sobre a competência, a agilidade e o atendimento acolhedor da Dra. Valéria Raposo em Manhuaçu e região."
               >
                 Avaliada com 5,0 ★ em{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  13 avaliações no Google.
+                  10 avaliações no Google.
                 </span>
               </Heading>
 
@@ -1315,10 +1324,10 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-slate-900">
-                    Ana Paula Lima Advocacia
+                    Valéria Raposo Advocacia
                   </p>
                   <p className="text-[11px] text-slate-500">
-                    13 avaliações 5 estrelas no Google
+                    10 avaliações 5 estrelas no Google
                   </p>
                 </div>
               </div>
@@ -1331,7 +1340,7 @@ export default function Home() {
               variants={stagger}
               className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {clientReviews.slice(0, 9).map((review) => (
+              {clientReviews.map((review) => (
                 <motion.article
                   key={review.name}
                   variants={reveal}
@@ -1359,7 +1368,7 @@ export default function Home() {
 
                     {review.reply && (
                       <div className="mt-3 rounded-lg border-l-2 border-[#b88628] bg-[#fdfbf7] p-2.5 text-[11px] leading-5 text-slate-700">
-                        <p className="font-semibold text-[#9b6e1b]">Resposta da Dra. Ana Paula:</p>
+                        <p className="font-semibold text-[#9b6e1b]">Resposta da Dra. Valéria Raposo:</p>
                         <p className="italic">{review.reply}</p>
                       </div>
                     )}
@@ -1406,7 +1415,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-zinc-400">
-                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Ana Paula no WhatsApp.
+                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Valéria Raposo no WhatsApp.
               </p>
             </div>
 
@@ -1448,7 +1457,7 @@ export default function Home() {
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
+                    "Olá, Dra. Valéria! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
@@ -1471,7 +1480,7 @@ export default function Home() {
               <Heading
                 theme="light"
                 eyebrow="CONTATO & AGENDAMENTO"
-                description="Fale diretamente com a Dra. Ana Paula Lima pelo WhatsApp para orientação imediata com acolhimento, sigilo absoluto e rigor técnico."
+                description="Fale diretamente com a Dra. Valéria Raposo pelo WhatsApp para orientação imediata com acolhimento, sigilo absoluto e rigor técnico."
               >
                 Prontidão para{" "}
                 <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
@@ -1482,14 +1491,14 @@ export default function Home() {
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Ana Paula
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Valéria
                 </GlowingButton>
                 <p className="text-[11px] leading-5 text-slate-600">
                   WhatsApp e telefone direto:{" "}
@@ -1508,10 +1517,10 @@ export default function Home() {
                       Horário de Funcionamento
                     </p>
                     <p className="mt-0.5 text-[#9b6e1b] font-bold">
-                      Segunda a Sexta · 08:00 às 18:00
+                      Segunda a Sexta · 08:00 às 17:00
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Atendimento presencial em Monte Azul e suporte online contínuo
+                      Atendimento presencial em Manhuaçu e suporte online contínuo
                     </p>
                   </div>
                 </div>
@@ -1557,7 +1566,7 @@ export default function Home() {
                     <span className="text-slate-900 font-medium">{ADDRESS_TEXT}</span>
                     <br />
                     <span className="text-[11px] text-slate-500">
-                      Sede em Monte Azul - MG e assessoria jurídica digital em todo o Brasil
+                      Sede em Manhuaçu - MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1572,7 +1581,7 @@ export default function Home() {
                 <div className="relative size-16 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
+                    alt="Monograma VR - Valéria Raposo Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
@@ -1580,7 +1589,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#b88628]">
-                    ANA PAULA LIMA
+                    VALÉRIA RAPOSO
                   </p>
                   <p className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
                     ADVOCACIA
@@ -1592,14 +1601,14 @@ export default function Home() {
               <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-stone-200 bg-stone-100 shadow-xs">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Ana Paula Lima em seu escritório"
+                  alt="Dra. Valéria Raposo em seu escritório"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
-                  <p className="text-xs font-semibold">Atendimento Acolhedor, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-200">Monte Azul · Norte de Minas & Atendimento Online</p>
+                  <p className="text-xs font-semibold">Atendimento Estratégico, Discreto e Resolutivo</p>
+                  <p className="text-[10px] text-stone-200">Manhuaçu · Zona da Mata & Atendimento Online</p>
                 </div>
               </div>
 
@@ -1621,21 +1630,21 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
                   <span>Segunda a Sexta</span>
                   <span className="text-right font-semibold text-[#9b6e1b]">
-                    08:00 às 18:00
+                    08:00 às 17:00
                   </span>
                   <span>Sábados e Domingos</span>
                   <span className="text-right font-medium text-slate-500">
                     Plantão via WhatsApp
                   </span>
                   <span>Localização</span>
-                  <span className="text-right text-slate-900 font-semibold">Monte Azul · MG</span>
+                  <span className="text-right text-slate-900 font-semibold">Manhuaçu · MG</span>
                 </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Ana Paula Lima! Gostaria de agendar um atendimento."
+                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1654,15 +1663,15 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
               <p className="eyebrow-light">
-                <Sparkles size={13} className="text-[#e2be67]" /> ANA PAULA LIMA ADVOCACIA
+                <Sparkles size={13} className="text-[#e2be67]" /> VALÉRIA RAPOSO ADVOCACIA
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Pronta para acolher sua história e defender seus direitos com firmeza.
+                Pronta para analisar seu caso e defender seus direitos com estratégia e firmeza.
               </h2>
             </div>
             <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dra. Ana Paula! Preciso de orientação jurídica para o meu caso."
+                "Olá, Dra. Valéria! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
               size="lg"
@@ -1681,13 +1690,13 @@ export default function Home() {
             <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Ana Paula Lima Advocacia"
+                aria-label="Valéria Raposo Advocacia"
                 className="flex items-center gap-3"
               >
                 <div className="relative size-12 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
+                    alt="Monograma VR - Valéria Raposo Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
@@ -1695,7 +1704,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-serif text-lg font-bold tracking-[0.14em] text-white">
-                    ANA PAULA LIMA
+                    VALÉRIA RAPOSO
                   </p>
                   <p className="text-[10px] font-semibold tracking-[0.22em] text-[#e2be67] uppercase">
                     A D V O C A C I A
@@ -1704,7 +1713,7 @@ export default function Home() {
               </a>
 
               <p className="mt-4 max-w-md text-xs leading-6 text-zinc-400">
-                Advocacia humanizada e estratégica especializada em Direito de Família, Previdenciário (INSS Rural e Urbano), Trabalhista e Cível, com sede em Monte Azul - MG e atuação online em todo o Brasil.
+                Advocacia estratégica e especializada em Direito de Família, Cível, Consumidor, Previdenciário (INSS) e Trabalhista, com sede no Centro de Manhuaçu - MG e atuação online em todo o Brasil.
               </p>
 
               <div className="mt-5 flex items-center gap-3 text-xs">
@@ -1714,7 +1723,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
                 >
-                  <InstagramIcon size={14} className="text-[#e2be67]" /> Instagram @adv.anapaulalimab
+                  <InstagramIcon size={14} className="text-[#e2be67]" /> Instagram @valeriaraposo.adv
                 </a>
                 <a
                   href={GOOGLE_SEARCH_URL}
@@ -1722,7 +1731,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
                 >
-                  <GoogleIcon size={14} /> Google 5,0 ★ (13 avaliações)
+                  <GoogleIcon size={14} /> Google 5,0 ★ (10 avaliações)
                 </a>
               </div>
             </div>
@@ -1740,7 +1749,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#sobre">
-                    A Advogada (Dra. Ana Paula)
+                    A Advogada (Dra. Valéria)
                   </a>
                 </li>
                 <li>
@@ -1781,7 +1790,7 @@ export default function Home() {
                   <strong className="text-white">Telefone / WhatsApp:</strong>
                   <br />
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Ana Paula! Gostaria de falar com seu escritório.")}
+                    href={getWhatsAppUrl("Olá, Dra. Valéria! Gostaria de falar com seu escritório.")}
                     target="_blank"
                     rel="noreferrer"
                     className="text-[#e2be67] hover:underline"
@@ -1797,7 +1806,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Horário:</strong>
                   <br />
-                  Segunda a Sexta · 08:00 às 18:00
+                  Segunda a Sexta · 08:00 às 17:00
                 </li>
                 <li>
                   <strong className="text-white">E-mail:</strong>
@@ -1809,7 +1818,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Especialização:</strong>
                   <br />
-                  Cível · Família · Previdenciário · Trabalhista
+                  Família · Cível · Consumidor · Previdenciário · Trabalhista
                 </li>
               </ul>
             </div>
@@ -1817,10 +1826,10 @@ export default function Home() {
 
           <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-800/80 pt-6 text-center text-[11px] text-zinc-500">
             <p>
-              © {new Date().getFullYear()} ANA PAULA LIMA ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} VALÉRIA RAPOSO ADVOCACIA. Todos os direitos reservados.
             </p>
             <p className="mt-1 text-[10px]">
-              R. Três de Outubro, 109, Monte Azul - MG, 39500-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
+              R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG, 36900-010 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1832,11 +1841,11 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Ana Paula! Gostaria de um atendimento jurídico pelo WhatsApp."
+              "Olá, Dra. Valéria! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Ana Paula Lima"
+            aria-label="Falar agora pelo WhatsApp com a Dra. Valéria Raposo"
             className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
             <span className="relative flex size-3">
@@ -1845,7 +1854,7 @@ export default function Home() {
             </span>
             <WhatsAppIcon size={18} className="text-white" />
             <span className="hidden sm:inline">
-              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Ana Paula Lima
+              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Valéria Raposo
             </span>
             <span className="sm:hidden font-bold">WhatsApp</span>
           </a>
@@ -1885,14 +1894,14 @@ export default function Home() {
                   <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-zinc-700 bg-black p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma Balança da Justiça - Ana Paula Lima Advocacia"
+                      alt="Monograma VR - Valéria Raposo Advocacia"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">ANA PAULA LIMA ADVOCACIA</p>
+                    <p className="eyebrow-light">VALÉRIA RAPOSO ADVOCACIA</p>
                     <p className="text-[10px] font-semibold tracking-wider text-[#e2be67] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
