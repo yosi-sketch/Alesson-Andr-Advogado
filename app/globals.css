@@ -3,31 +3,32 @@
 :root {
   color-scheme: light dark;
   
-  /* Primary Contrast: Obsidian Pure Black & Silk White */
-  --color-black-pure: #090a0d;
-  --color-black-surface: #111317;
-  --color-black-card: #171920;
-  --color-black-hover: #21232c;
+  /* Primary Contrast: Obsidian Midnight & Silk White */
+  --color-black-pure: #050c18;
+  --color-black-surface: #0a172e;
+  --color-black-card: #0d2042;
+  --color-black-hover: #142c56;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #fbf9f5;
+  --color-white-surface: #f8fafd;
   --color-white-card: #ffffff;
-  --color-white-muted: #f4efe6;
+  --color-white-muted: #f1f5f9;
 
-  /* Primary Logo Metallic Polished Gold */
+  /* Primary Logo Metallic Polished Royal Gold (Ouro Imperial) */
   --brand-gold-champagne: #faecd3;
   --brand-gold-light: #f3db9d;
-  --brand-gold-accent: #e2be67;
-  --brand-gold-warm: #cda142;
-  --brand-gold-primary: #b88628;
-  --brand-gold-rich: #9b6e1b;
-  --brand-gold-deep: #6e4a0d;
-  --brand-gold-noir: #201404;
+  --brand-gold-accent: #dfb555;
+  --brand-gold-warm: #c59b3f;
+  --brand-gold-primary: #b38a34;
+  --brand-gold-rich: #966f20;
+  --brand-gold-deep: #6e4e10;
+  --brand-gold-noir: #1f1403;
 
-  /* Secondary Brand Accent: Soft Velvet Marsala / Warm Wine */
-  --brand-wine-crimson: #c53150;
-  --brand-wine-rich: #80182a;
-  --brand-wine-deep: #54091a;
+  /* Secondary Brand Accent: Royal Imperial Navy Blue (Azul Marinho Real do Brasão WS) */
+  --brand-navy-light: #2563eb;
+  --brand-navy-primary: #0f2b5c;
+  --brand-navy-deep: #0a1b3b;
+  --brand-navy-midnight: #050d1d;
 }
 
 @theme inline {
@@ -38,24 +39,25 @@
   --color-gold-50: #fdfbf7;
   --color-gold-100: #faecd3;
   --color-gold-200: #f3db9d;
-  --color-gold-300: #e2be67;
-  --color-gold-400: #cda142;
-  --color-gold-500: #b88628;
-  --color-gold-600: #9b6e1b;
-  --color-gold-700: #78510f;
-  --color-gold-800: #4d3208;
-  --color-gold-900: #201404;
+  --color-gold-300: #dfb555;
+  --color-gold-400: #c59b3f;
+  --color-gold-500: #b38a34;
+  --color-gold-600: #966f20;
+  --color-gold-700: #785412;
+  --color-gold-800: #4d3408;
+  --color-gold-900: #1f1403;
 
-  --color-wine-50: #fdf2f4;
-  --color-wine-100: #fbe2e7;
-  --color-wine-200: #f7c5ce;
-  --color-wine-300: #ef98a8;
-  --color-wine-400: #df5e78;
-  --color-wine-500: #c53150;
-  --color-wine-600: #80182a;
-  --color-wine-700: #6a0f21;
-  --color-wine-800: #54091a;
-  --color-wine-900: #33040e;
+  --color-navy-50: #f0f5ff;
+  --color-navy-100: #e0ebff;
+  --color-navy-200: #c7d8fe;
+  --color-navy-300: #9bbafc;
+  --color-navy-400: #6091f7;
+  --color-navy-500: #3b71ef;
+  --color-navy-600: #2554e2;
+  --color-navy-700: #1d40ce;
+  --color-navy-800: #1b35a7;
+  --color-navy-900: #0f2452;
+  --color-navy-950: #07122b;
 }
 
 html {
@@ -68,11 +70,11 @@ body {
   background: #ffffff;
   color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #b88628;
+  caret-color: #c59b3f;
 }
 
 ::selection {
-  background: #b88628;
+  background: #c59b3f;
   color: #ffffff;
 }
 
@@ -81,7 +83,7 @@ body {
 }
 
 .eyebrow-gold,
-.eyebrow-wine,
+.eyebrow-navy,
 .eyebrow-dark,
 .eyebrow-light {
   display: flex;
@@ -95,11 +97,11 @@ body {
 }
 
 .eyebrow-gold {
-  color: #9b6e1b;
+  color: #966f20;
 }
 
-.eyebrow-wine {
-  color: #80182a;
+.eyebrow-navy {
+  color: #1d40ce;
 }
 
 .eyebrow-dark {
@@ -111,7 +113,7 @@ body {
 }
 
 .eyebrow-gold::before,
-.eyebrow-wine::before,
+.eyebrow-navy::before,
 .eyebrow-dark::before,
 .eyebrow-light::before {
   width: 1.75rem;
@@ -146,15 +148,15 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #b88628;
+  background: #c59b3f;
   content: "";
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   transition: transform 200ms ease;
 }
 
 .nav-link:hover {
-  color: #b88628;
+  color: #0f172a;
 }
 
 .nav-link:hover::after {
@@ -162,40 +164,12 @@ body {
 }
 
 .footer-link {
-  transition: color 180ms ease;
+  color: #94a3b8;
+  transition: color 150ms ease, transform 150ms ease;
+  display: inline-block;
 }
 
 .footer-link:hover {
-  color: #e2be67;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 9px;
-}
-
-::-webkit-scrollbar-track {
-  background: #090a0d;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 2px solid #090a0d;
-  border-radius: 999px;
-  background: #b88628;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #e2be67;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-  }
+  color: #dfb555;
+  transform: translateX(2px);
 }

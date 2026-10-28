@@ -19,41 +19,42 @@ import {
   Star,
   Shield,
   FileText,
-  HelpCircle,
   X,
   ChevronDown,
   Users,
   Briefcase,
-  AlertCircle,
-  Building,
+  Cpu,
+  Gavel,
+  Check,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5533988348180";
-const PHONE_DISPLAY = "(33) 98834-8180";
-const EMAIL_CONTACT = "contato@valeriaraposo.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/valeriaraposo.adv/";
-const INSTAGRAM_HANDLE = "@valeriaraposo.adv";
-const LAWYER_NAME = "Dra. Valéria Raposo";
-const LAWYER_TITLE = "Advogada · OAB/MG";
-const FIRM_NAME = "Valéria Raposo Advocacia";
-const ADDRESS_TEXT = "R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG, 36900-010";
+const WHATSAPP_NUMBER = "5537998693626";
+const PHONE_DISPLAY = "(37) 99869-3626";
+const EMAIL_CONTACT = "contato@weslleysantos.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/weslley_santos_advocacia";
+const INSTAGRAM_HANDLE = "@weslley_santos_advocacia";
+const LAWYER_NAME = "Dr. Weslley Santos";
+const LAWYER_TITLE = "Advogado · OAB/MG";
+const FIRM_NAME = "Escritório de Advocacia Weslley Santos";
+const FIRM_SUBTITLE = "Advocacia Especializada · Consultoria e Assessoria Jurídica";
+const ADDRESS_TEXT = "R. Batista de Almeida, 240 - Sl 12 - Centro, Oliveira - MG, 35540-000";
 const REGION_TEXT =
-  "Manhuaçu · Reduto · Simonésia · Manhumirim · Lajinha · Caratinga · Zona da Mata & Atendimento Online em Todo o Brasil";
+  "Oliveira · Carmópolis de Minas · Campo Belo · Santo Antônio do Amparo · Passa Tempo · Cláudio · Divinópolis · Toda MG & Atendimento Online em Todo o Brasil";
 const GOOGLE_SEARCH_URL =
-  "https://www.google.com/search?q=Val%C3%A9ria+Raposo+%E2%80%94+Advogada%0AManhua%C3%A7u+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
+  "https://www.google.com/search?q=Weslley+Santos+Advocacia%0AOliveira+%C2%B7+MG&sourceid=chrome&ie=UTF-8#";
 
 const LOGO_SRC = "/logo.png";
 const LOGO_SYMBOL_SRC = "/logo-symbol.png";
-const FOTO_HERO_SRC = "/valeria-raposo-hero.jpg";
-const FOTO_SOBRE_SRC = "/valeria-raposo-sobre.jpg";
+const FOTO_HERO_SRC = "/weslley-santos-hero.jpg";
+const FOTO_SOBRE_SRC = "/weslley-santos-sobre.jpg";
 
 function getWhatsAppUrl(
   message?: string,
   number: string = WHATSAPP_NUMBER
 ) {
   const defaultText =
-    "Olá, Dra. Valéria Raposo! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
+    "Olá, Dr. Weslley Santos! Gostaria de tirar dúvidas e agendar uma consultoria jurídica.";
   return `https://wa.me/${number}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -149,239 +150,255 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-de-familia",
-    title: "Direito de Família & Sucessões",
-    icon: Users,
-    tag: "Divórcio · Pensão Alimentícia · Guarda · Partilha · Inventários",
+    id: "direito-penal-juri",
+    title: "Direito Criminal & Tribunal do Júri",
+    icon: Gavel,
+    tag: "Plantão 24h · Flagrantes · Audiência de Custódia · Júri · Habeas Corpus",
     summary:
-      "Atuação acolhedora, estratégica e resolutiva para proteger quem você ama e assegurar a justa partilha do patrimônio familiar com total discrição.",
+      "Defesa técnica combativa e estratégica em todas as fases da persecução penal: de prisões em flagrante à tribuna do Tribunal do Júri.",
     details:
-      "Questões de família exigem sensibilidade humana combinada com firmeza técnica. A Dra. Valéria Raposo atua de forma estratégica na condução de divórcios consensuais e litigiosos, fixação e revisão justa de alimentos, regulamentação de guarda e inventários céleres, priorizando a paz familiar e a segurança patrimonial.",
+      "No processo penal, a liberdade exige resposta imediata e rigor técnico irretocável. O Dr. Weslley Santos atua com dedicação incansável em prisões em flagrante 24h, audiências de custódia, revogação de prisões preventivas, pedidos de liberdade provisória, impetração de Habeas Corpus e sustentação oral combativa perante o Tribunal do Júri, assegurando a defesa sagrada da vida e das garantias constitucionais.",
     topics: [
-      "Divórcio extrajudicial em cartório (ágil e menos oneroso) e divórcio judicial contencioso",
-      "Fixação, revisão (aumento ou redução) e execução de pensão alimentícia com cobrança ágil de atrasados",
-      "Regulamentação de guarda compartilhada, convivência familiar e proteção integral dos filhos",
-      "Reconhecimento e dissolução de união estável com partilha justa de patrimônio comum",
-      "Inventário judicial e extrajudicial em cartório com regularização segura de bens herdados",
-      "Planejamento sucessório familiar, testamentos e doações com cláusulas protetivas",
+      "Plantão Criminal 24 Horas para flagrantes, mandados de busca e apreensão e prisões cautelares",
+      "Acompanhamento presencial imediato em Delegacias de Polícia e lavratura de autos",
+      "Atuação estratégica em Audiências de Custódia com pedido de relaxamento de prisão ou liberdade provisória",
+      "Sustentação oral vibrante e combativa em Sessões Plenárias do Tribunal do Júri",
+      "Impetração ágil de Habeas Corpus no Tribunal de Justiça (TJMG), STJ e Supremo Tribunal Federal",
+      "Acompanhamento em Execução Penal, livramento condicional, remição e progressão de regime prisional",
     ],
     whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de consultoria jurídica sobre Direito de Família (divórcio, pensão, guarda ou inventário).",
+      "Olá, Dr. Weslley Santos! Preciso de atendimento criminal urgente (plantão 24h, prisão em flagrante ou custódia).",
+  },
+  {
+    id: "lei-de-drogas",
+    title: "Especialista em Lei de Drogas",
+    icon: Shield,
+    tag: "Lei 11.343/06 · Desclassificação para Uso · Tráfico Privilegiado · Nulidades",
+    summary:
+      "Expertise aprofundada na Lei de Drogas para combater abusos em apreensões, buscar a desclassificação para uso próprio ou aplicação de tráfico privilegiado.",
+    details:
+      "Processos envolvendo a Lei 11.343/06 demandam perícia técnica para apontar ilegalidades em abordagens e violações de domicílio. Como especialista em Lei de Drogas, o Dr. Weslley Santos constrói teses probatórias consistentes para demonstrar ausência de provas de traficância, pleitear desclassificação para consumo pessoal (art. 28), aplicação de tráfico privilegiado com redução de pena e substituição por medidas restritivas de direitos.",
+    topics: [
+      "Identificação e anulação de buscas domiciliares ilegais e invasões de domicílio sem mandado válido",
+      "Teses sólidas de desclassificação de tráfico (art. 33) para porte para consumo pessoal (art. 28)",
+      "Reconhecimento de Tráfico Privilegiado (§4º do art. 33) com redução máxima de pena e liberdade",
+      "Impugnação técnica de laudos preliminares e definitivos de constatação de entorpecentes",
+      "Combate a quebras da cadeia de custódia da prova e nulidade de apreensões arbitrárias",
+      "Recursos aos Tribunais Superiores (STJ e STF) para fixação de regime aberto e penas alternativas",
+    ],
+    whatsAppText:
+      "Olá, Dr. Weslley Santos! Gostaria de consultoria especializada sobre caso relacionado à Lei de Drogas.",
+  },
+  {
+    id: "pericia-digital-grafotecnica",
+    title: "Perícia Forense Digital & Grafotécnica",
+    icon: Cpu,
+    tag: "Validação de WhatsApp · Áudios & Mídias · Falsidade de Assinaturas · Fraudes",
+    summary:
+      "Diferencial científico e tecnológico exclusivo: formação técnica para desmascarar fraudes eletrônicas, metadados adulterados e assinaturas forjadas.",
+    details:
+      "Em tempos de processos digitais e golpes sofisticados, conversas de WhatsApp sem autenticidade técnica, arquivos adulterados ou contratos com assinaturas falsificadas podem causar prejuízos irreparáveis. Com formação especializada em Perícia Digital e Grafotécnica, o Dr. Weslley Santos analisa a autenticidade de documentos e provas eletrônicas, elaborando quesitos e pareceres assistenciais determinantes para o desfecho judicial.",
+    topics: [
+      "Exame grafotécnico de autenticidade e falsidade em assinaturas de contratos, cheques e procurações",
+      "Análise forense de conversas de WhatsApp, extração de metadados e integridade de mídias",
+      "Impugnação de provas digitais forjadas, print screens descontextualizados e violações da cadeia de custódia",
+      "Elaboração de laudos e pareceres técnicos assistenciais para processos criminais, cíveis e trabalhistas",
+      "Formulação de quesitos periciais estratégicos para questionar laudos oficiais frágeis ou contraditórios",
+      "Defesa contra fraudes cibernéticas, contas clonadas, golpes do Pix e falsificação documental",
+    ],
+    whatsAppText:
+      "Olá, Dr. Weslley Santos! Gostaria de uma avaliação sobre Perícia Digital ou Análise Grafotécnica para o meu caso.",
   },
   {
     id: "direito-civel",
     title: "Direito Cível & Responsabilidade Civil",
     icon: Scale,
-    tag: "Ações Indenizatórias · Contratos · Cobrança de Créditos · Posse e Propriedade",
+    tag: "Ações Indenizatórias · Contratos · Defesa do Consumidor · Posse & Imóveis",
     summary:
-      "Soluções assertivas para reparação de prejuízos materiais e morais, elaboração e revisão de contratos e defesa intransigente do seu patrimônio.",
+      "Atuação resolutiva para reparação integral de danos morais e materiais, blindagem contratual, usucapião e cobrança estratégica de títulos.",
     details:
-      "As relações civis demandam respaldo jurídico confiável para prevenir prejuízos e buscar reparações integrais. O escritório da Dra. Valéria Raposo promove ações indenizatórias consistentes contra atos ilícitos, descumprimentos de contratos, cobranças de títulos e proteção da posse e propriedade de imóveis.",
+      "As relações civis e comerciais exigem assessoria técnica para prevenir perdas e recompor patrimônios lesados. O escritório do Dr. Weslley Santos promove ações indenizatórias consistentes contra atos ilícitos e descumprimentos de contratos, recuperação de créditos, combate a abusos bancários e regularização definitiva de imóveis.",
     topics: [
-      "Ações indenizatórias por danos morais, materiais e estéticos decorrentes de atos ilícitos e acidentes",
-      "Elaboração, análise crítica e blindagem de Contratos Civis, Compra e Venda de Imóveis e Locações",
-      "Cobrança judicial e extrajudicial de dívidas, notas promissórias, cheques e contratos inadimplidos",
-      "Rescisão contratual com restituição de quantias pagas e aplicação de penalidades contratuais",
+      "Ações indenizatórias por danos morais, materiais e estéticos decorrentes de acidentes e ilícitos",
+      "Elaboração, análise de riscos e revisão de Contratos Civis, Compra e Venda de Imóveis e Locações",
+      "Combate a fraudes financeiras, golpes bancários e pedidos liminares para limpeza de nome no SPC/Serasa",
+      "Cobrança judicial e extrajudicial de títulos de crédito, notas promissórias e contratos inadimplidos",
       "Ações de Usucapião judicial e extrajudicial para regularização documental definitiva de imóveis",
-      "Ações Possessórias (Reintegração, Interdito Proibitório e Manutenção de Posse) para proteção de terrenos e imóveis",
+      "Ações possessórias (Reintegração, Manutenção de Posse e Interdito Proibitório) em defesa de propriedades",
     ],
     whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de consultoria jurídica sobre Direito Cível (indenização, contratos ou litígios civis).",
+      "Olá, Dr. Weslley Santos! Gostaria de consultoria sobre Direito Cível (indenização, contratos ou litígio).",
   },
   {
-    id: "direito-do-consumidor",
-    title: "Direito do Consumidor & Defesa Bancária",
-    icon: Shield,
-    tag: "Golpes do Pix & Fraudes · Limpeza de Nome · SPC/Serasa · Abusos Bancários",
+    id: "direito-de-familia",
+    title: "Direito de Família & Sucessões",
+    icon: Users,
+    tag: "Divórcio · Pensão Alimentícia · Guarda · Partilha de Bens · Inventários",
     summary:
-      "Combate incisivo a fraudes financeiras e abusos bancários: retirada urgente do nome dos órgãos de crédito e indenizações justas por danos sofridos.",
+      "Condução sensível, humana e firme para resolver impasses familiares e patrimoniais com total discrição e celeridade.",
     details:
-      "A Dra. Valéria Raposo atua com rapidez diante de golpes cibernéticos, negativações indevidas e cobranças abusivas de bancos. Ingressamos com pedidos liminares de urgência para desbloqueio de contas, exclusão imediata de restrições no SPC/Serasa e indenizações pelos transtornos suportados.",
+      "Conflitos familiares exigem equilíbrio psicológico aliado à precisão jurídica. O Dr. Weslley Santos atua na condução de divórcios rápidos em cartório ou contenciosos, fixação e execução de alimentos, guarda compartilhada dos filhos e inventários ágeis, preservando a harmonia familiar e resguardando os direitos patrimoniais de cada herdeiro.",
     topics: [
-      "Pedido liminar de urgência para retirada imediata do nome do SPC, Serasa e cartórios de protesto",
-      "Defesa jurídica estratégica para vítimas de fraudes bancárias, clonagem de contas e golpes do Pix",
-      "Cancelamento de empréstimos consignados não contratados e restituição de descontos indevidos em aposentadorias",
-      "Ações contra juros abusivos, tarifas bancárias ilegais e vendas casadas de seguros",
-      "Restituição em dobro de quantias cobradas indevidamente conforme o Código de Defesa do Consumidor",
-      "Indenizações por danos morais contra empresas de telefonia, companhias aéreas e prestadoras de serviços",
+      "Divórcio consensual em cartório (ágil e menos oneroso) e divórcio judicial contencioso",
+      "Fixação, revisão (aumento ou redução) e execução rigorosa de pensão alimentícia atrasada",
+      "Regulamentação de guarda compartilhada, convivência familiar e plano parental protetivo",
+      "Reconhecimento e dissolução de união estável com partilha justa do patrimônio amealhado",
+      "Inventário judicial e inventário extrajudicial em cartório com regularização imobiliária célere",
+      "Planejamento sucessório familiar, testamentos e doações com cláusulas protetivas",
     ],
     whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de atendimento urgente sobre negativação indevida, golpe bancário ou cobrança abusiva.",
+      "Olá, Dr. Weslley Santos! Gostaria de orientações sobre Direito de Família (divórcio, pensão, guarda ou inventário).",
   },
   {
     id: "direito-previdenciario",
-    title: "Direito Previdenciário (INSS Rural & Urbano)",
+    title: "Direito Previdenciário (INSS)",
     icon: HeartHandshake,
-    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Revisão de Benefícios",
+    tag: "Aposentadorias · BPC/LOAS · Auxílio-Doença · Reversão de Negativas Judiciais",
     summary:
-      "Assessoria especializada para garantir aposentadorias e amparo assistencial do INSS sem burocracia, com profundo conhecimento da realidade de Manhuaçu e região.",
+      "Assessoria combativa para garantir benefícios previdenciários e assistenciais justos para trabalhadores rurais e urbanos em Oliveira e região.",
     details:
-      "Conquistar o benefício do INSS exige documentação precisa e domínio das normas previdenciárias. A Dra. Valéria Raposo atua no requerimento administrativo e em ações judiciais combativas para aposentadorias rurais e urbanas, concessão de BPC/LOAS e reversão de indeferimentos injustos.",
+      "Conquistar o amparo do INSS exige documentação precisa e enfrentamento das negativas administrativas arbitrárias. O escritório atua na comprovação robusta da atividade de trabalhadores do campo e da cidade, concessão de BPC/LOAS para idosos e pessoas com deficiência e restabelecimento de auxílios e aposentadorias por incapacidade.",
     topics: [
-      "Aposentadoria por Idade Rural com comprovação robusta da atividade de pequeno produtor e trabalhador do campo",
+      "Aposentadoria por Idade Rural com comprovação documental detalhada do trabalhador do campo",
       "Aposentadoria Urbana por Idade, Tempo de Contribuição e regras de transição vigentes",
       "BPC / LOAS (Benefício de Prestação Continuada para Idosos 65+ e Pessoas com Deficiência)",
       "Auxílio por Incapacidade Temporária (Auxílio-Doença) e Aposentadoria por Invalidez",
-      "Pensão por Morte rural e urbana, Auxílio-Reclusão e Salário-Maternidade",
-      "Recursos administrativos e ações judiciais contra negativas ilegais do INSS",
+      "Pensão por Morte, Auxílio-Reclusão e Salário-Maternidade para famílias amparadas",
+      "Ações judiciais na Justiça Federal para reverter indeferimentos e receber parcelas retroativas",
     ],
     whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de orientação jurídica sobre aposentadoria rural/urbana, BPC/LOAS ou benefício do INSS.",
-  },
-  {
-    id: "direito-trabalhista",
-    title: "Direito do Trabalho & Defesa do Trabalhador",
-    icon: Briefcase,
-    tag: "Verbas Rescisórias · Rescisão Indireta · Horas Extras · Vínculo de Emprego",
-    summary:
-      "Defesa firme e combativa dos direitos do trabalhador para assegurar o pagamento correto de verbas rescisórias, horas extras e reparação por condições abusivas.",
-    details:
-      "Trabalhadores que dedicam seu esforço merecem o cumprimento integral da legislação. O escritório da Dra. Valéria Raposo atua com rigor técnico na apuração dos valores sonegados, pedidos de rescisão indireta quando o empregador descumpre obrigações e cobrança de todas as verbas rescisórias.",
-    topics: [
-      "Cobrança integral de verbas rescisórias não quitadas, aviso prévio, saldo de salário, férias e 13º salário",
-      "Ação de Rescisão Indireta do Contrato de Trabalho por falta de recolhimento de FGTS, atraso salarial ou abusos",
-      "Reconhecimento formal de vínculo empregatício sem registro em carteira e liberação de FGTS com multa",
-      "Cobrança de horas extras, intervalos intrajornada não concedidos e adicionais de trabalho noturno",
-      "Pleito de adicional de insalubridade e periculosidade para ambientes de risco à saúde e segurança",
-      "Ações indenizatórias por acidentes de trabalho, doenças ocupacionais e assédio moral no ambiente profissional",
-    ],
-    whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de consultoria sobre direitos trabalhistas (rescisão, acerto ou horas extras).",
-  },
-  {
-    id: "consultoria-estrategica",
-    title: "Consultoria Preventiva & Soluções Extrajudiciais",
-    icon: FileText,
-    tag: "Notificações · Acordos em Cartório · Mediação Célere · Atendimento Online",
-    summary:
-      "Resolução estratégica e econômica fora do Judiciário para solucionar conflitos com celeridade, unindo o atendimento presencial em Manhuaçu à praticidade digital.",
-    details:
-      "Muitos impasses podem ser solucionados sem o desgaste e o custo de um longo processo judicial. A Dra. Valéria Raposo oferece consultoria preventiva personalizada, mediação entre partes e redação de notificações formais que conferem segurança jurídica absoluta e celeridade aos acordos.",
-    topics: [
-      "Elaboração e envio de Notificações Extrajudiciais com validade formal para constituição em mora e cobrança",
-      "Mediação e condução de acordos amigáveis para resolução de disputas patrimoniais e contratuais",
-      "Assessoria consultiva e preventiva para pessoas físicas e empreendedores na assinatura de negócios",
-      "Acompanhamento e representação perante Cartórios de Notas e Registro de Imóveis de Manhuaçu e região",
-      "Atendimento 100% digital com videochamadas e assinatura eletrônica válida em todo o território nacional",
-      "Atendimento presencial personalizado em nosso escritório no centro de Manhuaçu - MG",
-    ],
-    whatsAppText:
-      "Olá, Dra. Valéria Raposo! Gostaria de uma consultoria estratégica preventiva ou envio de notificação para o meu caso.",
+      "Olá, Dr. Weslley Santos! Gostaria de orientação sobre aposentadoria rural/urbana, BPC/LOAS ou benefício do INSS.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Marcos Aurélio de Souza",
-    reviewerTag: "Manhuaçu · MG · Avaliação verificada no Google",
-    badge: "Estratégia Impecável, Clareza e Condução Ágil",
+    name: "Diego Henrique",
+    reviewerTag: "7 avaliações · 1 foto · Avaliação no Google",
+    badge: "Advogado de Extrema Confiança e Atendimento Rápido",
     rating: 5,
     content:
-      "A Dra. Valéria Raposo é uma advogada excepcional. Conduziu nosso processo com uma estratégia impecável, clareza e dedicação em cada etapa. O atendimento no escritório no centro de Manhuaçu é extremamente acolhedor. Recomendo de olhos fechados!",
-    reply: "Muito obrigada pelas palavras e pela confiança, Marcos! Conduzir cada causa com estratégia, transparência e respeito é a nossa maior missão.",
+      "Perfeito. Já é meu advogado há anos. Bem em conta os preços, atencioso, responde rápido no celular e atende. Aqui em Oliveira muitos conhecidos são clientes dele. Está de parabéns.",
+    reply: "Obrigado pela preferência e confiança!",
   },
   {
-    name: "Mariana Diniz Fonseca",
-    reviewerTag: "Avaliação verificada no Google",
-    badge: "Serenidade, Firmeza e Segurança no Divórcio e Partilha",
+    name: "Roney e Tamiris",
+    reviewerTag: "2 avaliações · Avaliação no Google",
+    badge: "Claro, Direto e com o Melhor Preço da Cidade",
     rating: 5,
     content:
-      "Excelente profissional! Cuidou do meu divórcio e partilha com muita serenidade, agilidade e firmeza. Me manteve informada de tudo pelo WhatsApp, sempre muito solícita e humana. Gratidão imensa pelo trabalho da Dra. Valéria!",
-    reply: "Agradeço de coração, Mariana. Assegurar a tranquilidade e a proteção dos seus direitos em momentos delicados é fundamental para nós.",
+      "Ótimo profissional! Me atendeu prontamente e me esclareceu todas as dúvidas. Sempre claro e direto. Recomendo a todos. Preço justo, o melhor da cidade.",
   },
   {
-    name: "Gilberto Carvalho Ramos",
-    reviewerTag: "Manhuaçu e Região · Avaliação no Google",
-    badge: "Golpe do Pix Resolvido com Liminar Urgente",
+    name: "Valle O",
+    reviewerTag: "Local Guide · 26 avaliações · 14 fotos · Google",
+    badge: "Extrema Cordialidade, Equipe Qualificada e Transparente",
     rating: 5,
     content:
-      "Atendimento de altíssimo nível. Fui vítima de uma fraude bancária com golpe do Pix e a Dra. Valéria conseguiu resolver com pedido de liminar muito rápido. Extremamente competente, firme e atenciosa.",
-    reply: "Combater abusos bancários e proteger o patrimônio dos nossos clientes exige rapidez e técnica precisa. Obrigado pela recomendação, Gilberto!",
+      "Desde o primeiro contato com o escritório de advocacia, fui atendido com extrema cordialidade, profissionalismo e atenção. A equipe se mostrou altamente qualificada, transparente e comprometida com a busca dos melhores resultados possíveis.",
+    reply: "Obrigado pela preferência e confiança!",
   },
   {
-    name: "Patrícia Oliveira Lopes",
-    reviewerTag: "Avaliação verificada no Google",
-    badge: "Aposentadoria Rural Concedida com Muito Cuidado",
+    name: "Jaqueline Eduarda",
+    reviewerTag: "5 avaliações · Avaliação no Google",
+    badge: "Dedicação, Segurança e Atuação Eficiente em Todas as Etapas",
     rating: 5,
     content:
-      "Dra. Valéria é muito competente, ética e atenciosa. Cuidou da aposentadoria da minha mãe no INSS com muito carinho e competência técnica. Conseguimos a aprovação sem enrolação. Excelente advogada em Manhuaçu!",
-    reply: "Fico muito feliz em participar dessa conquista tão merecida para a sua mãe, Patrícia. O trabalhador do campo merece todo o nosso amparo.",
+      "Gostaria de agradecer imensamente pelo atendimento prestado. Sua atuação foi extremamente profissional, clara e eficiente em todas as etapas. A dedicação, o conhecimento e a segurança que você transmite fazem toda a diferença.",
+    reply: "Obrigado pela confiança em meu trabalho!",
   },
   {
-    name: "Tiago Fernandes Martins",
+    name: "Dra. Érika Oliveira",
+    reviewerTag: "Local Guide · 16 avaliações · 1 foto · Google",
+    badge: "Deslocou 70km para me Acolher e Defender Minha História",
+    rating: 5,
+    content:
+      "Procurei por acidente um advogado no Google. Não posso mentir. Encontrei Weslley que me atendeu e me deu conforto imediato na minha causa. Ele foi atencioso a ponto de se deslocar 70km pra vir ouvir a minha história, acreditar em mim e me defender. Gratidão eterna.",
+    reply: "Agradecido pela gratidão e confiança em meu trabalho!",
+  },
+  {
+    name: "Danilo Garcia",
+    reviewerTag: "Local Guide · 4 avaliações · 48 fotos · Google",
+    badge: "Divórcio Resolvido com Suporte Mesmo em Outro Estado",
+    rating: 5,
+    content:
+      "Advogado muito competente e de extrema confiança. Procurei sem conhecer para resolver o meu divorcio e mesmo sendo em outro estado tive todo o suporte e presteza, sem contar com a qualidade no serviço e a confiabilidade. Indico para todos!!",
+  },
+  {
+    name: "Maria Alves",
     reviewerTag: "Avaliação no Google",
-    badge: "Clareza, Objetividade e Estratégia Jurídica Certeira",
+    badge: "Acolhimento Humano Inestimável em Momento Difícil",
     rating: 5,
     content:
-      "Profissional diferenciada em Manhuaçu. Clareza nas informações, sem rodeios e com estratégia jurídica de verdade. Fez toda a diferença no desfecho da minha ação cível. Nota 10!",
-    reply: "Obrigado pela confiança, Tiago! Atuação técnica e objetiva é o compromisso diário do nosso escritório.",
+      "Excelente profissional! Mesmo estando com o coração partido, não posso esquecer o quanto fui acolhida pelo Dr. Wesley. A gratidão será eterna.",
   },
   {
-    name: "Larissa Castro Albuquerque",
+    name: "ROSIMARA NASCIMENTO",
+    reviewerTag: "13 avaliações · Avaliação no Google",
+    badge: "Muito Eficiente e Comprometido",
+    rating: 5,
+    content:
+      "Recomendo o Dr. muito eficiente e comprometido. Ótimo profissional.",
+  },
+  {
+    name: "Alinne Morais",
     reviewerTag: "Avaliação no Google",
-    badge: "Segurança Absoluta do Início ao Fim",
+    badge: "Comprometimento, Excelência Técnica e Ética Rigorosa",
     rating: 5,
     content:
-      "Uma advogada humana, segura e extremamente detalhista. Transmite muita confiança desde o primeiro contato no WhatsApp. Recomendo a todos que precisam de uma assessoria de excelência.",
+      "Parabenizo o escritório pelo comprometimento, excelência técnica e pela ética com que conduz cada caso. É visível a seriedade e o cuidado com que atuam, refletindo a confiança que inspiram em seus clientes.",
   },
   {
-    name: "Antônio Carlos Rezende",
-    reviewerTag: "Manhuaçu · MG · Avaliação no Google",
-    badge: "Inventário Conduzido em Cartório com Rapidez",
+    name: "Reginaldo Machado",
+    reviewerTag: "2 avaliações · Avaliação no Google",
+    badge: "O Melhor Doutor: Atencioso e Prestativo",
     rating: 5,
     content:
-      "O inventário da nossa família foi resolvido com muita rapidez e transparência no cartório graças à orientação da Dra. Valéria Raposo. Escritório muito sério, moderno e eficiente.",
+      "Ótimo Dr o melhor sempre recomendo muito atencioso e prestativo.",
+    reply: "Obrigado pela confiança!",
   },
   {
-    name: "Camila Ribeiro Bastos",
+    name: "Maria Eduarda",
     reviewerTag: "Avaliação no Google",
-    badge: "Atendimento Humanizado e Muito Rápido no WhatsApp",
+    badge: "Profissional Excepcional e Altamente Competente",
     rating: 5,
     content:
-      "Atendimento impecável! Respondeu prontamente todas as dúvidas, explicou cada detalhe sem juridiquês e me acolheu em um momento delicado da minha família.",
+      "Profissional excepcional, comprometido e altamente competente! Sua dedicação e conhecimento jurídico fazem toda a diferença. Recomendo sem hesitar!",
   },
   {
-    name: "Eduardo Moreira Pires",
-    reviewerTag: "Avaliação no Google",
-    badge: "Defesa Trabalhista Firme e Direitos Assegurados",
+    name: "Talita Santos",
+    reviewerTag: "2 avaliações · Avaliação no Google",
+    badge: "Resolveu Meus Problemas e Esclareceu Cada Dúvida",
     rating: 5,
     content:
-      "Competência, postura ética e dedicação real ao cliente. A Dra. Valéria atuou na rescisão do meu contrato de trabalho com máxima firmeza e conseguimos nossos direitos. Excelente advogada!",
-  },
-  {
-    name: "Beatriz Vasconcelos",
-    reviewerTag: "Avaliação verificada no Google",
-    badge: "Excelência Presencial e no Atendimento Online",
-    rating: 5,
-    content:
-      "Super recomendo o escritório da Dra. Valéria Raposo em Manhuaçu. Atendimento impecável tanto presencialmente quanto pelo atendimento online. Muito dedicada e prestativa!",
+      "Ótima, resolveu meus problemas e tirou todas as dúvidas! Parabéns pelo trabalho.",
   },
 ];
 
 const faqs = [
   {
-    q: "A Dra. Valéria Raposo atende apenas presencialmente em Manhuaçu ou também online?",
-    a: "Atendemos presencialmente em nosso escritório na R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu (MG), e também de forma 100% digital e segura para clientes em toda a Zona da Mata mineira, Minas Gerais e qualquer estado do Brasil. Por meio de chamadas de vídeo, envio prático de documentos pelo WhatsApp e assinaturas digitais com validade legal oficial, você tem o mesmo rigor, sigilo e atenção sem precisar se deslocar.",
+    q: "O escritório atende prisões em flagrante e plantão criminal 24 horas?",
+    a: "Sim. O Escritório de Advocacia Weslley Santos mantém plantão criminal ininterrupto 24 horas por dia, 7 dias por semana, inclusive feriados e madrugadas. Realizamos atendimento imediato em Delegacias de Polícia, acompanhamento de prisões em flagrante, audiências de custódia e pedidos de liberdade de urgência em Oliveira e em todas as comarcas da região.",
   },
   {
-    q: "Como funciona o atendimento inicial e a análise do meu caso?",
-    a: "O primeiro contato pode ser feito diretamente pelo nosso WhatsApp. Analisamos sua demanda com sigilo profissional, verificamos os documentos preliminares e traçamos um diagnóstico jurídico claro e objetivo sobre a viabilidade, riscos e o melhor caminho para defender os seus direitos.",
+    q: "O que é a especialização em Lei de Drogas e por que ela é decisiva no processo?",
+    a: "A Lei 11.343/06 possui particularidades que exigem conhecimento técnico apurado. O Dr. Weslley Santos analisa a legalidade da abordagem policial, da busca domiciliar e da cadeia de custódia da substância. Essa atuação técnica permite combater excessos, demonstrar a ausência de intenção de tráfico, postular a desclassificação para uso (art. 28) ou a aplicação de tráfico privilegiado com redução substancial de pena e liberdade.",
   },
   {
-    q: "Como a Dra. Valéria atua em causas de Direito de Família (divórcio, pensão e partilha)?",
-    a: "Nossa prioridade é atuar com equilíbrio, discrição e estratégia, priorizando a via consensual em cartório — mais rápida e econômica. Caso haja litígio, defendemos os seus interesses e o sustento de seus filhos com técnica e combatividade nos tribunais.",
+    q: "Como a Perícia Forense Digital e Grafotécnica auxilia na defesa do cliente?",
+    a: "Com formação em Perícia Digital e Grafotécnica, o Dr. Weslley Santos examina a autenticidade de mensagens eletrônicas (WhatsApp, áudios, metadados de fotos e vídeos) para comprovar ou afastar manipulações, bem como realiza análises de assinaturas forjadas em contratos, procurações e títulos de crédito. Essa prova pericial pode ser determinante para anular processos injustos ou recuperar prejuízos de fraudes.",
   },
   {
-    q: "O que fazer se fui vítima de golpe do Pix, fraude bancária ou negativação indevida?",
-    a: "Casos de fraudes financeiras e restrições ilegais no SPC/Serasa demandam ação imediata. Atuamos com pedidos de tutela de urgência (liminar) para estancar descontos, bloquear transferências ilícitas e exigir a imediata exclusão do nome dos órgãos de crédito, cumulado com pedido de indenização por danos morais e restituição de quantias.",
+    q: "O Dr. Weslley Santos atende apenas presencialmente em Oliveira ou também online?",
+    a: "Atendemos presencialmente em nosso escritório na R. Batista de Almeida, 240 - Sl 12 - Centro, Oliveira (MG), e também online para clientes de cidades vizinhas (Carmópolis, Campo Belo, Cláudio, Santo Antônio do Amparo, Divinópolis), toda Minas Gerais e qualquer estado do Brasil, com reuniões virtuais seguras e assinatura eletrônica de documentos.",
   },
   {
-    q: "Quem tem direito aos benefícios previdenciários do INSS (aposentadoria ou BPC/LOAS)?",
-    a: "Tanto trabalhadores urbanos quanto trabalhadores rurais da nossa região possuem regras específicas de idade e tempo de contribuição ou atividade no campo. Além disso, idosos a partir de 65 anos e pessoas com deficiência de qualquer idade podem ter direito ao BPC/LOAS. Realizamos a conferência minuciosa de cada documento para buscar a concessão sem demoras.",
+    q: "Como funciona o atendimento inicial para divórcio, pensão alimentícia ou inventário?",
+    a: "O primeiro contato pode ser feito diretamente pelo nosso WhatsApp. Analisamos sua situação com discrição e sigilo, avaliando se o procedimento pode ser conduzido rapidamente pela via extrajudicial em cartório ou se demandará ação judicial, sempre priorizando a proteção dos filhos e a segurança patrimonial da família.",
   },
   {
-    q: "Como acompanho a movimentação do meu processo no escritório?",
-    a: "A transparência é um compromisso fundamental da Dra. Valéria Raposo. Você não fica sem saber o que está ocorrendo: a cada andamento ou decisão relevante, nosso escritório encaminha notificações claras e orientações diretamente no seu WhatsApp, sempre em linguagem simples e acessível.",
+    q: "Quem tem direito aos benefícios previdenciários do INSS (rural, urbano ou BPC/LOAS)?",
+    a: "Trabalhadores rurais e urbanos possuem requisitos específicos de idade e tempo de contribuição ou comprovação de atividade camponesa. Além disso, idosos com mais de 65 anos e pessoas com deficiência em situação de vulnerabilidade têm direito ao BPC/LOAS sem necessidade de contribuição anterior. O escritório realiza a análise documental completa para viabilizar a concessão e cobrar atrasados.",
   },
 ];
 
@@ -429,7 +446,7 @@ function Heading({
       {description && (
         <p
           className={`mt-4 text-[15px] leading-7 sm:text-base sm:leading-8 ${
-            isDark ? "text-zinc-300" : "text-slate-600"
+            isDark ? "text-slate-300" : "text-slate-600"
           }`}
         >
           {description}
@@ -457,15 +474,15 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative min-h-screen selection:bg-[#b88628] selection:text-white">
-        {/* DOBRA 0: Top Announcement Bar (Obsidian Noir - Alto Contraste) */}
-        <div className="border-b border-zinc-800 bg-[#090a0d] px-4 py-2.5 text-center text-xs text-zinc-300">
+      <main className="relative min-h-screen selection:bg-[#c59b3f] selection:text-white">
+        {/* DOBRA 0: Top Announcement Bar (Obsidian Navy Midnight - Alto Contraste) */}
+        <div className="border-b border-slate-800 bg-[#050c18] px-4 py-2.5 text-center text-xs text-slate-300">
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5 font-medium text-white">
-              <MapPin size={13} className="text-[#e2be67]" />
-              <strong>Sede em Manhuaçu - MG</strong>
-              <span className="hidden md:inline text-zinc-400">
-                · R. Cap. Rafael, 21 - Sl 103 - Centro · Atendimento Presencial & Online em Todo o Brasil
+              <MapPin size={13} className="text-[#dfb555]" />
+              <strong>Sede em Oliveira - MG</strong>
+              <span className="hidden md:inline text-slate-400">
+                · R. Batista de Almeida, 240 - Sl 12 - Centro · Plantão 24 Horas & Atendimento Online em Todo o Brasil
               </span>
             </span>
 
@@ -475,36 +492,36 @@ export default function Home() {
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#f3db9d] transition-colors"
             >
-              <span className="flex text-[#e2be67]">
+              <span className="flex text-[#dfb555]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="fill-[#e2be67]" />
+                  <Star key={i} size={11} className="fill-[#dfb555]" />
                 ))}
               </span>
-              <span>5,0 ★ no Google (10 avaliações)</span>
+              <span>5,0 ★ no Google (239 avaliações)</span>
             </a>
           </div>
         </div>
 
-        {/* Global Floating Header (Silk White - Clean, Elegante, Baseado no Logo Dourado VR) */}
+        {/* Global Floating Header (Silk White - Clean, Imperial Navy & Metallic Gold WS) */}
         <header
           className={`sticky top-0 z-40 transition-all duration-300 ${
             isScrolled
-              ? "border-b border-stone-200 bg-white/95 shadow-md shadow-black/5 backdrop-blur-md"
-              : "border-b border-stone-100 bg-white/90 backdrop-blur-sm"
+              ? "border-b border-slate-200 bg-white/95 shadow-md shadow-black/5 backdrop-blur-md"
+              : "border-b border-slate-100 bg-white/90 backdrop-blur-sm"
           }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8 lg:px-12">
             {/* Logo on Left */}
             <a
               href="#inicio"
-              aria-label="Valéria Raposo Advocacia - Início"
+              aria-label="Escritório de Advocacia Weslley Santos - Início"
               onClick={closeMenu}
               className="flex shrink-0 items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 mr-6 lg:mr-8 xl:mr-10"
             >
-              <div className="relative size-[52px] sm:size-[58px] lg:size-[62px] shrink-0">
+              <div className="relative size-[54px] sm:size-[60px] lg:size-[66px] shrink-0">
                 <Image
                   src={LOGO_SYMBOL_SRC}
-                  alt="Monograma VR - Valéria Raposo Advocacia"
+                  alt="Brasão Real WS - Escritório de Advocacia Weslley Santos"
                   fill
                   priority
                   unoptimized
@@ -512,11 +529,11 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-[16px] sm:text-[18px] lg:text-[19.5px] font-bold tracking-[0.13em] text-slate-900 leading-tight">
-                  VALÉRIA RAPOSO
+                <span className="font-cinzel text-[16px] sm:text-[18px] lg:text-[20px] font-bold tracking-[0.12em] text-[#0a172e] leading-tight">
+                  WESLLEY SANTOS
                 </span>
-                <span className="text-[10.5px] sm:text-[12px] lg:text-[12.8px] font-semibold tracking-[0.24em] text-[#b88628] uppercase mt-0.5">
-                  A D V O C A C I A
+                <span className="text-[10px] sm:text-[11.5px] lg:text-[12px] font-bold tracking-[0.22em] text-[#b38a34] uppercase mt-0.5">
+                  ADVOCACIA ESPECIALIZADA
                 </span>
               </div>
             </a>
@@ -527,7 +544,7 @@ export default function Home() {
               className="hidden lg:flex items-center gap-5 xl:gap-7 2xl:gap-8 whitespace-nowrap text-[11px] xl:text-[12px] font-medium tracking-[0.1em] xl:tracking-[0.12em]"
             >
               <a className="nav-link" href="#sobre">
-                A Advogada
+                O Advogado
               </a>
               <a className="nav-link" href="#atuacao">
                 Especialidades
@@ -536,13 +553,13 @@ export default function Home() {
                 Diferenciais
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Avaliações
+                Avaliações (239)
               </a>
               <a className="nav-link hidden 2xl:inline-block" href="#faq">
                 Dúvidas
               </a>
               <a className="nav-link" href="#contato">
-                Contato
+                Contato & Sede
               </a>
             </nav>
 
@@ -550,7 +567,7 @@ export default function Home() {
             <div className="hidden lg:flex items-center gap-3 shrink-0 ml-auto lg:ml-6 xl:ml-8">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Valéria Raposo! Gostaria de agendar uma consulta jurídica."
+                  "Olá, Dr. Weslley Santos! Gostaria de agendar uma consulta jurídica."
                 )}
                 target="_blank"
                 size="sm"
@@ -570,7 +587,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-10 sm:size-11 place-items-center rounded-lg border border-stone-200 bg-white text-slate-900 lg:hidden shadow-xs ml-auto cursor-pointer"
+              className="grid size-10 sm:size-11 place-items-center rounded-lg border border-slate-200 bg-white text-slate-900 lg:hidden shadow-xs ml-auto cursor-pointer"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -586,12 +603,12 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-stone-200 bg-white px-6 text-slate-900 lg:hidden shadow-xl"
+                className="overflow-hidden border-t border-slate-200 bg-white px-6 text-slate-900 lg:hidden shadow-xl"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["A Advogada", "#sobre"],
+                    ["O Advogado", "#sobre"],
                     ["Especialidades", "#atuacao"],
                     ["Diferenciais", "#diferenciais"],
                     ["Avaliações (5,0 ★)", "#avaliacoes"],
@@ -602,16 +619,16 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#b88628]"
+                      className="py-3 text-sm font-medium text-slate-700 hover:text-[#b38a34]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#805b14] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:brightness-105 active:translate-y-0"
                       href={getWhatsAppUrl(
-                        "Olá, Dra. Valéria Raposo! Gostaria de conversar com você sobre uma questão jurídica."
+                        "Olá, Dr. Weslley Santos! Gostaria de conversar com você sobre uma questão jurídica."
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -620,13 +637,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> WhatsApp: {PHONE_DISPLAY}
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-stone-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#b88628]"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-slate-50 px-5 py-3 text-xs font-semibold uppercase tracking-[0.13em] text-slate-800 transition-all hover:border-[#c59b3f]"
                       href={GOOGLE_SEARCH_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <GoogleIcon size={15} /> 5,0 ★ no Google (10 avaliações)
+                      <GoogleIcon size={15} /> 5,0 ★ no Google (239 avaliações)
                     </a>
                   </div>
                 </div>
@@ -635,16 +652,16 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* DOBRA 1: HERO SECTION (White Silk & Gold Metallic Glow) */}
+        {/* DOBRA 1: HERO SECTION (White Silk & Royal Navy & Gold Glow) */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-stone-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
+          className="relative isolate scroll-mt-24 border-b border-slate-200 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden"
         >
           {/* Subtle warm luxury background aura */}
-          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[45rem] rounded-full bg-[radial-gradient(circle,rgba(226,190,103,0.12),transparent_65%)]" />
-          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[35rem] rounded-full bg-[radial-gradient(circle,rgba(184,134,40,0.08),transparent_65%)]" />
+          <div className="pointer-events-none absolute right-0 top-0 -z-10 size-[48rem] rounded-full bg-[radial-gradient(circle,rgba(223,181,85,0.14),transparent_65%)]" />
+          <div className="pointer-events-none absolute left-0 bottom-0 -z-10 size-[38rem] rounded-full bg-[radial-gradient(circle,rgba(15,43,92,0.08),transparent_65%)]" />
 
-          <div className="mx-auto grid min-h-[600px] max-w-7xl items-center gap-10 px-5 sm:px-8 lg:min-h-[660px] lg:grid-cols-[1.14fr_0.86fr] lg:gap-14 lg:px-12">
+          <div className="mx-auto grid min-h-[600px] max-w-7xl items-center gap-10 px-5 sm:px-8 lg:min-h-[660px] lg:grid-cols-[1.12fr_0.88fr] lg:gap-14 lg:px-12">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -654,22 +671,22 @@ export default function Home() {
               {/* Secondary Gold Accent Eyebrow Pill */}
               <motion.div
                 variants={reveal}
-                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9b6e1b] shadow-xs"
+                className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#c59b3f]/30 bg-[#fdfbf7] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#966f20] shadow-xs"
               >
                 <span className="relative flex size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e2be67] opacity-75"></span>
-                  <span className="relative inline-flex size-2 rounded-full bg-[#b88628]"></span>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dfb555] opacity-75"></span>
+                  <span className="relative inline-flex size-2 rounded-full bg-[#c59b3f]"></span>
                 </span>
-                <span>DRA. VALÉRIA RAPOSO · ADVOCACIA · MANHUAÇU - MG</span>
+                <span>DR. WESLLEY SANTOS · ADVOCACIA · OLIVEIRA - MG · PLANTÃO 24H</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.15] tracking-[-0.02em] text-[#0f172a] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0a172e] sm:text-[2.65rem] sm:leading-[1.14] lg:text-[3.25rem] xl:text-[3.45rem]"
               >
-                Atuação jurídica estratégica, firme e personalizada:{" "}
-                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  defendendo seus direitos, seu patrimônio e a sua dignidade.
+                Advocacia estratégica, combate técnico &{" "}
+                <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#0f2b5c]">
+                  defesa intransigente dos seus direitos.
                 </span>
               </motion.h1>
 
@@ -677,7 +694,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8"
               >
-                Sob a liderança da <strong className="font-semibold text-slate-900">Dra. Valéria Raposo</strong>, nosso escritório combina combatividade técnica, transparência e acolhimento humano na defesa estratégica dos seus interesses em <strong className="font-semibold text-slate-900">Direito de Família, Cível, Consumidor, Previdenciário (INSS) e Trabalhista</strong>. Avaliação máxima 5,0 ★ no Google em Manhuaçu, Zona da Mata e com atendimento online em todo o Brasil.
+                Liderado pelo <strong className="font-semibold text-slate-900">Dr. Weslley Santos</strong>, nosso escritório combina combatividade destemida, precisão científica e atendimento transparente na defesa das suas causas em <strong className="font-semibold text-slate-900">Direito Criminal, Tribunal do Júri, Lei de Drogas, Perícia Digital e Grafotécnica, Cível e Previdenciário (INSS)</strong>. Nota máxima 5,0 ★ no Google com 239 avaliações reais. Plantão 24 Horas em Oliveira e região.
               </motion.p>
 
               {/* Action Buttons */}
@@ -687,7 +704,7 @@ export default function Home() {
               >
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento para analisar meu caso."
+                    "Olá, Dr. Weslley Santos! Gostaria de agendar um atendimento para analisar meu caso."
                   )}
                   target="_blank"
                   size="lg"
@@ -713,79 +730,79 @@ export default function Home() {
                 className="mt-10 grid grid-cols-2 gap-3 pt-6 border-t border-slate-200 sm:grid-cols-3 text-xs text-slate-600"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Atuação Estratégica & Personalizada</span>
+                  <CheckCircle2 size={16} className="text-[#b38a34] shrink-0" />
+                  <span>Plantão Criminal 24h & Flagrantes</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Presencial (Manhuaçu) & Online (Brasil)</span>
+                  <CheckCircle2 size={16} className="text-[#b38a34] shrink-0" />
+                  <span>Especialista em Lei de Drogas</span>
                 </div>
                 <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Comunicação Clara e Direta</span>
+                  <CheckCircle2 size={16} className="text-[#b38a34] shrink-0" />
+                  <span>Perícia Digital & Grafotécnica</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Visual presentation - Dra. Valéria Raposo Portrait */}
+            {/* Visual presentation - Dr. Weslley Santos Office Photo */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.15 }}
               className="relative mx-auto w-full max-w-[480px] lg:max-w-none"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-stone-200 bg-stone-50 shadow-2xl ring-1 ring-black/5">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-2xl ring-1 ring-black/5">
                 <Image
                   src={FOTO_HERO_SRC}
-                  alt="Dra. Valéria Raposo — Advogada em Manhuaçu - MG"
+                  alt="Dr. Weslley Santos em seu escritório de advocacia em Oliveira - MG"
                   fill
                   priority
                   unoptimized
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
 
                 {/* Floating identity bar on photo */}
-                <div className="absolute inset-x-4 bottom-4 rounded-xl border border-stone-200 bg-white/95 p-4 shadow-lg backdrop-blur-md">
+                <div className="absolute inset-x-4 bottom-4 rounded-xl border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b88628]">
-                        Valéria Raposo Advocacia
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b38a34]">
+                        Weslley Santos Advocacia
                       </p>
                       <p className="font-serif text-base font-bold text-slate-900 sm:text-lg">
-                        Dra. Valéria Raposo
+                        Dr. Weslley Santos
                       </p>
                     </div>
-                    <span className="rounded-md border border-[#b88628]/30 bg-[#fdfbf7] px-2.5 py-1 text-[10px] font-bold text-[#9b6e1b]">
-                      OAB/MG · Estratégia Jurídica
+                    <span className="rounded-md border border-[#c59b3f]/30 bg-[#fdfbf7] px-2.5 py-1 text-[10px] font-bold text-[#966f20]">
+                      OAB/MG · Plantão 24h
                     </span>
                   </div>
                   <p className="mt-1 text-[11px] text-slate-600">
-                    R. Cap. Rafael, 21 - Sl 103 - Centro · Manhuaçu - MG
+                    R. Batista de Almeida, 240 - Sl 12 - Centro · Oliveira - MG
                   </p>
                 </div>
               </div>
 
               {/* Decorative subtle corner border */}
-              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#b88628]/40 sm:-left-5 sm:-top-5 sm:size-28" />
-              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#b88628]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
+              <span className="absolute -left-3 -top-3 -z-10 size-20 border-l-2 border-t-2 border-[#c59b3f]/40 sm:-left-5 sm:-top-5 sm:size-28" />
+              <span className="absolute -bottom-3 -right-3 -z-10 size-20 border-b-2 border-r-2 border-[#c59b3f]/40 sm:-bottom-5 sm:-right-5 sm:size-28" />
 
               {/* Floating Google Review Badge */}
               <a
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="absolute -left-4 top-8 flex items-center gap-2.5 rounded-xl border border-stone-200 bg-white px-4 py-3 shadow-xl backdrop-blur-md transition-transform hover:scale-105 sm:-left-8"
+                className="absolute -left-4 top-8 flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-xl backdrop-blur-md transition-transform hover:scale-105 sm:-left-8"
               >
-                <div className="grid size-9 place-items-center rounded-lg bg-stone-50 border border-stone-200 shadow-xs shrink-0">
+                <div className="grid size-9 place-items-center rounded-lg bg-slate-50 border border-slate-200 shadow-xs shrink-0">
                   <GoogleIcon size={18} />
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
                     <span className="font-bold text-sm text-slate-900">5,0 ★</span>
-                    <span className="text-[10px] text-[#e2be67]">★★★★★</span>
+                    <span className="text-[10px] text-[#dfb555]">★★★★★</span>
                   </div>
                   <p className="text-[10px] font-medium text-slate-600">
-                    10 avaliações no Google
+                    239 avaliações no Google
                   </p>
                 </div>
               </a>
@@ -793,46 +810,46 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 2: FAIXA DE CREDENCIAIS (Obsidian Noir - Alto Impacto e Autoridade) */}
+        {/* DOBRA 2: FAIXA DE CREDENCIAIS (Obsidian Midnight - Alto Impacto e Autoridade) */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-zinc-800 bg-[#090a0d] text-white"
+          className="border-b border-slate-800 bg-[#050c18] text-white"
         >
           <div className="mx-auto max-w-7xl px-5 py-9 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
               {[
                 {
-                  value: "5,0 ★ no Google",
-                  label: "Nota máxima comprovando eficácia estratégica, celeridade e acolhimento humano",
+                  value: "5,0 ★ (239 Avaliações)",
+                  label: "Avaliação máxima no Google atestando presteza, clareza, preço justo e resolutividade",
                 },
                 {
-                  value: "Família & Cível",
-                  label: "Atuação resolutiva em divórcios, partilhas, indenizações e proteção de contratos",
+                  value: "Criminal & Júri 24h",
+                  label: "Atendimento ininterrupto para flagrantes, custódia e defesa no Tribunal do Júri",
                 },
                 {
-                  value: "Consumidor & Previdenciário",
-                  label: "Combate a golpes bancários, negativações indevidas e benefícios do INSS",
+                  value: "Lei de Drogas & Perícia",
+                  label: "Especialista em Lei 11.343/06 com formação em Perícia Digital e Grafotécnica",
                 },
                 {
-                  value: "Sede em Manhuaçu",
-                  label: "Atendimento presencial no Centro (R. Cap. Rafael) e assessoria online para todo o Brasil",
+                  value: "Sede em Oliveira · MG",
+                  label: "Atendimento presencial no Centro (R. Batista de Almeida) e online para todo o Brasil",
                 },
               ].map((item, index) => (
                 <div
                   key={item.value}
                   className={`flex flex-col justify-start ${
                     index > 0
-                      ? "sm:border-l sm:border-zinc-800/80 sm:pl-6 lg:pl-6 xl:pl-8"
+                      ? "sm:border-l sm:border-slate-800/80 sm:pl-6 lg:pl-6 xl:pl-8"
                       : ""
                   }`}
                 >
                   <div className="flex items-center gap-2.5">
-                    <span className="size-2 shrink-0 rounded-full bg-[#e2be67]" />
+                    <span className="size-2 shrink-0 rounded-full bg-[#dfb555]" />
                     <h3 className="font-serif text-lg sm:text-[1.18rem] lg:text-[1.25rem] font-bold text-white tracking-tight leading-snug">
                       {item.value}
                     </h3>
                   </div>
-                  <p className="mt-2.5 text-xs lg:text-[13px] leading-relaxed text-zinc-400 font-normal pl-[18px]">
+                  <p className="mt-2.5 text-xs lg:text-[13px] leading-relaxed text-slate-400 font-normal pl-[18px]">
                     {item.label}
                   </p>
                 </div>
@@ -841,13 +858,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 3: SOBRE A ADVOGADA (Silk Surface) */}
+        {/* DOBRA 3: SOBRE O ADVOGADO (Silk Surface) */}
         <section
           id="sobre"
-          className="scroll-mt-24 border-b border-stone-200 bg-[#fbf9f5] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-[#f8fafd] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 lg:px-12">
-            {/* Visual presentation - Dra. Valéria Raposo Portrait */}
+            {/* Visual presentation - Dr. Weslley Santos Portrait */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -855,10 +872,10 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[490px]"
             >
-              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
+              <div className="relative aspect-[4/4.9] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
                 <Image
                   src={FOTO_SOBRE_SRC}
-                  alt="Dra. Valéria Raposo — Advocacia Especializada em Manhuaçu"
+                  alt="Dr. Weslley Santos — Escritório de Advocacia Especializada em Oliveira"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -866,25 +883,25 @@ export default function Home() {
               </div>
 
               {/* Authority badge card */}
-              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-stone-200 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
-                <div className="flex items-center gap-2 text-[#b88628]">
+              <div className="absolute -bottom-6 right-3 max-w-[340px] rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-xl sm:-right-6 sm:px-6">
+                <div className="flex items-center gap-2 text-[#b38a34]">
                   <Sparkles size={16} />
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b88628]">
-                    Atuação Estratégica na Defesa de Direitos
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#b38a34]">
+                    Excelência Técnica & Combate Jurídico
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-slate-900">
-                  Valéria Raposo Advocacia
+                  Weslley Santos Advocacia
                 </p>
-                <p className="mt-0.5 text-[11px] font-medium text-[#b88628]">
-                  OAB/MG · Atendimento Presencial & Online
+                <p className="mt-0.5 text-[11px] font-medium text-[#b38a34]">
+                  OAB/MG · Especialista em Lei de Drogas & Perícia
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-slate-500">
-                  R. Cap. Rafael, 21 - Sl 103 - Centro · Manhuaçu - MG
+                  R. Batista de Almeida, 240 - Sl 12 - Centro · Oliveira - MG
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#b88628]/40 sm:-left-7 sm:-top-7 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 border-l-2 border-t-2 border-[#c59b3f]/40 sm:-left-7 sm:-top-7 sm:size-32" />
             </motion.div>
 
             {/* Story & Biography */}
@@ -896,19 +913,19 @@ export default function Home() {
             >
               <motion.div
                 variants={reveal}
-                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#9b6e1b] shadow-xs"
+                className="mb-4 inline-flex items-center gap-2.5 rounded-md border border-[#c59b3f]/25 bg-[#fdfbf7] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#966f20] shadow-xs"
               >
-                <span className="size-2 shrink-0 rounded-full bg-[#b88628]" />
-                <span>SOBRE A ADVOGADA & COMPROMISSO</span>
+                <span className="size-2 shrink-0 rounded-full bg-[#c59b3f]" />
+                <span>SOBRE O PROFISSIONAL & COMPROMISSO</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0f172a] sm:text-4xl lg:text-[3.25rem]"
+                className="font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-[#0a172e] sm:text-4xl lg:text-[3.25rem]"
               >
-                Uma advocacia pautada na estratégia refinada, escuta atenta e{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  defesa intransigente dos seus direitos.
+                Uma advocacia pautada na estratégia incisiva, agilidade e{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#0f2b5c]">
+                  defesa destemida da sua liberdade e dos seus direitos.
                 </span>
               </motion.h2>
 
@@ -916,26 +933,26 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                Por trás de cada causa jurídica existem histórias reais, conquistas familiares e direitos que exigem proteção enérgica e técnica apurada. <strong className="font-bold text-slate-900">A Dra. Valéria Raposo construiu sua prática profissional fundamentada na atuação estratégica</strong>, compreendendo as particularidades de cada cliente para transformar conflitos em soluções jurídicas seguras e eficazes.
+                No universo jurídico, especialmente nas áreas Criminal, de Família e Cível, cada decisão tomada nas primeiras horas define o futuro de uma vida inteira. <strong className="font-bold text-slate-900">O Dr. Weslley Santos consolidou sua atuação na advocacia combativa de resultados</strong>, aliando prontidão ininterrupta no atendimento à aplicação de teses técnicas avançadas.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-slate-600"
               >
-                Seja protegendo os vínculos familiares e a partilha de bens em um divórcio, revertendo fraudes e negativações indevidas contra instituições financeiras, ou assegurando direitos trabalhistas e benefícios do INSS em Manhuaçu e região, <strong className="font-bold text-slate-900">nosso compromisso é lutar pelo melhor resultado</strong> com rigor ético, proximidade e dedicação absoluta.
+                Com formação especializada em <strong className="font-bold text-slate-900">Perícia Digital e Grafotécnica</strong> e destacado reconhecimento como <strong className="font-bold text-slate-900">Especialista em Lei de Drogas</strong>, nosso escritório oferece um diferencial raro: a capacidade de desarticular acusações frágeis com rigor científico e atuar com eloquência na tribuna do Tribunal do Júri e nas cortes de justiça.
               </motion.p>
 
               {/* Client Quote Card */}
               <motion.div
                 variants={reveal}
-                className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-xs"
+                className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-xs"
               >
                 <blockquote className="font-serif text-sm italic leading-relaxed text-slate-800">
-                  &ldquo;A Dra. Valéria Raposo é uma advogada excepcional. Conduziu nosso processo com uma estratégia impecável, clareza e dedicação em cada etapa. O atendimento no escritório no centro de Manhuaçu é extremamente acolhedor. Recomendo de olhos fechados!&rdquo;
+                  &ldquo;Perfeito. Já é meu advogado há anos. Bem em conta os preços, atencioso, responde rápido no celular e atende. Aqui em Oliveira muitos conhecidos são clientes dele. Está de parabéns.&rdquo;
                 </blockquote>
-                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b88628]">
-                  — Marcos Aurélio de Souza (Avaliação verificada no Google · 5,0 ★)
+                <p className="mt-2 text-[11px] font-semibold uppercase tracking-wider text-[#b38a34]">
+                  — Diego Henrique (Cliente · Avaliação verificada no Google)
                 </p>
               </motion.div>
 
@@ -944,22 +961,22 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3"
               >
-                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
+                <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs">
                   <p className="font-bold text-slate-900">5,0 ★ no Google</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    10 avaliações 5 estrelas
+                    239 avaliações 5 estrelas
                   </p>
                 </div>
-                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs">
-                  <p className="font-bold text-slate-900">Atendimento Direto</p>
+                <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs">
+                  <p className="font-bold text-slate-900">Plantão 24 Horas</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Fale com a própria Dra. Valéria
+                    Emergências Criminais
                   </p>
                 </div>
-                <div className="rounded-lg border border-stone-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
-                  <p className="font-bold text-slate-900">Presencial & Online</p>
+                <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-xs col-span-2 sm:col-span-1">
+                  <p className="font-bold text-slate-900">Perícia & Técnica</p>
                   <p className="mt-0.5 text-[11px] text-slate-500">
-                    Manhuaçu e todo o Brasil
+                    Digital e Grafotécnica
                   </p>
                 </div>
               </motion.div>
@@ -969,53 +986,53 @@ export default function Home() {
                 className="mt-8 flex flex-col gap-3 text-xs text-slate-800"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Sede na R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG</span>
+                  <CheckCircle2 size={16} className="text-[#b38a34] shrink-0" />
+                  <span>Sede na R. Batista de Almeida, 240 - Sl 12 - Centro, Oliveira - MG</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-[#b88628] shrink-0" />
-                  <span>Contato direto pelo WhatsApp com a Dra. Valéria Raposo</span>
+                  <CheckCircle2 size={16} className="text-[#b38a34] shrink-0" />
+                  <span>Atendimento rápido e direto no WhatsApp pelo Dr. Weslley Santos</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-8">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria! Gostaria de agendar uma consulta para conversar sobre o meu caso."
+                    "Olá, Dr. Weslley Santos! Gostaria de agendar uma consulta para conversar sobre o meu caso."
                   )}
                   target="_blank"
                   size="md"
                   variant="gold"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Valéria Raposo
+                  <WhatsAppIcon size={16} /> Falar com o Dr. Weslley Santos
                 </GlowingButton>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* DOBRA 4: ÁREAS DE ATUAÇÃO (Obsidian Noir) */}
+        {/* DOBRA 4: ÁREAS DE ATUAÇÃO (Obsidian Midnight - Alto Impacto) */}
         <section
           id="atuacao"
-          className="scroll-mt-24 border-b border-zinc-800 bg-[#090a0d] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-800 bg-[#050c18] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="dark"
-                eyebrow="ÁREAS DE ATUAÇÃO ESPECIALIZADA"
-                description="Conheça nossos principais pilares jurídicos. Clique em qualquer especialidade para ver detalhes, procedimentos adotados e orientações sob medida."
+                eyebrow="PILAREs DE ATUAÇÃO ESPECIALIZADA"
+                description="Conheça nossas áreas de atuação técnica. Clique em qualquer especialidade para ver detalhes, estratégias processuais e direcionamento imediato."
               >
                 Soluções jurídicas estratégicas em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
-                  Manhuaçu, Zona da Mata e em todo o Brasil.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#dfb555]">
+                  Oliveira, região Centro-Oeste e em todo o Brasil.
                 </span>
               </Heading>
 
               <div className="shrink-0">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
+                    "Olá, Dr. Weslley Santos! Tenho dúvidas sobre uma questão jurídica e gostaria de atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1040,14 +1057,14 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group relative flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#111317] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:bg-[#171920] hover:shadow-[0_12px_36px_rgba(184,134,40,0.22)]"
+                    className="group relative flex flex-col justify-between rounded-xl border border-slate-800 bg-[#0a172e] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b3f] hover:bg-[#0f2244] hover:shadow-[0_12px_36px_rgba(197,155,63,0.25)]"
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <div className="grid size-12 place-items-center rounded-lg border border-zinc-700 bg-[#1c1e26] text-[#e2be67] transition-colors group-hover:border-[#b88628] group-hover:bg-[#b88628] group-hover:text-white">
+                        <div className="grid size-12 place-items-center rounded-lg border border-slate-700 bg-[#142c56] text-[#dfb555] transition-colors group-hover:border-[#c59b3f] group-hover:bg-[#c59b3f] group-hover:text-white">
                           <Icon size={22} />
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#e2be67]">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#dfb555]">
                           Especialidade
                         </span>
                       </div>
@@ -1060,16 +1077,16 @@ export default function Home() {
                         {area.tag}
                       </p>
 
-                      <p className="mt-3 text-xs leading-6 text-zinc-400">
+                      <p className="mt-3 text-xs leading-6 text-slate-300">
                         {area.summary}
                       </p>
                     </div>
 
-                    <div className="mt-6 flex items-center justify-between border-t border-zinc-800/80 pt-4">
+                    <div className="mt-6 flex items-center justify-between border-t border-slate-800/80 pt-4">
                       <button
                         type="button"
                         onClick={() => setActiveArea(area)}
-                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-zinc-300 transition-colors hover:text-[#e2be67] cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-300 transition-colors hover:text-[#dfb555] cursor-pointer"
                       >
                         Ver Detalhes & Tópicos <ArrowRight size={13} />
                       </button>
@@ -1079,7 +1096,7 @@ export default function Home() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`Falar no WhatsApp sobre ${area.title}`}
-                        className="grid size-8 place-items-center rounded-md border border-zinc-700 bg-zinc-900 text-zinc-300 transition-all hover:bg-[#25D366] hover:text-white hover:border-[#25D366]"
+                        className="grid size-8 place-items-center rounded-md border border-slate-700 bg-slate-900 text-slate-300 transition-all hover:bg-[#25D366] hover:text-white hover:border-[#25D366]"
                       >
                         <WhatsAppIcon size={14} />
                       </a>
@@ -1094,17 +1111,17 @@ export default function Home() {
         {/* DOBRA 5: DIFERENCIAIS (Silk Surface) */}
         <section
           id="diferenciais"
-          className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <Heading
               theme="light"
               eyebrow="POR QUE NOS ESCOLHER"
-              description="A união entre profundo preparo técnico, estratégia sob medida e transparência absoluta faz a diferença nos resultados que entregamos."
+              description="A união entre profundo domínio legislativo, resposta imediata 24 horas, técnica pericial e preço justo consolida a preferência de centenas de clientes."
             >
-              O que diferencia a atuação da{" "}
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                Dra. Valéria Raposo?
+              O que diferencia a advocacia do{" "}
+              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#0f2b5c]">
+                Dr. Weslley Santos?
               </span>
             </Heading>
 
@@ -1115,49 +1132,49 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#f8fafd] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b3f] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
-                      <HeartHandshake size={14} /> Atendimento Pessoal & Direto
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b3f]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#966f20]">
+                      <Clock size={14} /> Plantão 24h & Resposta Imediata
                     </span>
-                    <span className="text-xs font-semibold text-[#b88628]">
-                      5,0 ★ Google
+                    <span className="text-xs font-semibold text-[#b38a34]">
+                      5,0 ★ Google (239)
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Contato Próximo, Transparente & Sem Intermediários
+                    Atendimento Ágil, Transparente & Sem Enrolação
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Como comprovam as avaliações no Google com nota máxima 5,0 ★, o grande diferencial da Dra. Valéria Raposo é a proximidade e o acolhimento com cada cliente. Você fala diretamente com a advogada responsável pelo seu caso, sem intermediários frios ou respostas prontas.
+                    Como destacam as mais de 230 avaliações no Google, o Dr. Weslley Santos se notabiliza por atender com rapidez, falar a verdade de forma clara e direta e cobrar honorários justos e transparentes. Você fala diretamente com o advogado no celular, a qualquer hora do dia ou da noite.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Comunicação clara, objetiva e sem juridiquês</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Plantão Criminal ininterrupto 24 horas por dia em Oliveira e região</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Retorno ágil de mensagens e dúvidas no WhatsApp</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Respostas rápidas no WhatsApp, sem intermediários ou burocracia</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Acolhimento sincero e empatia em momentos decisivos</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Preço justo e condições transparentes de contratação</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-stone-200 pt-4">
+                <div className="mt-7 border-t border-slate-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Valéria! Gostaria de tirar dúvidas com você sobre o meu caso."
+                      "Olá, Dr. Weslley Santos! Gostaria de tirar dúvidas com você sobre o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b88628] hover:bg-[#b88628] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#c59b3f] hover:bg-[#c59b3f] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
-                      <WhatsAppIcon size={15} /> Conversar com a Dra. Valéria Raposo
+                      <WhatsAppIcon size={15} /> Conversar com o Dr. Weslley Santos
                     </span>
                     <ArrowUpRight size={15} />
                   </a>
@@ -1170,46 +1187,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group flex flex-col justify-between rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md sm:p-9"
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-[#f8fafd] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c59b3f] hover:shadow-md sm:p-9"
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#9b6e1b]">
-                      <Award size={14} /> Rigor Técnico & Estratégia
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-[#c59b3f]/25 bg-[#fdfbf7] px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#966f20]">
+                      <Cpu size={14} /> Lei de Drogas & Perícia Digital
                     </span>
-                    <span className="text-xs font-semibold text-[#b88628]">
-                      Zona da Mata & Brasil
+                    <span className="text-xs font-semibold text-[#b38a34]">
+                      Minas Gerais & Brasil
                     </span>
                   </div>
                   <h3 className="mt-4 font-serif text-2xl leading-tight text-slate-900 sm:text-[1.75rem]">
-                    Atuação Estratégica & Combatividade Processual
+                    Especialização Técnica Rara & Provas Incontestáveis
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-                    Ações de família, causas cíveis, fraudes de consumo e demandas previdenciárias exigem estratégia minuciosa, domínio legislativo e agilidade. O escritório da Dra. Valéria Raposo combina preparo técnico com petições combativas que fazem valer os seus direitos perante juizados e tribunais.
+                    Processos criminais complexos, acusações de tráfico e litígios cíveis não podem ser conduzidos com amadorismo. O domínio aprofundado da Lei 11.343/06 e a capacitação em Perícia Digital e Grafotécnica permitem ao Dr. Weslley identificar nulidades que outros deixam passar e construir teses vencedoras.
                   </p>
                   <ul className="mt-5 space-y-2 text-xs font-medium text-slate-700">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Análise aprofundada de documentos e histórico probatório</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Análise técnica de laudos toxicológicos e nulidade de buscas ilegais</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Agilidade em pedidos de liminares urgentes e tutelas de emergência</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Perícia de conversas de WhatsApp, metadados e assinaturas fraudulentas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 size={15} className="shrink-0 text-[#b88628]" />
-                      <span>Acompanhamento constante até a efetiva resolução do litígio</span>
+                      <CheckCircle2 size={15} className="shrink-0 text-[#b38a34]" />
+                      <span>Sustentação oral vibrante e destemida no Tribunal do Júri</span>
                     </li>
                   </ul>
                 </div>
-                <div className="mt-7 border-t border-stone-200 pt-4">
+                <div className="mt-7 border-t border-slate-200 pt-4">
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Valéria! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
+                      "Olá, Dr. Weslley Santos! Gostaria de consultar sobre a melhor estratégia jurídica para o meu caso."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex w-full items-center justify-between rounded-lg border border-stone-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#b88628] hover:bg-[#b88628] hover:text-white"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-slate-300 bg-white px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-slate-900 transition-all hover:border-[#c59b3f] hover:bg-[#c59b3f] hover:text-white"
                   >
                     <span className="inline-flex items-center gap-2">
                       <WhatsAppIcon size={15} /> Consultar Estratégia no WhatsApp
@@ -1222,25 +1239,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 6: MÉTODO EM 3 PASSOS (Obsidian Noir) */}
-        <section className="relative overflow-hidden border-b border-zinc-800 bg-[#0f1115] py-20 text-white sm:py-24 lg:py-28">
+        {/* DOBRA 6: MÉTODO EM 3 PASSOS (Obsidian Navy Midnight) */}
+        <section className="relative overflow-hidden border-b border-slate-800 bg-[#071224] py-20 text-white sm:py-24 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="dark"
-                eyebrow="COMO CUIDAMOS DO SEU CASO"
-                description="Um método transparente, estratégico e focado em resultados práticos para garantir sua segurança patrimonial e a paz da sua família."
+                eyebrow="COMO ATUAMOS NO SEU CASO"
+                description="Um método transparente, estratégico e focado em resultados práticos para garantir sua liberdade, patrimônio e a paz da sua família."
               >
                 Três etapas claras para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
-                  resolver sua demanda jurídica com segurança e paz de espírito.
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#dfb555]">
+                  defender sua causa com segurança e firmeza absoluta.
                 </span>
               </Heading>
 
-              <blockquote className="mt-8 rounded-xl border border-zinc-800 bg-[#171920] p-6 font-serif text-base italic leading-7 text-zinc-200 shadow-md">
-                &ldquo;Cada cliente traz uma causa singular que exige escuta atenta, estratégia refinada e firmeza. Nosso compromisso é entregar clareza, dedicação e técnica em todas as fases, defendendo o seu direito do início ao fim.&rdquo;
-                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#e2be67]">
-                  — Dra. Valéria Raposo · Advogada
+              <blockquote className="mt-8 rounded-xl border border-slate-800 bg-[#0a172e] p-6 font-serif text-base italic leading-7 text-slate-200 shadow-md">
+                &ldquo;Cada causa exige dedicação leal, técnica afiada e prontidão. Seja em uma audiência de custódia na madrugada, no plenário do júri ou em uma disputa cível, meu compromisso é lutar incansavelmente pelos melhores resultados para quem confia em meu trabalho.&rdquo;
+                <footer className="mt-3 font-sans text-[11px] font-semibold not-italic uppercase tracking-wider text-[#dfb555]">
+                  — Dr. Weslley Santos · Advogado
                 </footer>
               </blockquote>
             </div>
@@ -1250,23 +1267,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="divide-y divide-zinc-800"
+              className="divide-y divide-slate-800"
             >
               {[
                 [
                   "01",
-                  "Escuta Acolhedora & Diagnóstico Jurídico Estratégico",
-                  "Conversa reservada pelo WhatsApp ou em nosso escritório no centro de Manhuaçu para entender sua situação detalhadamente, analisando contratos, provas documentais e o contexto da demanda.",
+                  "Atendimento Rápido & Diagnóstico Técnico Imediato",
+                  "Contato direto e sem intermediários pelo WhatsApp ou presencialmente em nosso escritório no centro de Oliveira. Avaliamos a urgência dos fatos, documentos e histórico com sigilo absoluto.",
                 ],
                 [
                   "02",
-                  "Definição da Rota & Ação Ágil",
-                  "Traçamos o plano mais vantajoso (seja pela via preventiva de acordo extrajudicial, notificação formal ou ação judicial com pedido de liminar urgente), ingressando rapidamente para estancar prejuízos.",
+                  "Plano de Ação Combativo & Intervenção Ágil",
+                  "Definição da melhor rota (pedido liminar de liberdade, habeas corpus, perícia grafotécnica/digital, ação cível ou previdenciária), ingressando com rapidez perante delegacias, juizados e tribunais.",
                 ],
                 [
                   "03",
-                  "Acompanhamento Transparente & Notificação em Tempo Real",
-                  "Você nunca fica sem saber o andamento do seu processo. Informamos cada movimentação relevante em linguagem simples e compreensível diretamente no seu WhatsApp, até a vitória definitiva.",
+                  "Acompanhamento Próximo & Atualização Contínua",
+                  "Você não fica no escuro. O Dr. Weslley Santos mantém você informado sobre cada andamento, decisão e conquista do processo diretamente no seu celular em linguagem clara.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1274,12 +1291,12 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-serif text-2xl font-semibold text-[#e2be67]">
+                  <span className="font-serif text-2xl font-semibold text-[#dfb555]">
                     {number}
                   </span>
                   <div>
                     <h3 className="font-serif text-2xl text-white">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-zinc-400">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-slate-300">
                       {description}
                     </p>
                   </div>
@@ -1289,27 +1306,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 7: AVALIAÇÕES GOOGLE 5.0 (Silk Surface) */}
+        {/* DOBRA 7: AVALIAÇÕES GOOGLE 5.0 (Silk Surface - 239 Avaliações Reais) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 border-b border-stone-200 bg-[#fbf9f5] py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-[#f8fafd] py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <Heading
                 theme="light"
                 eyebrow="PROVA SOCIAL VERIFICADA · GOOGLE MEU NEGÓCIO"
-                description="Veja depoimentos reais sobre a competência, a agilidade e o atendimento acolhedor da Dra. Valéria Raposo em Manhuaçu e região."
+                description="Veja depoimentos reais de clientes atendidos pelo Dr. Weslley Santos em Oliveira, comarcas vizinhas e em outros estados."
               >
-                Avaliada com 5,0 ★ em{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  10 avaliações no Google.
+                Avaliado com nota máxima 5,0 ★ em{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#0f2b5c]">
+                  239 avaliações no Google.
                 </span>
               </Heading>
 
               {/* Google Verified Card */}
-              <div className="flex flex-col gap-3 rounded-xl border border-stone-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
-                <div className="grid size-12 place-items-center rounded-lg bg-stone-50 border border-stone-200 shrink-0">
+              <div className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center md:min-w-[340px]">
+                <div className="grid size-12 place-items-center rounded-lg bg-slate-50 border border-slate-200 shrink-0">
                   <GoogleIcon size={24} />
                 </div>
                 <div>
@@ -1317,17 +1334,17 @@ export default function Home() {
                     <span className="font-serif text-2xl font-bold text-slate-900">
                       5,0
                     </span>
-                    <div className="flex text-[#e2be67]">
+                    <div className="flex text-[#dfb555]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={15} className="fill-[#e2be67]" />
+                        <Star key={i} size={15} className="fill-[#dfb555]" />
                       ))}
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-slate-900">
-                    Valéria Raposo Advocacia
+                    Escritório de Advocacia Weslley Santos
                   </p>
                   <p className="text-[11px] text-slate-500">
-                    10 avaliações 5 estrelas no Google
+                    239 avaliações 5 estrelas no Google
                   </p>
                 </div>
               </div>
@@ -1344,16 +1361,16 @@ export default function Home() {
                 <motion.article
                   key={review.name}
                   variants={reveal}
-                  className="flex flex-col justify-between rounded-xl border border-stone-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#b88628] hover:shadow-md"
+                  className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-[#c59b3f] hover:shadow-md"
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex text-[#e2be67]">
+                      <div className="flex text-[#dfb555]">
                         {[...Array(review.rating)].map((_, i) => (
-                          <Star key={i} size={14} className="fill-[#e2be67]" />
+                          <Star key={i} size={14} className="fill-[#dfb555]" />
                         ))}
                       </div>
-                      <span className="rounded-md border border-[#b88628]/25 bg-[#fdfbf7] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#9b6e1b]">
+                      <span className="rounded-md border border-[#c59b3f]/25 bg-[#fdfbf7] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#966f20]">
                         Google Verificado
                       </span>
                     </div>
@@ -1367,14 +1384,14 @@ export default function Home() {
                     </p>
 
                     {review.reply && (
-                      <div className="mt-3 rounded-lg border-l-2 border-[#b88628] bg-[#fdfbf7] p-2.5 text-[11px] leading-5 text-slate-700">
-                        <p className="font-semibold text-[#9b6e1b]">Resposta da Dra. Valéria Raposo:</p>
+                      <div className="mt-3 rounded-lg border-l-2 border-[#c59b3f] bg-[#fdfbf7] p-2.5 text-[11px] leading-5 text-slate-700">
+                        <p className="font-semibold text-[#966f20]">Resposta do Dr. Weslley Santos:</p>
                         <p className="italic">{review.reply}</p>
                       </div>
                     )}
                   </div>
 
-                  <div className="mt-5 border-t border-stone-100 pt-3">
+                  <div className="mt-5 border-t border-slate-100 pt-3">
                     <p className="font-serif text-sm font-semibold text-slate-900">
                       {review.name}
                     </p>
@@ -1392,30 +1409,30 @@ export default function Home() {
                 href={GOOGLE_SEARCH_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#b88628] hover:text-[#b88628]"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-900 shadow-sm transition-all hover:border-[#c59b3f] hover:text-[#c59b3f]"
               >
-                <GoogleIcon size={16} /> Ver avaliações no Google <ArrowUpRight size={14} />
+                <GoogleIcon size={16} /> Ver todas as 239 avaliações no Google <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
         </section>
 
-        {/* DOBRA 8: PERGUNTAS FREQUENTES / FAQ (Obsidian Noir) */}
+        {/* DOBRA 8: PERGUNTAS FREQUENTES / FAQ (Obsidian Midnight) */}
         <section
           id="faq"
-          className="scroll-mt-24 border-b border-zinc-800 bg-[#090a0d] py-20 text-white sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-800 bg-[#050c18] py-20 text-white sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-4xl px-5 sm:px-8">
             <div className="text-center">
               <p className="eyebrow-light justify-center">DÚVIDAS FREQUENTES</p>
               <h2 className="mt-4 font-serif text-3xl leading-[1.14] tracking-[-0.02em] text-white sm:text-4xl lg:text-[3.15rem]">
                 Respostas diretas e esclarecedoras sobre os{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#e2be67]">
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3db9d] to-[#dfb555]">
                   seus direitos e nosso atendimento.
                 </span>
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-zinc-400">
-                Transparência desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com a Dra. Valéria Raposo no WhatsApp.
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-400">
+                Transparência total desde o primeiro contato. Se sua dúvida não estiver listada abaixo, clique no botão e fale diretamente com o Dr. Weslley Santos no WhatsApp.
               </p>
             </div>
 
@@ -1425,7 +1442,7 @@ export default function Home() {
                 return (
                   <div
                     key={faq.q}
-                    className="overflow-hidden rounded-xl border border-zinc-800 bg-[#111317] transition-colors hover:border-zinc-700"
+                    className="overflow-hidden rounded-xl border border-slate-800 bg-[#0a172e] transition-colors hover:border-slate-700"
                   >
                     <button
                       type="button"
@@ -1435,13 +1452,13 @@ export default function Home() {
                       <span>{faq.q}</span>
                       <ChevronDown
                         size={18}
-                        className={`shrink-0 text-[#e2be67] transition-transform duration-200 ${
+                        className={`shrink-0 text-[#dfb555] transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     {isOpen && (
-                      <div className="border-t border-zinc-800 px-6 pb-6 pt-4 text-sm leading-7 text-zinc-300">
+                      <div className="border-t border-slate-800 px-6 pb-6 pt-4 text-sm leading-7 text-slate-300">
                         {faq.a}
                       </div>
                     )}
@@ -1451,13 +1468,13 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-sm text-zinc-400">
-                Tem uma dúvida específica sobre a sua situação?
+              <p className="text-sm text-slate-400">
+                Tem uma dúvida urgente ou necessita de plantão criminal?
               </p>
               <div className="mt-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
+                    "Olá, Dr. Weslley Santos! Gostaria de tirar uma dúvida sobre a minha situação jurídica."
                   )}
                   target="_blank"
                   size="md"
@@ -1473,32 +1490,32 @@ export default function Home() {
         {/* DOBRA 9: CONTATO & SEDE (Silk Surface) */}
         <section
           id="contato"
-          className="scroll-mt-24 border-b border-stone-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
+          className="scroll-mt-24 border-b border-slate-200 bg-white py-20 text-slate-900 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
                 theme="light"
-                eyebrow="CONTATO & AGENDAMENTO"
-                description="Fale diretamente com a Dra. Valéria Raposo pelo WhatsApp para orientação imediata com acolhimento, sigilo absoluto e rigor técnico."
+                eyebrow="CONTATO & ATENDIMENTO 24H"
+                description="Fale diretamente com o Dr. Weslley Santos pelo WhatsApp para orientação imediata, sigilo profissional absoluto e rigor técnico."
               >
-                Prontidão para{" "}
-                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#80182a]">
-                  atender suas necessidades e defender seus direitos.
+                Prontidão total para{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#0f2b5c]">
+                  proteger sua liberdade e defender seus interesses.
                 </span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento."
+                    "Olá, Dr. Weslley Santos! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="lg"
                   variant="gold"
                   className="rounded-lg shadow-md"
                 >
-                  <WhatsAppIcon size={17} /> Falar no WhatsApp com a Dra. Valéria
+                  <WhatsAppIcon size={17} /> Falar no WhatsApp com o Dr. Weslley
                 </GlowingButton>
                 <p className="text-[11px] leading-5 text-slate-600">
                   WhatsApp e telefone direto:{" "}
@@ -1510,48 +1527,48 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <Clock
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#b88628]"
+                    className="mt-0.5 shrink-0 text-[#b38a34]"
                   />
                   <div>
                     <p className="font-semibold text-slate-900">
                       Horário de Funcionamento
                     </p>
-                    <p className="mt-0.5 text-[#9b6e1b] font-bold">
-                      Segunda a Sexta · 08:00 às 17:00
+                    <p className="mt-0.5 text-[#966f20] font-bold">
+                      Aberto 24 Horas · Plantão Jurídico e Criminal Ininterrupto
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Atendimento presencial em Manhuaçu e suporte online contínuo
+                      Atendimento presencial em Oliveira - MG e suporte online contínuo
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 pt-1">
-                  <Phone size={16} className="shrink-0 text-[#b88628]" />
+                  <Phone size={16} className="shrink-0 text-[#b38a34]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="font-medium text-slate-900 transition-colors hover:text-[#b88628]"
+                    className="font-medium text-slate-900 transition-colors hover:text-[#b38a34]"
                   >
-                    {PHONE_DISPLAY} (Ligações e WhatsApp)
+                    {PHONE_DISPLAY} (Ligações e WhatsApp 24h)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="shrink-0 text-[#b88628]" />
+                  <InstagramIcon size={16} className="shrink-0 text-[#b38a34]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="transition-colors hover:text-[#b88628] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b38a34] text-slate-900 font-medium"
                   >
                     {INSTAGRAM_HANDLE} (Instagram Oficial)
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="shrink-0 text-[#b88628]" />
+                  <Mail size={16} className="shrink-0 text-[#b38a34]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="transition-colors hover:text-[#b88628] text-slate-900 font-medium"
+                    className="transition-colors hover:text-[#b38a34] text-slate-900 font-medium"
                   >
                     {EMAIL_CONTACT}
                   </a>
@@ -1560,13 +1577,13 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={16}
-                    className="mt-0.5 shrink-0 text-[#b88628]"
+                    className="mt-0.5 shrink-0 text-[#b38a34]"
                   />
                   <div>
                     <span className="text-slate-900 font-medium">{ADDRESS_TEXT}</span>
                     <br />
                     <span className="text-[11px] text-slate-500">
-                      Sede em Manhuaçu - MG e assessoria jurídica digital em todo o Brasil
+                      Sede em Oliveira - MG e assessoria jurídica digital em todo o Brasil
                     </span>
                   </div>
                 </div>
@@ -1574,41 +1591,41 @@ export default function Home() {
             </div>
 
             {/* Brand Presentation Card */}
-            <div className="relative overflow-hidden rounded-xl border border-stone-200 bg-[#fbf9f5] p-7 shadow-lg sm:p-10">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b88628] via-[#e2be67] to-[#80182a]" />
+            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-[#f8fafd] p-7 shadow-lg sm:p-10">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#b38a34] via-[#dfb555] to-[#0f2b5c]" />
 
               <div className="flex items-center gap-4">
                 <div className="relative size-16 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma VR - Valéria Raposo Advocacia"
+                    alt="Brasão WS - Escritório de Advocacia Weslley Santos"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#b88628]">
-                    VALÉRIA RAPOSO
+                  <p className="font-cinzel text-[13px] font-bold uppercase tracking-[0.14em] text-[#0a172e]">
+                    WESLLEY SANTOS
                   </p>
-                  <p className="font-serif text-xl sm:text-2xl font-bold text-slate-900">
-                    ADVOCACIA
+                  <p className="text-[10px] font-bold tracking-[0.2em] text-[#b38a34] uppercase mt-0.5">
+                    ADVOCACIA ESPECIALIZADA
                   </p>
                 </div>
               </div>
 
               {/* Photo Presentation */}
-              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-stone-200 bg-stone-100 shadow-xs">
+              <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-xs">
                 <Image
-                  src={FOTO_SOBRE_SRC}
-                  alt="Dra. Valéria Raposo em seu escritório"
+                  src={FOTO_HERO_SRC}
+                  alt="Dr. Weslley Santos em seu escritório"
                   fill
                   unoptimized
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 text-white">
-                  <p className="text-xs font-semibold">Atendimento Estratégico, Discreto e Resolutivo</p>
-                  <p className="text-[10px] text-stone-200">Manhuaçu · Zona da Mata & Atendimento Online</p>
+                  <p className="text-xs font-semibold">Atendimento Estratégico, Destemido e Resolutivo</p>
+                  <p className="text-[10px] text-slate-200">Oliveira · Centro-Oeste Mineiro & Atendimento Online</p>
                 </div>
               </div>
 
@@ -1623,28 +1640,28 @@ export default function Home() {
               </address>
 
               {/* Weekly schedule table */}
-              <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-xs">
-                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b88628]">
+              <div className="mt-6 rounded-lg border border-slate-200 bg-white p-4 text-xs">
+                <p className="mb-2.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#b38a34]">
                   Atendimento & Horários
                 </p>
                 <div className="grid grid-cols-2 gap-y-1.5 text-slate-700">
-                  <span>Segunda a Sexta</span>
-                  <span className="text-right font-semibold text-[#9b6e1b]">
-                    08:00 às 17:00
+                  <span>Plantão Criminal</span>
+                  <span className="text-right font-bold text-[#966f20]">
+                    Aberto 24 Horas
                   </span>
-                  <span>Sábados e Domingos</span>
-                  <span className="text-right font-medium text-slate-500">
-                    Plantão via WhatsApp
+                  <span>Atendimento Presencial</span>
+                  <span className="text-right font-medium text-slate-600">
+                    Sede em Oliveira - MG
                   </span>
-                  <span>Localização</span>
-                  <span className="text-right text-slate-900 font-semibold">Manhuaçu · MG</span>
+                  <span>Atendimento Online</span>
+                  <span className="text-right text-slate-900 font-semibold">Todo o Brasil</span>
                 </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Valéria Raposo! Gostaria de agendar um atendimento."
+                    "Olá, Dr. Weslley Santos! Gostaria de agendar um atendimento."
                   )}
                   target="_blank"
                   size="md"
@@ -1658,20 +1675,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 10: PRÉ-FOOTER BANNER (Obsidian Noir) */}
-        <section className="border-t border-zinc-800 bg-[#0f1115] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
+        {/* DOBRA 10: PRÉ-FOOTER BANNER (Obsidian Navy Midnight) */}
+        <section className="border-t border-slate-800 bg-[#071224] px-5 py-14 text-white shadow-xl sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
             <div>
               <p className="eyebrow-light">
-                <Sparkles size={13} className="text-[#e2be67]" /> VALÉRIA RAPOSO ADVOCACIA
+                <Sparkles size={13} className="text-[#dfb555]" /> ESCRITÓRIO DE ADVOCACIA WESLLEY SANTOS
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl">
-                Pronta para analisar seu caso e defender seus direitos com estratégia e firmeza.
+                Pronto para analisar seu caso e defender seus direitos com técnica impecável e combatividade.
               </h2>
             </div>
             <GlowingButton
               href={getWhatsAppUrl(
-                "Olá, Dra. Valéria! Preciso de orientação jurídica para o meu caso."
+                "Olá, Dr. Weslley Santos! Preciso de orientação jurídica para o meu caso."
               )}
               target="_blank"
               size="lg"
@@ -1683,55 +1700,55 @@ export default function Home() {
           </div>
         </section>
 
-        {/* DOBRA 11: RODAPÉ INSTITUCIONAL (Obsidian Noir) */}
-        <footer className="border-t border-zinc-800 bg-[#090a0d] px-5 py-14 text-zinc-400 sm:px-8 lg:px-12">
+        {/* DOBRA 11: RODAPÉ INSTITUCIONAL (Obsidian Navy Midnight) */}
+        <footer className="border-t border-slate-800 bg-[#050c18] px-5 py-14 text-slate-400 sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
             {/* Col 1: Brand */}
             <div className="md:col-span-2">
               <a
                 href="#inicio"
-                aria-label="Valéria Raposo Advocacia"
-                className="flex items-center gap-3"
+                aria-label="Escritório de Advocacia Weslley Santos"
+                className="flex items-center gap-3.5"
               >
-                <div className="relative size-12 shrink-0">
+                <div className="relative size-14 shrink-0">
                   <Image
                     src={LOGO_SYMBOL_SRC}
-                    alt="Monograma VR - Valéria Raposo Advocacia"
+                    alt="Brasão WS - Weslley Santos Advocacia"
                     fill
                     unoptimized
                     className="object-contain"
                   />
                 </div>
                 <div>
-                  <p className="font-serif text-lg font-bold tracking-[0.14em] text-white">
-                    VALÉRIA RAPOSO
+                  <p className="font-cinzel text-lg font-bold tracking-[0.12em] text-white">
+                    WESLLEY SANTOS
                   </p>
-                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#e2be67] uppercase">
-                    A D V O C A C I A
+                  <p className="text-[10px] font-semibold tracking-[0.22em] text-[#dfb555] uppercase mt-0.5">
+                    ADVOCACIA ESPECIALIZADA
                   </p>
                 </div>
               </a>
 
-              <p className="mt-4 max-w-md text-xs leading-6 text-zinc-400">
-                Advocacia estratégica e especializada em Direito de Família, Cível, Consumidor, Previdenciário (INSS) e Trabalhista, com sede no Centro de Manhuaçu - MG e atuação online em todo o Brasil.
+              <p className="mt-4 max-w-md text-xs leading-6 text-slate-400">
+                Advocacia combativa e especializada em Direito Criminal, Tribunal do Júri, Lei de Drogas, Perícia Digital e Grafotécnica, Cível e Previdenciário (INSS), com sede no Centro de Oliveira - MG e atuação online em todo o Brasil.
               </p>
 
-              <div className="mt-5 flex items-center gap-3 text-xs">
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-xs">
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0a172e] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#dfb555] hover:text-white"
                 >
-                  <InstagramIcon size={14} className="text-[#e2be67]" /> Instagram @valeriaraposo.adv
+                  <InstagramIcon size={14} className="text-[#dfb555]" /> Instagram {INSTAGRAM_HANDLE}
                 </a>
                 <a
                   href={GOOGLE_SEARCH_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#111317] px-3 py-1.5 text-zinc-300 transition-colors hover:border-[#e2be67] hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-[#0a172e] px-3 py-1.5 text-slate-300 transition-colors hover:border-[#dfb555] hover:text-white"
                 >
-                  <GoogleIcon size={14} /> Google 5,0 ★ (10 avaliações)
+                  <GoogleIcon size={14} /> Google 5,0 ★ (239 avaliações)
                 </a>
               </div>
             </div>
@@ -1749,7 +1766,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#sobre">
-                    A Advogada (Dra. Valéria)
+                    O Advogado (Dr. Weslley Santos)
                   </a>
                 </li>
                 <li>
@@ -1764,7 +1781,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#avaliacoes">
-                    Avaliações no Google (5,0 ★)
+                    Avaliações no Google (239)
                   </a>
                 </li>
                 <li>
@@ -1774,7 +1791,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a className="footer-link" href="#contato">
-                    Contato & Endereço
+                    Contato & Sede
                   </a>
                 </li>
               </ul>
@@ -1785,15 +1802,15 @@ export default function Home() {
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">
                 Atendimento & Sede
               </p>
-              <ul className="mt-4 space-y-2.5 text-xs text-zinc-400">
+              <ul className="mt-4 space-y-2.5 text-xs text-slate-400">
                 <li>
                   <strong className="text-white">Telefone / WhatsApp:</strong>
                   <br />
                   <a
-                    href={getWhatsAppUrl("Olá, Dra. Valéria! Gostaria de falar com seu escritório.")}
+                    href={getWhatsAppUrl("Olá, Dr. Weslley! Gostaria de falar com seu escritório.")}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#e2be67] hover:underline"
+                    className="text-[#dfb555] hover:underline"
                   >
                     {PHONE_DISPLAY}
                   </a>
@@ -1806,7 +1823,7 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Horário:</strong>
                   <br />
-                  Segunda a Sexta · 08:00 às 17:00
+                  Aberto 24 Horas · Plantão Jurídico e Criminal
                 </li>
                 <li>
                   <strong className="text-white">E-mail:</strong>
@@ -1818,18 +1835,18 @@ export default function Home() {
                 <li>
                   <strong className="text-white">Especialização:</strong>
                   <br />
-                  Família · Cível · Consumidor · Previdenciário · Trabalhista
+                  Criminal · Tribunal do Júri · Lei de Drogas · Perícia Digital · Cível · INSS
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-800/80 pt-6 text-center text-[11px] text-zinc-500">
+          <div className="mx-auto mt-12 max-w-7xl border-t border-slate-800/80 pt-6 text-center text-[11px] text-slate-500">
             <p>
-              © {new Date().getFullYear()} VALÉRIA RAPOSO ADVOCACIA. Todos os direitos reservados.
+              © {new Date().getFullYear()} ESCRITÓRIO DE ADVOCACIA WESLLEY SANTOS. Todos os direitos reservados.
             </p>
             <p className="mt-1 text-[10px]">
-              R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG, 36900-010 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
+              R. Batista de Almeida, 240 - Sl 12 - Centro, Oliveira - MG, 35540-000 · Advocacia em conformidade com o Código de Ética e Disciplina da OAB.
             </p>
           </div>
         </footer>
@@ -1841,11 +1858,11 @@ export default function Home() {
         >
           <a
             href={getWhatsAppUrl(
-              "Olá, Dra. Valéria! Gostaria de um atendimento jurídico pelo WhatsApp."
+              "Olá, Dr. Weslley Santos! Gostaria de um atendimento jurídico pelo WhatsApp."
             )}
             target="_blank"
             rel="noreferrer"
-            aria-label="Falar agora pelo WhatsApp com a Dra. Valéria Raposo"
+            aria-label="Falar agora pelo WhatsApp com o Dr. Weslley Santos"
             className="group flex items-center gap-2.5 rounded-full border border-[#25D366]/80 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] px-4 py-3 text-xs font-bold text-white shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all hover:scale-105 hover:brightness-110 active:scale-95"
           >
             <span className="relative flex size-3">
@@ -1854,9 +1871,9 @@ export default function Home() {
             </span>
             <WhatsAppIcon size={18} className="text-white" />
             <span className="hidden sm:inline">
-              <span className="text-white font-bold">WhatsApp Direto</span> · Dra. Valéria Raposo
+              <span className="text-white font-bold">Plantão WhatsApp 24h</span> · Dr. Weslley Santos
             </span>
-            <span className="sm:hidden font-bold">WhatsApp</span>
+            <span className="sm:hidden font-bold">WhatsApp 24h</span>
           </a>
         </aside>
 
@@ -1879,30 +1896,30 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-zinc-700 bg-[#111317] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-xl border border-slate-700 bg-[#0a172e] p-7 shadow-2xl sm:max-w-xl sm:rounded-xl sm:p-10 text-white"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da especialidade"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition-colors hover:border-[#e2be67] cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-lg border border-slate-700 bg-slate-800 text-white transition-colors hover:border-[#dfb555] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
                 <div className="flex items-center gap-3 pr-12">
-                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-zinc-700 bg-black p-1 shadow-xs">
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-lg border border-slate-700 bg-[#050c18] p-1 shadow-xs">
                     <Image
                       src={LOGO_SYMBOL_SRC}
-                      alt="Monograma VR - Valéria Raposo Advocacia"
+                      alt="Brasão WS - Weslley Santos Advocacia"
                       fill
                       sizes="48px"
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <p className="eyebrow-light">VALÉRIA RAPOSO ADVOCACIA</p>
-                    <p className="text-[10px] font-semibold tracking-wider text-[#e2be67] uppercase">
+                    <p className="eyebrow-light">ESCRITÓRIO DE ADVOCACIA WESLLEY SANTOS</p>
+                    <p className="text-[10px] font-semibold tracking-wider text-[#dfb555] uppercase">
                       {LAWYER_NAME} · {LAWYER_TITLE}
                     </p>
                   </div>
@@ -1915,21 +1932,21 @@ export default function Home() {
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-7 text-zinc-300">
+                <p className="mt-5 text-sm leading-7 text-slate-300">
                   {activeArea.details}
                 </p>
 
-                <div className="mt-6 border-t border-zinc-800 pt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e2be67]">
+                <div className="mt-6 border-t border-slate-800 pt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#dfb555]">
                     Atuação e Procedimentos Adotados pelo Escritório:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-zinc-300"
+                        className="flex items-center gap-3 text-sm text-slate-300"
                       >
-                        <span className="size-2 shrink-0 rounded-full bg-[#e2be67]" />
+                        <span className="size-2 shrink-0 rounded-full bg-[#dfb555]" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1949,7 +1966,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-semibold text-zinc-400 transition-colors hover:text-white cursor-pointer"
+                    className="px-5 py-3 text-xs font-semibold text-slate-400 transition-colors hover:text-white cursor-pointer"
                   >
                     Fechar
                   </button>

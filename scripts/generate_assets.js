@@ -2,81 +2,87 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/827a0cb2-d46e-438d-b223-d51de8f16a7d/.user_uploaded/media_1793195495811_dd8247b9.jpg';
-const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/827a0cb2-d46e-438d-b223-d51de8f16a7d/.user_uploaded/media_1793195459222_fc5bb032.png';
+const pPhoto = 'C:/Users/matheus/.gemini/antigravity/brain/9f754abd-8829-422f-90dc-c55a7d4a64e8/.user_uploaded/media_1793198548824_f6ce7c64.jpg';
+const pLogo = 'C:/Users/matheus/.gemini/antigravity/brain/9f754abd-8829-422f-90dc-c55a7d4a64e8/.user_uploaded/media_1793198559216_765f8096.png';
 
 async function generateAssets() {
   const pubDir = path.resolve('public');
   const appDir = path.resolve('app');
   if (!fs.existsSync(pubDir)) fs.mkdirSync(pubDir, { recursive: true });
 
-  console.log('Generating brand assets for Valéria Raposo — Advogada...');
+  console.log('Generating brand assets for Escritório de Advocacia Weslley Santos...');
 
-  // 1. Raw Portrait Photo
+  // 1. Raw Portrait Photo & Full Office Hero
   await sharp(pPhoto)
-    .jpeg({ quality: 96, mozjpeg: true })
-    .toFile(path.join(pubDir, 'valeria-raposo.jpg'));
-
-  // 2. Hero photo (portrait framing focused on head & upper torso)
-  await sharp(pPhoto)
-    .resize(750, 920, { fit: 'cover', position: 'top' })
     .jpeg({ quality: 95, mozjpeg: true })
-    .toFile(path.join(pubDir, 'valeria-raposo-hero.jpg'));
+    .toFile(path.join(pubDir, 'weslley-santos.jpg'));
 
-  // 3. Sobre photo (portrait framing)
+  // 2. Full office hero photo
   await sharp(pPhoto)
-    .resize(750, 900, { fit: 'cover', position: 'top' })
     .jpeg({ quality: 95, mozjpeg: true })
-    .toFile(path.join(pubDir, 'valeria-raposo-sobre.jpg'));
+    .toFile(path.join(pubDir, 'weslley-santos-hero.jpg'));
+
+  // 3. Sobre photo: Headroom starting at y=90, centered on Dr. Weslley (x=380..720)
+  await sharp(pPhoto)
+    .extract({ left: 380, top: 90, width: 350, height: 490 })
+    .resize(600, 840, { fit: 'cover' })
+    .jpeg({ quality: 95, mozjpeg: true })
+    .toFile(path.join(pubDir, 'weslley-santos-sobre.jpg'));
+
+  await sharp(pubDir + '/weslley-santos-sobre.jpg')
+    .toFile(path.join(pubDir, 'weslley-santos-portrait.jpg'));
 
   // 4. Logo full
   await sharp(pLogo)
-    .png()
+    .png({ quality: 95 })
     .toFile(path.join(pubDir, 'logo.png'));
 
-  // 5. Monogram symbol: The "VR" inside the gold square frame
-  // Crop bounds: left 330, top 24, width 364, height 310
-  const symbolCrop = await sharp(pLogo)
-    .extract({ left: 330, top: 24, width: 364, height: 310 })
+  // 5. Monogram / Royal Crest Symbol (Crest + Crown + Laurels)
+  // Crest bounds: top: 16, height: 512, left: 49, width: 926
+  const crestCrop = await sharp(pLogo)
+    .extract({ left: 49, top: 16, width: 926, height: 512 })
     .toBuffer();
 
-  // Place into a square 512x512 with transparent padding for standalone symbol use
-  await sharp(symbolCrop)
-    .resize(440, 440, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  // Standalone transparent symbol
+  await sharp(crestCrop)
+    .resize(480, 480, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .extend({
-      top: 36,
-      bottom: 36,
-      left: 36,
-      right: 36,
+      top: 16,
+      bottom: 16,
+      left: 16,
+      right: 16,
       background: { r: 0, g: 0, b: 0, alpha: 0 }
     })
     .png()
     .toFile(path.join(pubDir, 'logo-symbol.png'));
 
-  // 6. Favicon Badge: Luxury Obsidian Noir with Polished Gold Rim and VR Monogram
+  await sharp(pubDir + '/logo-symbol.png')
+    .toFile(path.join(pubDir, 'logo-crest.png'));
+
+  // 6. Favicon Badge: Royal Imperial Navy (#071224) with polished Metallic Gold Rim and WS Royal Crest
   const badgeSvg = `
     <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
-          <stop offset="0%" stop-color="#1f180e" />
-          <stop offset="60%" stop-color="#100d07" />
-          <stop offset="100%" stop-color="#060503" />
+        <radialGradient id="bgGrad" cx="50%" cy="38%" r="65%">
+          <stop offset="0%" stop-color="#0f2347" />
+          <stop offset="55%" stop-color="#0a1832" />
+          <stop offset="100%" stop-color="#050c19" />
         </radialGradient>
         <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#fdf4d8" />
+          <stop offset="0%" stop-color="#fff1cc" />
           <stop offset="25%" stop-color="#e8be67" />
-          <stop offset="60%" stop-color="#b88428" />
-          <stop offset="85%" stop-color="#7a4e10" />
-          <stop offset="100%" stop-color="#4a2d07" />
+          <stop offset="60%" stop-color="#c59f42" />
+          <stop offset="85%" stop-color="#8c661b" />
+          <stop offset="100%" stop-color="#4a3307" />
         </linearGradient>
       </defs>
-      <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
-      <rect x="14" y="14" width="484" height="484" rx="114" fill="none" stroke="url(#goldRim)" stroke-width="18" stroke-opacity="0.95" />
+      <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+      <rect x="14" y="14" width="484" height="484" rx="106" fill="none" stroke="url(#goldRim)" stroke-width="16" stroke-opacity="0.9" />
     </svg>
   `;
 
-  const symbolBadge = await sharp(symbolCrop)
-    .resize(360, 360, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  const symbolBadge = await sharp(crestCrop)
+    .resize(380, 380, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .toBuffer();
 
   const icon512 = await sharp(Buffer.from(badgeSvg))
@@ -139,6 +145,9 @@ async function generateAssets() {
 
   // Clean up any remaining previous client files in public
   const oldFiles = [
+    'valeria-raposo.jpg',
+    'valeria-raposo-hero.jpg',
+    'valeria-raposo-sobre.jpg',
     'ana-paula-lima.jpg',
     'ana-paula-hero.jpg',
     'ana-paula-sobre.jpg'
@@ -151,7 +160,7 @@ async function generateAssets() {
     }
   }
 
-  console.log('✅ Successfully generated all brand assets and favicons for Valéria Raposo — Advogada!');
+  console.log('✅ Successfully generated all brand assets and favicons for Weslley Santos Advocacia!');
 }
 
 generateAssets().catch(err => {

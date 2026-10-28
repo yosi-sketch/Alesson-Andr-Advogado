@@ -36,79 +36,77 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090a0d",
+  themeColor: "#050c18",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.valeriaraposo.adv.br"),
-  title: "Valéria Raposo | Advogada em Manhuaçu · MG | Atendimento Presencial e Online",
+  metadataBase: new URL("https://www.weslleysantos.adv.br"),
+  title: "Escritório de Advocacia Weslley Santos | Advogado em Oliveira · MG | Atendimento 24h & Online",
   description:
-    "⚖️ Dra. Valéria Raposo — Advocacia Especializada com atuação estratégica na defesa de direitos. Sede em Manhuaçu - MG (R. Cap. Rafael, 21 - Sl 103 - Centro) e Atendimento Online em Todo o Brasil. Nota Máxima 5,0 ★ no Google (10 avaliações).",
+    "⚖️ Dr. Weslley Santos — Advocacia Especializada e Consultoria Jurídica em Oliveira - MG. Atuação combativa em Direito Criminal, Tribunal do Júri, Especialista em Lei de Drogas, Perícia Digital e Grafotécnica, Cível e Previdenciário. Nota máxima 5,0 ★ no Google (239 avaliações). Plantão 24 Horas.",
   keywords: [
-    "Valéria Raposo Advogada",
-    "Dra Valéria Raposo",
-    "Valéria Raposo Advocacia",
-    "Advogada em Manhuaçu MG",
-    "Advogado Manhuaçu Minas Gerais",
-    "Serviços Jurídicos Manhuaçu",
-    "Atuação Estratégica na Defesa de Direitos",
-    "Direito de Família Manhuaçu",
-    "Divórcio e Pensão Alimentícia Manhuaçu",
-    "Guarda e Partilha de Bens",
-    "Inventário e Sucessões Manhuaçu",
-    "Advogada Previdenciária Manhuaçu",
-    "Aposentadoria Rural e Urbana INSS",
-    "BPC LOAS Manhuaçu",
-    "Auxílio Doença INSS Manhuaçu",
-    "Direito Trabalhista Manhuaçu",
-    "Direitos do Trabalhador e Rescisão",
-    "Direito Cível e Responsabilidade Civil",
-    "Direito do Consumidor e Golpes Bancários",
-    "Zona da Mata Mineira Advocacia",
-    "Vertente do Caparaó Advocacia",
-    "Atendimento Jurídico Online Brasil",
+    "Weslley Santos Advocacia",
+    "Dr Weslley Santos",
+    "Advogado Weslley Santos",
+    "Advogado em Oliveira MG",
+    "Escritório de Advocacia Oliveira MG",
+    "Advogado Criminalista Oliveira MG",
+    "Tribunal do Júri Oliveira MG",
+    "Especialista em Lei de Drogas MG",
+    "Perícia Digital Forense MG",
+    "Perícia Grafotécnica Oliveira MG",
+    "Audiência de Custódia Oliveira",
+    "Habeas Corpus Plantão 24 Horas",
+    "Advogado Previdenciário Oliveira MG",
+    "Aposentadoria INSS Oliveira",
+    "BPC LOAS Oliveira MG",
+    "Direito de Família Oliveira",
+    "Divórcio e Pensão Oliveira",
+    "Direito Cível Indenizações Oliveira",
+    "Advogado Campo Belo Carmópolis Divinópolis",
+    "Plantão Criminal 24 Horas",
   ],
-  authors: [{ name: "Valéria Raposo Advocacia" }],
-  creator: "Valéria Raposo Advocacia",
-  publisher: "Valéria Raposo Advocacia",
+  authors: [{ name: "Escritório de Advocacia Weslley Santos" }],
+  creator: "Escritório de Advocacia Weslley Santos",
+  publisher: "Escritório de Advocacia Weslley Santos",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=vr1", sizes: "any" },
-      { url: "/favicon-32x32.png?v=vr1", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=vr1", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=vr1", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=vr1", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=ws2", sizes: "any" },
+      { url: "/favicon-32x32.png?v=ws2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=ws2", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=ws2", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=ws2", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=vr1",
-    apple: [{ url: "/apple-icon.png?v=vr1", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=ws2",
+    apple: [{ url: "/apple-icon.png?v=ws2", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.valeriaraposo.adv.br",
-    title: "Valéria Raposo | Advogada em Manhuaçu · MG | Atendimento Presencial e Online",
+    url: "https://www.weslleysantos.adv.br",
+    title: "Escritório de Advocacia Weslley Santos | Advogado em Oliveira · MG",
     description:
-      "⚖️ Atuação estratégica na defesa de seus direitos. Nota máxima 5,0 ★ no Google (10 avaliações). R. Cap. Rafael, 21 - Sl 103 - Centro, Manhuaçu - MG.",
-    siteName: "Valéria Raposo Advocacia",
+      "⚖️ Advocacia Especializada e Combate Técnico na Defesa de Seus Direitos. Nota máxima 5,0 ★ no Google (239 avaliações). Sede em Oliveira - MG (R. Batista de Almeida, 240 - Sl 12 - Centro). Plantão 24h.",
+    siteName: "Escritório de Advocacia Weslley Santos",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 512,
-        alt: "Valéria Raposo Advocacia",
+        height: 682,
+        alt: "Escritório de Advocacia Weslley Santos - Advocacia Especializada",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valéria Raposo | Advogada em Manhuaçu · MG",
+    title: "Escritório de Advocacia Weslley Santos | Oliveira · MG",
     description:
-      "⚖️ Advocacia Humanizada e Estratégica na Defesa de Direitos. Nota máxima 5,0 ★ no Google (10 avaliações).",
+      "⚖️ Advocacia Especializada: Criminal, Júri, Lei de Drogas, Perícia Digital, Cível e Previdenciário. 5,0 ★ no Google (239 avaliações).",
     images: ["/logo.png"],
   },
 };
@@ -121,37 +119,43 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Valéria Raposo Advocacia",
-    alternateName: "Dra. Valéria Raposo",
-    legalName: "Valéria Raposo Advocacia",
-    telephone: "+55-33-98834-8180",
-    email: "contato@valeriaraposo.adv.br",
-    url: "https://www.valeriaraposo.adv.br",
-    image: "https://www.valeriaraposo.adv.br/logo.png",
+    name: "Escritório de Advocacia Weslley Santos",
+    alternateName: "Dr. Weslley Santos Advocacia",
+    legalName: "Escritório de Advocacia Weslley Santos",
+    telephone: "+55-37-99869-3626",
+    email: "contato@weslleysantos.adv.br",
+    url: "https://www.weslleysantos.adv.br",
+    image: "https://www.weslleysantos.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Cap. Rafael, 21 - Sl 103 - Centro",
-      addressLocality: "Manhuaçu",
+      streetAddress: "R. Batista de Almeida, 240 - Sl 12 - Centro",
+      addressLocality: "Oliveira",
       addressRegion: "MG",
-      postalCode: "36900-010",
+      postalCode: "35540-000",
       addressCountry: "BR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-20.6963",
+      longitude: "-44.9016",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "10",
+      reviewCount: "239",
+      bestRating: "5",
+      worstRating: "1",
     },
     areaServed: [
-      "Manhuaçu",
-      "Reduto",
-      "Simonésia",
-      "Manhumirim",
-      "Lajinha",
-      "Ipanema",
-      "Caratinga",
-      "Ponte Nova",
-      "Zona da Mata",
+      "Oliveira",
+      "Carmópolis de Minas",
+      "Campo Belo",
+      "Santo Antônio do Amparo",
+      "Passa Tempo",
+      "Cláudio",
+      "Divinópolis",
+      "São Francisco de Paula",
       "Minas Gerais",
       "Brasil",
     ],
@@ -164,14 +168,16 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
+          "Saturday",
+          "Sunday",
         ],
-        opens: "08:00",
-        closes: "17:00",
+        opens: "00:00",
+        closes: "23:59",
       },
     ],
     sameAs: [
-      "https://www.instagram.com/valeriaraposo.adv/",
-      "https://wa.me/5533988348180",
+      "https://www.instagram.com/weslley_santos_advocacia",
+      "https://wa.me/5537998693626",
     ],
   };
 
@@ -181,19 +187,19 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=vr1" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=vr1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=vr1" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=vr1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=vr1" />
-        <link rel="shortcut icon" href="/favicon.ico?v=vr1" />
-        <meta name="theme-color" content="#090a0d" />
+        <link rel="icon" href="/favicon.ico?v=ws2" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ws2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ws2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=ws2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=ws2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=ws2" />
+        <meta name="theme-color" content="#050c18" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#b88628] selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#c59b3f] selection:text-white">
         {children}
       </body>
     </html>

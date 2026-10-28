@@ -11,8 +11,7 @@ interface GlowingButtonProps {
   size?: "sm" | "md" | "lg";
   variant?:
     | "gold"
-    | "wine"
-    | "ruby"
+    | "navy"
     | "dark"
     | "white"
     | "emerald"
@@ -35,55 +34,47 @@ export default function GlowingButton({
     lg: "px-8 py-4 text-xs tracking-[0.15em]",
   }[size];
 
-  // High-contrast prestige styling (black & white with signature polished gold & warm wine accents)
+  // High-contrast prestige styling (Royal Navy, Polished Gold & Midnight Obsidian)
   const variantClasses = {
-    // Primary Signature: Polished Imperial Gold & Champagne (From Valéria Raposo Logo)
+    // Primary Signature: Polished Imperial Gold & Champagne (From Weslley Santos Crest)
     gold:
-      "relative border border-[#fdf5e2]/90 bg-gradient-to-r from-[#9b6e1b] via-[#cda142] to-[#8a5d12] text-white font-black tracking-[0.14em] " +
-      "shadow-[0_6px_22px_-2px_rgba(184,134,40,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +
-      "hover:-translate-y-0.5 hover:from-[#b88628] hover:via-[#e2be67] hover:to-[#9b6e1b] " +
-      "hover:shadow-[0_10px_30px_rgba(226,190,103,0.6)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(184,134,40,0.4)]",
+      "relative border border-[#fef3d6]/90 bg-gradient-to-r from-[#966f20] via-[#c59b3f] to-[#805b14] text-white font-black tracking-[0.14em] " +
+      "shadow-[0_6px_22px_-2px_rgba(197,155,63,0.48),inset_0_1px_1px_rgba(255,255,255,0.45)] " +
+      "hover:-translate-y-0.5 hover:from-[#b38a34] hover:via-[#dfb555] hover:to-[#966f20] " +
+      "hover:shadow-[0_10px_30px_rgba(223,181,85,0.6)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(197,155,63,0.4)]",
 
-    // Secondary Accent: Signature Velvet Wine / Marsala
-    wine:
-      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#80182a] via-[#a41f3d] to-[#6a0f21] text-white font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(128,24,42,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
-      "hover:-translate-y-0.5 hover:from-[#9e1836] hover:via-[#c53150] hover:to-[#80182a] " +
-      "hover:shadow-[0_10px_28px_-2px_rgba(164,31,61,0.6)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(128,24,42,0.4)]",
+    // Secondary Accent: Royal Imperial Navy (From WS Monogram)
+    navy:
+      "relative border border-[#6091f7]/40 bg-gradient-to-r from-[#0a172e] via-[#0f2b5c] to-[#07122b] text-white font-bold tracking-[0.14em] " +
+      "shadow-[0_6px_20px_-2px_rgba(15,43,92,0.5),inset_0_1px_1px_rgba(255,255,255,0.25)] " +
+      "hover:-translate-y-0.5 hover:from-[#112347] hover:via-[#163b78] hover:to-[#0a172e] " +
+      "hover:shadow-[0_10px_28px_-2px_rgba(37,84,226,0.5)] " +
+      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(15,43,92,0.4)]",
 
-    // Alias ruby to wine
-    ruby:
-      "relative border border-[#f7c5ce]/40 bg-gradient-to-r from-[#80182a] via-[#a41f3d] to-[#6a0f21] text-white font-bold tracking-[0.14em] " +
-      "shadow-[0_6px_20px_-2px_rgba(128,24,42,0.45),inset_0_1px_1px_rgba(255,255,255,0.4)] " +
-      "hover:-translate-y-0.5 hover:from-[#9e1836] hover:via-[#c53150] hover:to-[#80182a] " +
-      "hover:shadow-[0_10px_28px_-2px_rgba(164,31,61,0.6)] " +
-      "active:translate-y-0 active:shadow-[0_3px_10px_rgba(128,24,42,0.4)]",
-
-    // High-Contrast Solid Black (ideal on White folds)
+    // High-Contrast Solid Midnight (ideal on White folds)
     dark:
-      "relative border border-stone-800 bg-[#090a0d] text-white font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_18px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 hover:bg-[#171920] hover:border-[#b88628] " +
-      "hover:shadow-[0_10px_24px_rgba(0,0,0,0.35)]",
+      "relative border border-slate-800 bg-[#060c18] text-white font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_18px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:bg-[#0d2042] hover:border-[#c59b3f] " +
+      "hover:shadow-[0_10px_24px_rgba(0,0,0,0.4)]",
 
-    // High-Contrast Pure White (ideal on Black folds)
+    // High-Contrast Pure White (ideal on Dark folds)
     white:
-      "relative border border-white bg-white text-[#090a0d] font-bold tracking-[0.13em] " +
-      "shadow-[0_6px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:bg-stone-100 hover:border-stone-200 " +
+      "relative border border-white bg-white text-[#060c18] font-bold tracking-[0.13em] " +
+      "shadow-[0_6px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 hover:bg-slate-100 hover:border-slate-200 " +
       "hover:shadow-[0_10px_26px_rgba(255,255,255,0.2)]",
 
     // Outline on Dark Folds
     outline:
       "relative border border-white/20 bg-white/5 text-white font-bold tracking-[0.13em] backdrop-blur-md " +
-      "hover:-translate-y-0.5 hover:border-[#e2be67] hover:bg-white/10 hover:text-[#faecd3]",
+      "hover:-translate-y-0.5 hover:border-[#dfb555] hover:bg-white/10 hover:text-[#faecd3]",
 
     // Outline on Light Folds
     "outline-dark":
-      "relative border border-stone-300 bg-white/80 text-[#0f172a] font-bold tracking-[0.13em] " +
-      "hover:-translate-y-0.5 hover:border-[#b88628] hover:text-[#b88628] hover:bg-stone-50",
+      "relative border border-slate-300 bg-white/90 text-[#0f172a] font-bold tracking-[0.13em] " +
+      "hover:-translate-y-0.5 hover:border-[#c59b3f] hover:text-[#c59b3f] hover:bg-slate-50",
 
-    // WhatsApp Green CTA
+    // WhatsApp Conversion Green CTA
     emerald:
       "relative border border-[#25D366]/70 bg-gradient-to-r from-[#0d331a] via-[#128C7E] to-[#075E54] text-white font-bold tracking-[0.14em] " +
       "shadow-[0_6px_20px_-2px_rgba(37,211,102,0.4)] hover:-translate-y-0.5 hover:brightness-110 " +
