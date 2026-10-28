@@ -36,77 +36,73 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#050c18",
+  themeColor: "#07090e",
   colorScheme: "light dark",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.weslleysantos.adv.br"),
-  title: "Escritório de Advocacia Weslley Santos | Advogado em Oliveira · MG | Atendimento 24h & Online",
+  metadataBase: new URL("https://www.alessonandre.adv.br"),
+  title: "Alesson André | Advogado Criminal e Trabalhista em Carmo do Rio Claro · MG",
   description:
-    "⚖️ Dr. Weslley Santos — Advocacia Especializada e Consultoria Jurídica em Oliveira - MG. Atuação combativa em Direito Criminal, Tribunal do Júri, Especialista em Lei de Drogas, Perícia Digital e Grafotécnica, Cível e Previdenciário. Nota máxima 5,0 ★ no Google (239 avaliações). Plantão 24 Horas.",
+    "⚖️ Dr. Alesson André — Advogado Criminal e Trabalhista (OAB/MG 233.850). Atuação combativa em Direito Criminal, Plantão em Delegacias e Flagrantes, Fóruns, Cartórios, Direito Trabalhista e Previdenciário. Nota máxima 5,0 ★ no Google (136 avaliações). Sede no Andar dos Advogados, Carmo do Rio Claro - MG.",
   keywords: [
-    "Weslley Santos Advocacia",
-    "Dr Weslley Santos",
-    "Advogado Weslley Santos",
-    "Advogado em Oliveira MG",
-    "Escritório de Advocacia Oliveira MG",
-    "Advogado Criminalista Oliveira MG",
-    "Tribunal do Júri Oliveira MG",
-    "Especialista em Lei de Drogas MG",
-    "Perícia Digital Forense MG",
-    "Perícia Grafotécnica Oliveira MG",
-    "Audiência de Custódia Oliveira",
-    "Habeas Corpus Plantão 24 Horas",
-    "Advogado Previdenciário Oliveira MG",
-    "Aposentadoria INSS Oliveira",
-    "BPC LOAS Oliveira MG",
-    "Direito de Família Oliveira",
-    "Divórcio e Pensão Oliveira",
-    "Direito Cível Indenizações Oliveira",
-    "Advogado Campo Belo Carmópolis Divinópolis",
-    "Plantão Criminal 24 Horas",
+    "Alesson André",
+    "Alesson André Advogado",
+    "Advogado Alesson André",
+    "Advogado em Carmo do Rio Claro MG",
+    "Advogado Criminalista Carmo do Rio Claro",
+    "Advogado Trabalhista Carmo do Rio Claro",
+    "Advogado Criminalista Sul de Minas",
+    "Audiência de Custódia Carmo do Rio Claro",
+    "Habeas Corpus Carmo do Rio Claro",
+    "Delegacia e Flagrantes Carmo do Rio Claro",
+    "Advogado Correspondente Carmo do Rio Claro",
+    "Direito do Trabalho Carmo do Rio Claro",
+    "Rescisão Trabalhista e Direitos do Trabalhador",
+    "Andar dos Advogados Carmo do Rio Claro",
+    "OAB MG 233850",
+    "Alfenas Passos Campo do Meio Carmo do Rio Claro",
   ],
-  authors: [{ name: "Escritório de Advocacia Weslley Santos" }],
-  creator: "Escritório de Advocacia Weslley Santos",
-  publisher: "Escritório de Advocacia Weslley Santos",
+  authors: [{ name: "Alesson André — Advogado" }],
+  creator: "Alesson André — Advogado",
+  publisher: "Alesson André — Advogado",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=ws2", sizes: "any" },
-      { url: "/favicon-32x32.png?v=ws2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=ws2", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png?v=ws2", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512x512.png?v=ws2", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=aa3", sizes: "any" },
+      { url: "/favicon-32x32.png?v=aa3", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=aa3", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png?v=aa3", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512x512.png?v=aa3", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=ws2",
-    apple: [{ url: "/apple-icon.png?v=ws2", sizes: "180x180" }],
+    shortcut: "/favicon.ico?v=aa3",
+    apple: [{ url: "/apple-icon.png?v=aa3", sizes: "180x180" }],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.weslleysantos.adv.br",
-    title: "Escritório de Advocacia Weslley Santos | Advogado em Oliveira · MG",
+    url: "https://www.alessonandre.adv.br",
+    title: "Alesson André | Advogado Criminal e Trabalhista em Carmo do Rio Claro · MG",
     description:
-      "⚖️ Advocacia Especializada e Combate Técnico na Defesa de Seus Direitos. Nota máxima 5,0 ★ no Google (239 avaliações). Sede em Oliveira - MG (R. Batista de Almeida, 240 - Sl 12 - Centro). Plantão 24h.",
-    siteName: "Escritório de Advocacia Weslley Santos",
+      "⚖️ Defesa técnica, combativa e estratégica. Atuação em Direito Criminal, Trabalhista, Administrativa, Fóruns, Delegacias e Cartórios. 5,0 ★ no Google (136 avaliações). Sede no Andar dos Advogados, Carmo do Rio Claro - MG.",
+    siteName: "Alesson André — Advogado",
     images: [
       {
         url: "/logo.png",
         width: 1024,
-        height: 682,
-        alt: "Escritório de Advocacia Weslley Santos - Advocacia Especializada",
+        height: 512,
+        alt: "Alesson André - Advogado Criminal & Trabalhista",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Escritório de Advocacia Weslley Santos | Oliveira · MG",
+    title: "Alesson André | Advogado Criminal e Trabalhista · Carmo do Rio Claro - MG",
     description:
-      "⚖️ Advocacia Especializada: Criminal, Júri, Lei de Drogas, Perícia Digital, Cível e Previdenciário. 5,0 ★ no Google (239 avaliações).",
+      "⚖️ Advocacia Criminal e Trabalhista com rigor técnico e combatividade. 5,0 ★ no Google (136 avaliações).",
     images: ["/logo.png"],
   },
 };
@@ -119,47 +115,59 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Escritório de Advocacia Weslley Santos",
-    alternateName: "Dr. Weslley Santos Advocacia",
-    legalName: "Escritório de Advocacia Weslley Santos",
-    telephone: "+55-37-99869-3626",
-    email: "contato@weslleysantos.adv.br",
-    url: "https://www.weslleysantos.adv.br",
-    image: "https://www.weslleysantos.adv.br/logo.png",
+    name: "Alesson André — Advogado",
+    alternateName: "Alesson André Advocacia Criminal e Trabalhista",
+    legalName: "Alesson André — Advogado (OAB/MG 233.850)",
+    telephone: "+55-35-99720-0713",
+    email: "contato@alessonandre.adv.br",
+    url: "https://www.alessonandre.adv.br",
+    image: "https://www.alessonandre.adv.br/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. Batista de Almeida, 240 - Sl 12 - Centro",
-      addressLocality: "Oliveira",
+      streetAddress: "ANDAR DOS ADVOGADOS - R. Cap. Pedro Augusto Corrêa, 74 - Sala 03 - Centro",
+      addressLocality: "Carmo do Rio Claro",
       addressRegion: "MG",
-      postalCode: "35540-000",
+      postalCode: "37150-000",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-20.6963",
-      longitude: "-44.9016",
+      latitude: "-20.9719",
+      longitude: "-46.1189",
     },
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "239",
+      reviewCount: "136",
       bestRating: "5",
       worstRating: "1",
     },
     areaServed: [
-      "Oliveira",
-      "Carmópolis de Minas",
-      "Campo Belo",
-      "Santo Antônio do Amparo",
-      "Passa Tempo",
-      "Cláudio",
-      "Divinópolis",
-      "São Francisco de Paula",
+      "Carmo do Rio Claro",
+      "Alfenas",
+      "Passos",
+      "Campo do Meio",
+      "Conceição da Aparecida",
+      "Guapé",
+      "Boa Esperança",
+      "Varginha",
       "Minas Gerais",
       "Brasil",
     ],
     openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "08:00",
+        closes: "17:30",
+      },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [
@@ -176,8 +184,8 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      "https://www.instagram.com/weslley_santos_advocacia",
-      "https://wa.me/5537998693626",
+      "https://www.instagram.com/alesson.advogado/",
+      "https://wa.me/5535997200713",
     ],
   };
 
@@ -187,19 +195,19 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${playfairFont.variable} ${cinzelFont.variable} scroll-smooth dark`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=ws2" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=ws2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=ws2" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=ws2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=ws2" />
-        <link rel="shortcut icon" href="/favicon.ico?v=ws2" />
-        <meta name="theme-color" content="#050c18" />
+        <link rel="icon" href="/favicon.ico?v=aa3" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=aa3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=aa3" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=aa3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png?v=aa3" />
+        <link rel="shortcut icon" href="/favicon.ico?v=aa3" />
+        <meta name="theme-color" content="#07090e" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#c59b3f] selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-white font-sans text-slate-900 antialiased selection:bg-[#d49d2c] selection:text-white">
         {children}
       </body>
     </html>

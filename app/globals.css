@@ -4,31 +4,31 @@
   color-scheme: light dark;
   
   /* Primary Contrast: Obsidian Midnight & Silk White */
-  --color-black-pure: #050c18;
-  --color-black-surface: #0a172e;
-  --color-black-card: #0d2042;
-  --color-black-hover: #142c56;
+  --color-black-pure: #07090e;
+  --color-black-surface: #0c1019;
+  --color-black-card: #111723;
+  --color-black-hover: #182234;
 
   --color-white-pure: #ffffff;
-  --color-white-surface: #f8fafd;
+  --color-white-surface: #f8fafc;
   --color-white-card: #ffffff;
   --color-white-muted: #f1f5f9;
 
-  /* Primary Logo Metallic Polished Royal Gold (Ouro Imperial) */
-  --brand-gold-champagne: #faecd3;
-  --brand-gold-light: #f3db9d;
-  --brand-gold-accent: #dfb555;
-  --brand-gold-warm: #c59b3f;
-  --brand-gold-primary: #b38a34;
-  --brand-gold-rich: #966f20;
-  --brand-gold-deep: #6e4e10;
-  --brand-gold-noir: #1f1403;
+  /* Primary Logo Metallic Polished Gold (Dr. Alesson André) */
+  --brand-gold-champagne: #faf0d7;
+  --brand-gold-light: #f5e0a9;
+  --brand-gold-accent: #e5b242;
+  --brand-gold-warm: #d49d2c;
+  --brand-gold-primary: #c58b24;
+  --brand-gold-rich: #9e6b15;
+  --brand-gold-deep: #6e4609;
+  --brand-gold-noir: #1f1302;
 
-  /* Secondary Brand Accent: Royal Imperial Navy Blue (Azul Marinho Real do Brasão WS) */
-  --brand-navy-light: #2563eb;
-  --brand-navy-primary: #0f2b5c;
-  --brand-navy-deep: #0a1b3b;
-  --brand-navy-midnight: #050d1d;
+  /* Secondary Brand Accent: Deep Slate Navy (Suit & Studio Palette) */
+  --brand-navy-light: #3b82f6;
+  --brand-navy-primary: #12233f;
+  --brand-navy-deep: #0a1424;
+  --brand-navy-midnight: #050a14;
 }
 
 @theme inline {
@@ -37,15 +37,15 @@
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   
   --color-gold-50: #fdfbf7;
-  --color-gold-100: #faecd3;
-  --color-gold-200: #f3db9d;
-  --color-gold-300: #dfb555;
-  --color-gold-400: #c59b3f;
-  --color-gold-500: #b38a34;
-  --color-gold-600: #966f20;
-  --color-gold-700: #785412;
-  --color-gold-800: #4d3408;
-  --color-gold-900: #1f1403;
+  --color-gold-100: #faf0d7;
+  --color-gold-200: #f5e0a9;
+  --color-gold-300: #e5b242;
+  --color-gold-400: #d49d2c;
+  --color-gold-500: #c58b24;
+  --color-gold-600: #9e6b15;
+  --color-gold-700: #7a500e;
+  --color-gold-800: #523408;
+  --color-gold-900: #1f1302;
 
   --color-navy-50: #f0f5ff;
   --color-navy-100: #e0ebff;
@@ -55,9 +55,9 @@
   --color-navy-500: #3b71ef;
   --color-navy-600: #2554e2;
   --color-navy-700: #1d40ce;
-  --color-navy-800: #1b35a7;
-  --color-navy-900: #0f2452;
-  --color-navy-950: #07122b;
+  --color-navy-800: #12233f;
+  --color-navy-900: #0a1424;
+  --color-navy-950: #050a14;
 }
 
 html {
@@ -70,11 +70,11 @@ body {
   background: #ffffff;
   color: #0f172a;
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  caret-color: #c59b3f;
+  caret-color: #d49d2c;
 }
 
 ::selection {
-  background: #c59b3f;
+  background: #d49d2c;
   color: #ffffff;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .eyebrow-gold {
-  color: #966f20;
+  color: #9e6b15;
 }
 
 .eyebrow-navy {
@@ -109,7 +109,7 @@ body {
 }
 
 .eyebrow-light {
-  color: #f3db9d;
+  color: #f5e0a9;
 }
 
 .eyebrow-gold::before,
@@ -148,7 +148,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: #c59b3f;
+  background: #d49d2c;
   content: "";
   transform: scaleX(0);
   transform-origin: center;
@@ -170,6 +170,6 @@ body {
 }
 
 .footer-link:hover {
-  color: #dfb555;
+  color: #e5b242;
   transform: translateX(2px);
 }

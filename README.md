@@ -1,24 +1,24 @@
-# Escritório de Advocacia Weslley Santos
+# Alesson André | Advogado
 
-Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para o **Escritório de Advocacia Weslley Santos**, liderado pelo **Dr. Weslley Santos** em Oliveira - MG.
+Landing page e site institucional de altíssimo padrão desenvolvido em Next.js 16 (App Router), Tailwind CSS v4 e Framer Motion para o **Dr. Alesson André — Advogado** (OAB/MG 233.850) em Carmo do Rio Claro - MG.
 
 ## Destaques da Plataforma
-- **Identidade Visual Fiel ao Logo:** Paleta extraída diretamente do brasão real oficial metálico dourado com coroa, louros e escudo com monograma WS em azul marinho profundo, utilizando Ouro Imperial (`#b38a34`, `#c59b3f`, `#dfb555`), Azul Marinho Real (`#0f2b5c`, `#0a172e`), fundos Obsidian Midnight (`#050c18`) e superfícies Silk White (`#ffffff`, `#f8fafd`).
-- **Especialidades Jurídicas:** Direito Criminal & Tribunal do Júri (Plantão 24h), Especialista em Lei de Drogas, Perícia Forense Digital & Análise Grafotécnica, Direito Cível & Consumidor, Família & Sucessões e Previdenciário (INSS Rural e Urbano).
-- **Autoridade Comprovada:** Nota máxima 5,0 ★ no Google Meu Negócio com **239 avaliações**.
-- **Atendimento Híbrido & Plantão 24 Horas:** Escritório físico moderno no Centro de Oliveira (MG) e assessoria jurídica 100% digital com validade jurídica nacional para clientes de todo o Brasil, além de plantão ininterrupto para emergências criminais.
+- **Identidade Visual Fiel ao Logo:** Paleta de cores extraída diretamente do novo logotipo oficial metálico dourado com monograma moderno "AA", utilizando Ouro Metálico Polido (`#c58b24`, `#d49d2c`, `#e5b242`), Ouro Champanhe (`#faf0d7`, `#f5e0a9`), fundos Obsidian Midnight (`#07090e`, `#0c1019`) e superfícies Silk White (`#ffffff`, `#f8fafc`).
+- **Especialidades Jurídicas:** Direito Criminal & Plantão 24h (Flagrantes, Custódia, Delegacias e Fóruns), Direito do Trabalho & Defesa do Trabalhador (Rescisões, Horas Extras, Acidentes), Correspondência Jurídica & Apoio em Fóruns e Cartórios em Carmo do Rio Claro e região, Direito Administrativo e Previdenciário (INSS).
+- **Autoridade Comprovada:** Nota máxima 5,0 ★ no Google Meu Negócio com **136 avaliações**.
+- **Atendimento Híbrido:** Escritório físico no tradicional ANDAR DOS ADVOGADOS (Centro de Carmo do Rio Claro - MG) e assessoria jurídica 100% digital para clientes de todo o Brasil.
 - **Conversão Otimizada:** Botões de CTA direcionando diretamente para o WhatsApp oficial com mensagens personalizadas e pré-preenchidas por especialidade.
 - **Favicons & Ícones de Alta Resolução:** Ícones multi-resolução aplicados no navegador (`favicon.ico`, `favicon-32x32.png`, `apple-icon.png`, `icon.png`, etc.).
 
 ## Dados do Cliente
-- **Profissional:** Dr. Weslley Santos (OAB/MG)
-- **Escritório:** Escritório de Advocacia Weslley Santos
-- **WhatsApp / Telefone:** (37) 99869-3626
-- **E-mail:** contato@weslleysantos.adv.br
-- **Endereço / Sede:** R. Batista de Almeida, 240 - Sl 12 - Centro, Oliveira - MG, 35540-000
-- **Instagram:** [@weslley_santos_advocacia](https://www.instagram.com/weslley_santos_advocacia)
-- **Horário:** Aberto 24 Horas (Plantão Criminal e Urgências)
-- **Prova Social:** 5,0 ★ com 239 avaliações no Google Meu Negócio
+- **Profissional:** Dr. Alesson André (OAB/MG 233.850)
+- **Escritório:** Alesson André | Advogado
+- **WhatsApp / Telefone:** (35) 99720-0713
+- **E-mail:** contato@alessonandre.adv.br
+- **Endereço / Sede:** ANDAR DOS ADVOGADOS - R. Cap. Pedro Augusto Corrêa, 74 - Sala 03 - Centro, Carmo do Rio Claro - MG, 37150-000
+- **Instagram:** [@alesson.advogado](https://www.instagram.com/alesson.advogado/)
+- **Horário:** Segunda a Sexta: 08:00 às 17:30 · Plantão para Urgências Criminais
+- **Prova Social:** 5,0 ★ com 136 avaliações no Google Meu Negócio
 
 ## Comandos para Execução
 ```bash
